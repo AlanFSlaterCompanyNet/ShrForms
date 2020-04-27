@@ -1,0 +1,410 @@
+{
+  "processing": [
+    [ "loadFields", "Charter Data" ],
+    [ "loadFields", "Contextual and EESSH" ],
+    [ "loadPages" ],
+    [ "generateCharter", "Rsl", "1_5" ],
+    [ "generateCharter", "La", "1_7" ],
+    [ "generateCharter", "LaHo", "1_5" ]
+  ],
+  "$schema": "./formDesignSchema.json",
+  "title": "Charter Return",
+  "formTitle": "Charter Return",
+  "outputTable": "Charter",
+  "readRole": "Charter Reader",
+  "editRole": "Charter Full Return User",
+  "pdfFileName": "CharterReturn.pdf",
+  "pages": [
+    {
+      "action": "insertPage",
+      "row": 2,
+      "contextualEessh": true
+    },
+    {
+      "action": "insertPage",
+      "row": 3,
+      "contextualEessh": true
+    },
+    {
+      "action": "insertPage",
+      "row": 4,
+      "contextualEessh": true
+    },
+    {
+      "action": "insertPage",
+      "row": 5,
+      "contextualEessh": true,
+      "indicatorRow": 4
+    },
+    {
+      "action": "insertPage",
+      "row": 6
+    },
+    {
+      "action": "insertPage",
+      "row": 7
+    },
+    {
+      "action": "insertPage",
+      "row": 8
+    },
+    {
+      "action": "insertPage",
+      "row": 9
+    },
+    {
+      "action": "insertPage",
+      "row": 10
+    },
+    {
+      "action": "insertPage",
+      "row": 11
+    },
+    {
+      "action": "insertPage",
+      "row": 12,
+      "contextualEessh": true
+    },
+    {
+      "formTypes": [ "Rsl" ],
+      "row": 13,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "C9",
+          "data": "Contextual and EESSH",
+          "row": 1,
+          "name": "c9_1"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "C9",
+          "data": "Contextual and EESSH",
+          "row": 11,
+          "name": "c9_2"
+        }
+      ]
+    },
+    {
+      "formTypes": [ "La" ],
+      "row": 13,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "C9 LA",
+          "data": "Contextual and EESSH",
+          "row": 1,
+          "name": "c9_1"
+        }
+      ]
+    },
+    {
+      "action": "insertPage",
+      "row": 14
+    },
+    {
+      "action": "insertPage",
+      "row": 15
+    },
+    {
+      "action": "insertPage",
+      "row": 16
+    },
+    {
+      "action": "insertPage",
+      "row": 17
+    },
+    {
+      "action": "insertPage",
+      "row": 18
+    },
+    {
+      "action": "insertPage",
+      "row": 19
+    },
+    {
+      "action": "insertPage",
+      "row": 20
+    },
+    {
+      "formTypes": [ "La", "Rsl" ],
+      "row": 21,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "C10",
+          "data": "Contextual and EESSH",
+          "row": 3,
+          "name": "c10_1"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "C10",
+          "data": "Contextual and EESSH",
+          "row": 11,
+          "name": "c10_2"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "C10",
+          "data": "Contextual and EESSH",
+          "row": 19,
+          "name": "c10_3"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "C10",
+          "data": "Contextual and EESSH",
+          "row": 27,
+          "name": "c10_4"
+        },
+        {
+          "action": "insertField",
+          "sheet": "C10",
+          "data": "Contextual and EESSH",
+          "name": "cha_y6_119"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "C10",
+          "data": "Contextual and EESSH",
+          "row": 38,
+          "name": "c10_5"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "C10",
+          "data": "Contextual and EESSH",
+          "row": 46,
+          "name": "c10_6"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "C10",
+          "data": "Contextual and EESSH",
+          "row": 54,
+          "name": "c10_7"
+        },
+        {
+          "action": "insertField",
+          "sheet": "C10",
+          "data": "Contextual and EESSH",
+          "name": "cha_y6_340"
+        }
+      ]
+    },
+
+    {
+      "formTypes": [ "La", "Rsl" ],
+      "row": 22,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "C11",
+          "data": "Contextual and EESSH",
+          "row": 3,
+          "name": "c11_1"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "C11",
+          "data": "Contextual and EESSH",
+          "row": 11,
+          "name": "c11_2"
+        },
+        {
+          "action": "insertField",
+          "sheet": "C11",
+          "data": "Contextual and EESSH",
+          "name": "cha_y6_209"
+        }
+      ]
+    },
+    {
+      "formTypes": [ "La", "Rsl" ],
+      "row": 23,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "C12",
+          "data": "Contextual and EESSH",
+          "row": 3,
+          "name": "c12_1"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "C12",
+          "data": "Contextual and EESSH",
+          "row": 14,
+          "name": "c12_2"
+        },
+        {
+          "action": "insertField",
+          "sheet": "C12",
+          "data": "Contextual and EESSH",
+          "name": "cha_y6_232"
+        },
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Indicator",
+          "borderTop": true
+        },
+        {
+          "action": "insertField",
+          "sheet": "C12",
+          "data": "Contextual and EESSH",
+          "name": "indicator_C12"
+        }
+      ]
+    },
+    {
+      "action": "insertPage",
+      "row": 24,
+      "contextualEessh": true
+    },
+    {
+      "action": "insertPage",
+      "row": 25
+    },
+    {
+      "row": 26,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "3&4",
+          "data": "Charter Data",
+          "row": 1,
+          "name": "c3_4_1"
+        },
+        {
+          "action": "insertTable",
+          "sheet": "3&4",
+          "data": "Charter Data",
+          "row": 9,
+          "name": "c3_4_2"
+        }
+      ]
+    },
+    {
+      "action": "insertPage",
+      "row": 27
+    },
+    {
+      "action": "insertPage",
+      "row": 28
+    },
+    {
+      "action": "insertPage",
+      "row": 29
+    },
+    {
+      "action": "insertPage",
+      "row": 30,
+      "contextualEessh": true
+    },
+    {
+      "action": "insertPage",
+      "row": 31
+    },
+    {
+      "action": "insertPage",
+      "row": 32
+    },
+    {
+      "action": "insertPage",
+      "row": 33
+    },
+    {
+      "action": "insertPage",
+      "row": 34
+    },
+    {
+      "action": "insertPage",
+      "row": 35
+    },
+    {
+      "action": "insertPage",
+      "row": 36
+    },
+    {
+      "action": "insertPage",
+      "row": 37
+    },
+    {
+      "action": "insertPage",
+      "row": 38
+    },
+    {
+      "action": "insertPage",
+      "row": 39
+    },
+    {
+      "action": "insertPage",
+      "row": 40
+    },
+    {
+      "action": "insertPage",
+      "row": 41
+    },
+    {
+      "action": "insertPage",
+      "row": 42
+    },
+    {
+      "action": "insertPage",
+      "row": 43
+    },
+    {
+      "action": "insertPage",
+      "row": 44
+    },
+    {
+      "action": "insertPage",
+      "row": 45
+    },
+    {
+      "action": "insertPage",
+      "row": 46
+    },
+    {
+      "action": "insertPage",
+      "row": 47
+    },
+    {
+      "action": "insertPage",
+      "row": 48,
+      "contextualEessh": true
+    },
+    {
+      "action": "insertPage",
+      "row": 49
+    },
+    {
+      "action": "insertPage",
+      "row": 50
+    },
+    {
+      "action": "insertPage",
+      "row": 51
+    },
+    {
+      "action": "insertPage",
+      "row": 52
+    },
+    {
+      "action": "insertPage",
+      "row": 53
+    },
+    {
+      "action": "insertPage",
+      "row": 54
+    },
+    {
+      "action": "insertPage",
+      "row": 55,
+      "contextualEessh": true
+    }
+  ]
+}
