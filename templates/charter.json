@@ -2,7 +2,7 @@
   "processing": [
     [ "loadFields", "Charter Data" ],
     [ "loadFields", "Contextual and EESSH" ],
-    [ "loadPages" ],
+    [ "loadPages", "ARC structure & wording" ],
     [ "generateCharter", "Rsl", "1_5" ],
     [ "generateCharter", "La", "1_7" ],
     [ "generateCharter", "LaHo", "1_5" ]
