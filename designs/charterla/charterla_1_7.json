@@ -9483,7 +9483,7 @@
           "validation": "( $value  <= new Date())",
           "validationMessage": "A1.2 cannot be a future date",
           "aux": {
-            "sampleValue": "08/01/2020 00:00:00",
+            "sampleValue": "1/8/2020 12:00:00 AM",
             "csvColumnName": "A1.1 Date approved"
           },
           "outputColumn": "cha_app_date"
