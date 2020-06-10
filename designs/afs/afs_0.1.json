@@ -1,0 +1,704 @@
+{
+  "$schema": "./formDesignSchema.json",
+  "title": "AFS Return",
+  "formTitle": "AFS Return",
+  "outputTable": "AFS",
+  "readRole": "AFS Reader",
+  "editRole": "AFS Editor",
+  "pdfFileName": "AfsReturn.pdf",
+  "pages": [
+    {
+      "name": "section1",
+      "title": "soce",
+      "fields": [],
+      "sectionLevel": 1
+    },
+    {
+      "name": "section2",
+      "title": "sub section",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "fields": [
+        {
+          "type": "table",
+          "headers": [
+            "Share capital",
+            "Revenue reserve Restricted fund",
+            "Revenue reserve Unrestricted fund",
+            "Restricted reserve",
+            "Revaluation reserve",
+            null
+          ],
+          "name": "soce_1",
+          "label": "Statement of Changes in Equity",
+          "children": [
+            {
+              "type": "tablerow",
+              "name": "table_soce_1_row_3",
+              "header": "Balance at beginning of the year",
+              "children": [
+                {
+                  "name": "afssoce001",
+                  "labelWidth": 5,
+                  "label": " Share capital - Balance at beginning of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce070",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Restricted fund - Balance at beginning of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce077",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Unrestricted fund - Balance at beginning of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "44298",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce015",
+                  "labelWidth": 5,
+                  "label": " Restricted reserve - Balance at beginning of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce022",
+                  "labelWidth": 5,
+                  "label": " Revaluation reserve - Balance at beginning of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "soce_11",
+                  "labelWidth": 5,
+                  "label": " ",
+                  "required": false,
+                  "width": 4,
+                  "type": "textarea",
+                  "aux": {
+                    "sampleValue": "Balance at beginning of the year comment",
+                    "csvColumnName": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_soce_1_row_4",
+              "header": "Issue of shares",
+              "children": [
+                {
+                  "name": "afssoce002",
+                  "labelWidth": 5,
+                  "label": " Share capital - Issue of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce071",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Restricted fund - Issue of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce078",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Unrestricted fund - Issue of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce016",
+                  "labelWidth": 5,
+                  "label": " Restricted reserve - Issue of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce023",
+                  "labelWidth": 5,
+                  "label": " Revaluation reserve - Issue of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "soce_12",
+                  "labelWidth": 5,
+                  "label": " ",
+                  "required": false,
+                  "width": 4,
+                  "type": "textarea",
+                  "aux": {
+                    "sampleValue": "Issue of shares comment",
+                    "csvColumnName": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_soce_1_row_5",
+              "header": "Cancellation of shares",
+              "children": [
+                {
+                  "name": "afssoce003",
+                  "labelWidth": 5,
+                  "label": " Share capital - Cancellation of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce072",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Restricted fund - Cancellation of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce079",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Unrestricted fund - Cancellation of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce017",
+                  "labelWidth": 5,
+                  "label": " Restricted reserve - Cancellation of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce024",
+                  "labelWidth": 5,
+                  "label": " Revaluation reserve - Cancellation of shares",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "soce_13",
+                  "labelWidth": 5,
+                  "label": " ",
+                  "required": false,
+                  "width": 4,
+                  "type": "textarea",
+                  "aux": {
+                    "sampleValue": "Cancellation of shares comment",
+                    "csvColumnName": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_soce_1_row_6",
+              "header": "Surplus/(deficit) from statement of comprehensive income",
+              "children": [
+                {
+                  "name": "afssoce004",
+                  "labelWidth": 5,
+                  "label": " Share capital - Surplus/(deficit) from statement of comprehensive income",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce073",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Restricted fund - Surplus/(deficit) from statement of comprehensive income",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce080",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Unrestricted fund - Surplus/(deficit) from statement of comprehensive income",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "120",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce018",
+                  "labelWidth": 5,
+                  "label": " Restricted reserve - Surplus/(deficit) from statement of comprehensive income",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce025",
+                  "labelWidth": 5,
+                  "label": " Revaluation reserve - Surplus/(deficit) from statement of comprehensive income",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "soce_14",
+                  "labelWidth": 5,
+                  "label": " ",
+                  "required": false,
+                  "width": 4,
+                  "type": "textarea",
+                  "aux": {
+                    "sampleValue": "Surplus/(deficit) from statement of comprehensive income comment",
+                    "csvColumnName": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_soce_1_row_7",
+              "header": "Transfer from revaluation reserve to revenue reserve",
+              "children": [
+                {
+                  "name": "afssoce005",
+                  "labelWidth": 5,
+                  "label": " Share capital - Transfer from revaluation reserve to revenue reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce074",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Restricted fund - Transfer from revaluation reserve to revenue reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce081",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Unrestricted fund - Transfer from revaluation reserve to revenue reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce019",
+                  "labelWidth": 5,
+                  "label": " Restricted reserve - Transfer from revaluation reserve to revenue reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce026",
+                  "labelWidth": 5,
+                  "label": " Revaluation reserve - Transfer from revaluation reserve to revenue reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "soce_15",
+                  "labelWidth": 5,
+                  "label": " ",
+                  "required": false,
+                  "width": 4,
+                  "type": "textarea",
+                  "aux": {
+                    "sampleValue": "Transfer from revaluation reserve to revenue reserve comment",
+                    "csvColumnName": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_soce_1_row_8",
+              "header": "Transfer of restricted expenditure from unrestricted reserve",
+              "children": [
+                {
+                  "name": "afssoce006",
+                  "labelWidth": 5,
+                  "label": " Share capital - Transfer of restricted expenditure from unrestricted reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce075",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Restricted fund - Transfer of restricted expenditure from unrestricted reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce082",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Unrestricted fund - Transfer of restricted expenditure from unrestricted reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce020",
+                  "labelWidth": 5,
+                  "label": " Restricted reserve - Transfer of restricted expenditure from unrestricted reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce027",
+                  "labelWidth": 5,
+                  "label": " Revaluation reserve - Transfer of restricted expenditure from unrestricted reserve",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": "0",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "soce_16",
+                  "labelWidth": 5,
+                  "label": " ",
+                  "required": false,
+                  "width": 4,
+                  "type": "textarea",
+                  "aux": {
+                    "sampleValue": "Transfer of restricted expenditure from unrestricted reserve comment",
+                    "csvColumnName": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_soce_1_row_9",
+              "header": "Balance at end of the year",
+              "children": [
+                {
+                  "name": "afssoce007",
+                  "labelWidth": 5,
+                  "label": " Share capital - Balance at end of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": null,
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce076",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Restricted fund - Balance at end of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": null,
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce083",
+                  "labelWidth": 5,
+                  "label": " Revenue reserve Unrestricted fund - Balance at end of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": null,
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce021",
+                  "labelWidth": 5,
+                  "label": " Restricted reserve - Balance at end of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": null,
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "afssoce028",
+                  "labelWidth": 5,
+                  "label": " Revaluation reserve - Balance at end of the year",
+                  "required": true,
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 99999999999.0,
+                  "decimalPlaces": 1,
+                  "aux": {
+                    "sampleValue": null,
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_0"
+                }
+              ]
+            }
+          ],
+          "headersStyle": "background-color:#891635; color:white",
+          "headers2Style": "background-color:#B7274C; color:white",
+          "headers2": [
+            "£'000",
+            "£'000",
+            "£'000",
+            "£'000",
+            "£'000"
+          ]
+        }
+      ],
+      "name": "soce",
+      "title": "SOCE"
+    }
+  ],
+  "quickNavigation": []
+}
