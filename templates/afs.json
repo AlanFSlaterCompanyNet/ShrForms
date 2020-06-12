@@ -1,8 +1,32 @@
 {
   "processing": [
-    [ "loadFields", "Data" ],
-    [ "loadPages", "AFS structure & wording" ],
-    [ "generate", "Afs", "1_1", false ]
+    [
+      "loadFields", "Data"
+    ],
+    [
+      "loadPages", "AFS structure & wording"
+    ],
+    [
+      "fields",
+      {
+        "afsf002": {
+          "width": 2,
+          "labelWidth": 3
+        },
+        "afsf003": {
+          "width": 5,
+          "labelWidth": 3
+        },
+        "afsf004": {
+          "width": 2,
+          "labelWidth": 3,
+          "showDigitGroupSeparator": false
+        }
+      }
+    ],
+    [
+      "generate", "Afs", "1_1", false
+    ]
   ],
   "$schema": "./formDesignSchema.json",
   "title": "AFS Return",
@@ -11,24 +35,11 @@
   "readRole": "AFS Reader",
   "editRole": "AFS User",
   "pdfFileName": "AfsReturn.pdf",
-  "thresholdLimits": [
-    {
-      "percentage": 101,
-      "increase": true,
-      "message": "{label} is greater than 101% of last year’s value.  If the value is correct then please enter a comment.  Otherwise correct the value entered."
-    },
-    {
-      "percentage": 15,
-      "increase": true,
-      "message": "{label} is greater than 15% of last year’s value.  Please provide a comment to explain the variance."
-    },
-    {
-      "percentage": 15,
-      "increase": false,
-      "message": "{label} is less than 15% of last year’s value.  Please provide a comment to explain the variance."
-    }
-  ],
   "pages": [
+    {
+      "action": "insertPage",
+      "row": 2
+    },
     {
       "row": 3,
       "fields": [
@@ -75,7 +86,10 @@
               "\u00A3'000"
             ]
           },
-          "highlightRows": [ "first", "last" ],
+          "highlightRows": [
+            "first",
+            "last"
+          ],
           "rowProperties": {
             "labelWidth": 3
           }
@@ -97,7 +111,10 @@
               "\u00A3'000"
             ]
           },
-          "highlightRows": [ "first", "last" ],
+          "highlightRows": [
+            "first",
+            "last"
+          ],
           "rowProperties": {
             "labelWidth": 3
           }
@@ -154,5 +171,5 @@
         }
       ]
     }
- ]
+  ]
 }
