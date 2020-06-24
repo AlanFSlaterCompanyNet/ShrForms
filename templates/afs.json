@@ -139,6 +139,7 @@
           "data": "Data",
           "row": 1,
           "name": "sofp_1",
+          "columnCount": 2,
           "properties": {
             "labelWidth": 3,
             "headersStyle": "background-color:#891635; color:white",
