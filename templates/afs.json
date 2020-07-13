@@ -23,7 +23,13 @@
           "width": 2,
           "labelWidth": 3,
           "showDigitGroupSeparator": false
-        }
+        },
+        "afsci007": {"group":"contingent_liabilities_group"},
+        "afsci008": {"group":"contingent_liabilities_group"},
+        "afsci010": {"group":"contingent_liabilities_group"},
+        "afsci011": {"group":"contingent_liabilities_group"},
+        "afsci012": {"group":"contingent_liabilities_group"},
+        "afsci009": {"group":"contingent_liabilities_group"}        
       }
     ],
     [
@@ -62,7 +68,7 @@
             "labelWidth": 3,
             "headersStyle": "background-color:#891635; color:white",
             "headers2Style": "background-color:#B7274C; color:white",
-            "styleLastIndex": 4,
+            "styleLastIndex": 0,
             "headers2": [
               "\u00A3'000"
             ]
@@ -144,7 +150,7 @@
             "labelWidth": 3,
             "headersStyle": "background-color:#891635; color:white",
             "headers2Style": "background-color:#B7274C; color:white",
-            "styleLastIndex": 4,
+            "styleLastIndex": 0,
             "headers2": [
               "\u00A3'000"
             ]
@@ -169,7 +175,7 @@
             "labelWidth": 3,
             "headersStyle": "background-color:#891635; color:white",
             "headers2Style": "background-color:#B7274C; color:white",
-            "styleLastIndex": 4,
+            "styleLastIndex": 0,
             "headers2": [
               "\u00A3'000"
             ]
@@ -253,7 +259,7 @@
           "properties": {
             "labelWidth": 3,
             "headersStyle": "background-color:#891635; color:white",
-            "styleLastIndex": 5,
+            "styleLastIndex": 4,
             "headers2": []
           },
           "highlightRows": [],
@@ -276,7 +282,7 @@
             "labelWidth": 3,
             "headersStyle": "background-color:#891635; color:white",
             "headers2Style": "background-color:#B7274C; color:white",
-            "styleLastIndex": 6,
+            "styleLastIndex": 0,
             "headers2": [
               "\u00A3'000"
             ]
@@ -285,6 +291,66 @@
           "rowProperties": {
             "labelWidth": 3
           }
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "Contextual Information",
+          "data": "Data",
+          "row": 1,
+          "name": "ci_1",
+          "properties": {
+            "labelWidth": 3,
+            "headerWidths": [3,3]
+          }
+        },
+        {
+          "name": "staff_pension_schemes",
+          "label": "Staff Pension Schemes",
+          "labelWidth": 1,
+          "type": "table",
+          "dynamic": true,
+          "headers": [
+            "Which scheme(s) are you members of?",
+            "How many participating members in each scheme?"
+          ],
+          "dynamicAddRowMessage": "Add a New Staff Pension Scheme",
+          "dynamicDeleteRowMessage": "Are you sure you want to delete this Staff Pension Scheme",
+          "children": [
+            {
+              "name": "staff_pension_schemes_row",
+              "type": "tablerow",
+              "header": "Foo",
+              "children": [
+                {
+                  "name": "scheme",
+                  "type": "choice",
+                  "label": "",
+                  "width": 3,
+                  "required": true,
+                  "csv": {
+                    "file": "pension_schemes.csv",
+                    "labelColumn": "Name",
+                    "valueColumn": "Id"
+                  }
+                },
+                {
+                  "name": "number_members",
+                  "type": "numeric",
+                  "label": "",
+                  "width": 1,
+                  "minimumValue": 0,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 0,
+                  "required": true
+                }
+              ]
+            }
+          ]
         }
       ]
     },
