@@ -39,7 +39,7 @@
     [
       "generate",
       "Afs",
-      "1_1",
+      "1_5",
       false
     ]
   ],
@@ -51,6 +51,7 @@
   "editRole": "AFS User",
   "pdfFileName": "AfsReturn.pdf",
   "illegalValueMessage": "-",
+  "financialFormatting": true,  
   "pages": [
     {
       "action": "insertPage",
