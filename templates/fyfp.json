@@ -1,0 +1,70 @@
+{
+  "processing": [
+    [
+      "loadFields",
+      "Data"
+    ],
+    [
+      "loadPages",
+      "FYFP structure & wording"
+    ],
+    [
+      "thresholds",
+      "Thresholds"
+    ],
+    [
+      "generate",
+      "Fyfp",
+      "1_0",
+      false
+    ]
+  ],
+  "$schema": "./formDesignSchema.json",
+  "title": "FYFP Return",
+  "formTitle": "FYFP Return",
+  "outputTable": "FYFP",
+  "readRole": "FYFP Reader",
+  "editRole": "FYFP User",
+  "pdfFileName": "FYFPReturn.pdf",
+  "illegalValueMessage": "-",
+  "financialFormatting": true,
+  "pages": [
+    {
+      "row": 3,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "Comprehensive Income",
+          "data": "Data",
+          "row": 1,
+          "name": "ci_1",
+          "properties": {
+            "labelWidth": 2,
+            "headerWidths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "headersStyle": "background-color:#891635; color:white",
+            "headers2Style": "background-color:#B7274C; color:white",
+            "styleLastIndex": 6,
+            "headers2": [
+              "\u00A3'000",
+              "\u00A3'000",
+              "\u00A3'000",
+              "\u00A3'000",
+              "\u00A3'000",
+              "\u00A3'000"
+            ]
+          },
+          "rowProperties": {
+            "labelWidth": 3
+          }
+        }
+      ]
+    }
+  ]
+}
