@@ -28,8 +28,13 @@
   "pdfFileName": "FYFPReturn.pdf",
   "illegalValueMessage": "-",
   "financialFormatting": true,
+  "excelFileName": "fyfp.xlsx",
   "pages": [
     {
+      "action": "insertPage",
+      "row": 2
+    },
+    {      
       "row": 3,
       "fields": [
         {
@@ -217,6 +222,10 @@
           }
         }
       ]
+    },
+    {
+      "action": "insertPage",
+      "row": 8
     }
   ]
 }
