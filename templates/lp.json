@@ -1,0 +1,61 @@
+{
+  "processing": [
+    [ "loadFields", "Data" ],
+    [ "loadPages", "Sections" ],
+    [
+      "generate",
+      "Lp",
+      "1_1",
+      false
+    ]    
+  ],
+  "$schema": "./formDesignSchema.json",
+  "title": "LP Return",
+  "formTitle": "LP Return",
+  "outputTable": "LP Submissions",
+  "readRole": "LPS User",
+  "editRole": "LPS Approver",
+  "pdfFileName": "LPReturn.pdf",
+  "hierarchical": true,
+  "pages": [
+    {
+      "action": "insertPage",
+      "row": 2
+    },
+    {
+      "action": "insertPage",
+      "row": 3,
+      "values":{
+        "hierarchical": true
+      }
+    },
+    {
+      "action": "insertPage",
+      "row": 4,
+      "values":{
+        "hierarchical": true
+      }
+    },
+    {
+      "action": "insertPage",
+      "row": 5,
+      "values":{
+        "hierarchical": true
+      }
+    },
+    {
+      "action": "insertPage",
+      "row": 6,
+      "values":{
+        "hierarchical": true
+      }
+    },
+    {
+      "action": "insertPage",
+      "row": 7,
+      "values":{
+        "hierarchical": true
+      }
+    }
+ ]
+}
