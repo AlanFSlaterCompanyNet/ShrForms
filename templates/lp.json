@@ -64,6 +64,27 @@
       "values":{
         "hierarchical": true
       }
+    },
+    {
+      "action": "insertPage",
+      "row": 10,
+      "values":{
+        "hierarchical": true
+      }
+    },
+    {
+      "action": "insertPage",
+      "row": 11,
+      "values":{
+        "hierarchical": true
+      }
+    },
+    {
+      "action": "insertPage",
+      "row": 12,
+      "values":{
+        "hierarchical": true
+      }
     }
  ]
 }
