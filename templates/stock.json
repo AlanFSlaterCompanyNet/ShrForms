@@ -1,0 +1,140 @@
+{
+  "processing": [
+    [
+      "loadFields",
+      "Data"
+    ],
+    [
+      "loadPages",
+      "SP structure & wording"
+    ],
+    [
+      "fields",
+      {
+      }
+    ],
+    [
+      "generate",
+      "Stock",
+      "1_1",
+      false
+    ]
+  ],
+  "$schema": "./formDesignSchema.json",
+  "title": "Stock Form",
+  "formTitle": "Stock",
+  "outputTable": "Stock",
+  "readRole": "AFS Reader",
+  "editRole": "Stock",
+  "pdfFileName": "AfsReturn.pdf",
+  "illegalValueMessage": "-",
+  "financialFormatting": true,  
+  "pages": [
+    {
+      "row": 2,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "Provision",
+          "data": "Data",
+          "row": 1,
+          "name": "provision_1",
+          "columnCount": 3,
+          "properties": {
+            "labelWidth": 1,
+            "headerWidths": [1,1,1],
+            "headersStyle": "background-color:#891635; color:white"
+          },
+          "rowProperties": {
+            "labelWidth": 2
+          }
+        }
+      ]
+    } ,
+    {
+      "row": 3,
+      "fields": [
+        {
+          "action": "insertTable",
+          "sheet": "Type",
+          "data": "Data",
+          "row": 1,
+          "name": "type_1",
+          "columnCount": 3,
+          "properties": {
+            "labelWidth": 1,
+            "headerWidths": [1,1,1],
+            "headersStyle": "background-color:#891635; color:white"
+          },
+          "rowProperties": {
+            "labelWidth": 2
+          }
+        },
+        {
+          "action": "insertTable",
+          "sheet": "Type",
+          "data": "Data",
+          "row": 10,
+          "name": "type_2",
+          "columnCount": 3,
+          "properties": {
+            "labelWidth": 1,
+            "headerWidths": [1,1,1],
+            "headersStyle": "background-color:#891635; color:white"
+          },
+          "rowProperties": {
+            "labelWidth": 2
+          }
+        },        
+        {
+          "action": "insertTable",
+          "sheet": "Type",
+          "data": "Data",
+          "row": 16,
+          "name": "type_3",
+          "columnCount": 3,
+          "properties": {
+            "labelWidth": 1,
+            "headerWidths": [1,1,1],
+            "headersStyle": "background-color:#891635; color:white"
+          },
+          "rowProperties": {
+            "labelWidth": 2
+          }
+        },        
+        {
+          "action": "insertTable",
+          "sheet": "Type",
+          "data": "Data",
+          "row": 21,
+          "name": "type_3",
+          "columnCount": 6,
+          "properties": {
+            "labelWidth": 2,
+            "headerWidths": [1,1,1],
+            "headersStyle": "background-color:#891635; color:white"
+          },
+          "rowProperties": {
+            "labelWidth": 2
+          }
+        },       
+        {
+          "action": "insertTable",
+          "sheet": "Type",
+          "data": "Data",
+          "row": 30,
+          "name": "type_3",
+          "columnCount": 1,
+          "properties": {
+            "labelWidth": 1,
+            "headerWidths": [1,1,1],
+            "headersStyle": "background-color:#891635; color:white"
+          },
+          "rowProperties": {
+            "labelWidth": 2
+          }
+        }                
+      ]
+    } 
+  ]
+}
