@@ -24,14 +24,18 @@
   "title": "Stock Form",
   "formTitle": "Stock",
   "outputTable": "Stock",
-  "readRole": "AFS Reader",
-  "editRole": "Stock",
-  "pdfFileName": "AfsReturn.pdf",
+  "readRole": "Organisational Details Reader",
+  "editRole": "Organisational Details",
   "illegalValueMessage": "-",
   "financialFormatting": true,  
   "pages": [
     {
+      "action": "insertPage",
       "row": 2,
+      "sheet": "Data"
+    },
+    {
+      "row": 3,
       "fields": [
         {
           "action": "insertTable",
@@ -52,7 +56,7 @@
       ]
     } ,
     {
-      "row": 3,
+      "row": 4,
       "fields": [
         {
           "action": "insertTable",
@@ -90,7 +94,7 @@
           "action": "insertTable",
           "sheet": "Type",
           "data": "Data",
-          "row": 16,
+          "row": 15,
           "name": "type_3",
           "columnCount": 3,
           "properties": {
@@ -135,6 +139,58 @@
           }
         }                
       ]
-    } 
+    },
+    {
+      "name":"f1",
+      "title":"Approval",
+      "fields": [
+        {
+          "name": "cn_localauthority2",
+          "labelWidth": 2,
+          "label": "Local Authority",
+          "required": false,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Moray",
+            "csvColumnName": "Local Authority"
+          },
+          "outputColumn": "cn_localauthority",
+          "readonly": true
+        },
+        {
+          "name": "cn_provisionupdate",
+          "labelWidth": 2,
+          "label": "Provision Update",
+          "width": 2,
+          "type": "text",
+          "readonly": true
+        },
+        {
+          "name": "cn_provisionasatfy",
+          "labelWidth": 2,
+          "label": "Provision Update as at Financial Year",
+          "width": 2,
+          "type": "text",
+          "readonly": true
+        },
+        {
+          "name": "cn_provisionasatdate",
+          "labelWidth": 2,
+          "label": "Provision Update as at Date",
+          "width": 2,
+          "type": "date",
+          "required": true
+        },
+        {
+          "submit": "submit",
+          "labelWidth": 2,
+          "label": "",
+          "width": 3,
+          "type": "submit",
+          "allowErrors": true
+        }
+      ]
+    }
   ]
 }
