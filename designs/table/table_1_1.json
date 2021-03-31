@@ -1,0 +1,670 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/AlanFSlaterCompanyNet/PerFormOpen/issues/2/PerFormOpen/schemas/formDesignSchema.json",
+  "formTitle": "A form with a table",
+  "outputTable": "TestOutputs",
+  "pages": [
+    {
+      "name": "c10",
+      "title": "Percentage of properties meeting the EESSH (Indicator C10)",
+      "fields": [
+        {
+          "type": "table",
+          "headers": [
+            "Gas",
+            "Electric",
+            "Other fuels",
+            "Total"
+          ],
+          "label": "C10.1 Number of self contained properties",
+          "children": [
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_4",
+              "header": "Flats",
+              "children": [
+                {
+                  "name": "cha_y6_039",
+                  "label": "row:(Flats), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_044",
+                  "label": "row:(Flats), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_049",
+                  "label": "row:(Flats), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_054",
+                  "label": "row:(Flats), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_039 +cha_y6_044 +cha_y6_049 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_5",
+              "header": "Four-in-a-block",
+              "children": [
+                {
+                  "name": "cha_y6_040",
+                  "label": "row:(Four-in-a-block), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_045",
+                  "label": "row:(Four-in-a-block), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_050",
+                  "label": "row:(Four-in-a-block), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_055",
+                  "label": "row:(Four-in-a-block), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_040 +cha_y6_045 +cha_y6_050 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_6",
+              "header": "Houses (other than detached)",
+              "children": [
+                {
+                  "name": "cha_y6_041",
+                  "label": "row:(Houses (other than detached)), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_046",
+                  "label": "row:(Houses (other than detached)), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_051",
+                  "label": "row:(Houses (other than detached)), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_056",
+                  "label": "row:(Houses (other than detached)), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_041 +cha_y6_046 +cha_y6_051 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_7",
+              "header": "Detached houses",
+              "children": [
+                {
+                  "name": "cha_y6_042",
+                  "label": "row:(Detached houses), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_047",
+                  "label": "row:(Detached houses), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_052",
+                  "label": "row:(Detached houses), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_057",
+                  "label": "row:(Detached houses), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_042 +cha_y6_047 +cha_y6_052 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_8",
+              "header": "Total",
+              "children": [
+                {
+                  "name": "cha_y6_043",
+                  "label": "row:(Total), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_039+cha_y6_040+cha_y6_041+cha_y6_042)"
+                },
+                {
+                  "name": "cha_y6_048",
+                  "label": "row:(Total), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_044+cha_y6_045+cha_y6_046+cha_y6_047)"
+                },
+                {
+                  "name": "cha_y6_053",
+                  "label": "row:(Total), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_049+cha_y6_050+cha_y6_051+cha_y6_052)"
+                },
+                {
+                  "name": "cha_y6_058",
+                  "label": "row:(Total), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_054+cha_y6_055+cha_y6_056+cha_y6_057)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Gas",
+            "Electric",
+            "Other fuels",
+            "Total"
+          ],
+          "label": "C10.2 Number of self contained properties not in scope of the EESSH",
+          "children": [
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_12",
+              "header": "Flats",
+              "children": [
+                {
+                  "name": "cha_y6_059",
+                  "label": "row:(Flats), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_064",
+                  "label": "row:(Flats), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_069",
+                  "label": "row:(Flats), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_074",
+                  "label": "row:(Flats), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_059 +cha_y6_064 +cha_y6_069 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_13",
+              "header": "Four-in-a-block",
+              "children": [
+                {
+                  "name": "cha_y6_060",
+                  "label": "row:(Four-in-a-block), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_065",
+                  "label": "row:(Four-in-a-block), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_070",
+                  "label": "row:(Four-in-a-block), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_075",
+                  "label": "row:(Four-in-a-block), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_060 +cha_y6_065 +cha_y6_070 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_14",
+              "header": "Houses (other than detached)",
+              "children": [
+                {
+                  "name": "cha_y6_061",
+                  "label": "row:(Houses (other than detached)), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_066",
+                  "label": "row:(Houses (other than detached)), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_071",
+                  "label": "row:(Houses (other than detached)), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_076",
+                  "label": "row:(Houses (other than detached)), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_061 +cha_y6_066 +cha_y6_071 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_15",
+              "header": "Detached houses",
+              "children": [
+                {
+                  "name": "cha_y6_062",
+                  "label": "row:(Detached houses), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_067",
+                  "label": "row:(Detached houses), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_072",
+                  "label": "row:(Detached houses), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0
+                },
+                {
+                  "name": "cha_y6_077",
+                  "label": "row:(Detached houses), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_062 +cha_y6_067 +cha_y6_072 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_16",
+              "header": "Total",
+              "children": [
+                {
+                  "name": "cha_y6_063",
+                  "label": "row:(Total), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_059+cha_y6_060+cha_y6_061+cha_y6_062)"
+                },
+                {
+                  "name": "cha_y6_068",
+                  "label": "row:(Total), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_064+cha_y6_065+cha_y6_066+cha_y6_067)"
+                },
+                {
+                  "name": "cha_y6_073",
+                  "label": "row:(Total), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_069+cha_y6_070+cha_y6_071+cha_y6_072)"
+                },
+                {
+                  "name": "cha_y6_078",
+                  "label": "row:(Total), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_074+cha_y6_075+cha_y6_076+cha_y6_077)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Gas",
+            "Electric",
+            "Other fuels",
+            "Total"
+          ],
+          "label": "C10.3 Number of self contained properties in scope of the EESSH",
+          "children": [
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_20",
+              "header": "Flats",
+              "children": [
+                {
+                  "name": "cha_y6_079",
+                  "label": "row:(Flats), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_039 +( - cha_y6_059 )"
+                },
+                {
+                  "name": "cha_y6_084",
+                  "label": "row:(Flats), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_044 +( - cha_y6_064 )"
+                },
+                {
+                  "name": "cha_y6_089",
+                  "label": "row:(Flats), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_049 +( - cha_y6_069 )"
+                },
+                {
+                  "name": "cha_y6_094",
+                  "label": "row:(Flats), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_079 +cha_y6_084 +cha_y6_089 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_21",
+              "header": "Four-in-a-block",
+              "children": [
+                {
+                  "name": "cha_y6_080",
+                  "label": "row:(Four-in-a-block), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_040 +( - cha_y6_060 )"
+                },
+                {
+                  "name": "cha_y6_085",
+                  "label": "row:(Four-in-a-block), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_045 +( - cha_y6_065 )"
+                },
+                {
+                  "name": "cha_y6_090",
+                  "label": "row:(Four-in-a-block), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_050 +( - cha_y6_070 )"
+                },
+                {
+                  "name": "cha_y6_095",
+                  "label": "row:(Four-in-a-block), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_080 +cha_y6_085 +cha_y6_090 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_22",
+              "header": "Houses (other than detached)",
+              "children": [
+                {
+                  "name": "cha_y6_081",
+                  "label": "row:(Houses (other than detached)), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_041 +( - cha_y6_061 )"
+                },
+                {
+                  "name": "cha_y6_086",
+                  "label": "row:(Houses (other than detached)), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_046 +( - cha_y6_066 )"
+                },
+                {
+                  "name": "cha_y6_091",
+                  "label": "row:(Houses (other than detached)), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_051 +( - cha_y6_071 )"
+                },
+                {
+                  "name": "cha_y6_096",
+                  "label": "row:(Houses (other than detached)), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_081 +cha_y6_086 +cha_y6_091 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_23",
+              "header": "Detached houses",
+              "children": [
+                {
+                  "name": "cha_y6_082",
+                  "label": "row:(Detached houses), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_042 +( - cha_y6_062 )"
+                },
+                {
+                  "name": "cha_y6_087",
+                  "label": "row:(Detached houses), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_047 +( - cha_y6_067 )"
+                },
+                {
+                  "name": "cha_y6_092",
+                  "label": "row:(Detached houses), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_052 +( - cha_y6_072 )"
+                },
+                {
+                  "name": "cha_y6_097",
+                  "label": "row:(Detached houses), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "cha_y6_082 +cha_y6_087 +cha_y6_092 "
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c10_1_row_24",
+              "header": "Total",
+              "children": [
+                {
+                  "name": "cha_y6_083",
+                  "label": "row:(Total), column:(Gas)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_079+cha_y6_080+cha_y6_081+cha_y6_082)"
+                },
+                {
+                  "name": "cha_y6_088",
+                  "label": "row:(Total), column:(Electric)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_084+cha_y6_085+cha_y6_086+cha_y6_087)"
+                },
+                {
+                  "name": "cha_y6_093",
+                  "label": "row:(Total), column:(Other fuels)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_089+cha_y6_090+cha_y6_091+cha_y6_092)"
+                },
+                {
+                  "name": "cha_y6_098",
+                  "label": "row:(Total), column:(Total)",
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "(cha_y6_094+cha_y6_095+cha_y6_096+cha_y6_097)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

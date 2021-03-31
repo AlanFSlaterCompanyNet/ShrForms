@@ -1,0 +1,704 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for PerForm Open Form Designs",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The title of the form design.",
+      "minLength": 1
+    },
+    "formTitle": {
+      "type": "string",
+      "description": "Used to define the titles of instances of forms created from this design",
+      "minLength": 1
+    },
+    "editRole": {
+      "type": "string",
+      "description": "Role for editing the form",
+      "minLength": 1
+    },
+    "readRole": {
+      "type": "string",
+      "description": "Role for editing the form",
+      "minLength": 1
+    },
+    "pdfFileName": {
+      "type": "string",
+      "description": "Name of generated PDF file",
+      "minLength": 5
+    },
+    "illegalValueMessage": {
+      "type": "string",
+      "description": "Text shown when an illegal value is calculated (e.g. division by zero) - defaults to 'N/A'"
+    },
+    "outputTable": {
+      "$ref": "#/definitions/outputTablePropertyDefinition"
+    },
+    "hierarchical": {
+      "$ref": "#/definitions/hierarchicalPropertyDefinition"
+    },
+    "thresholds": {
+      "$ref": "#/definitions/thresholdsListPropertyDefinition"
+    },
+    "pages": {
+      "$ref": "#/definitions/pages"
+    }
+  },
+  "required": [
+    "title",
+    "formTitle",
+    "pages"
+  ],
+  "definitions": {
+    "pages": {
+      "description": "List of Pages in the Form",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/pageDesign"
+      }
+    },
+    "pageDesign": {
+      "description": "An individual Page in the Form",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "title": {
+          "description": "The user friendly name of the Form",
+          "type": "string"
+        },
+        "editRole": {
+          "type": "string",
+          "description": "Role for editing this page in the form",
+          "minLength": 1
+        },
+        "fields": {
+          "$ref": "#/definitions/fields"
+        },
+        "sectionLevel": {
+          "description": "section level - start at 1 and increase",
+          "type": "integer"
+        }
+      },
+      "required": [ "name", "title", "fields" ]
+    },
+    "fields": {
+      "description": "The list of Fields in the Page",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/fieldDesign"
+      }
+    },
+    "fieldDesign": {
+      "oneOf": [
+        { "$ref": "#/definitions/textFieldDesign" },
+        { "$ref": "#/definitions/textAreaFieldDesign" },
+        { "$ref": "#/definitions/numericFieldDesign" },
+        { "$ref": "#/definitions/currencyFieldDesign" },
+        { "$ref": "#/definitions/choiceFieldDesign" },
+        { "$ref": "#/definitions/staticFieldDesign" },
+        { "$ref": "#/definitions/submitFieldDesign" },
+        { "$ref": "#/definitions/linkedPageGridFieldDesign" },
+        { "$ref": "#/definitions/closeFieldDesign" },
+        { "$ref": "#/definitions/linkedPageSelectFieldDesign" },
+        { "$ref": "#/definitions/dateFieldDesign" },
+        { "$ref": "#/definitions/booleanFieldDesign" },
+        { "$ref": "#/definitions/tableFieldDesign" },
+        { "$ref": "#/definitions/blankFieldDesign" }
+      ]
+    },
+
+    "textFieldDesign": {
+      "description": "Text field",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "text" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "readonly": { "$ref": "#/definitions/readonlyPropertyDefinition" },
+        "hidden": { "$ref": "#/definitions/hiddenPropertyDefinition" },
+        "outputColumn": { "$ref": "#/definitions/outputColumnPropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "validation": { "$ref": "#/definitions/validationPropertyDefinition" },
+        "validationMessage": { "$ref": "#/definitions/validationMessagePropertyDefinition" },
+        "validationList": { "$ref": "#/definitions/validationListPropertyDefinition" },
+        "width": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "calculation": { "$ref": "#/definitions/calculationPropertyDefinition" },
+        "required": { "$ref": "#/definitions/requiredPropertyDefinition" },
+        "activation": { "$ref": "#/definitions/activationPropertyDefinition" },
+        "activationMode": { "$ref": "#/definitions/activationModePropertyDefinition" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" },
+        "isComment": { "$ref": "#/definitions/isCommentPropertyDefinition" }
+      },
+      "required": [ "type", "name", "label" ]
+    },
+    "textAreaFieldDesign": {
+      "description": "Text Area field",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "textarea" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "readonly": { "$ref": "#/definitions/readonlyPropertyDefinition" },
+        "hidden": { "$ref": "#/definitions/hiddenPropertyDefinition" },
+        "outputColumn": { "$ref": "#/definitions/outputColumnPropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "validation": { "$ref": "#/definitions/validationPropertyDefinition" },
+        "validationMessage": { "$ref": "#/definitions/validationMessagePropertyDefinition" },
+        "validationList": { "$ref": "#/definitions/validationListPropertyDefinition" },
+        "width": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "calculation": { "$ref": "#/definitions/calculationPropertyDefinition" },
+        "required": { "$ref": "#/definitions/requiredPropertyDefinition" },
+        "activation": { "$ref": "#/definitions/activationPropertyDefinition" },
+        "activationMode": { "$ref": "#/definitions/activationModePropertyDefinition" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+      },
+      "required": [ "type", "name", "label" ]
+    },
+    "numericFieldDesign": {
+      "description": "Numeric field",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "numeric" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "readonly": { "$ref": "#/definitions/readonlyPropertyDefinition" },
+        "hidden": { "$ref": "#/definitions/hiddenPropertyDefinition" },
+        "outputColumn": { "$ref": "#/definitions/outputColumnPropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "maximumValue": { "type": "number" },
+        "minimumValue": { "type": "number" },
+        "decimalPlaces": { "$ref": "#/definitions/decimalPlacesPropertyDefinition" },
+        "percentage": { "type": "boolean" },
+        "width": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "validation": { "$ref": "#/definitions/validationPropertyDefinition" },
+        "validationMessage": { "$ref": "#/definitions/validationMessagePropertyDefinition" },
+        "validationList": { "$ref": "#/definitions/validationListPropertyDefinition" },
+        "calculation": { "$ref": "#/definitions/calculationPropertyDefinition" },
+        "required": { "$ref": "#/definitions/requiredPropertyDefinition" },
+        "activation": { "$ref": "#/definitions/activationPropertyDefinition" },
+        "activationMode": { "$ref": "#/definitions/activationModePropertyDefinition" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" },
+        "showDigitGroupSeparator": { "$ref": "#/definitions/showDigitGroupSeparatorPropertyDefinition" },
+        "validatedPositive": {"$ref": "#/definitions/validatedPositivePropertyDefinition"},
+        "validatedNegative": {"$ref": "#/definitions/validatedNegativePropertyDefinition"},
+        "thresholds": {"$ref": "#/definitions/thresholdsPropertyDefinition"}
+      },
+      "required": [ "type", "name", "label" ]
+    },
+    "currencyFieldDesign": {
+      "description": "Currency field",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "currency" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "readonly": { "$ref": "#/definitions/readonlyPropertyDefinition" },
+        "hidden": { "$ref": "#/definitions/hiddenPropertyDefinition" },
+        "outputColumn": { "$ref": "#/definitions/outputColumnPropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "maximumValue": { "type": "number" },
+        "minimumValue": { "type": "number" },
+        "decimalPlaces": { "$ref": "#/definitions/decimalPlacesPropertyDefinition" },
+        "width": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "validation": { "$ref": "#/definitions/validationPropertyDefinition" },
+        "validationMessage": { "$ref": "#/definitions/validationMessagePropertyDefinition" },
+        "validationList": { "$ref": "#/definitions/validationListPropertyDefinition" },
+        "calculation": { "$ref": "#/definitions/calculationPropertyDefinition" },
+        "required": { "$ref": "#/definitions/requiredPropertyDefinition" },
+        "activation": { "$ref": "#/definitions/activationPropertyDefinition" },
+        "activationMode": { "$ref": "#/definitions/activationModePropertyDefinition" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" },
+        "showCurrencySymbol": {
+          "description": "Show the currency symbol",
+          "type": "boolean"
+        },
+        "validatedPositive": {"$ref": "#/definitions/validatedPositivePropertyDefinition"},
+        "validatedNegative": {"$ref": "#/definitions/validatedNegativePropertyDefinition"},
+        "thresholds": {"$ref": "#/definitions/thresholdsPropertyDefinition"}
+      },
+      "required": [ "type", "name", "label" ]
+    },
+    "choiceFieldDesign": {
+      "description": "Choice field",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "choice" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "readonly": { "$ref": "#/definitions/readonlyPropertyDefinition" },
+        "hidden": { "$ref": "#/definitions/hiddenPropertyDefinition" },
+        "outputColumn": { "$ref": "#/definitions/outputColumnPropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "values": { "$ref": "#/definitions/choiceValuesPropertyDefinition" },
+        "width": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "validation": { "$ref": "#/definitions/validationPropertyDefinition" },
+        "validationMessage": { "$ref": "#/definitions/validationMessagePropertyDefinition" },
+        "validationList": { "$ref": "#/definitions/validationListPropertyDefinition" },
+        "calculation": { "$ref": "#/definitions/calculationPropertyDefinition" },
+        "required": { "$ref": "#/definitions/requiredPropertyDefinition" },
+        "multiple": {
+          "description": "Set to allow multiple values",
+          "type": "boolean"
+        },
+        "activation": { "$ref": "#/definitions/activationPropertyDefinition" },
+        "activationMode": { "$ref": "#/definitions/activationModePropertyDefinition" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "csv": { "$ref": "#/definitions/csvPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+      },
+      "required": [ "type", "name", "label" ]
+    },
+    "staticFieldDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "static" ] },
+        "style": { "enum": [ "heading", "card", "htmlcard" ] },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "width": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "title": { "type": "string" },
+        "text": { "type": "string" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "borderTop": { "type": "boolean" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+      },
+      "required": [ "type", "style" ]
+    },
+    "submitFieldDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "width": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "type": { "enum": [ "submit" ] },
+        "message": { "type": "string" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" },
+        "allowErrors": {
+          "description": "Allow form to be submitted even if there are errors",
+          "type": "boolean"
+        },
+        "commentsRequiredMessage": {
+          "description": "If comment is required, show this message",
+          "type":"string"
+        }
+      }
+    },
+    "linkedPageGridFieldDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "linkedPageGrid" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "page": { "type": "string" },
+        "createLabel": { "type": "string" },
+        "descriptionFields": { "$ref": "#/definitions/descriptionFieldPropertyDefinition" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+      }
+    },
+    "closeFieldDesign": {
+      "type": "object",
+      "properties": {
+        "type": { "enum": [ "close" ] },
+        "closeLabel ": { "type": "string" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+      }
+    },
+    "linkedPageSelectFieldDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "linkedPageSelect" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "page": { "type": "string" },
+        "descriptionFields": { "$ref": "#/definitions/descriptionFieldPropertyDefinition" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+      }
+    },
+    "dateFieldDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "date" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "readonly": { "$ref": "#/definitions/readonlyPropertyDefinition" },
+        "hidden": { "$ref": "#/definitions/hiddenPropertyDefinition" },
+        "outputColumn": { "$ref": "#/definitions/outputColumnPropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "width": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "validation": { "$ref": "#/definitions/validationPropertyDefinition" },
+        "validationMessage": { "$ref": "#/definitions/validationMessagePropertyDefinition" },
+        "validationList": { "$ref": "#/definitions/validationListPropertyDefinition" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" },
+        "required": { "$ref": "#/definitions/requiredPropertyDefinition" },
+        "monthYearOnly": {
+          "description": "Only allow month and year to be selected",
+          "type": "boolean"
+        }
+      },
+      "required": [ "type", "name", "label" ]
+    },
+    "booleanFieldDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "boolean" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "readonly": { "$ref": "#/definitions/readonlyPropertyDefinition" },
+        "hidden": { "$ref": "#/definitions/hiddenPropertyDefinition" },
+        "outputColumn": { "$ref": "#/definitions/outputColumnPropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "width": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "validation": { "$ref": "#/definitions/validationPropertyDefinition" },
+        "validationMessage": { "$ref": "#/definitions/validationMessagePropertyDefinition" },
+        "validationList": { "$ref": "#/definitions/validationListPropertyDefinition" },
+        "help": { "$ref": "#/definitions/helpPropertyDefinition" },
+        "activation": { "$ref": "#/definitions/activationPropertyDefinition" },
+        "activationMode": { "$ref": "#/definitions/activationModePropertyDefinition" },
+        "labelTrue": { "type": "string" },
+        "labelFalse": { "type": "string" },
+        "tooltipTrue": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "tooltipFalse": { "$ref": "#/definitions/tooltipPropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" },
+        "group": {
+          "type":"string"
+        },
+        "checkbox": { "type": "boolean" }
+      },
+      "required": [ "type", "name", "label" ]
+    },
+    "tableFieldDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "table" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "label": { "$ref": "#/definitions/labelPropertyDefinition" },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "headers": {
+          "description": "Column headers",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "headerWidths": {
+          "description": "Column header widths",
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "headerAlignment": {
+          "enum": [ "left", "right", "center" ]
+        },
+        "headersStyle": {
+          "description": "CSS style for header",
+          "type":"string"
+        },
+        "headers2": {
+          "description": "Secondary headers",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "headers2Style": {
+          "description": "CSS style for secondary header",
+          "type":"string"
+        },
+        "styleLastIndex": {
+          "description": "Index of last header to apply styling to",
+          "type": "integer"
+        },
+        "messageWidth": { "$ref": "#/definitions/widthPropertyDefinition" },
+        "dynamic": {
+          "description": "Can rows be dynamically addded/removed from this table?",
+          "type":"boolean"
+        },
+        "dynamicAddRowMessage": {
+          "description": "Label on button that allows rows to be added",
+          "type":"string"
+        },
+        "dynamicDeleteRowMessage": {
+          "description": "Confirmation message on button that allows rows to be deleted",
+          "type":"string"
+        },
+        "children": {
+          "description": "The list of rows in this table",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tableRowFieldDesign"
+          }
+        },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+      },
+      "required": [ "type", "name", "children", "headers" ]
+    },
+    "tableRowFieldDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "tablerow" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "highlight": {
+          "description": "Highlight this row?",
+          "type": "boolean"
+        },
+        "header": {
+          "description": "Row header",
+          "type": "string"
+        },
+        "labelWidth": { "$ref": "#/definitions/labelWidthPropertyDefinition" },
+        "children": {
+          "description": "The list of Fields in this row",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/fieldDesign"
+          }
+        },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+      },
+      "required": [ "type", "name", "children" ]
+    },
+    "blankFieldDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": [ "blank" ] },
+        "name": { "$ref": "#/definitions/namePropertyDefinition" },
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+      },
+      "required": [ "type", "name" ]
+    },
+
+    "namePropertyDefinition": {
+      "description": "Names can only be made up of lowercase letters, digits and underscore",
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "outputColumnPropertyDefinition": {
+      "description": "Output columns can only be made up of lowercase letters, digits and underscore",
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "readonlyPropertyDefinition": {
+      "description": "Is the field readonly?",
+      "type": "boolean"
+    },
+    "hiddenPropertyDefinition": {
+      "description": "Is the field hidden?",
+      "type": "boolean"
+    },
+    "outputTablePropertyDefinition": {
+      "description": "Output table name",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_]+$"
+    },
+    "hierarchicalPropertyDefinition": {
+      "description": "Is this a hierarchical form?",
+      "type": "boolean"
+    },
+    "labelPropertyDefinition": {
+      "type": "string",
+      "description": "Field label display to the user",
+      "minLength": 0
+    },
+    "validationPropertyDefinition": {
+      "type": "string"
+    },
+    "validationListPropertyDefinition": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "validation": {
+            "description": "Validation script",
+            "type": "string"
+          },
+          "message": {
+            "description": "Validation message",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "validationMessagePropertyDefinition": {
+      "description": "Message shown when validation test fails",
+      "type": "string"
+    },
+    "calculationPropertyDefinition": {
+      "type": "string"
+    },
+    "decimalPlacesPropertyDefinition": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "widthPropertyDefinition": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "labelWidthPropertyDefinition": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 8
+    },
+    "choiceValuesPropertyDefinition": {
+      "description": "List of values for a choice field",
+      "type": "array",
+      "items": {
+        "description": "A value and a label",
+        "type": "array",
+        "minItems": 2,
+        "maxLength": 2,
+        "items": { "type": "string" }
+      }
+    },
+    "requiredPropertyDefinition": {
+      "description": "Must this field contain a value?",
+      "type": "boolean"
+    },
+    "activationPropertyDefinition": {
+      "description": "script to decide whether to activate this field or not",
+      "type": "string"
+    },
+    "activationModePropertyDefinition": {
+      "enum": [ "hide", "disable" ]
+    },
+    "descriptionFieldPropertyDefinition": {
+      "description": "Array of fields extracted from linked pages to create definiton",
+      "type": "array",
+      "items": [ { "type": "string" } ]
+    },
+    "helpPropertyDefinition": {
+      "description": "HTML help text shown in modal dialog opened by icon next to field",
+      "type": "string"
+    },
+    "tooltipPropertyDefinition": {
+      "description": "HTML tooltip text shown automatically for a field",
+      "type": "string"
+    },
+    "auxPropertyDefinition": {
+      "description": "Auxiliary values associated with a field",
+      "type": "object"
+    },
+    "isCommentPropertyDefinition": {
+      "description": "Is this text field a comment?",
+      "type": "boolean"
+    },
+    "csvPropertyDefinition": {
+      "description": "Properties for loading data from CSV files",
+      "type": "object",
+      "properties": {
+        "file": {
+          "description": "the CSV file name containing the data to be loaded",
+          "type": "string"
+        },
+        "labelColumn": {
+          "description": "the column name in the CSV data for labels displayed to users",
+          "type": "string"
+        },
+        "valueColumn": {
+          "description": "the column name in the CSV data for values to be stored and reported",
+          "type": "string"
+        }
+      },
+      "required": [ "file", "labelColumn", "valueColumn" ]
+    },
+    "thresholdsListPropertyDefinition": {
+      "description": "List of thresholds to be applied",
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type":"string",
+              "description": "Name of this threshold, used to refer to it from fields"
+            },
+            "positive": {
+              "type":"boolean",
+              "description": "Does threshold fire for positive deviations?"
+            },
+            "negative": {
+              "type":"boolean",
+              "description": "Does threshold fire for negative deviations?"
+            },
+            "comparator": {
+              "type":"string",
+              "description": "Comparator field name if not checking against current field"
+            },
+            "percentage": {
+              "type": "integer",
+              "description": "The percentage threshold value"
+            },
+            "message": {
+              "type": "string",
+              "description": "The validation message to be displayed if the threshold is crossed"
+            }
+          }
+        }
+      ]
+    },
+    "showDigitGroupSeparatorPropertyDefinition": {
+      "description": "Show numeric group separator (e.g. ',' in  1,000,000)",
+      "type": "boolean"
+    },
+    "validatedPositivePropertyDefinition": {
+      "description": "Validated to always be >= 0",
+      "type": "boolean"
+    },
+    "validatedNegativePropertyDefinition": {
+      "description": "Validated to always be <= 0",
+      "type": "boolean"
+    },
+    "thresholdsPropertyDefinition": {
+      "description": "List of the names of the threshold tests for a field",
+      "type": "array",
+      "items": {"type":"string"}
+    }
+  }
+}

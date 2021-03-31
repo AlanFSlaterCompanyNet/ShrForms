@@ -1,0 +1,158 @@
+{
+  "$schema": "https://raw.githubusercontent.com/AlanFSlaterCompanyNet/PerFormOpen/master/PerFormOpen/schemas/formDesignSchema.json",
+  "title": "A Form",
+  "formTitle": "A Demo Form",
+  "outputTable": "MyFirstOutputs",
+  "readRole": "reader",
+  "editRole": "editor",
+  "pages": [
+    {
+      "name": "section1",
+      "title": "Section One",
+      "sectionLevel": 1,
+      "fields": []
+    },
+    {
+      "name": "subsection1",
+      "title": "Subsection One",
+      "sectionLevel": 2,
+      "fields": []
+    },
+    {
+      "name": "page1",
+      "title": "Page One",
+      "fields": [
+        {
+          "name": "date1",
+          "label": "Date",
+          "type": "date"
+        },
+        {
+          "name": "date2",
+          "label": "Date - month & year only",
+          "type": "date",
+          "monthYearOnly":  true
+        },
+        {
+          "name": "t1000",
+          "type": "text",
+          "label": "A text field",
+          "tooltip": "This is a tooltip that can contain explanatory text for the field - don't say 'banana'",
+          "validation": "$value != 'banana'",
+          "validationMessage": "Please don't say that",
+          "help": "We can add some help text here"
+        },
+        {
+          "name": "bool0",
+          "label": "First",
+          "type": "boolean",
+          "help": "This is a boolean"
+        },
+        {
+          "name": "bool1",
+          "label": "Second",
+          "type": "boolean",
+          "help": "This is also a boolean, but the labels for the true and false values have been changed",
+          "labelTrue": "Positive",
+          "labelFalse": "Negative"
+        },
+        {
+          "name": "bool2",
+          "label": "Checkbox",
+          "type": "boolean",
+          "checkbox": true
+        },
+        {
+          "name": "activated",
+          "label": "Activated",
+          "type": "text",
+          "activation": "!bool2",
+          "tooltip": "Required if checkbox false"
+        },
+        {
+          "name": "percentage1",
+          "label": "Percentage",
+          "type": "numeric",
+          "percentage": true,
+          "required": true
+        },
+        {
+          "name": "c1",
+          "label": "Currency",
+          "type": "currency"
+        },
+        {
+          "name": "n",
+          "label": "Numeric > 10",
+          "type": "numeric",
+          "minimumValue": 10
+        },
+        {
+          "name": "a",
+          "label": "Field A",
+          "type": "numeric",
+          "decimalPlaces": 1,
+          "validation": "$value > 5",
+          "validationMessage": "Must be greater than 5"
+        },
+        {
+          "name": "b",
+          "label": "Field B",
+          "type": "numeric",
+          "decimalPlaces": 1
+        },
+        {
+          "name": "calc1",
+          "label": "Calculated",
+          "type": "numeric",
+          "calculation": "a/b",
+          "validation": "$value > 1",
+          "validationMessage": "Should be > 1",
+          "tooltip": "=a/b",
+          "help": "A longer explanation of what the calculation is"
+        },
+        {
+          "name": "lenders",
+          "type": "choice",
+          "label": "Lenders (from CSV)",
+          "csv": {
+            "file": "lenders.csv",
+            "labelColumn": "Lender",
+            "valueColumn": "Short code"
+          },
+          "help": "A choice field where the values are read from a CSV file"
+        }
+      ]
+    },
+    {
+      "name": "section2",
+      "title": "Section Two",
+      "sectionLevel": 1,
+      "fields": []
+    },
+    {
+      "name": "page3",
+      "title": "Second page",
+      "fields": [
+        {
+          "name": "page32",
+          "type": "text",
+          "label": "Field on page 2",
+          "help": "Help text"
+        }
+      ]
+    },
+    {
+      "name": "submit",
+      "title": "Submit Page",
+      "fields": [
+        {
+          "name": "submit",
+          "type": "submit",
+          "message": "Are you sure you want to submit this test form?",
+          "width": 5
+        }
+      ]
+    }
+  ]
+}

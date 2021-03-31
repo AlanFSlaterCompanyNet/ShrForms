@@ -1,0 +1,114 @@
+{
+  "$schema": "https://raw.githubusercontent.com/AlanFSlaterCompanyNet/PerFormOpen/master/PerFormOpen/schemas/formDesignSchema.json",
+  "title": "A Form",
+  "formTitle": "A Demo Form",
+  "outputTable": "MyFirstOutputs",
+  "pages": [
+    {
+      "name": "section1",
+      "title": "Section One",
+      "sectionLevel": 1,
+      "fields": []
+    },
+    {
+      "name": "page1",
+      "title": "Page One",
+      "fields": [
+        {
+          "name": "t1000",
+          "type": "text",
+          "label": "A text field for the demo",
+          "tooltip": "This is a tooltip that can contain explanatory text for the field",
+          "validation": "$value != 'banana'",
+          "validationMessage": "Please don't say that",
+          "help": "We can add some help text here"
+        },
+        {
+          "name": "bool0",
+          "label": "First",
+          "type": "boolean",
+          "help": "This is a boolean"
+        },
+        {
+          "name": "bool1",
+          "label": "Second",
+          "type": "boolean",
+          "help": "This is also a boolean, but the labels for the true and false values have been changed",
+          "labelTrue": "Positive",
+          "labelFalse": "Negative"
+        },
+        {
+          "name": "percentage1",
+          "label": "Percentage",
+          "type": "numeric",
+          "percentage": true
+        },
+        {
+          "name": "n",
+          "label": "Numeric > 10",
+          "type": "numeric",
+          "minimumValue": 10
+        },
+        {
+          "name": "n2",
+          "label": "No decimal places",
+          "type": "numeric",
+          "decimalPlaces": 0
+        },
+        {
+          "name": "n3",
+          "label": "No decimal places",
+          "type": "numeric",
+          "decimalPlaces": 0
+        },        
+        {
+          "name": "calculation",
+          "label": "Divided by",
+          "type": "numeric",
+          "calculation": "n / n2"
+        },
+        {
+          "name": "lenders",
+          "type": "choice",
+          "label": "Lenders (from CSV)",
+          "csv": {
+            "file": "lenders.csv",
+            "labelColumn": "Lender",
+            "valueColumn": "Short code"
+          },
+          "help": "A choice field where the values are read from a CSV file"
+        }
+      ]
+    },
+    {
+      "name": "section2",
+      "title": "Section Two",
+      "sectionLevel": 1,
+      "fields": []
+    },
+    {
+      "name": "page3",
+      "title": "Second page",
+      "fields": [
+        {
+          "name": "page32",
+          "type": "text",
+          "label": "Field on page 2",
+          "help": "Help text"
+        }
+      ]
+    },
+    {
+      "name": "submit",
+      "title": "Submit Page",
+      "fields": [
+        {
+          "name": "submit",
+          "type": "submit",
+          "message": "Are you sure you want to submit this test form?",
+          "width": 5
+        }
+      ]
+    }
+  ]
+}

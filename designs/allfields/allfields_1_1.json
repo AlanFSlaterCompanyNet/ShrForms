@@ -1,0 +1,129 @@
+﻿{
+  "$schema": "formDesignSchema.json",
+  "title": "All field types",
+  "formTitle": "A form with all field types....",
+  "outputTable": "AllFields",
+  "pages": [
+    {
+      "name": "checkboxes",
+      "title": "Boolean fields - Checkboxes",
+      "fields": [
+        {
+          "name": "b0",
+          "label": "Checkbox",
+          "type": "boolean",
+          "labelWidth": 2,
+          "checkbox": true
+        },
+        {
+          "name": "b1",
+          "label": "Checkbox - calculated: true",
+          "type": "boolean",
+          "labelWidth": 2,
+          "checkbox": true,
+          "calculation": "true"
+        },
+        {
+          "name": "b2",
+          "label": "Checkbox - calculated: false",
+          "type": "boolean",
+          "labelWidth": 2,
+          "checkbox": true,
+          "calculation": "false"
+        },
+        {
+          "name": "b3",
+          "label": "Checkbox - inactive",
+          "type": "boolean",
+          "labelWidth": 2,
+          "checkbox": true,
+          "activation": "false"
+        },
+        {
+          "name": "b4",
+          "label": "Checkbox - validation",
+          "type": "boolean",
+          "labelWidth": 2,
+          "checkbox": true,
+          "validation": "$value",
+          "help": "Validation fails if value is true",
+          "validationMessage": "Validation message"
+        },
+        {
+          "name": "b5",
+          "label": "Checkbox - activates",
+          "type": "boolean",
+          "labelWidth": 2,
+          "checkbox": true
+        },
+        {
+          "name": "b6",
+          "label": "Checkbox - activated",
+          "type": "boolean",
+          "labelWidth": 2,
+          "checkbox": true,
+          "activation":  "b5"
+        }
+      ]
+    },
+    {
+      "name": "radioButtons",
+      "title": "Boolean fields - radio buttons",
+      "fields": [
+        {
+          "name": "b105",
+          "label": "Radio buttons",
+          "type": "boolean",
+          "labelWidth": 2
+        },
+        {
+          "name": "b106",
+          "label": "Radio buttons - calculated: true",
+          "type": "boolean",
+          "labelWidth": 2,
+          "calculation": "true"
+        },
+        {
+          "name": "b107",
+          "label": "Radio buttons - calculated: false",
+          "type": "boolean",
+          "labelWidth": 2,
+          "calculation": "false"
+        },
+        {
+          "name": "b108",
+          "label": "Radio buttons - inactive",
+          "type": "boolean",
+          "labelWidth": 2,
+          "activation": "false"
+        },
+        {
+          "name": "b109",
+          "label": "Radio buttons - activates",
+          "type": "boolean",
+          "labelWidth": 2
+        },
+        {
+          "name": "b110",
+          "label": "Radio buttons - activated",
+          "type": "boolean",
+          "labelWidth": 2,
+          "activation": "b109"
+        }
+      ]
+    },
+    {
+      "name": "submit",
+      "title": "Submit Form",
+      "fields": [
+        {
+          "name": "a0",
+          "labelWidth": 3,
+          "label": "",
+          "type": "submit",
+          "allowErrors": true
+        }
+      ]
+    }
+  ]
+}

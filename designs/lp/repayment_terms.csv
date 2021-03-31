@@ -1,0 +1,14 @@
+value,label
+1,
+2,Fully Amortising
+3,Payment start date deferred then fully amortising
+4,Interest only - Bullet repayment at end of term from cashflow
+5,Interest only - Bullet repayment at end of term from refinancing
+6,Repayable on demand
+7,Converted to loan
+8,Subject to annual renewal
+9,Interest only then capital and interest
+10,Interest only until fully drawn
+11,Interest only followed by structured capital repayments
+12,Payment start date deferred-bullet repayment of interest and capital at maturity
+13,Interest & capital then bullet repayment from cashflow or refinancing

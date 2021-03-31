@@ -1,0 +1,14 @@
+value,label,shortCode
+1,,
+2,Bond / Capital Market product,BNDCAP
+3,Bridging Finance,BDGFIN
+4,Development Overdraft,DEVDFT
+5,Fixed Interest Free,FIXIF
+6,Fixed Rate Loan,FIXED
+7,Fixed with embedded Interest Rate Swaps,FWEIRS
+8,Fixed without embedded Interest Rate Swaps,FNEIRS
+9,Revolving Loan / Credit Facility,REVLNF
+10,Variable Rate Loan,VAR
+11,Variable with embedded Interest Rate Swaps,VWES
+12,Variable without embedded Interest Rate Swaps,VNES
+13,Working Capital Overdraft (if > £1m),WCPDFT

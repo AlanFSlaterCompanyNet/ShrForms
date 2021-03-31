@@ -1,0 +1,153 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/AlanFSlaterCompanyNet/PerFormOpen/master/PerFormOpen/schemas/formDesignSchema.json",
+  "title": "A Hierarchical Form",
+  "formTitle": "A Hierarchical Form",
+  "hierarchical":  true,
+  "pages": [
+    {
+      "name": "submission",
+      "title": "Submission",
+      "outputTable": "Submission",
+      "fields": [
+        {
+          "name": "facilities",
+          "label": "Facilities",
+          "type": "linkedPageGrid",
+          "page": "facility",
+          "createLabel": "Create Facility",
+          "descriptionFields": [ "facility_lender", "facility_name" ]
+        },
+        {
+          "name": "isdas",
+          "label": "ISDAs",
+          "type": "linkedPageGrid",
+          "page": "isda",
+          "createLabel": "Create ISDA",
+          "descriptionFields": [ "text1" ]
+        },
+        {
+          "name": "igfs",
+          "label": "IGFs",
+          "type": "linkedPageGrid",
+          "page": "igf",
+          "createLabel": "Create IGF",
+          "descriptionFields": [ "igf_type", "igf_relationship" ]
+        },
+        {
+          "name": "submit",
+          "type": "submit",
+          "message": "Are you sure you want to submit this form?",
+          "width": 5
+        }
+      ]
+    },
+    {
+      "name": "facility",
+      "title": "Facility",
+      "outputTable": "Facilities",
+      "fields": [
+        {
+          "name": "facility_name",
+          "label": "Text",
+          "type": "text"
+        },
+        {
+          "name": "facility_lender",
+          "label": "Lender",
+          "type": "choice",
+          "values": [
+            [ "AHF", "Affordable Housing Finance" ],
+            [ "ASB", "Airdrie Savings Bank" ],
+            [ "AGI", "Allianz Global Investments" ],
+            [ "AIB", "Allied Irish Bank" ]
+          ]
+        },
+        {
+          "name": "loans",
+          "label": "Loans",
+          "type": "linkedPageGrid",
+          "page": "loan",
+          "createLabel": "Create New Loan",
+          "descriptionFields": [ "loan_amount" ]
+        },
+        {
+          "name": "facility_close",
+          "label": "Close",
+          "type": "close"
+        }
+      ]
+    },
+    {
+      "name": "isda",
+      "title": "ISDA",
+      "outputTable": "ISDAs",
+      "fields": [
+        {
+          "name": "isda_name",
+          "label": "Text",
+          "type": "text"
+        },
+        {
+          "name": "isda_close",
+          "label": "Close",
+          "type": "close"
+        }
+      ]
+    },
+    {
+      "name": "igf",
+      "title": "IGF",
+      "outputTable": "IGFs",
+      "fields": [
+        {
+          "name": "igf_type",
+          "label": "Type",
+          "type": "choice",
+          "values": [
+            [ "lend", "Lend" ],
+            [ "borrow", "Borrow" ]
+          ]
+        },
+        {
+          "name": "igf_relationship",
+          "label": "Relationship to RSL",
+          "type": "choice",
+          "values": [
+            [ "parent", "Parent" ],
+            [ "subsidiary", "Subsidiary" ],
+            [ "other", "Other group company" ]
+          ]
+        },
+        {
+          "name": "igf_loan",
+          "label": "Loan",
+          "type": "linkedPageSelect",
+          "page": "loan",
+          "descriptionFields": [ "loan_amount" ]
+        },
+        {
+          "name": "igf_close",
+          "label": "Close",
+          "type": "close"
+        }
+      ]
+    },
+    {
+      "name": "loan",
+      "title": "Loan",
+      "outputTable": "Loans",
+      "fields": [
+        {
+          "name": "loan_amount",
+          "label": "Amount",
+          "type": "currency"
+        },
+        {
+          "name": "loan_close",
+          "label": "Close",
+          "type": "close"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1361 @@
+{
+  "$schema": "./formDesignSchema.json",
+  "title": "Charter Return",
+  "formTitle": "Charter Return",
+  "outputTable": "Charter",
+  "readRole": "Charter Reader",
+  "editRole": "Charter Full Return User",
+  "pdfFileName": "CharterReturn.pdf",
+  "pages": [
+    {
+      "name": "section66",
+      "title": "Introduction",
+      "fields": [],
+      "sectionLevel": 1
+    },
+    {
+      "name": "section67",
+      "title": "Welcome to the portal for the Annual Return on the Charter (ARC)",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "name": "f1",
+      "title": "Introduction",
+      "fields": [
+        {
+          "name": "cha_y6_846",
+          "labelWidth": 5,
+          "label": "F1.1 Form type",
+          "required": true,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "rsl"
+          },
+          "outputColumn": "cha_form_type",
+          "hidden": true
+        },
+        {
+          "name": "cha_y6_847",
+          "labelWidth": 5,
+          "label": "F1.2 Financial year",
+          "required": true,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "2019/2020"
+          },
+          "outputColumn": "cha_fin_year",
+          "readonly": true
+        },
+        {
+          "name": "cha_y6_848",
+          "labelWidth": 5,
+          "label": "F1.3 Landlord name",
+          "required": true,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Abbeyfield Scotland Ltd"
+          },
+          "outputColumn": "cha_landlord_name",
+          "readonly": true
+        },
+        {
+          "name": "cha_y6_849",
+          "labelWidth": 5,
+          "label": "F1.4 RSL Registration Number",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 10000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "20"
+          },
+          "outputColumn": "cha_rsl_reg_no",
+          "readonly": true
+        },
+        {
+          "name": "cha_y6_858",
+          "labelWidth": 5,
+          "label": "F1.5 Social Landlord ID",
+          "required": false,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "ED6CA976-CFA9-E311-93F1-005056B555E6"
+          },
+          "outputColumn": "cha_landlord_id",
+          "hidden": true
+        },
+        {
+          "name": "cha_y6_859",
+          "labelWidth": 5,
+          "label": "F1.6 Constitution",
+          "required": false,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "I&P - Charitable - Abbeyfield"
+          },
+          "outputColumn": "cha_constitution",
+          "hidden": true
+        },
+        {
+          "name": "cha_y6_860",
+          "labelWidth": 5,
+          "label": "F1.7 Clients",
+          "required": false,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Supported"
+          },
+          "outputColumn": "cha_clients",
+          "hidden": true
+        },
+        {
+          "name": "cha_y6_861",
+          "labelWidth": 5,
+          "label": "F1.8 Landlord type",
+          "required": false,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Small"
+          },
+          "outputColumn": "cha_landlord_type",
+          "hidden": true
+        },
+        {
+          "name": "cha_y6_862",
+          "labelWidth": 5,
+          "label": "F1.9 Settlement",
+          "required": false,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Mixed"
+          },
+          "outputColumn": "cha_settlement",
+          "hidden": true
+        },
+        {
+          "name": "cha_y6_863",
+          "labelWidth": 5,
+          "label": "F1.10 National operator",
+          "required": true,
+          "width": 2,
+          "type": "boolean",
+          "aux": {
+            "sampleValue": "Yes"
+          },
+          "outputColumn": "cha_national_operator",
+          "hidden": true
+        },
+        {
+          "name": "cha_y6_864",
+          "labelWidth": 0,
+          "label": "F1.11 Welcome",
+          "required": false,
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "From April 2013 all social landlords must collect key information to show us how they are achieving the outcomes and standards in the Charter. By the end of August each year we will publish each landlord’s ARC on our website so that tenants and other service users can see what progress the landlord is making. The ARC will also inform our regulatory assessments.\n\nYou must complete your ARC by 31 May each year. Please make sure that the senior officer in your organisation signs the ARC off.\n\nWe will publish a report for each landlord using key information from its ARC.  We will do this by the end of August each year and will make the report available for tenants and other service users through our website. You must also make the report available to all of your tenants. It is up to you how you do this – it could be through a newsletter or an article on your website for instance – but all of your tenants should be able to access it."
+          },
+          "title": "Welcome",
+          "text": "<p>From April 2013 all social landlords must collect key information to show us how they are achieving the outcomes and standards in the Charter. By the end of August each year we will publish each landlord’s ARC on our website so that tenants and other service users can see what progress the landlord is making. The ARC will also inform our regulatory assessments.</p>\n<p>You must complete your ARC by 31 May each year. Please make sure that the senior officer in your organisation signs the ARC off.</p>\n<p>We will publish a report for each landlord using key information from its ARC.  We will do this by the end of August each year and will make the report available for tenants and other service users through our website. You must also make the report available to all of your tenants. It is up to you how you do this – it could be through a newsletter or an article on your website for instance – but all of your tenants should be able to access it.</p>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "cha_y6_865",
+          "labelWidth": 0,
+          "label": "F1.12 About the online ARC",
+          "required": false,
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "The online ARC has ten sections:\n \n* Introduction (this section)\n* Landlord contextual information\n* Overall satisfaction\n* The customer/landlord relationship\n* Housing quality and maintenance\n* Neighbourhood and community\n* Access to housing and support\n* Getting good value from rents and service charges\n* Other customers\n* Validation summary\n\nThe Validation Summary flags up any indicators where you need to take further action – for example, because some information appears to be missing or figures do not add up. But please remember that, although the Validation Summary helps you to submit your ARC data, it does not mean that we have ratified your information or approved the processes you use to calculate your performance. So it is important that you have appropriate internal audit controls and quality assurance systems in place to ensure that the information in your ARC is accurate and robust and reflects your performance against the Charter standards and outcomes."
+          },
+          "title": "About the online ARC",
+          "text": "<p>The online ARC has ten sections:</p>\n<ul>\n<li>Introduction (this section)</li>\n<li>Landlord contextual information</li>\n<li>Overall satisfaction</li>\n<li>The customer/landlord relationship</li>\n<li>Housing quality and maintenance</li>\n<li>Neighbourhood and community</li>\n<li>Access to housing and support</li>\n<li>Getting good value from rents and service charges</li>\n<li>Other customers</li>\n<li>Validation summary</li>\n</ul>\n<p>The Validation Summary flags up any indicators where you need to take further action – for example, because some information appears to be missing or figures do not add up. But please remember that, although the Validation Summary helps you to submit your ARC data, it does not mean that we have ratified your information or approved the processes you use to calculate your performance. So it is important that you have appropriate internal audit controls and quality assurance systems in place to ensure that the information in your ARC is accurate and robust and reflects your performance against the Charter standards and outcomes.</p>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "cha_y6_866",
+          "labelWidth": 0,
+          "label": "F1.13 Validation Summary",
+          "required": false,
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "We appreciate that different landlords operate in different ways. Some may appoint only one person to complete their ARC, while others may prefer to have several people completing different parts of it. We have therefore designed the system so that several people can access the system. No matter how you complete your ARC, please remember that your senior officer must sign it off.\n\nThere is technical help on screen as well as links to the Charter Technical Guidance to help you. If these don’t resolve any problems you encounter, you can contact us by email at [shr@shr.gov.scot](mailto:shr@shr.gov.scot)"
+          },
+          "title": "Validation Summary",
+          "text": "<p>We appreciate that different landlords operate in different ways. Some may appoint only one person to complete their ARC, while others may prefer to have several people completing different parts of it. We have therefore designed the system so that several people can access the system. No matter how you complete your ARC, please remember that your senior officer must sign it off.</p>\n<p>There is technical help on screen as well as links to the Charter Technical Guidance to help you. If these don’t resolve any problems you encounter, you can contact us by email at <a href=\"mailto:shr@shr.gov.scot\">shr@shr.gov.scot</a></p>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "cha_y6_867",
+          "labelWidth": 0,
+          "label": "F1.14 Buttons",
+          "required": false,
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "Button|Action\n--------|--------\nPrevious|This button will take you to the previous available page and save all content on the current page \nNext|This button will take you to the next available page and save all content on the current page\nSave|This button will save all content within the form and allow further editing\nPDF|This button will download a pdf document of the charter return form\nClose|This button will take you to a Close screen"
+          },
+          "title": "Buttons",
+          "text": "<table>\n<thead>\n<tr>\n<th>Button</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Previous</td>\n<td>This button will take you to the previous available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Next</td>\n<td>This button will take you to the next available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Save</td>\n<td>This button will save all content within the form and allow further editing</td>\n</tr>\n<tr>\n<td>PDF</td>\n<td>This button will download a pdf document of the charter return form</td>\n</tr>\n<tr>\n<td>Close</td>\n<td>This button will take you to a Close screen</td>\n</tr>\n</tbody>\n</table>\n",
+          "style": "htmlcard"
+        }
+      ]
+    },
+    {
+      "name": "section68",
+      "title": "Neighbourhood & community",
+      "fields": [],
+      "sectionLevel": 1
+    },
+    {
+      "name": "section69",
+      "title": "Estate management, anti-social behaviour, neighbour nuisance and tenancy disputes",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Complaints are expressions of dissatisfaction by one, or more, members of the public about the landlord’s action or lack of action, or about the standard of service provided by or on behalf of the landlord.\n\nPlease state the number of:",
+          "name": "static_3_4_177",
+          "borderTop": false
+        },
+        {
+          "type": "table",
+          "headers": [
+            "1st stage",
+            "2nd stage"
+          ],
+          "name": "c3_4_1",
+          "label": "Complaints received in the reporting year",
+          "children": [
+            {
+              "type": "tablerow",
+              "name": "table_c3_4_1_row_3",
+              "header": "Complaints received in the reporting year",
+              "children": [
+                {
+                  "name": "cha_y6_001",
+                  "labelWidth": 5,
+                  "label": "3.1.1 Number of 1st stage complaints received in the reporting year",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "aux": {
+                    "sampleValue": "136"
+                  },
+                  "outputColumn": "cha_ind3_4_stage1_curr_comp"
+                },
+                {
+                  "name": "cha_y6_004",
+                  "labelWidth": 5,
+                  "label": "3.1.4 Number of 2nd stage complaints received in the reporting year",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "aux": {
+                    "sampleValue": "32"
+                  },
+                  "outputColumn": "cha_ind3_4_stage2_curr_comp"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c3_4_1_row_4",
+              "header": "Complaints carried forward from previous reporting year",
+              "children": [
+                {
+                  "name": "cha_y6_002",
+                  "labelWidth": 5,
+                  "label": " 3.1.2 Number of 1st stage complaints carried forward from previous reporting year",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "aux": {
+                    "sampleValue": "5"
+                  },
+                  "outputColumn": "cha_ind3_4_stage1_prev_comp"
+                },
+                {
+                  "name": "cha_y6_005",
+                  "labelWidth": 5,
+                  "label": " 3.1.5 Number of 2nd stage complaints carried forward from previous reporting year",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "aux": {
+                    "sampleValue": "2"
+                  },
+                  "outputColumn": "cha_ind3_4_stage2_prev_comp"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c3_4_1_row_5",
+              "header": "All complaints received and carried forward",
+              "children": [
+                {
+                  "name": "cha_y6_003",
+                  "labelWidth": 5,
+                  "label": "3.1.3 All 1st stage complaints received and carried forward",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "( cha_y6_001 + cha_y6_002 )",
+                  "aux": {
+                    "sampleValue": "141"
+                  },
+                  "outputColumn": "cha_ind3_4_stage1_comp_gt",
+                  "tooltip": "Total = 3.1.1 + 3.1.2"
+                },
+                {
+                  "name": "cha_y6_006",
+                  "labelWidth": 5,
+                  "label": "3.1.6 All 2nd stage All complaints received and carried forward",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "calculation": "( cha_y6_004 + cha_y6_005 )",
+                  "aux": {
+                    "sampleValue": "34"
+                  },
+                  "outputColumn": "cha_ind3_4_stage2_comp_gt",
+                  "tooltip": "Total = 3.1.4 + 3.1.5"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c3_4_1_row_6",
+              "header": "Number of complaints responded to in full by the landlord in the reporting year",
+              "children": [
+                {
+                  "name": "cha_y6_007",
+                  "labelWidth": 5,
+                  "label": "3.1.7 Number of 1st stage complaints responded to in full by the landlord in the reporting year",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "validation": "( $value  <=  cha_y6_003 )",
+                  "validationMessage": "1st stage complaints responded to in full (3.1.7) must be <= All 1st stage complaints received and carried forward (3.1.3)",
+                  "aux": {
+                    "sampleValue": "134"
+                  },
+                  "outputColumn": "cha_ind3_4_stage1_resp_num"
+                },
+                {
+                  "name": "cha_y6_008",
+                  "labelWidth": 5,
+                  "label": "3.1.8 Number of 2nd stage complaints responded to in full by the landlord in the reporting year",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "validation": "( $value  <=  cha_y6_006 )",
+                  "validationMessage": "2nd stage complaints responded to in full (3.1.8) must be <= All 2nd stage complaints received and carried forward (3.1.6)",
+                  "aux": {
+                    "sampleValue": "32"
+                  },
+                  "outputColumn": "cha_ind3_4_stage2_resp_num"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c3_4_1_row_7",
+              "header": "Time taken in working days to provide a full response",
+              "children": [
+                {
+                  "name": "cha_y6_009",
+                  "labelWidth": 5,
+                  "label": "4.1.1 Time taken in working days to provide a full response for all stage 1 complaints",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "aux": {
+                    "sampleValue": "45"
+                  },
+                  "outputColumn": "cha_ind3_4_stage1_resp_days"
+                },
+                {
+                  "name": "cha_y6_010",
+                  "labelWidth": 5,
+                  "label": "4.1.2 Time taken in working days to provide a full response for all stage 2 complaints",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 100000000.0,
+                  "decimalPlaces": 0,
+                  "aux": {
+                    "sampleValue": "105"
+                  },
+                  "outputColumn": "cha_ind3_4_stage2_resp_days"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "1st stage",
+            "2nd stage"
+          ],
+          "name": "c3_4_2",
+          "label": "Indicators 3 & 4",
+          "children": [
+            {
+              "type": "tablerow",
+              "name": "table_c3_4_2_row_11",
+              "header": "Percentage of all complaints responded to in full",
+              "children": [
+                {
+                  "name": "indicator_3_4",
+                  "labelWidth": 5,
+                  "label": "The percentage of all complaints responded to in full at Stage 1  (Indicators 3 & 4)",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000,
+                  "decimalPlaces": 2,
+                  "percentage": true,
+                  "calculation": "(( cha_y6_007  /  cha_y6_003 ) * 100)",
+                  "aux": {
+                    "sampleValue": "95.0354609929078"
+                  },
+                  "outputColumn": "cha_ind3_4_stage1_pct"
+                },
+                {
+                  "name": "indicator_3_4_2",
+                  "labelWidth": 5,
+                  "label": "The percentage of all complaints responded to in full at Stage 2 (Indicators 3 & 4)",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000,
+                  "decimalPlaces": 2,
+                  "percentage": true,
+                  "calculation": "(( cha_y6_008  /  cha_y6_006 ) * 100)",
+                  "aux": {
+                    "sampleValue": "94.1176470588235"
+                  },
+                  "outputColumn": "cha_ind3_4_stage2_pct"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_c3_4_2_row_12",
+              "header": "Average time in working days for a full response",
+              "children": [
+                {
+                  "name": "indicator_3_4_3",
+                  "labelWidth": 5,
+                  "label": "The average time in working days for a full response at Stage 1 (Indicators 3 & 4)",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000,
+                  "decimalPlaces": 2,
+                  "calculation": "( cha_y6_009  /  cha_y6_007 )",
+                  "aux": {
+                    "sampleValue": "0.335820895522388"
+                  },
+                  "outputColumn": "cha_ind3_4_stage1_avg"
+                },
+                {
+                  "name": "indicator_3_4_4",
+                  "labelWidth": 5,
+                  "label": "The average time in working days for a full response at Stage 2 (Indicators 3 & 4)",
+                  "required": true,
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000,
+                  "decimalPlaces": 2,
+                  "calculation": "( cha_y6_010  /  cha_y6_008 )",
+                  "aux": {
+                    "sampleValue": "3.28125"
+                  },
+                  "outputColumn": "cha_ind3_4_stage2_avg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "3_4",
+      "title": "Percentage of all complaints responded to in full at Stage 1 and percentage of all complaints responded to in full at Stage 2. (Indicators 3 & 4)"
+    },
+    {
+      "name": "section70",
+      "title": "Comments",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "name": "comment_nc",
+      "title": "Comments (Neighbourhood & community)",
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Neighbourhood & community'' section.",
+          "name": "static_comment_nc_178",
+          "borderTop": false
+        },
+        {
+          "name": "comment_nc",
+          "labelWidth": 2,
+          "label": "Comments",
+          "required": false,
+          "width": 6,
+          "type": "textarea",
+          "aux": {
+            "sampleValue": "Comment for Neighbourhood & community"
+          },
+          "outputColumn": "cha_nc_comm"
+        }
+      ]
+    },
+    {
+      "name": "section71",
+      "title": "Access to housing and support",
+      "fields": [],
+      "sectionLevel": 1
+    },
+    {
+      "name": "section72",
+      "title": "Housing options and access to social housing",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "name": "24",
+      "title": "Homelessness (LAs only) – the percentage of homeless households referred to RSLs under section 5 and through other referral routes (Indicator 24).",
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Please state:",
+          "name": "static_24_179",
+          "borderTop": false
+        },
+        {
+          "name": "cha_y6_240",
+          "labelWidth": 5,
+          "label": "24.1 The total number of individual homeless households referred to RSLs under section 5",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "565"
+          },
+          "outputColumn": "cha_ind24_sec5_num"
+        },
+        {
+          "name": "cha_y6_241",
+          "labelWidth": 5,
+          "label": "24.2 The total number of individual homeless households referred to RSLs under other referral routes",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "185"
+          },
+          "outputColumn": "cha_ind24_other_num"
+        },
+        {
+          "name": "cha_y6_242",
+          "labelWidth": 5,
+          "label": "24.3 The total number of individual homeless households referred to RSLs under section 5 and other referral routes",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "calculation": "(( cha_y6_240 + cha_y6_241 ))",
+          "aux": {
+            "sampleValue": "750"
+          },
+          "outputColumn": "cha_ind24_referr_gt",
+          "help": "Total = 24.1 + 24.2"
+        },
+        {
+          "name": "cha_y6_243",
+          "labelWidth": 5,
+          "label": "24.4 The total number of homeless households to whom the local authority has a statutory duty to secure permanent accommodation",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "793"
+          },
+          "outputColumn": "cha_ind24_perm_accom_num"
+        },
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Indicator",
+          "name": "static_24_180",
+          "borderTop": true
+        },
+        {
+          "name": "indicator_24",
+          "labelWidth": 5,
+          "label": "Homelessness (LAs only) – the percentage of homeless households referred to RSLs under Section 5 and through other referral routes (Indicator 24)",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000,
+          "decimalPlaces": 2,
+          "percentage": true,
+          "calculation": "((( cha_y6_240  +  cha_y6_241 ) /  cha_y6_243 ) * 100)",
+          "aux": {
+            "sampleValue": "94.577553593947"
+          },
+          "outputColumn": "cha_ind24_pct"
+        }
+      ]
+    },
+    {
+      "name": "section73",
+      "title": "Getting good value from rents and service charges",
+      "fields": [],
+      "sectionLevel": 1
+    },
+    {
+      "name": "section74",
+      "title": "Rents and service charges",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "name": "28",
+      "title": "Average annual management fee per factored property (Indicator 28)",
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "A factored property is where a landlord is responsible for the delivery of a management service to the owner of the property.\n\nPlease state:",
+          "name": "static_28_181",
+          "borderTop": false
+        },
+        {
+          "name": "cha_y1_279",
+          "labelWidth": 5,
+          "label": "28.1 The number of residential properties factored",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "582"
+          },
+          "outputColumn": "cha_ind28_prop_fact_num",
+          "tooltip": "Please note: If 28.1 is changed to 0 then all data will be erased from Indicator 29"
+        },
+        {
+          "name": "cha_y1_280",
+          "labelWidth": 5,
+          "label": "28.2 The total value of management fees invoiced to factored owners in the reporting year",
+          "required": true,
+          "width": 2,
+          "type": "currency",
+          "minimumValue": 0,
+          "maximumValue": 10000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "28.2 is required if 28.1 > 0",
+          "activation": "( cha_y1_279  > 0)",
+          "aux": {
+            "sampleValue": "36084"
+          },
+          "outputColumn": "cha_ind28_man_fees_amt",
+          "help": "Requires 28.1 > 0 to activate"
+        },
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Indicator",
+          "name": "static_28_182",
+          "borderTop": true
+        },
+        {
+          "name": "indicator_28",
+          "labelWidth": 5,
+          "label": "Average annual management fee per factored property (Indicator 28)",
+          "required": true,
+          "width": 2,
+          "type": "currency",
+          "minimumValue": 0,
+          "maximumValue": 10000000.0,
+          "decimalPlaces": 2,
+          "calculation": "( cha_y1_280  /  cha_y1_279 )",
+          "aux": {
+            "sampleValue": "62"
+          },
+          "outputColumn": "cha_ind28_avg"
+        }
+      ]
+    },
+    {
+      "name": "section75",
+      "title": "Value for money",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "name": "29",
+      "title": "Percentage of factored owners satisfied with the factoring service they receive (Indicator 29)",
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "In relation to tenant satisfaction with the factoring services provided, please state:",
+          "name": "static_29_183",
+          "borderTop": false
+        },
+        {
+          "name": "cha_y1_281",
+          "labelWidth": 5,
+          "label": "29.1 How many factored owners answered the question \"Taking everything into account, how satisfied or dissatisfied are you with the factoring services provided by your landlord?\"",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "29.1 is required if 28.1 > 0",
+          "activation": "( cha_y1_279  > 0)",
+          "aux": {
+            "sampleValue": "58"
+          },
+          "outputColumn": "cha_ind29_survey_tl",
+          "help": "Requires 28.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_282",
+          "labelWidth": 5,
+          "label": "29.2.1 Very satisfied",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "29.2.1 is required if 28.1 > 0",
+          "activation": "( cha_y1_279  > 0)",
+          "aux": {
+            "sampleValue": "4"
+          },
+          "outputColumn": "cha_ind29_survey_vsat",
+          "help": "Requires 28.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_283",
+          "labelWidth": 5,
+          "label": "29.2.2 Fairly satisfied\n",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "29.2.2 is required if 28.1 > 0",
+          "activation": "( cha_y1_279  > 0)",
+          "aux": {
+            "sampleValue": "29"
+          },
+          "outputColumn": "cha_ind29_survey_fsat",
+          "help": "Requires 28.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_284",
+          "labelWidth": 5,
+          "label": "29.2.3 Neither satisfied nor dissatisfied",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "29.2.3 is required if 28.1 > 0",
+          "activation": "( cha_y1_279  > 0)",
+          "aux": {
+            "sampleValue": "14"
+          },
+          "outputColumn": "cha_ind29_survey_mid",
+          "help": "Requires 28.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_285",
+          "labelWidth": 5,
+          "label": "29.2.4 Fairly dissatisfied",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "29.2.4 is required if 28.1 > 0",
+          "activation": "( cha_y1_279  > 0)",
+          "aux": {
+            "sampleValue": "6"
+          },
+          "outputColumn": "cha_ind29_survey_fdis",
+          "help": "Requires 28.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_286",
+          "labelWidth": 5,
+          "label": "29.2.5 Very dissatisfied",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "29.2.5 is required if 28.1 > 0",
+          "activation": "( cha_y1_279  > 0)",
+          "aux": {
+            "sampleValue": "5"
+          },
+          "outputColumn": "cha_ind29_survey_vdis",
+          "help": "Requires 28.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y6_812",
+          "labelWidth": 5,
+          "label": "29.3 Total",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "calculation": "(( cha_y1_282 + cha_y1_283 + cha_y1_284 + cha_y1_285 + cha_y1_286 ))",
+          "validation": "( $value  <=  cha_y1_281 )",
+          "validationMessage": "Total of all responses (29.2) must be <= 29.1",
+          "activation": "( cha_y1_279  > 0)",
+          "aux": {
+            "sampleValue": "58"
+          },
+          "outputColumn": "cha_ind29_survey_gt",
+          "help": "Total = 29.2.1 + 29.2.2 + 29.2.3 + 29.2.4 + 29.2.5"
+        },
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Indicator",
+          "name": "static_29_184",
+          "borderTop": true
+        },
+        {
+          "name": "indicator_29",
+          "labelWidth": 5,
+          "label": "Percentage of factored owners satisfied with the factoring service they receive (Indicator 29)",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000,
+          "decimalPlaces": 2,
+          "percentage": true,
+          "calculation": "((( cha_y1_282  +  cha_y1_283 ) /  cha_y1_281 ) * 100)",
+          "activation": "( cha_y1_279  > 0)",
+          "aux": {
+            "sampleValue": "56.8965517241379"
+          },
+          "outputColumn": "cha_ind29_pct"
+        }
+      ]
+    },
+    {
+      "name": "section76",
+      "title": "Comments",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "name": "comment_gv",
+      "title": "Comments (Getting good value from rents and service charges)",
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Getting good value from rents and service charges'' section.",
+          "name": "static_comment_gv_185",
+          "borderTop": false
+        },
+        {
+          "name": "comment_gv",
+          "labelWidth": 2,
+          "label": "Comments",
+          "required": false,
+          "width": 6,
+          "type": "textarea",
+          "aux": {
+            "sampleValue": "Comment for Getting good value from rents and service charges"
+          },
+          "outputColumn": "cha_gv_comm"
+        }
+      ]
+    },
+    {
+      "name": "section77",
+      "title": "Other customers",
+      "fields": [],
+      "sectionLevel": 1
+    },
+    {
+      "name": "section78",
+      "title": "Gypsies / Travellers",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "name": "31",
+      "title": "For those who provide Gypsies/Travellers sites - Average weekly rent per pitch (Indicator 31)",
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "A pitch is a defined serviced area provided by a landlord for mainly Gypsies and Travellers to place their homes.\n\nPlease state:",
+          "name": "static_31_186",
+          "borderTop": false
+        },
+        {
+          "name": "cha_y1_292",
+          "labelWidth": 5,
+          "label": "31.1 The total number of pitches",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validation": " $value ==0== cha_y1_293 ==0",
+          "validationMessage": "If 31.1 > 0  32.1 must be > 0",
+          "aux": {
+            "sampleValue": "17"
+          },
+          "outputColumn": "cha_ind31_pitches_num",
+          "tooltip": "Please note: If 31.1 is changed to 0 then all data will be erased from Indicator 32"
+        },
+        {
+          "name": "cha_y1_291",
+          "labelWidth": 5,
+          "label": "31.2 The total amount of rent set for all pitches during the reporting year",
+          "required": true,
+          "width": 2,
+          "type": "currency",
+          "minimumValue": 0,
+          "maximumValue": 10000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "31.2 is required if 31.1 > 0",
+          "activation": "( cha_y1_292  > 0)",
+          "aux": {
+            "sampleValue": "66912"
+          },
+          "outputColumn": "cha_ind31_rent_set_amt",
+          "help": "Requires 31.1 > 0 to activate"
+        },
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Indicator",
+          "name": "static_31_187",
+          "borderTop": true
+        },
+        {
+          "name": "indicator_31",
+          "labelWidth": 5,
+          "label": "For those who provide Gypsies/Travellers sites - Average weekly rent per pitch (Indicator 31)",
+          "required": true,
+          "width": 2,
+          "type": "currency",
+          "minimumValue": 0,
+          "maximumValue": 10000000.0,
+          "decimalPlaces": 2,
+          "calculation": "(( cha_y1_291  /  cha_y1_292 ) / 52)",
+          "aux": {
+            "sampleValue": "75.6923076923077"
+          },
+          "outputColumn": "cha_ind31_avg"
+        }
+      ]
+    },
+    {
+      "name": "32",
+      "title": "For those who provide sites – percentage of Gypsies/Travellers satisfied with the landlord’s management of the site (Indicator 32)",
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "In relation to the satisfaction question on the management of sites provided to gypsies/travellers, please state:",
+          "name": "static_32_188",
+          "borderTop": false
+        },
+        {
+          "name": "cha_y1_293",
+          "labelWidth": 5,
+          "label": "32.1 How many Gypsies/Travellers answered the question \"How satisfied or dissatisfied are you with your landlord's management of your site?\"",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "32.1 is required if 31.1 > 0",
+          "activation": "( cha_y1_292  > 0)",
+          "aux": {
+            "sampleValue": "19"
+          },
+          "outputColumn": "cha_ind32_survey_tl",
+          "help": "Requires 31.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_294",
+          "labelWidth": 5,
+          "label": "32.2.1 Very satisfied",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "32.2.1 is required if 31.1 > 0",
+          "activation": "( cha_y1_292  > 0)",
+          "aux": {
+            "sampleValue": "12"
+          },
+          "outputColumn": "cha_ind32_survey_vsat",
+          "help": "Requires 31.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_295",
+          "labelWidth": 5,
+          "label": "32.2.2 Fairly satisfied\n",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "32.2.2 is required if 31.1 > 0",
+          "activation": "( cha_y1_292  > 0)",
+          "aux": {
+            "sampleValue": "4"
+          },
+          "outputColumn": "cha_ind32_survey_fsat",
+          "help": "Requires 31.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_296",
+          "labelWidth": 5,
+          "label": "32.2.3 Neither satisfied nor dissatisfied",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "32.2.3 is required if 31.1 > 0",
+          "activation": "( cha_y1_292  > 0)",
+          "aux": {
+            "sampleValue": "3"
+          },
+          "outputColumn": "cha_ind32_survey_mid",
+          "help": "Requires 31.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_297",
+          "labelWidth": 5,
+          "label": "32.2.4 Fairly dissatisfied",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "32.2.4 is required if 31.1 > 0",
+          "activation": "( cha_y1_292  > 0)",
+          "aux": {
+            "sampleValue": "0"
+          },
+          "outputColumn": "cha_ind32_survey_fdis",
+          "help": "Requires 31.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y1_298",
+          "labelWidth": 5,
+          "label": "32.2.5 Very dissatisfied",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "validationMessage": "32.2.5 is required if 31.1 > 0",
+          "activation": "( cha_y1_292  > 0)",
+          "aux": {
+            "sampleValue": "0"
+          },
+          "outputColumn": "cha_ind32_survey_vdis",
+          "help": "Requires 31.1 > 0 to activate"
+        },
+        {
+          "name": "cha_y6_813",
+          "labelWidth": 5,
+          "label": "32.2.6 Total",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 100000000.0,
+          "decimalPlaces": 0,
+          "calculation": "(( cha_y1_294 + cha_y1_295 + cha_y1_296 + cha_y1_297 + cha_y1_298 ))",
+          "validation": "( $value  <=  cha_y1_293 )",
+          "validationMessage": "If 31.2 > 0 then total of all responses (32.2) must be <= 32.1",
+          "activation": "( cha_y1_292  > 0)",
+          "aux": {
+            "sampleValue": "19"
+          },
+          "outputColumn": "cha_ind32_survey_gt",
+          "help": "Total = 32.2.1 + 32.2.2 + 32.2.3 + 32.2.4 + 32.2.5"
+        },
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Indicator",
+          "name": "static_32_189",
+          "borderTop": true
+        },
+        {
+          "name": "indicator_32",
+          "labelWidth": 5,
+          "label": "For those who provide sites – percentage of Gypsies/Travellers satisfied with the landlord’s management of the site (Indicator 32)",
+          "required": true,
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000,
+          "decimalPlaces": 2,
+          "percentage": true,
+          "calculation": "((( cha_y1_294  +  cha_y1_295 ) /  cha_y1_293 ) * 100)",
+          "activation": "( cha_y1_292  > 0)",
+          "aux": {
+            "sampleValue": "84.2105263157895"
+          },
+          "outputColumn": "cha_ind32_pct"
+        }
+      ]
+    },
+    {
+      "name": "section79",
+      "title": "Comments",
+      "fields": [],
+      "sectionLevel": 2
+    },
+    {
+      "name": "comment_oc",
+      "title": "Comments (Other customers)",
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Other customers'' section.",
+          "name": "static_comment_oc_190",
+          "borderTop": false
+        },
+        {
+          "name": "comment_oc",
+          "labelWidth": 2,
+          "label": "Comments",
+          "required": false,
+          "width": 6,
+          "type": "textarea",
+          "aux": {
+            "sampleValue": "Comment for Other customers"
+          },
+          "outputColumn": "cha_oc_comm"
+        }
+      ]
+    },
+    {
+      "name": "section80",
+      "title": "Approval",
+      "fields": [],
+      "sectionLevel": 1
+    },
+    {
+      "name": "a1",
+      "title": "Approval",
+      "editRole": "Charter Approver",
+      "fields": [
+        {
+          "name": "cha_y6_820",
+          "labelWidth": 3,
+          "label": "A1.1 Date approved",
+          "required": true,
+          "width": 2,
+          "type": "date",
+          "validation": "( $value  <= new Date())",
+          "validationMessage": "A1.2 cannot be a future date",
+          "aux": {
+            "sampleValue": "08/01/2020 00:00:00"
+          },
+          "outputColumn": "cha_app_date"
+        },
+        {
+          "name": "cha_y6_821",
+          "labelWidth": 3,
+          "label": "A1.2 Approver",
+          "required": true,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "A N Other"
+          },
+          "outputColumn": "cha_app_name"
+        },
+        {
+          "name": "cha_y6_822",
+          "labelWidth": 3,
+          "label": "A1.3 Approver job title",
+          "required": true,
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Finance Manager"
+          },
+          "outputColumn": "cha_app_job_title"
+        },
+        {
+          "name": "cha_y6_819",
+          "labelWidth": 3,
+          "label": "",
+          "commentsRequiredMessage": "A1.4 Under exceptional circumstances, if the return is to be approved with validation messages showing on your Validation Summary, you must provide reason(s) why these cannot be cleared. Enter your comments and Save the page before Submitting the form.",
+          "width": 5,
+          "required": false,
+          "type": "submit",
+          "allowErrors": true,
+          "validationMessage": "A1.1 is required if Error count > 0",
+          "aux": {
+            "sampleValue": "Comment to allow validation when Error count > 0"
+          },
+          "outputColumn": "cha_app_comm",
+          "tooltip": "Requires 'Error count' > 0 to activate"
+        }
+      ]
+    }
+  ],
+  "quickNavigation": [
+    {
+      "label": "Introduction",
+      "page": "f1"
+    },
+    {
+      "label": "Percentage of all complaints responded to in full at Stage 1 and percentage of all complaints responded to in full at Stage 2. (Indicators 3 & 4)",
+      "page": "3_4"
+    },
+    {
+      "label": "Homelessness (LAs only) – the percentage of homeless households referred to RSLs under section 5 and through other referral routes (Indicator 24).",
+      "page": "24"
+    },
+    {
+      "label": "Average annual management fee per factored property (Indicator 28)",
+      "page": "28"
+    },
+    {
+      "label": "Percentage of factored owners satisfied with the factoring service they receive (Indicator 29)",
+      "page": "29"
+    },
+    {
+      "label": "For those who provide Gypsies/Travellers sites - Average weekly rent per pitch (Indicator 31)",
+      "page": "31"
+    },
+    {
+      "label": "For those who provide sites – percentage of Gypsies/Travellers satisfied with the landlord’s management of the site (Indicator 32)",
+      "page": "32"
+    },
+    {
+      "label": "Approval",
+      "page": "a1"
+    }
+  ]
+}

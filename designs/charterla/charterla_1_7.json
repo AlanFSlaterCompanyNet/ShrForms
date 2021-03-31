@@ -734,7 +734,7 @@
           "percentage": true,
           "calculation": "(((( cha_y1_002 + cha_y1_003 )) / (( cha_y1_002 + cha_y1_003 + cha_y1_004 + cha_y1_005 + cha_y1_006 + cha_y1_007 ))) * 100)",
           "aux": {
-            "sampleValue": "77.16666666666666",
+            "sampleValue": "77.1666666666667",
             "csvColumnName": "1 - Percentage of tenants satisfied with the overall service provided landlord"
           },
           "outputColumn": "cha_ind1_pct"
@@ -943,7 +943,7 @@
           "percentage": true,
           "calculation": "(((( cha_y1_128 + cha_y1_129 )) /  cha_y1_127 ) * 100)",
           "aux": {
-            "sampleValue": "82.82312925170068",
+            "sampleValue": "82.8231292517007",
             "csvColumnName": "2 - Percentage tenants who feel landlord good at keeping them informed about services and decisions"
           },
           "outputColumn": "cha_ind2_pct"
@@ -1113,7 +1113,7 @@
           "percentage": true,
           "calculation": "(((( cha_y1_150 + cha_y1_151 )) /  cha_y1_149 ) * 100)",
           "aux": {
-            "sampleValue": "71.62872154115587",
+            "sampleValue": "71.6287215411559",
             "csvColumnName": "5 - Percentage tenants satisfied with opportunities given to participate in landlord decision making"
           },
           "outputColumn": "cha_ind5_pct"
@@ -1688,7 +1688,7 @@
           "percentage": true,
           "calculation": "(( cha_y6_852  /  cha_y6_850 ) * 100)",
           "aux": {
-            "sampleValue": "98.29396325459318",
+            "sampleValue": "98.2939632545932",
             "csvColumnName": "6 - Percentage properties meeting SHQS year end"
           },
           "outputColumn": "cha_ind6_la_curr_year_pct"
@@ -1706,7 +1706,7 @@
           "percentage": true,
           "calculation": "(( cha_y6_853  /  cha_y6_851 ) * 100)",
           "aux": {
-            "sampleValue": "97.33766233766234",
+            "sampleValue": "97.3376623376623",
             "csvColumnName": "6 - Percentage properties meeting SHQS next year"
           },
           "outputColumn": "cha_ind6_la_next_year_pct"
@@ -1869,7 +1869,7 @@
           "percentage": true,
           "calculation": "((( cha_y1_174  +  cha_y1_175 ) /  cha_y1_173 ) * 100)",
           "aux": {
-            "sampleValue": "90.03496503496503",
+            "sampleValue": "90.034965034965",
             "csvColumnName": "7 - Percentage tenants satisfied with quality of home"
           },
           "outputColumn": "cha_ind7_pct"
@@ -1950,7 +1950,7 @@
           "decimalPlaces": 2,
           "calculation": "( cha_y1_180  /  cha_y1_179 )",
           "aux": {
-            "sampleValue": "3.1968689684752305",
+            "sampleValue": "3.19686896847523",
             "csvColumnName": "8 - Average hours to complete emergency repairs"
           },
           "outputColumn": "cha_ind8_avg"
@@ -2025,7 +2025,7 @@
           "decimalPlaces": 2,
           "calculation": "( cha_y1_182  /  cha_y1_181 )",
           "aux": {
-            "sampleValue": "4.880446525027008",
+            "sampleValue": "4.88044652502701",
             "csvColumnName": "9 - Average working days to complete non-emergency repairs"
           },
           "outputColumn": "cha_ind9_avg"
@@ -2101,7 +2101,7 @@
           "percentage": true,
           "calculation": "(( cha_y1_183  /  cha_y1_184 ) * 100)",
           "aux": {
-            "sampleValue": "92.68008003557136",
+            "sampleValue": "92.6800800355714",
             "csvColumnName": "10 - Percentage reactive repairs completed right first time"
           },
           "outputColumn": "cha_ind10_pct"
@@ -5240,7 +5240,7 @@
           "percentage": true,
           "calculation": "(( cha_y6_179  /  cha_y6_098 ) * 100)",
           "aux": {
-            "sampleValue": "84.58956362526702",
+            "sampleValue": "84.589563625267",
             "csvColumnName": "C10 - Percentage of properties meeting the EESSH"
           },
           "outputColumn": "cha_indc10_pct"
@@ -6481,7 +6481,7 @@
           "percentage": true,
           "calculation": "(( cha_y6_217  /  cha_y6_058 ) * 100)",
           "aux": {
-            "sampleValue": "65.40688814385858",
+            "sampleValue": "65.4068881438586",
             "csvColumnName": "C12 - Energy Performance Certificates (EPCs)"
           },
           "outputColumn": "cha_indc12_pct"
@@ -6520,7 +6520,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "53386",
@@ -6536,7 +6536,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "551097",
@@ -6552,7 +6552,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "13599",
@@ -6568,7 +6568,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "calculation": "(( cha_y6_234 + cha_y6_235 + cha_y6_236 ))",
           "aux": {
@@ -6910,7 +6910,7 @@
                   "percentage": true,
                   "calculation": "(( cha_y6_008  /  cha_y6_006 ) * 100)",
                   "aux": {
-                    "sampleValue": "94.11764705882352",
+                    "sampleValue": "94.1176470588235",
                     "csvColumnName": "3 & 4 - Percentage of all complaints responded to in full Stage 2"
                   },
                   "outputColumn": "cha_ind3_4_stage2_pct"
@@ -6934,7 +6934,7 @@
                   "decimalPlaces": 2,
                   "calculation": "( cha_y6_009  /  cha_y6_007 )",
                   "aux": {
-                    "sampleValue": "0.3358208955223881",
+                    "sampleValue": "0.335820895522388",
                     "csvColumnName": "3 & 4 - Average time in working days for full response Stage 1"
                   },
                   "outputColumn": "cha_ind3_4_stage1_avg"
@@ -7121,7 +7121,7 @@
           "percentage": true,
           "calculation": "((( cha_y1_197  +  cha_y1_198 ) /  cha_y1_196 ) * 100)",
           "aux": {
-            "sampleValue": "79.38461538461539",
+            "sampleValue": "79.3846153846154",
             "csvColumnName": "13 - Percentage tenants satisfied with landlord contribution to management of neighbourhood"
           },
           "outputColumn": "cha_ind13_pct"
@@ -7197,7 +7197,7 @@
           "percentage": true,
           "calculation": "(( cha_y1_203  /  cha_y1_202 ) * 100)",
           "aux": {
-            "sampleValue": "48.67170363148915",
+            "sampleValue": "48.6717036314892",
             "csvColumnName": "14 - Percentage tenancy offers refused"
           },
           "outputColumn": "cha_ind14_pct"
@@ -7271,7 +7271,7 @@
           "percentage": true,
           "calculation": "(( cha_y1_205  /  cha_y1_204 ) * 100)",
           "aux": {
-            "sampleValue": "99.95242626070409",
+            "sampleValue": "99.9524262607041",
             "csvColumnName": "15 - Percentage Anti-social behaviour cases resolved"
           },
           "outputColumn": "cha_ind15_pct"
@@ -7586,7 +7586,7 @@
           "percentage": true,
           "calculation": "(( cha_y1_217  /  cha_y1_660 ) * 100)",
           "aux": {
-            "sampleValue": "3.7793355684242607",
+            "sampleValue": "3.77933556842426",
             "csvColumnName": "17 - Percentage lettable self-contained houses that became vacant in year"
           },
           "outputColumn": "cha_ind17_pct"
@@ -7702,7 +7702,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "10001",
@@ -7718,7 +7718,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "5500",
@@ -7734,7 +7734,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "3500",
@@ -7758,7 +7758,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "calculation": "(( cha_y6_016 + cha_y6_017 + cha_y6_018 ))",
           "aux": {
@@ -7825,7 +7825,7 @@
           "decimalPlaces": 2,
           "calculation": "( cha_y6_020  /  cha_y6_021 )",
           "aux": {
-            "sampleValue": "82.96666666666667",
+            "sampleValue": "82.9666666666667",
             "csvColumnName": "21 - Average time to complete adaptations"
           },
           "outputColumn": "cha_ind21_avg"
@@ -7931,7 +7931,7 @@
           "percentage": true,
           "calculation": "((( cha_y6_240  +  cha_y6_241 ) /  cha_y6_243 ) * 100)",
           "aux": {
-            "sampleValue": "94.57755359394704",
+            "sampleValue": "94.577553593947",
             "csvColumnName": "24 - Percentage of homeless households referred to RSLs under Section 5 and other referral routes"
           },
           "outputColumn": "cha_ind24_pct"
@@ -8220,7 +8220,7 @@
           "percentage": true,
           "calculation": "(( cha_y6_829  /  cha_y6_825 ) * 100)",
           "aux": {
-            "sampleValue": "88.88888888888889",
+            "sampleValue": "88.8888888888889",
             "csvColumnName": "16 - Percentage new tenancies sustained more than a year - applicants assessed as statutory homeless by LA"
           },
           "outputColumn": "cha_ind16_la_hless_pct"
@@ -8238,7 +8238,7 @@
           "percentage": true,
           "calculation": "(( cha_y6_830  /  cha_y6_826 ) * 100)",
           "aux": {
-            "sampleValue": "84.12698412698413",
+            "sampleValue": "84.1269841269841",
             "csvColumnName": "16 - Percentage new tenancies sustained more than a year - applicants from housing list"
           },
           "outputColumn": "cha_ind16_la_list_pct"
@@ -8328,7 +8328,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "7751982",
@@ -8344,7 +8344,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validation": "(( $value  +  cha_y1_288 ) <=  cha_y1_278 )",
           "validationMessage": "26.2 + 18.2 must be <= 27.2",
@@ -8375,7 +8375,7 @@
           "percentage": true,
           "calculation": "(( cha_y1_275  /  cha_y1_276 ) * 100)",
           "aux": {
-            "sampleValue": "99.25147670843339",
+            "sampleValue": "99.2514767084334",
             "csvColumnName": "26 - Percentage collected of rent due"
           },
           "outputColumn": "cha_ind26_pct"
@@ -8402,7 +8402,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "224050",
@@ -8418,7 +8418,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validation": "(( cha_y1_276  +  cha_y1_288 ) <=  $value )",
           "validationMessage": "26.2 + 18.2 must be <= 27.2",
@@ -8449,7 +8449,7 @@
           "percentage": true,
           "calculation": "(( cha_y1_277  /  cha_y1_278 ) * 100)",
           "aux": {
-            "sampleValue": "2.819646334170313",
+            "sampleValue": "2.81964633417031",
             "csvColumnName": "27 - Percentage gross rent arrears of rent due"
           },
           "outputColumn": "cha_ind27_pct"
@@ -8493,7 +8493,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validationMessage": "28.2 is required if 28.1 > 0",
           "activation": "( cha_y1_279  > 0)",
@@ -8520,7 +8520,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 2,
           "calculation": "( cha_y1_280  /  cha_y1_279 )",
           "aux": {
@@ -8551,7 +8551,7 @@
           "width": 2,
           "type": "numeric",
           "minimumValue": 0,
-          "maximumValue": 100000000.0,
+          "maximumValue": 1000000000.0,
           "decimalPlaces": 0,
           "calculation": " cha_y1_278 ",
           "aux": {
@@ -8600,7 +8600,7 @@
           "percentage": true,
           "calculation": "(( cha_y1_288  /  cha_y1_287 ) * 100)",
           "aux": {
-            "sampleValue": "0.44074828795051413",
+            "sampleValue": "0.440748287950514",
             "csvColumnName": "18 - Percentage of rent due lost through empty properties"
           },
           "outputColumn": "cha_ind18_pct"
@@ -8674,7 +8674,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "5038900",
@@ -8704,7 +8704,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validation": "( $value  <=  cha_y1_277 )",
           "validationMessage": "C7.1 must be <= 27.1",
@@ -8722,7 +8722,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validation": "( $value  <=  cha_y1_461 )",
           "validationMessage": "C7.2 must be <= C7.1",
@@ -8753,7 +8753,7 @@
           "percentage": true,
           "calculation": "(( cha_y1_462  /  cha_y1_461 ) * 100)",
           "aux": {
-            "sampleValue": "42.615322089006305",
+            "sampleValue": "42.6153220890063",
             "csvColumnName": "C7 - Percentage former tenant rent arrears written off"
           },
           "outputColumn": "cha_indc7_pct"
@@ -8923,7 +8923,7 @@
           "percentage": true,
           "calculation": "((( cha_y1_270  +  cha_y1_271 ) /  cha_y1_269 ) * 100)",
           "aux": {
-            "sampleValue": "77.03180212014135",
+            "sampleValue": "77.0318021201414",
             "csvColumnName": "25 - Percentage tenants who feel rent for property represents good value for money"
           },
           "outputColumn": "cha_ind25_pct"
@@ -9107,7 +9107,7 @@
           "calculation": "((( cha_y1_282  +  cha_y1_283 ) /  cha_y1_281 ) * 100)",
           "activation": "( cha_y1_279  > 0)",
           "aux": {
-            "sampleValue": "56.896551724137936",
+            "sampleValue": "56.8965517241379",
             "csvColumnName": "29 - Percentage factored owners satisfied with factoring service"
           },
           "outputColumn": "cha_ind29_pct"
@@ -9198,7 +9198,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validationMessage": "31.2 is required if 31.1 > 0",
           "activation": "( cha_y1_292  > 0)",
@@ -9225,7 +9225,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 2,
           "calculation": "(( cha_y1_291  /  cha_y1_292 ) / 52)",
           "aux": {
@@ -9413,7 +9413,7 @@
           "calculation": "((( cha_y1_294  +  cha_y1_295 ) /  cha_y1_293 ) * 100)",
           "activation": "( cha_y1_292  > 0)",
           "aux": {
-            "sampleValue": "84.21052631578947",
+            "sampleValue": "84.2105263157895",
             "csvColumnName": "32 - Percentage Gypsies/Travellers satisfied with landlord management of site"
           },
           "outputColumn": "cha_ind32_pct"
