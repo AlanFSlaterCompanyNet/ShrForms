@@ -15,7 +15,7 @@
     [
       "generate",
       "Fyfp",
-      "1_4",
+      "1_12",
       false
     ]
   ],
@@ -181,6 +181,25 @@
           },
           "rowProperties": {
             "labelWidth": 3
+          }
+        },
+        {
+          "action": "insertTable",
+          "sheet": "Additional Information",
+          "data": "Data",
+          "row": 55,
+          "name": "ai_2",
+          "columnCount": 1,
+          "properties": {
+            "labelWidth": 2,
+            "headerWidths": [
+              1
+            ],
+            "headersStyle": "background-color:#891635; color:white",
+            "styleLastIndex": 1
+          },
+          "rowProperties": {
+            "labelWidth": 2
           }
         }
       ]
