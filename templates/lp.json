@@ -69,7 +69,8 @@
       "action": "insertPage",
       "row": 10,
       "values":{
-        "hierarchical": true
+        "hierarchical": true,
+        "crumbField": "lpl002b"
       }
     },
     {

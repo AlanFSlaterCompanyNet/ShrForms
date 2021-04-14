@@ -3,8 +3,8 @@
   "title": "LP Return",
   "formTitle": "LP Return",
   "outputTable": "LP Submissions",
-  "readRole": "LPS Reader",
-  "editRole": "LPS User",
+  "readRole": "LPS User",
+  "editRole": "LPS Approver",
   "pdfFileName": "LPReturn.pdf",
   "hierarchical": true,
   "pages": [
@@ -1859,7 +1859,7 @@
             "file": "lender.csv"
           },
           "aux": {
-            "sampleValue": "Bank of Scotland",
+            "sampleValue": "BOS",
             "csvColumnName": null
           },
           "help": "if more than one, please choose name of lead lender",
@@ -2220,6 +2220,7 @@
     {
       "name": "loan",
       "hierarchical": true,
+      "crumbField": "lpl002b",
       "title": "Loan",
       "fields": [
         {
@@ -2235,19 +2236,6 @@
           "required": false
         },
         {
-          "name": "lpl001a",
-          "labelWidth": 5,
-          "label": "Facility_Reference_Number",
-          "width": 2,
-          "type": "text",
-          "calculation": " lpf004 ",
-          "aux": {
-            "sampleValue": "1",
-            "csvColumnName": null
-          },
-          "readonly": true
-        },
-        {
           "name": "lpl002a",
           "labelWidth": 5,
           "label": "1. Loan Type",
@@ -2259,7 +2247,7 @@
             "file": "loan_type.csv"
           },
           "aux": {
-            "sampleValue": "Fixed Rate Loan",
+            "sampleValue": "FIXED",
             "csvColumnName": null
           },
           "required": true
@@ -2270,12 +2258,12 @@
           "label": "2. Loan Reference Number",
           "width": 2,
           "type": "text",
+          "calculation": "( lpf001 + lpl002a +Pfo_Page_Serial_Padded_4)",
           "aux": {
+            "sampleValue": "BOSFIXED0002",
             "csvColumnName": null
           },
-          "help": "DERIVED\n(a) Bank short code\n+ (b) Loan short code\n+ © Loan counter + 1: Sequence number 4 digits with leading zeroes",
-          "readonly": true,
-          "required": true
+          "help": "DERIVED\n(a) Bank short code\n+ (b) Loan short code\n+ © Loan counter + 1: Sequence number 4 digits with leading zeroes"
         },
         {
           "name": "lpl003",
@@ -2289,7 +2277,7 @@
             "file": "loan_purpose.csv"
           },
           "aux": {
-            "sampleValue": "Other (give details)",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -2300,6 +2288,7 @@
           "label": "Loan Purpose Details",
           "width": 2,
           "type": "text",
+          "activation": " lpl003 ==3",
           "aux": {
             "sampleValue": "The Loan Purpose Details are …",
             "csvColumnName": null
@@ -2412,7 +2401,7 @@
           },
           "validationMessage": "If 1. Loan Type = \"Fixed Rate Loan\", \"Fixed with embedded Intereat Rate Swaps\", \"Fixed without embedded Intererest Rate Swaps\" or \"Bond / Capital Market product\", then 8. Reference Interest Rate must = \"Fixed Rate Percentage\"",
           "aux": {
-            "sampleValue": "Fixed Rate Percentage",
+            "sampleValue": "4",
             "csvColumnName": null
           },
           "help": "3) Reference Interest Rate is Fixed Rate Percentage but Loan Type is not Fixed Rate Loan OR Fixed with embedded Interest Rate Swaps OR Fixed without embedded Interest Rate Swaps OR Bond / Capital Market product.\n\n5) Reference Interest Rate is 'Interest Free' but Loan type is not 'Fixed Interest Free'.",
@@ -2429,16 +2418,16 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "validation": "(((( lpl009 !='Interest Free')&&( lpl009 !='Lendrs Mortgage Base Rate')&&(( $value  > 0))))||((((( lpl009 =='Interest Free')||( lpl009 =='Lendrs Mortgage Base Rate')))&&( $value ==0))))",
+          "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  >= 0)))))",
           "validationMessage": "If 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\" then \"9. Margin Over Reference Interest Rate (%) must = 0.",
           "aux": {
-            "sampleValue": "20.0001",
+            "sampleValue": "0",
             "csvColumnName": null
           },
           "required": true
         },
         {
-          "name": "lpl010",
+          "name": "lpl010a",
           "labelWidth": 5,
           "label": "9. All in fixed rate (%)",
           "width": 2,
@@ -2448,7 +2437,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "validation": "(((( lpl009 !='Interest Free')&&( lpl009 !='Lendrs Mortgage Base Rate')&&(( $value  > 0))))||((((( lpl009 =='Interest Free')||( lpl009 =='Lendrs Mortgage Base Rate')))&&( $value ==0))))",
+          "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  >= 0)))))",
           "validationMessage": "If 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\" then \"9. All in fixed rate (%) must = 0.",
           "aux": {
             "sampleValue": "3.875",
@@ -2794,9 +2783,9 @@
           "label": "Facility Reference Number",
           "width": 2,
           "type": "text",
-          "calculation": " lpl001a ",
+          "calculation": "",
           "aux": {
-            "sampleValue": "1",
+            "sampleValue": "#REF!",
             "csvColumnName": null
           },
           "readonly": true
@@ -2809,7 +2798,7 @@
           "type": "text",
           "calculation": " lpl002b ",
           "aux": {
-            "sampleValue": "BOSFIXED0001",
+            "sampleValue": "BOSFIXED0002",
             "csvColumnName": null
           },
           "readonly": true
@@ -2920,32 +2909,6 @@
       "hierarchical": true,
       "title": "Embedded Interest Rate Derivative",
       "fields": [
-        {
-          "name": "lpc010",
-          "labelWidth": 5,
-          "label": "Facility Reference Number",
-          "width": 2,
-          "type": "text",
-          "calculation": " lpl001a ",
-          "aux": {
-            "sampleValue": "1",
-            "csvColumnName": null
-          },
-          "readonly": true
-        },
-        {
-          "name": "lpc012",
-          "labelWidth": 5,
-          "label": "Loan Refererence Number",
-          "width": 2,
-          "type": "text",
-          "calculation": " lpl002b ",
-          "aux": {
-            "sampleValue": "BOSFIXED0001",
-            "csvColumnName": null
-          },
-          "readonly": true
-        },
         {
           "name": "lpc013",
           "labelWidth": 5,
