@@ -13,7 +13,7 @@
       "title": "Introduction",
       "fields": [
         {
-          "name": "lpf001",
+          "name": "lpfd001",
           "labelWidth": 5,
           "label": "F1.1 Form type",
           "width": 2,
@@ -26,7 +26,7 @@
           "required": true
         },
         {
-          "name": "lpf002",
+          "name": "lpfd002",
           "labelWidth": 5,
           "label": "F1.2 Financial year",
           "width": 2,
@@ -39,7 +39,7 @@
           "required": true
         },
         {
-          "name": "lpf003",
+          "name": "lpfd003",
           "labelWidth": 5,
           "label": "F1.3 Type of Return",
           "width": 2,
@@ -52,7 +52,7 @@
           "required": true
         },
         {
-          "name": "lpf004",
+          "name": "lpfd004",
           "labelWidth": 5,
           "label": "F1.4 CY Start date",
           "width": 2,
@@ -65,7 +65,7 @@
           "required": true
         },
         {
-          "name": "lpf005",
+          "name": "lpfd005",
           "labelWidth": 5,
           "label": "F1.5 CY End date",
           "width": 2,
@@ -78,7 +78,7 @@
           "required": true
         },
         {
-          "name": "lpf006",
+          "name": "lpfd006",
           "labelWidth": 5,
           "label": "F1.6 Social Landlord ID",
           "width": 2,
@@ -91,7 +91,7 @@
           "required": false
         },
         {
-          "name": "lpf007",
+          "name": "lpfd007",
           "labelWidth": 5,
           "label": "F1.7 CY In-year count",
           "width": 2,
@@ -107,7 +107,7 @@
           "required": true
         },
         {
-          "name": "lpf008",
+          "name": "lpfd008",
           "labelWidth": 5,
           "label": "F1.8 PY live Facility count",
           "width": 2,
@@ -123,7 +123,7 @@
           "required": true
         },
         {
-          "name": "lpf009",
+          "name": "lpfd009",
           "labelWidth": 5,
           "label": "F1.9 PY live IGF count",
           "width": 2,
@@ -139,7 +139,7 @@
           "required": true
         },
         {
-          "name": "lpf010",
+          "name": "lpfd010",
           "labelWidth": 5,
           "label": "F1.10 PY ISDA count",
           "width": 2,
@@ -155,7 +155,7 @@
           "required": true
         },
         {
-          "name": "lpf011",
+          "name": "lpfd011",
           "labelWidth": 5,
           "label": "F1.11 Fifty years (days)",
           "width": 2,
@@ -171,7 +171,7 @@
           "required": true
         },
         {
-          "name": "lpf012",
+          "name": "lpfd012",
           "labelWidth": 0,
           "label": "F1.12 Welcome",
           "width": 8,
@@ -185,7 +185,7 @@
           "style": "htmlcard"
         },
         {
-          "name": "lpf013",
+          "name": "lpfd013",
           "labelWidth": 0,
           "label": "F1.13 About the online LPS return",
           "width": 8,
@@ -199,7 +199,7 @@
           "style": "htmlcard"
         },
         {
-          "name": "lpf014",
+          "name": "lpfd014",
           "labelWidth": 0,
           "label": "F1.14 Validation Summary",
           "width": 8,
@@ -213,7 +213,7 @@
           "style": "htmlcard"
         },
         {
-          "name": "lpf015",
+          "name": "lpfd015",
           "labelWidth": 0,
           "label": "F1.15 Buttons",
           "width": 8,
@@ -225,6 +225,18 @@
           "title": "Buttons",
           "text": "<table>\n<thead>\n<tr>\n<th>Button</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Previous</td>\n<td>This button will take you to the previous available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Next</td>\n<td>This button will take you to the next available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Save</td>\n<td>This button will save all content within the form and allow further editing</td>\n</tr>\n<tr>\n<td>PDF</td>\n<td>This button will download a pdf document of the Loan Portfolio return form</td>\n</tr>\n<tr>\n<td>Close</td>\n<td>This button will take you to a Close screen</td>\n</tr>\n</tbody>\n</table>\n",
           "style": "htmlcard"
+        },
+        {
+          "name": "lpfd016",
+          "labelWidth": 5,
+          "label": "F1.16 Landlord short code",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "DMO",
+            "csvColumnName": null
+          },
+          "required": true
         }
       ]
     },
@@ -1833,6 +1845,7 @@
     {
       "name": "facility",
       "hierarchical": true,
+      "crumbField": "lpf004",
       "title": "Facility",
       "fields": [
         {
@@ -1905,13 +1918,12 @@
           "label": "2. Facility Reference Number",
           "width": 2,
           "type": "text",
-          "calculation": "Pfo_Page_Serial",
+          "calculation": "( lpfd016 + lpf001 +Pfo_Page_Serial_Padded_4)",
           "aux": {
-            "sampleValue": "1",
+            "sampleValue": "DMOBOS0002",
             "csvColumnName": null
           },
-          "help": "DERIVED\n(a) RSL short code\n + (b) Lender short code\n + (c) Facilirty counter + 1: Sequence number 4 digits with leading zeroes",
-          "readonly": true
+          "help": "DERIVED\n(a) RSL short code\n + (b) Lender short code\n + (c) Facilirty counter + 1: Sequence number 4 digits with leading zeroes"
         },
         {
           "name": "lpf005",
@@ -1970,7 +1982,7 @@
           "label": "5. Start Date (DD/MM/YYYY)",
           "width": 2,
           "type": "date",
-          "validation": "(((Math.abs(( $value  -  lpr005a )) <=  lpf011 ))&&((Math.abs(( lpr005a  -  $value )) <=  lpf011 )))",
+          "validation": "(((Math.abs(( $value  -  lpr005a )) <=  lpfd011 ))&&((Math.abs(( lpr005a  -  $value )) <=  lpfd011 )))",
           "validationMessage": "5. Start Date must fall within default date range based on Date of Return  (50 years)",
           "aux": {
             "sampleValue": "01/04/2000 00:00:00",
@@ -1990,7 +2002,7 @@
               "message": "6. End Date must be greater than 5. Start Date"
             },
             {
-              "validation": "(((Math.abs(( $value  -  lpr005a )) <=  lpf011 ))&&((Math.abs(( lpr005a  -  $value )) <=  lpf011 )))",
+              "validation": "(((Math.abs(( $value  -  lpr005a )) <=  lpfd011 ))&&((Math.abs(( lpr005a  -  $value )) <=  lpfd011 )))",
               "message": "6. End Date must fall within default date range based on Date of Return (50 years)"
             }
           ],
@@ -2469,7 +2481,7 @@
               "message": "10. First Capital Repayment Date should be the same as or later than the Start date of the Facility to which it relates"
             },
             {
-              "validation": "(((Math.abs(( $value  -  lpr005 )) <=  lpf011 ))&&((Math.abs(( lpr005  -  $value )) <=  lpf011 )))",
+              "validation": "(((Math.abs(( $value  -  lpr005 )) <=  lpfd011 ))&&((Math.abs(( lpr005  -  $value )) <=  lpfd011 )))",
               "message": "10. First Capital Repayment Date must fall within default date range based on Date of Return (50 years)"
             }
           ],
@@ -2491,7 +2503,7 @@
               "message": "11. Final Capital Repayment date cannot be less than First Capital Repayment date"
             },
             {
-              "validation": "(((Math.abs(( $value  -  lpr005 )) <=  lpf012 ))&&((Math.abs(( lpr005  -  $value )) <=  lpf011 )))",
+              "validation": "(((Math.abs(( $value  -  lpr005 )) <=  lpfd012 ))&&((Math.abs(( lpr005  -  $value )) <=  lpfd011 )))",
               "message": "10. Final Capital Repayment Date must fall within default date range based on Date of Return (50 years)"
             }
           ],
@@ -2711,7 +2723,7 @@
               "message": "16(iv). Date of valuation cannot be after Date of return."
             },
             {
-              "validation": "(((Math.abs(( $value  -  lpigf031 )) <=  lpf011 ))&&((Math.abs(( lpr005  -  $value )) <=  lpf011 )))",
+              "validation": "(((Math.abs(( $value  -  lpigf031 )) <=  lpfd011 ))&&((Math.abs(( lpr005  -  $value )) <=  lpfd011 )))",
               "message": "16(iv). Date of valuation must fall within default date range based on Date of Return (50 years)"
             }
           ],
