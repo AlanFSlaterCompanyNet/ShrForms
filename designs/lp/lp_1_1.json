@@ -685,8 +685,6 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
-          "validation": "( $value  > 0)",
-          "validationMessage": "4. Amount Provided must be greater than 0",
           "aux": {
             "sampleValue": "10000",
             "csvColumnName": null
@@ -724,7 +722,7 @@
             "file": "igf_purpose.csv"
           },
           "aux": {
-            "sampleValue": "Capital Purchase (give details)",
+            "sampleValue": "4",
             "csvColumnName": null
           },
           "required": true
@@ -735,6 +733,7 @@
           "label": "Purpose of Loan details",
           "width": 2,
           "type": "text",
+          "activation": " lpigf006 !=4",
           "aux": {
             "sampleValue": "The details are as follows…",
             "csvColumnName": null
@@ -752,8 +751,6 @@
           "maximumValue": 1000000000,
           "decimalPlaces": 0,
           "validatedPositive": true,
-          "validation": "( $value  > 0)",
-          "validationMessage": "7. Duration of Funding must be greater than 0",
           "aux": {
             "sampleValue": "12",
             "csvColumnName": null
@@ -810,7 +807,7 @@
             "file": "yes_no.csv"
           },
           "aux": {
-            "sampleValue": "Yes",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -826,6 +823,7 @@
             "valueColumn": "value",
             "file": "igf_security_type.csv"
           },
+          "activation": " lpigf012 ==3",
           "aux": {
             "sampleValue": "Standard security over stock (give details)",
             "csvColumnName": null
@@ -839,6 +837,7 @@
           "label": "Type of Security details",
           "width": 2,
           "type": "text",
+          "activation": " lpigf012 ==3",
           "aux": {
             "sampleValue": "The security details are…",
             "csvColumnName": null
@@ -857,7 +856,7 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
-          "validationMessage": "13. Value of Security is required if 11. Security taken = \"Yes\"",
+          "activation": " lpigf012 ==3",
           "aux": {
             "sampleValue": "2500",
             "csvColumnName": null
@@ -876,7 +875,7 @@
             "file": "yes_no.csv"
           },
           "aux": {
-            "sampleValue": "Yes",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -892,6 +891,7 @@
             "valueColumn": "value",
             "file": "loan_type.csv"
           },
+          "activation": " lpigf016a ==3",
           "aux": {
             "sampleValue": "Variable Rate Loan",
             "csvColumnName": null
@@ -908,7 +908,7 @@
           "maximumValue": 1000000000,
           "decimalPlaces": 0,
           "validatedPositive": true,
-          "validationMessage": "16. Repayment Period is required if 14. Loan Agreement in Place = \"Yes\"",
+          "activation": " lpigf016a ==3",
           "aux": {
             "sampleValue": "36",
             "csvColumnName": null
@@ -926,6 +926,7 @@
             "valueColumn": "value",
             "file": "repayment_terms.csv"
           },
+          "activation": " lpigf016a ==3",
           "aux": {
             "sampleValue": "Converted to Loan",
             "csvColumnName": null
@@ -943,6 +944,7 @@
             "valueColumn": "value",
             "file": "reference_interest_rate.csv"
           },
+          "activation": " lpigf016a ==3",
           "aux": {
             "sampleValue": "LIBOR 1 month",
             "csvColumnName": null
@@ -960,6 +962,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
+          "activation": " lpigf016a ==3",
           "aux": {
             "sampleValue": "20.0001",
             "csvColumnName": null
@@ -977,6 +980,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
+          "activation": " lpigf016a ==3",
           "aux": {
             "sampleValue": "3.375",
             "csvColumnName": null
@@ -1007,7 +1011,7 @@
             "file": "yes_no.csv"
           },
           "aux": {
-            "sampleValue": "Yes",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -1018,6 +1022,7 @@
           "label": "21. If you answered YES to question (19) please enter the Loan Reference Number",
           "width": 2,
           "type": "text",
+          "activation": " lpigf021 ==3",
           "aux": {
             "sampleValue": "BCHFIXED11052",
             "csvColumnName": null
@@ -1035,6 +1040,7 @@
             "valueColumn": "value",
             "file": "yes_no_na.csv"
           },
+          "activation": " lpigf021 ==3",
           "aux": {
             "sampleValue": "Yes",
             "csvColumnName": null

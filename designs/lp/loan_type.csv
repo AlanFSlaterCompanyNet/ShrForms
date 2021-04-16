@@ -1,14 +1,14 @@
-label,value
+value,label
 ,
-Bond / Capital Market product,BNDCAP
-Bridging Finance,BDGFIN
-Development Overdraft,DEVDFT
-Fixed Interest Free,FIXIF
-Fixed Rate Loan,FIXED
-Fixed with embedded Interest Rate Swaps,FWEIRS
-Fixed without embedded Interest Rate Swaps,FNEIRS
-Revolving Loan / Credit Facility,REVLNF
-Variable Rate Loan,VAR
-Variable with embedded Interest Rate Swaps,VWES
-Variable without embedded Interest Rate Swaps,VNES
-Working Capital Overdraft (if > £1m),WCPDFT
+BNDCAP,Bond / Capital Market product
+BDGFIN,Bridging Finance
+DEVDFT,Development Overdraft
+FIXIF,Fixed Interest Free
+FIXED,Fixed Rate Loan
+FWEIRS,Fixed with embedded Interest Rate Swaps
+FNEIRS,Fixed without embedded Interest Rate Swaps
+REVLNF,Revolving Loan / Credit Facility
+VAR,Variable Rate Loan
+VWES,Variable with embedded Interest Rate Swaps
+VNES,Variable without embedded Interest Rate Swaps
+WCPDFT,Working Capital Overdraft (if > Â£1m)
