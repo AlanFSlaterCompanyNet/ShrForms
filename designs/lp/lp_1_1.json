@@ -237,6 +237,30 @@
             "csvColumnName": null
           },
           "required": true
+        },
+        {
+          "name": "lpfd017",
+          "labelWidth": 5,
+          "label": "F1.17 50YearsInPast",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "16/04/1971 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpfd018",
+          "labelWidth": 5,
+          "label": "F1.18 50YearsInFuture",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "16/04/2071 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
         }
       ]
     },
@@ -1890,7 +1914,7 @@
             "file": "yes_no.csv"
           },
           "aux": {
-            "sampleValue": "Yes",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -1906,6 +1930,8 @@
             "valueColumn": "value",
             "file": "lender.csv"
           },
+          "multiple": true,
+          "activation": " lpf002 ==3",
           "aux": {
             "sampleValue": "AXA",
             "csvColumnName": null
@@ -1953,6 +1979,7 @@
             "valueColumn": "value",
             "file": "fac_charge_holder.csv"
           },
+          "multiple": true,
           "aux": {
             "sampleValue": "BAE Pension Fund",
             "csvColumnName": null
@@ -1982,7 +2009,7 @@
           "label": "5. Start Date (DD/MM/YYYY)",
           "width": 2,
           "type": "date",
-          "validation": "(((Math.abs(( $value  -  lpr005a )) <=  lpfd011 ))&&((Math.abs(( lpr005a  -  $value )) <=  lpfd011 )))",
+          "validation": "((( $value  >  lpfd017 ))&&(( $value  <  lpfd018 )))",
           "validationMessage": "5. Start Date must fall within default date range based on Date of Return  (50 years)",
           "aux": {
             "sampleValue": "01/04/2000 00:00:00",
@@ -2098,7 +2125,7 @@
             "file": "fac_undrawn_purpose.csv"
           },
           "aux": {
-            "sampleValue": "Other (give details)",
+            "sampleValue": "4",
             "csvColumnName": null
           },
           "required": true
@@ -2109,6 +2136,7 @@
           "label": "Undrawn Facility for Details",
           "width": 2,
           "type": "text",
+          "activation": " lpf013 ==4",
           "aux": {
             "sampleValue": "The undrawn Facility details are…",
             "csvColumnName": null
@@ -2174,6 +2202,7 @@
           "label": "Other fees Details",
           "width": 2,
           "type": "text",
+          "activation": " lpf018 ",
           "aux": {
             "sampleValue": "Other fees details are…",
             "csvColumnName": null
@@ -2300,7 +2329,7 @@
           "label": "Loan Purpose Details",
           "width": 2,
           "type": "text",
-          "activation": " lpl003 ==3",
+          "activation": " lpl003 ==14",
           "aux": {
             "sampleValue": "The Loan Purpose Details are …",
             "csvColumnName": null
@@ -2650,6 +2679,7 @@
           "label": "Other Fees Details",
           "width": 2,
           "type": "text",
+          "activation": " lpl021 ",
           "aux": {
             "sampleValue": "Other fees details are…",
             "csvColumnName": null
