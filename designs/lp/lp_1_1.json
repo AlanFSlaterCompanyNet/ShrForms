@@ -1578,7 +1578,7 @@
             "file": "reference_interest_rate.csv"
           },
           "aux": {
-            "sampleValue": "LIBOR 2 month",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -1594,6 +1594,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
+          "activation": " lpc024 !=3",
           "aux": {
             "sampleValue": "20.0001",
             "csvColumnName": null
@@ -1601,7 +1602,7 @@
           "required": true
         },
         {
-          "name": "lpc025",
+          "name": "lpc025a",
           "labelWidth": 5,
           "label": "7. All in fixed rate (%)",
           "width": 2,
@@ -1611,6 +1612,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
+          "activation": " lpc024 ==3",
           "aux": {
             "sampleValue": "3.875",
             "csvColumnName": null
@@ -1703,7 +1705,7 @@
             "file": "isda_collateral_call.csv"
           },
           "aux": {
-            "sampleValue": "Secured Assets",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -1719,6 +1721,7 @@
             "valueColumn": "value",
             "file": "basis_of_valuation.csv"
           },
+          "activation": " lpc030 ==3",
           "aux": {
             "sampleValue": "EUV",
             "csvColumnName": null
@@ -1734,7 +1737,7 @@
           "csv": {
             "labelColumn": "label",
             "valueColumn": "value",
-            "file": "isda_collateral_call.csv"
+            "file": "isda_frequency_call.csv"
           },
           "aux": {
             "sampleValue": "Weekly",
