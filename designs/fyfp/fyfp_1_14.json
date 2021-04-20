@@ -9,6 +9,7 @@
   "illegalValueMessage": "-",
   "financialFormatting": true,
   "excelFileName": "fyfp.xlsx",
+  "multipleOutputTables": true,
   "pages": [
     {
       "name": "f1",

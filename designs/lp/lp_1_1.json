@@ -601,23 +601,6 @@
       "title": "Inter Group Finance - Lend",
       "fields": [
         {
-          "name": "lpigf031",
-          "labelWidth": 5,
-          "label": "Intra Group Finance Type",
-          "width": 2,
-          "type": "choice",
-          "csv": {
-            "labelColumn": "label",
-            "valueColumn": "value",
-            "file": "igf_type.csv"
-          },
-          "aux": {
-            "sampleValue": "Lend",
-            "csvColumnName": null
-          },
-          "required": true
-        },
-        {
           "name": "lpigf030",
           "labelWidth": 5,
           "label": "IGF Comments Lend",
@@ -1068,23 +1051,6 @@
       "title": "Inter Group Finance - Borrow",
       "fields": [
         {
-          "name": "lpigb051",
-          "labelWidth": 5,
-          "label": "Intra Group Finance Type",
-          "width": 2,
-          "type": "choice",
-          "csv": {
-            "labelColumn": "label",
-            "valueColumn": "value",
-            "file": "igf_type.csv"
-          },
-          "aux": {
-            "sampleValue": "Borrow",
-            "csvColumnName": null
-          },
-          "required": true
-        },
-        {
           "name": "lpigf050",
           "labelWidth": 5,
           "label": "IGF Comments Borrow",
@@ -1153,8 +1119,6 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
-          "validation": "( $value  > 0)",
-          "validationMessage": "4. Amount Received must be greater than 0",
           "aux": {
             "sampleValue": "5000",
             "csvColumnName": null
@@ -1278,7 +1242,7 @@
             "file": "yes_no.csv"
           },
           "aux": {
-            "sampleValue": "Yes",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -1294,6 +1258,7 @@
             "valueColumn": "value",
             "file": "igf_security_type.csv"
           },
+          "activation": " lpigf036 ==3",
           "aux": {
             "sampleValue": "Standard security over stock (give details)",
             "csvColumnName": null
@@ -1307,6 +1272,7 @@
           "label": "Details",
           "width": 2,
           "type": "text",
+          "activation": " lpigf036 ==3",
           "aux": {
             "sampleValue": "The security details are…",
             "csvColumnName": null
@@ -1326,6 +1292,7 @@
           "showCurrencySymbol": false,
           "validatedPositive": true,
           "validationMessage": "13. Value of Security is required if 11. Security taken = \"Yes\"",
+          "activation": " lpigf036 ==3",
           "aux": {
             "sampleValue": "1250",
             "csvColumnName": null
@@ -1344,7 +1311,7 @@
             "file": "yes_no.csv"
           },
           "aux": {
-            "sampleValue": "Yes",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -1360,6 +1327,7 @@
             "valueColumn": "value",
             "file": "loan_type.csv"
           },
+          "activation": " lpigf040a ==3",
           "aux": {
             "sampleValue": "Variable Rate Loan",
             "csvColumnName": null
@@ -1377,6 +1345,7 @@
           "decimalPlaces": 0,
           "validatedPositive": true,
           "validationMessage": "16. Repayment Period is required if 14. Loan Agreement in Place = \"Yes\"",
+          "activation": " lpigf040a ==3",
           "aux": {
             "sampleValue": "24",
             "csvColumnName": null
@@ -1394,6 +1363,7 @@
             "valueColumn": "value",
             "file": "repayment_terms.csv"
           },
+          "activation": " lpigf040a ==3",
           "aux": {
             "sampleValue": "Converted to Loan",
             "csvColumnName": null
@@ -1411,6 +1381,7 @@
             "valueColumn": "value",
             "file": "reference_interest_rate.csv"
           },
+          "activation": " lpigf040a ==3",
           "aux": {
             "sampleValue": "LIBOR 2 month",
             "csvColumnName": null
@@ -1428,6 +1399,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
+          "activation": " lpigf040a ==3",
           "aux": {
             "sampleValue": "20.0001",
             "csvColumnName": null
@@ -1445,6 +1417,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
+          "activation": " lpigf040a ==3",
           "aux": {
             "sampleValue": "3.375",
             "csvColumnName": null
@@ -2756,16 +2729,8 @@
           "label": "16(iv). Date of valuation (DD/MM/YYYY)",
           "width": 2,
           "type": "date",
-          "validationList": [
-            {
-              "validation": "( $value  <=  lpr005 )",
-              "message": "16(iv). Date of valuation cannot be after Date of return."
-            },
-            {
-              "validation": "(((Math.abs(( $value  -  lpigf031 )) <=  lpfd011 ))&&((Math.abs(( lpr005  -  $value )) <=  lpfd011 )))",
-              "message": "16(iv). Date of valuation must fall within default date range based on Date of Return (50 years)"
-            }
-          ],
+          "validation": "( $value  <=  lpr005a )",
+          "validationMessage": "16(iv). Date of valuation cannot be after Date of return.",
           "aux": {
             "sampleValue": "01/04/2010 00:00:00",
             "csvColumnName": null
