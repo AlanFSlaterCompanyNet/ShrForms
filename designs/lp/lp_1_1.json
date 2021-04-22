@@ -2315,7 +2315,7 @@
           "name": "lpl002a",
           "labelWidth": 5,
           "label": "1. Loan Type",
-          "width": 2,
+          "width": 4,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -2323,7 +2323,7 @@
             "file": "loan_type.csv"
           },
           "aux": {
-            "sampleValue": "FIXED",
+            "sampleValue": "VAR",
             "csvColumnName": null
           },
           "required": true
@@ -2336,7 +2336,7 @@
           "type": "text",
           "calculation": "( lpf001 + lpl002a +Pfo_Page_Serial_Padded_4)",
           "aux": {
-            "sampleValue": "BOSFIXED0002",
+            "sampleValue": "BOSVAR0002",
             "csvColumnName": null
           },
           "help": "DERIVED\n(a) Bank short code\n+ (b) Loan short code\n+ © Loan counter + 1: Sequence number 4 digits with leading zeroes"
@@ -2345,7 +2345,7 @@
           "name": "lpl003",
           "labelWidth": 5,
           "label": "3. What is the purpose of the Loan?",
-          "width": 2,
+          "width": 4,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -2451,7 +2451,7 @@
           "name": "lpl008",
           "labelWidth": 5,
           "label": "7. Repayment Terms",
-          "width": 2,
+          "width": 6,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -2468,16 +2468,25 @@
           "name": "lpl009",
           "labelWidth": 5,
           "label": "8. Reference Interest Rate",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
             "valueColumn": "value",
             "file": "reference_interest_rate.csv"
           },
-          "validationMessage": "If 1. Loan Type = \"Fixed Rate Loan\", \"Fixed with embedded Intereat Rate Swaps\", \"Fixed without embedded Intererest Rate Swaps\" or \"Bond / Capital Market product\", then 8. Reference Interest Rate must = \"Fixed Rate Percentage\"",
+          "validationList": [
+            {
+              "validation": "(( lpl002a =='FIXED')||( lpl002a =='FWEIRS')||( lpl002a =='FNEIRS')||( lpl002a =='BNDCAP'))? $value ==3:true",
+              "message": "If 1. Loan Type = \"Fixed Rate Loan\", \"Fixed with embedded Intereat Rate Swaps\", \"Fixed without embedded Intererest Rate Swaps\" or \"Bond / Capital Market product\", then 8. Reference Interest Rate must = \"Fixed Rate Percentage\""
+            },
+            {
+              "validation": " lpl002a =='FIXIF'? $value ==4:true",
+              "message": "If 1. Loan Type = \"Fixed Interest Free\" then 8. Reference Interest Rate must = \"Interest Free\""
+            }
+          ],
           "aux": {
-            "sampleValue": "4",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "help": "3) Reference Interest Rate is Fixed Rate Percentage but Loan Type is not Fixed Rate Loan OR Fixed with embedded Interest Rate Swaps OR Fixed without embedded Interest Rate Swaps OR Bond / Capital Market product.\n\n5) Reference Interest Rate is 'Interest Free' but Loan type is not 'Fixed Interest Free'.",
@@ -2858,32 +2867,6 @@
       "title": "Loan Covenant",
       "fields": [
         {
-          "name": "lpc001",
-          "labelWidth": 5,
-          "label": "Facility Reference Number",
-          "width": 2,
-          "type": "text",
-          "calculation": "",
-          "aux": {
-            "sampleValue": "#REF!",
-            "csvColumnName": null
-          },
-          "readonly": true
-        },
-        {
-          "name": "lpc002",
-          "labelWidth": 5,
-          "label": "Loan Reference Number",
-          "width": 2,
-          "type": "text",
-          "calculation": " lpl002b ",
-          "aux": {
-            "sampleValue": "BOSFIXED0002",
-            "csvColumnName": null
-          },
-          "readonly": true
-        },
-        {
           "name": "lpc003",
           "labelWidth": 5,
           "label": "1. Sequence Number",
@@ -3012,7 +2995,7 @@
           "name": "lpc014",
           "labelWidth": 5,
           "label": "2. Derivative Type",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
