@@ -22,7 +22,6 @@
             "sampleValue": "lps",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": true
         },
         {
@@ -35,7 +34,6 @@
             "sampleValue": "2020/2021",
             "csvColumnName": null
           },
-          "readonly": true,
           "required": true
         },
         {
@@ -48,7 +46,6 @@
             "sampleValue": "Annual",
             "csvColumnName": null
           },
-          "readonly": true,
           "required": true
         },
         {
@@ -61,7 +58,6 @@
             "sampleValue": "01/04/2021 00:00:00",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": true
         },
         {
@@ -74,7 +70,6 @@
             "sampleValue": "31/03/2022 00:00:00",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": true
         },
         {
@@ -87,8 +82,34 @@
             "sampleValue": "ED6CA976-CFA9-E311-93F1-005056B555E6",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": false
+        },
+        {
+          "name": "lpfd020",
+          "labelWidth": 5,
+          "label": "F1.20 Landlord name",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Abbeyfield Scotland Ltd",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpfd021",
+          "labelWidth": 5,
+          "label": "F1.21 RSL Registration Number",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 10000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "20",
+            "csvColumnName": null
+          },
+          "required": true
         },
         {
           "name": "lpfd007",
@@ -103,7 +124,6 @@
             "sampleValue": "1",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": true
         },
         {
@@ -119,7 +139,6 @@
             "sampleValue": "12",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": true
         },
         {
@@ -135,7 +154,6 @@
             "sampleValue": "2",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": true
         },
         {
@@ -151,7 +169,6 @@
             "sampleValue": "1",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": true
         },
         {
@@ -167,7 +184,6 @@
             "sampleValue": "18264",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": true
         },
         {
@@ -274,6 +290,8 @@
           "label": "Submission Comments",
           "width": 4,
           "type": "textarea",
+          "validation": "(( $value ).length <= 1500)",
+          "validationMessage": "Submission Comments must be 1500 characters or less",
           "aux": {
             "sampleValue": "Comments for an Annual Submission",
             "csvColumnName": null
@@ -286,6 +304,7 @@
           "label": "1. Nil return",
           "width": 2,
           "type": "text",
+          "activation": "((( lpfd007 + lpfd008 + lpfd009 + lpfd010 )) > 0)",
           "aux": {
             "sampleValue": "No",
             "csvColumnName": null
@@ -305,6 +324,7 @@
             "valueColumn": "value",
             "file": "yes_no.csv"
           },
+          "activation": "(((( lpfd007 + lpfd008 + lpfd009 + lpfd010 ))==0)&&( lpfd003 =='Annual'))",
           "aux": {
             "sampleValue": "No",
             "csvColumnName": null
@@ -318,7 +338,9 @@
           "label": "2. Date of Return",
           "width": 2,
           "type": "date",
+          "activation": " lpfd003 =='Annual'",
           "aux": {
+            "sampleValue": "31/03/2021 00:00:00",
             "csvColumnName": null
           },
           "readonly": true,
@@ -330,6 +352,7 @@
           "label": "2. Date of Return",
           "width": 2,
           "type": "date",
+          "activation": " lpfd003 =='In-Year'",
           "aux": {
             "sampleValue": "01/04/2021 00:00:00",
             "csvColumnName": null
@@ -348,6 +371,7 @@
             "valueColumn": "value",
             "file": "return_reason.csv"
           },
+          "activation": " lpfd003 =='In-Year'",
           "aux": {
             "sampleValue": "Change in Loan details",
             "csvColumnName": null
@@ -606,6 +630,8 @@
           "label": "IGF Comments Lend",
           "width": 4,
           "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "Intra Group Financial Comments must be 2000 characters or less",
           "aux": {
             "sampleValue": "Comments for Intra Group Finance Lend",
             "csvColumnName": null
@@ -668,6 +694,8 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "4. Amount Provided must be greater than 0",
           "aux": {
             "sampleValue": "10000",
             "csvColumnName": null
@@ -734,6 +762,8 @@
           "maximumValue": 1000000000,
           "decimalPlaces": 0,
           "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "7. Duration of Funding must be greater than 0",
           "aux": {
             "sampleValue": "12",
             "csvColumnName": null
@@ -977,6 +1007,7 @@
           "width": 2,
           "type": "boolean",
           "checkbox": true,
+          "activation": "(( lpigf016a ==3)&&(((( lpigf020a  > 20))||(( lpigf020b  < 3.5)))))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -1037,6 +1068,7 @@
           "width": 2,
           "type": "boolean",
           "checkbox": true,
+          "activation": "(( lpigf005 ==0)&&( lpigf010 !='')&&(( lpigf010  <=  lpr005 )))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
@@ -1056,6 +1088,8 @@
           "label": "IGF Comments Borrow",
           "width": 4,
           "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "Intra Group Financial Comments must be 2000 characters or less",
           "aux": {
             "sampleValue": "Comments for Intra Group Finance Borrow",
             "csvColumnName": null
@@ -1119,6 +1153,8 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "4. Amount Received must be greater than 0",
           "aux": {
             "sampleValue": "5000",
             "csvColumnName": null
@@ -1167,6 +1203,7 @@
           "label": "Details",
           "width": 2,
           "type": "text",
+          "activation": " lpigf030 !=4",
           "aux": {
             "sampleValue": "The details are as follows…",
             "csvColumnName": null
@@ -1431,6 +1468,7 @@
           "width": 2,
           "type": "boolean",
           "checkbox": true,
+          "activation": "(( lpigf040a ==3)&&(((( lpigf044a  > 20))||(( lpigf044b  < 3.5)))))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -1443,6 +1481,7 @@
           "width": 2,
           "type": "boolean",
           "checkbox": true,
+          "activation": "(( lpigf029 ==0)&&( lpigf034 !='')&&(( lpigf034  <=  lpr005 )))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
@@ -1462,6 +1501,8 @@
           "label": "Comments for ISDA",
           "width": 4,
           "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "ISDAl Comments must be 2000 characters or less",
           "aux": {
             "sampleValue": "Comments for ISDA",
             "csvColumnName": null
@@ -1605,6 +1646,7 @@
           "width": 2,
           "type": "boolean",
           "checkbox": true,
+          "activation": "((( lpc025  > 20))||(( lpc025a  < 3.5)))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
@@ -1787,6 +1829,8 @@
           "label": "3. How is this Covenant calculated?",
           "width": 4,
           "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "3. How is this Covenant calculated must be 2000 characters or less.",
           "aux": {
             "sampleValue": "How the Covenant calculated …",
             "csvColumnName": null
@@ -1860,6 +1904,8 @@
           "label": "Comments for Facility",
           "width": 4,
           "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "Facility Comments must be 2000 characters or less",
           "aux": {
             "sampleValue": "Comments for Facility",
             "csvColumnName": null
@@ -1931,7 +1977,7 @@
             "sampleValue": "DMOBOS0002",
             "csvColumnName": null
           },
-          "help": "DERIVED\n(a) RSL short code\n + (b) Lender short code\n + (c) Facilirty counter + 1: Sequence number 4 digits with leading zeroes"
+          "help": "DERIVED\n(a) RSL short code\n + (b) Lender short code\n + (c) Facility counter + 1: Sequence number 4 digits with leading zeroes"
         },
         {
           "name": "lpf005",
@@ -1962,6 +2008,7 @@
             "file": "fac_charge_holder.csv"
           },
           "multiple": true,
+          "activation": " lpf005 ==3",
           "aux": {
             "sampleValue": "BAE Pension Fund",
             "csvColumnName": null
@@ -2089,6 +2136,7 @@
             "valueColumn": "value",
             "file": "yes_no.csv"
           },
+          "activation": "( lpf011  > 0)",
           "aux": {
             "sampleValue": "Yes",
             "csvColumnName": null
@@ -2106,6 +2154,7 @@
             "valueColumn": "value",
             "file": "fac_undrawn_purpose.csv"
           },
+          "activation": " lpf012 ==3",
           "aux": {
             "sampleValue": "4",
             "csvColumnName": null
@@ -2136,6 +2185,7 @@
             "valueColumn": "value",
             "file": "yes_no.csv"
           },
+          "activation": " lpf012 ==3",
           "aux": {
             "sampleValue": "Yes",
             "csvColumnName": null
@@ -2198,6 +2248,7 @@
           "width": 2,
           "type": "boolean",
           "checkbox": true,
+          "activation": "(( lpf010 ==0)&&( lpf008 !='')&&(( lpf008  <=  lpr005 )))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
@@ -2252,6 +2303,8 @@
           "label": "Comments for Loan",
           "width": 4,
           "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "Loan Comments must be 2000 characters or less",
           "aux": {
             "sampleValue": "Comments for Loan",
             "csvColumnName": null
@@ -2443,6 +2496,7 @@
           "validatedPositive": true,
           "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  >= 0)))))",
           "validationMessage": "If 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\" then \"9. Margin Over Reference Interest Rate (%) must = 0.",
+          "activation": "(( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS'))",
           "aux": {
             "sampleValue": "0",
             "csvColumnName": null
@@ -2462,6 +2516,7 @@
           "validatedPositive": true,
           "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  >= 0)))))",
           "validationMessage": "If 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\" then \"9. All in fixed rate (%) must = 0.",
+          "activation": "!((( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS')))",
           "aux": {
             "sampleValue": "3.875",
             "csvColumnName": null
@@ -2475,6 +2530,7 @@
           "width": 2,
           "type": "boolean",
           "checkbox": true,
+          "activation": "((( lpl010  > 20))||(( lpl010a  < 3.5)))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -2496,6 +2552,7 @@
               "message": "10. First Capital Repayment Date must fall within default date range based on Date of Return (50 years)"
             }
           ],
+          "activation": "(( lpl008 !=4)&&( lpl008 !=5)&&( lpl008 !=10))",
           "aux": {
             "sampleValue": "01/04/2021 00:00:00",
             "csvColumnName": null
@@ -2540,6 +2597,7 @@
               "message": "12. First interest payment date must be the same as or earlier than 11. Final Capial Repayment Date"
             }
           ],
+          "activation": "(( lpl009 !=4)&&( lpl009 !=5))",
           "aux": {
             "sampleValue": "02/04/2021 00:00:00",
             "csvColumnName": null
@@ -2579,6 +2637,7 @@
               "message": "13(ii) Date when the current deal expires must be greater than General Information Date of return "
             }
           ],
+          "activation": " lpl014 ==2",
           "aux": {
             "sampleValue": "01/04/2030 00:00:00",
             "csvColumnName": null
@@ -2596,6 +2655,7 @@
             "valueColumn": "value",
             "file": "yes_no.csv"
           },
+          "activation": " lpl014 ==2",
           "aux": {
             "sampleValue": "Yes",
             "csvColumnName": null
@@ -2700,6 +2760,7 @@
           "validatedPositive": true,
           "validation": "( $value  > 0)",
           "validationMessage": "16(ii). Value of Security must be greater than 0",
+          "activation": "( lpl023  > 0)",
           "aux": {
             "sampleValue": "100",
             "csvColumnName": null
@@ -2717,6 +2778,7 @@
             "valueColumn": "value",
             "file": "basis_of_valuation.csv"
           },
+          "activation": "( lpl023  > 0)",
           "aux": {
             "sampleValue": "MV-ST",
             "csvColumnName": null
@@ -2731,6 +2793,7 @@
           "type": "date",
           "validation": "( $value  <=  lpr005a )",
           "validationMessage": "16(iv). Date of valuation cannot be after Date of return.",
+          "activation": "( lpl023  > 0)",
           "aux": {
             "sampleValue": "01/04/2010 00:00:00",
             "csvColumnName": null
@@ -2744,6 +2807,7 @@
           "width": 2,
           "type": "boolean",
           "checkbox": true,
+          "activation": "(( lpl007 ==0)&&( lpl012 !='')&&(( lpl012  <=  lpr005 )))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
@@ -2859,6 +2923,8 @@
           "label": "3. How is this Covenant calculated?",
           "width": 4,
           "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "3. How is this Covenant calculated must be 2000 characters or less.",
           "aux": {
             "sampleValue": "This is how the Covenant is calculated…",
             "csvColumnName": null
@@ -2970,6 +3036,8 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "3. Amount must have a value greater than 0",
           "aux": {
             "sampleValue": "5000",
             "csvColumnName": null
@@ -3013,6 +3081,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
+          "activation": "(( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS'))",
           "aux": {
             "sampleValue": "20.0001",
             "csvColumnName": null
@@ -3030,6 +3099,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
+          "activation": "!((( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS')))",
           "aux": {
             "sampleValue": "3.875",
             "csvColumnName": null
@@ -3042,6 +3112,7 @@
           "label": "6b. I confirm that the value entered is correct",
           "width": 1,
           "type": "boolean",
+          "activation": "((( lpc018a  > 20))||(( lpc018b  > 20)))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
