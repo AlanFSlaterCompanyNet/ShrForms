@@ -338,12 +338,10 @@
           "label": "2. Date of Return",
           "width": 2,
           "type": "date",
-          "activation": " lpfd003 =='Annual'",
           "aux": {
             "sampleValue": "31/03/2021 00:00:00",
             "csvColumnName": null
           },
-          "readonly": true,
           "required": false
         },
         {
@@ -352,7 +350,6 @@
           "label": "2. Date of Return",
           "width": 2,
           "type": "date",
-          "activation": " lpfd003 =='In-Year'",
           "aux": {
             "sampleValue": "01/04/2021 00:00:00",
             "csvColumnName": null
@@ -2322,6 +2319,16 @@
             "valueColumn": "value",
             "file": "loan_type.csv"
           },
+          "validationList": [
+            {
+              "validation": "(( $value =='FWEIRS')||( $value =='VWES'))?(pfo_count_eird > 0):true",
+              "message": "If Loan Type = \"Fixed with embedded Interest Rate Swaps\" OR Loan Type = 'Variable with embedded Interest Rate Swaps\" then at least 1 Embedded Interest Rate must exist"
+            },
+            {
+              "validation": "(pfo_count_eird > 0)?(( $value =='FWEIRS')||( $value =='REVLNF')||( $value =='VWES')):true",
+              "message": "Interest Rate Derivative exists but Loan type not (Fixed with embedded Interest Rate Swaps) OR(Revolving Loan / Credit Facility) OR (Variable with embedded Interest Rate Swaps)"
+            }
+          ],
           "aux": {
             "sampleValue": "VAR",
             "csvColumnName": null
@@ -2483,6 +2490,14 @@
             {
               "validation": " lpl002a =='FIXIF'? $value ==4:true",
               "message": "If 1. Loan Type = \"Fixed Interest Free\" then 8. Reference Interest Rate must = \"Interest Free\""
+            },
+            {
+              "validation": " $value ==3?(( lpl002a =='FIXED')||( lpl002a =='FWEIRS')||( lpl002a =='FNEIRS')||( lpl002a =='BNDCAP')):true",
+              "message": "8. Reference Interest Rate is \"Fixed Rate Percentage\" but 1. Loan Type is not \"Fixed Rate Loan\" OR \"Fixed with embedded Interest Rate Swaps\" OR \"Fixed without embedded Interest Rate Swaps\" OR \"Bond / Capital Market product\""
+            },
+            {
+              "validation": " $value ==4? lpl002a =='FIXIF':true",
+              "message": "8. Reference Interest Rate is \"Interest Free\" but Loan type is not \"Fixed Interest Free\"."
             }
           ],
           "aux": {
@@ -2557,7 +2572,7 @@
               "message": "10. First Capital Repayment Date should be the same as or later than the Start date of the Facility to which it relates"
             },
             {
-              "validation": "(((Math.abs(( $value  -  lpr005 )) <=  lpfd011 ))&&((Math.abs(( lpr005  -  $value )) <=  lpfd011 )))",
+              "validation": "((( $value  >=  lpfd017 ))&&(( $value  <=  lpfd018 )))",
               "message": "10. First Capital Repayment Date must fall within default date range based on Date of Return (50 years)"
             }
           ],
@@ -2580,7 +2595,7 @@
               "message": "11. Final Capital Repayment date cannot be less than First Capital Repayment date"
             },
             {
-              "validation": "(((Math.abs(( $value  -  lpr005 )) <=  lpfd012 ))&&((Math.abs(( lpr005  -  $value )) <=  lpfd011 )))",
+              "validation": "((( $value  >=  lpfd017 ))&&(( $value  <=  lpfd018 )))",
               "message": "10. Final Capital Repayment Date must fall within default date range based on Date of Return (50 years)"
             }
           ],
@@ -2603,7 +2618,7 @@
             },
             {
               "validation": "( $value  <=  lpl012 )",
-              "message": "12. First interest payment date must be the same as or earlier than 11. Final Capial Repayment Date"
+              "message": "12. First interest payment date must be the same as or earlier than 11. Final Capital Repayment Date"
             }
           ],
           "activation": "(( lpl009 !=4)&&( lpl009 !=5))",
@@ -2625,7 +2640,7 @@
             "file": "yes_no.csv"
           },
           "aux": {
-            "sampleValue": "No",
+            "sampleValue": "2",
             "csvColumnName": null
           },
           "required": true
@@ -2813,15 +2828,19 @@
           "name": "lpl028",
           "labelWidth": 5,
           "label": "17. Has this Loan been repaid?",
-          "width": 2,
-          "type": "boolean",
-          "checkbox": true,
+          "type": "close",
+          "closeChildren": true,
+          "closeLabel": "Repay loan",
+          "message": "Are you sure you want to repay this loan?",
+          "closedMessage": "Loan has been repaid",
+          "cantCloseMessage": "Can't mark this loan as repaid.",
           "activation": "(( lpl007 ==0)&&( lpl012 !='')&&(( lpl012  <=  lpr005 )))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
           },
-          "help": "To change Loan status to repaid please ensure that\n• Balance Outstanding must be 0\n• The Final Capital Repayment date must be entered\n• Repayment date cannot be greater than the Submission Date of Return"
+          "help": "To change Loan status to repaid please ensure that\n• Balance Outstanding must be 0\n• The Final Capital Repayment date must be entered\n• Repayment date cannot be greater than the Submission Date of Return",
+          "required": false
         },
         {
           "name": "lpl100",
