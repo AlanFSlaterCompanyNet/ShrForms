@@ -63,7 +63,8 @@
       "row": 9,
       "values":{
         "hierarchical": true,
-        "crumbField": "lpf004"
+        "crumbField": "lpf004",
+        "totals": [{"page":"loan", "fields":["lpl007"]}]        
       }
     },
     {

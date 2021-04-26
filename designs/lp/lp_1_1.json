@@ -1527,7 +1527,7 @@
           "name": "lpc020",
           "labelWidth": 5,
           "label": "2. Name of Lender",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -1587,7 +1587,7 @@
           "name": "lpc024",
           "labelWidth": 5,
           "label": "6. Reference Interest Rate",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -1732,7 +1732,7 @@
           "name": "lpc031",
           "labelWidth": 5,
           "label": "13. If answer to question 12 is 'Secured Assets', under which method are they marked?",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -1807,13 +1807,14 @@
           "name": "lpc004a",
           "labelWidth": 5,
           "label": "2. Type of covenant applied",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
             "valueColumn": "value",
             "file": "covenant_type.csv"
           },
+          "validation": " $value !=''",
           "aux": {
             "sampleValue": "Interest Cover",
             "csvColumnName": null
@@ -1893,6 +1894,14 @@
       "name": "facility",
       "hierarchical": true,
       "crumbField": "lpf004",
+      "totals": [
+        {
+          "page": "loan",
+          "fields": [
+            "lpl007"
+          ]
+        }
+      ],
       "title": "Facility",
       "fields": [
         {
@@ -1948,7 +1957,7 @@
           "name": "lpf003",
           "labelWidth": 5,
           "label": "1.2 If answer to 1.1 above is Yes, please enter all lenders within this syndicate.",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -1956,6 +1965,8 @@
             "file": "lender.csv"
           },
           "multiple": true,
+          "validation": "(((pfo_lpf003_length >= 1))&&(pfo_lpf003_first!=''))",
+          "validationMessage": "A minimum of one Lender must be added if more than 1.1 Is there a syndicate involved = \"Yes\"'",
           "activation": " lpf002 ==3",
           "aux": {
             "sampleValue": "AXA",
@@ -1997,7 +2008,7 @@
           "name": "lpf005b",
           "labelWidth": 5,
           "label": "3a. If the charge holder is different from the lead lender/lender in Q3 above please list all charge holders",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -2005,6 +2016,8 @@
             "file": "fac_charge_holder.csv"
           },
           "multiple": true,
+          "validation": "(((pfo_lpf005b_length >= 1))&&(pfo_lpf005b_first!=''))",
+          "validationMessage": "3a. Charge holder must be added if 3. Is the Charge holder different from Lender / lead Lender = \"Yes\"",
           "activation": " lpf005 ==3",
           "aux": {
             "sampleValue": "BAE Pension Fund",
@@ -2055,7 +2068,7 @@
               "message": "6. End Date must be greater than 5. Start Date"
             },
             {
-              "validation": "(((Math.abs(( $value  -  lpr005a )) <=  lpfd011 ))&&((Math.abs(( lpr005a  -  $value )) <=  lpfd011 )))",
+              "validation": "((( $value  >  lpfd017 ))&&(( $value  <  lpfd018 )))",
               "message": "6. End Date must fall within default date range based on Date of Return (50 years)"
             }
           ],
@@ -2095,8 +2108,16 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
-          "validation": "( $value  <=  lpf009 )",
-          "validationMessage": "8. Balance of Facility outstaning cannot be greater than 7. Total Facility",
+          "validationList": [
+            {
+              "validation": "( $value  <=  lpf009 )",
+              "message": "8. Balance of Facility outstaning cannot be greater than 7. Total Facility"
+            },
+            {
+              "validation": " $value ==pfo_total_loan_lpl007",
+              "message": "Must equal sum of all balances outstanding for all Loans in this facility."
+            }
+          ],
           "aux": {
             "sampleValue": "10000",
             "csvColumnName": null
@@ -2144,7 +2165,7 @@
           "name": "lpf013",
           "labelWidth": 5,
           "label": "9(iii). What is the undrawn Facility for?",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -2242,15 +2263,19 @@
           "name": "lpf020",
           "labelWidth": 5,
           "label": "11. Is this Facility Closed?",
-          "width": 2,
-          "type": "boolean",
-          "checkbox": true,
+          "type": "close",
+          "closeChildren": false,
+          "closeLabel": "Close facility",
+          "message": "Are you sure you want to close this facility?",
+          "closedMessage": "Facility has been closed",
+          "cantCloseMessage": "Can't close this facility.",
           "activation": "(( lpf010 ==0)&&( lpf008 !='')&&(( lpf008  <=  lpr005 )))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
           },
-          "help": "To change Facility status to closed please ensure that\n• All Loan records have Balance Outstanding = 0\n• The end date is entered and is not greater date of return."
+          "help": "To change Facility status to closed please ensure that\n• All Loan records have Balance Outstanding = 0\n• The end date is entered and is not greater date of return.",
+          "required": false
         },
         {
           "name": "lpc100",
@@ -3065,7 +3090,7 @@
           "width": 2,
           "type": "date",
           "validation": "( $value  >=  lpc016 )",
-          "validationMessage": "4. Date To cannot be before 3. Date From",
+          "validationMessage": "5. Date To cannot be before 4. Date From",
           "aux": {
             "sampleValue": "31/03/2015 00:00:00",
             "csvColumnName": null
@@ -3114,6 +3139,8 @@
           "label": "6b. I confirm that the value entered is correct",
           "width": 1,
           "type": "boolean",
+          "validation": " $value ",
+          "validationMessage": "6. Margin Over Reference Interest Rate / 6. All-in fixed rate is outside the range set by SHR",
           "activation": "((( lpc018a  > 20))||(( lpc018b  > 20)))",
           "aux": {
             "sampleValue": "True",
