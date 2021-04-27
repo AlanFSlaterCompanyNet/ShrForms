@@ -304,13 +304,11 @@
           "label": "1. Nil return",
           "width": 2,
           "type": "text",
-          "activation": "((( lpfd007 + lpfd008 + lpfd009 + lpfd010 )) > 0)",
           "aux": {
             "sampleValue": "No",
             "csvColumnName": null
           },
           "help": "A nil Return can only be entered if:\n1. No in-year return exists for that financial year;\n2. No live Facility or ISDA or Inter Group Finance record exists in the previous annual return;",
-          "hidden": true,
           "required": false
         },
         {
@@ -355,26 +353,27 @@
             "csvColumnName": null
           },
           "help": "Return date for current submission cannot be less than Return data for previous submission",
-          "hidden": true,
           "required": true
         },
         {
           "name": "lpr006",
           "labelWidth": 5,
           "label": "3. Reason for return",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
             "valueColumn": "value",
             "file": "return_reason.csv"
           },
+          "multiple": true,
+          "validation": "(((pfo_lpr006_length >= 1))&&(pfo_lpr006_first!=''))",
+          "validationMessage": "One or more 3. Reason for return required if Return type = \"In-Year\"",
           "activation": " lpfd003 =='In-Year'",
           "aux": {
             "sampleValue": "Change in Loan details",
             "csvColumnName": null
           },
-          "hidden": true,
           "required": true
         },
         {
@@ -544,6 +543,23 @@
             "LPIGF028",
             "LPIGF033",
             "LPIGF034"
+          ],
+          "aux": {
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpr104",
+          "labelWidth": 5,
+          "label": "Loan Covenant",
+          "type": "linkedPageGrid",
+          "page": "loancovenant",
+          "createLabel": "Create Loan Covenant",
+          "columns": [
+            "lpc004",
+            "lpc005",
+            "lpc007"
           ],
           "aux": {
             "csvColumnName": null
@@ -2301,23 +2317,6 @@
             "csvColumnName": null
           },
           "required": true
-        },
-        {
-          "name": "lpc101",
-          "labelWidth": 5,
-          "label": "Loan Covenant",
-          "type": "linkedPageGrid",
-          "page": "loancovenant",
-          "createLabel": "Create Loan Covenant",
-          "columns": [
-            "lpc004",
-            "lpc005",
-            "lpc007"
-          ],
-          "aux": {
-            "csvColumnName": null
-          },
-          "required": true
         }
       ]
     },
@@ -2608,7 +2607,7 @@
           "label": "9b. I confirm that the value entered is correct",
           "width": 1,
           "type": "boolean",
-          "validation": "( lpl010a  < 3.5)? $value :true",
+          "validation": "((((( lpl010a  < 3.5))&&(( lpl010a  > 0))))||(( lpl010  > 20)))? $value :true",
           "validationMessage": "8. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
           "aux": {
             "sampleValue": "True",
@@ -2929,7 +2928,7 @@
           "labelWidth": 5,
           "label": "Loan Covenants",
           "type": "linkedPageSelect",
-          "page": "loancovenant",
+          "page": "global.loancovenant",
           "createLabel": "Manage Linked Loan Covenants",
           "title": "Loan Covenants",
           "useParent": true,
