@@ -310,7 +310,7 @@
             "csvColumnName": null
           },
           "help": "A nil Return can only be entered if:\n1. No in-year return exists for that financial year;\n2. No live Facility or ISDA or Inter Group Finance record exists in the previous annual return;",
-          "readonly": true,
+          "hidden": true,
           "required": false
         },
         {
@@ -355,6 +355,7 @@
             "csvColumnName": null
           },
           "help": "Return date for current submission cannot be less than Return data for previous submission",
+          "hidden": true,
           "required": true
         },
         {
@@ -373,6 +374,7 @@
             "sampleValue": "Change in Loan details",
             "csvColumnName": null
           },
+          "hidden": true,
           "required": true
         },
         {
@@ -722,7 +724,7 @@
           "name": "lpigf006",
           "labelWidth": 5,
           "label": "6. Purpose of loan",
-          "width": 2,
+          "width": 4,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -826,7 +828,7 @@
           "name": "lpigf013",
           "labelWidth": 5,
           "label": "12. Type of Security",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -894,7 +896,7 @@
           "name": "lpigf016b",
           "labelWidth": 5,
           "label": "15. Loan Type",
-          "width": 2,
+          "width": 4,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -929,7 +931,7 @@
           "name": "lpigf018",
           "labelWidth": 5,
           "label": "17. Repayment terms",
-          "width": 2,
+          "width": 6,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -947,7 +949,7 @@
           "name": "lpigf019",
           "labelWidth": 5,
           "label": "18. Reference Interest Rate",
-          "width": 2,
+          "width": 3,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
@@ -1001,9 +1003,10 @@
           "name": "lpc020bx",
           "labelWidth": 5,
           "label": "19b. I confirm that the value entered is correct",
-          "width": 2,
+          "width": 1,
           "type": "boolean",
-          "checkbox": true,
+          "validation": " $value ",
+          "validationMessage": "19. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
           "activation": "(( lpigf016a ==3)&&(((( lpigf020a  > 20))||(( lpigf020b  < 3.5)))))",
           "aux": {
             "sampleValue": "True",
@@ -1062,15 +1065,19 @@
           "name": "lpigf024",
           "labelWidth": 5,
           "label": "23. Has this Loan been repaid?",
-          "width": 2,
-          "type": "boolean",
-          "checkbox": true,
+          "type": "close",
+          "closeChildren": false,
+          "closeLabel": "Close IGF Lend",
+          "message": "Are you sure you want to close this IGF Lend?",
+          "closedMessage": "This IGF Lend has been closed",
+          "cantCloseMessage": "Can't mark this IGF Loan as closed.",
           "activation": "(( lpigf005 ==0)&&( lpigf010 !='')&&(( lpigf010  <=  lpr005 )))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
           },
-          "help": "To change loan status to repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater date of return."
+          "help": "To change loan status to repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater date of return.",
+          "required": false
         }
       ]
     },
@@ -1462,9 +1469,8 @@
           "name": "lpigf044x",
           "labelWidth": 5,
           "label": "19b. I confirm that the value entered is correct",
-          "width": 2,
+          "width": 1,
           "type": "boolean",
-          "checkbox": true,
           "activation": "(( lpigf040a ==3)&&(((( lpigf044a  > 20))||(( lpigf044b  < 3.5)))))",
           "aux": {
             "sampleValue": "True",
@@ -1475,15 +1481,19 @@
           "name": "lpigf045",
           "labelWidth": 5,
           "label": "20. Has this Loan been repaid?",
-          "width": 2,
-          "type": "boolean",
-          "checkbox": true,
+          "type": "close",
+          "closeChildren": false,
+          "closeLabel": "Close IGF Borrow",
+          "message": "Are you sure you want to close this IGF Borrow?",
+          "closedMessage": "This IGF Borrow has been closed",
+          "cantCloseMessage": "Can't mark this IGF Loan as closed.",
           "activation": "(( lpigf029 ==0)&&( lpigf034 !='')&&(( lpigf034  <=  lpr005 )))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
           },
-          "help": "To change loan status to repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater date of return."
+          "help": "To change loan status to repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater date of return.",
+          "required": false
         }
       ]
     },
@@ -1640,9 +1650,8 @@
           "name": "lpc025b",
           "labelWidth": 5,
           "label": "7b. I confirm that the value entered is correct",
-          "width": 2,
+          "width": 1,
           "type": "boolean",
-          "checkbox": true,
           "activation": "((( lpc025  > 20))||(( lpc025a  < 3.5)))",
           "aux": {
             "sampleValue": "False",
@@ -1814,7 +1823,6 @@
             "valueColumn": "value",
             "file": "covenant_type.csv"
           },
-          "validation": " $value !=''",
           "aux": {
             "sampleValue": "Interest Cover",
             "csvColumnName": null
@@ -2483,13 +2491,27 @@
           "name": "lpl008",
           "labelWidth": 5,
           "label": "7. Repayment Terms",
-          "width": 6,
+          "width": 4,
           "type": "choice",
           "csv": {
             "labelColumn": "label",
             "valueColumn": "value",
             "file": "repayment_terms.csv"
           },
+          "validationList": [
+            {
+              "validation": "(( $value ==2)||( $value ==3)||( $value ==12)||( $value ==13))? lpl013 == lpl011 :true",
+              "message": "12.First interest payment date must be the same as 10.First Capital Repayment Date for Repayment Terms"
+            },
+            {
+              "validation": "(( $value ==4)||( $value ==5)||( $value ==10))?( lpl013  <  lpl012 ):true",
+              "message": "12.First interest payment date must be the same as 10.First Capital Repayment Date for Repayment Terms"
+            },
+            {
+              "validation": "(( $value ==9)||( $value ==11))?( lpl013  <  lpl011 ):true",
+              "message": "12.First interest payment date must be prior to 10.First Capital Repayment Date for Repayment Terms"
+            }
+          ],
           "aux": {
             "sampleValue": "Fully Amortising",
             "csvColumnName": null
@@ -2563,8 +2585,16 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  >= 0)))))",
-          "validationMessage": "If 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\" then \"9. All in fixed rate (%) must = 0.",
+          "validationList": [
+            {
+              "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  >= 0)))))",
+              "message": "If 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\" then \"9. All in fixed rate (%) must = 0."
+            },
+            {
+              "validation": "( $value  > 0)",
+              "message": "9. All in fixed rate (%) must have a value greater than 0"
+            }
+          ],
           "activation": "!((( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS')))",
           "aux": {
             "sampleValue": "3.875",
@@ -2576,10 +2606,10 @@
           "name": "lpl010b",
           "labelWidth": 5,
           "label": "9b. I confirm that the value entered is correct",
-          "width": 2,
+          "width": 1,
           "type": "boolean",
-          "checkbox": true,
-          "activation": "((( lpl010  > 20))||(( lpl010a  < 3.5)))",
+          "validation": "( lpl010a  < 3.5)? $value :true",
+          "validationMessage": "8. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -2682,7 +2712,7 @@
               "message": "13(ii) Date when the current deal expires should be the same as or later than the Start date of the Facility to which it relates"
             },
             {
-              "validation": "( $value  >=  lpr005 )",
+              "validation": "( $value  >  lpr005 )",
               "message": "13(ii) Date when the current deal expires must be greater than General Information Date of return "
             }
           ],
@@ -2722,6 +2752,8 @@
             "valueColumn": "value",
             "file": "loan_interest_treated.csv"
           },
+          "validation": " lpl009 ==4? $value ==4:true",
+          "validationMessage": "If Reference Interest Rate = 'Interest free' then must = 'Waived'",
           "aux": {
             "sampleValue": "Paid",
             "csvColumnName": null
@@ -2840,8 +2872,16 @@
           "label": "16(iv). Date of valuation (DD/MM/YYYY)",
           "width": 2,
           "type": "date",
-          "validation": "( $value  <=  lpr005a )",
-          "validationMessage": "16(iv). Date of valuation cannot be after Date of return.",
+          "validationList": [
+            {
+              "validation": "( $value  <=  lpr005a )",
+              "message": "16(iv). Date of valuation cannot be after Date of return."
+            },
+            {
+              "validation": "((( $value  >=  lpfd017 ))&&(( $value  <=  lpfd018 )))",
+              "message": "16(iv). Date of valuation must fall within default date range based on Date of Return (50 years)"
+            }
+          ],
           "activation": "( lpl023  > 0)",
           "aux": {
             "sampleValue": "01/04/2010 00:00:00",
