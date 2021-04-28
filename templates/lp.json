@@ -27,7 +27,11 @@
     "facility",
     "loan",
     "loancovenant",
-    "eird"
+    "eird",
+    "igflend",
+    "igfborrow",
+    "isda",
+    "isdacovenant"
   ],
   "pages": [
     {
@@ -46,28 +50,143 @@
       "action": "insertPage",
       "row": 5,
       "values": {
-        "hierarchical": true
+        "hierarchical": true,
+        "pdfGrids": [
+          {
+            "heading": "IGF Lends",
+            "fields": [
+              "lpigf001",
+              "lpigf002",
+              "lpigf003",
+              "lpigf004",
+              "lpigf005",
+              "lpigf006",
+              "lpigf007",
+              "lpigf008",
+              "lpigf009",
+              "lpigf010",
+              "lpigf011",
+              "lpigf021",
+              "lpigf022",
+              "lpigf023"
+            ]
+          },
+          {
+            "heading": "IGF Lends",
+            "fields": [
+              "lpigf001",
+              "lpigf002",
+              "lpigf012",
+              "lpigf013",
+              "lpigf014",
+              "lpigf015",
+              "lpigf016a",
+              "lpigf016b",
+              "lpigf017",
+              "lpigf018",
+              "lpigf019",
+              "lpigf020a",
+              "lpigf020b",
+              "lpigf030"
+            ]
+          }
+        ]
       }
     },
     {
       "action": "insertPage",
       "row": 6,
       "values": {
-        "hierarchical": true
+        "hierarchical": true,
+        "pdfGrids": [
+          {
+            "heading": "IGF Borrows",
+            "fields": [
+              "lpigf100",
+              "lpigf026",
+              "lpigf027",
+              "lpigf028",
+              "lpigf029",
+              "lpigf030",
+              "lpigf031",
+              "lpigf032",
+              "lpigf033",
+              "lpigf034",
+              "lpigf035"
+            ]
+          },
+          {
+            "heading": "IGF Borrows",
+            "fields": [
+              "lpigf100",
+              "lpigf026",
+              "lpigf036",
+              "lpigf037",
+              "lpigf038",
+              "lpigf039",
+              "lpigf040a",
+              "lpigf040b",
+              "lpigf041",
+              "lpigf042",
+              "lpigf043",
+              "lpigf044a",
+              "lpigf044b",
+              "lpigf050"
+            ]
+          }
+        ]
       }
     },
     {
       "action": "insertPage",
       "row": 7,
       "values": {
-        "hierarchical": true
+        "hierarchical": true,
+        "pdfGrids": [
+          {
+            "heading": "ISDAs",
+            "fields": [
+              "lpc019",
+              "lpc020",
+              "lpc021",
+              "lpc022",
+              "lpc023",
+              "lpc024",
+              "lpc025",
+              "lpc025a",
+              "lpc026",
+              "lpc027",
+              "lpc028",
+              "lpc029",
+              "lpc030",
+              "lpc031",
+              "lpc032",
+              "lpc040"
+            ]
+          }
+        ]
       }
     },
     {
       "action": "insertPage",
       "row": 8,
       "values": {
-        "hierarchical": true
+        "hierarchical": true,
+        "pdfGrids": [
+          {
+            "heading": "ISDA Covenants",
+            "fields": [
+              "lpc019",
+              "lpc003a",
+              "lpc004a",
+              "lpc005",
+              "lpc006",
+              "lpc007",
+              "lpc008",
+              "lpc009"
+            ]
+          }
+        ]
       }
     },
     {
