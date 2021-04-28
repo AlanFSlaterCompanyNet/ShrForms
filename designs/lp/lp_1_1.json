@@ -8,7 +8,10 @@
   "pdfFileName": "LPReturn.pdf",
   "hierarchical": true,
   "pdfPages": [
-    "facility"
+    "facility",
+    "loan",
+    "loancovenant",
+    "eird"
   ],
   "pages": [
     {
@@ -1947,6 +1950,19 @@
             "lpf014",
             "lpf015"
           ]
+        },
+        {
+          "heading": "Facilities",
+          "fields": [
+            "lpf004",
+            "lpf001",
+            "lpf016",
+            "lpf017",
+            "lpf018",
+            "lpf019",
+            "lpf003",
+            "lpf030"
+          ]
         }
       ],
       "title": "Facility",
@@ -2347,6 +2363,48 @@
       "name": "loan",
       "hierarchical": true,
       "crumbField": "lpl002b",
+      "pdfGrids": [
+        {
+          "heading": "Loans",
+          "fields": [
+            "lpf004",
+            "lpl002b",
+            "lpl002a",
+            "lpl003",
+            "lpl004",
+            "lpl006",
+            "lpl007",
+            "lpl008",
+            "lpl009",
+            "lpl010",
+            "lpl010a",
+            "lpl011",
+            "lpl012",
+            "lpl013",
+            "lpl018"
+          ]
+        },
+        {
+          "heading": "Loans",
+          "fields": [
+            "lpf004",
+            "lpl002b",
+            "lpl005",
+            "lpl014",
+            "lpl015",
+            "lpl016",
+            "lpl019",
+            "lpl020",
+            "lpl021",
+            "lpl022",
+            "lpl023",
+            "lpl024",
+            "lpl025",
+            "lpl026",
+            "lpl030"
+          ]
+        }
+      ],
       "title": "Loan",
       "fields": [
         {
@@ -2970,6 +3028,20 @@
     {
       "name": "loancovenant",
       "hierarchical": true,
+      "pdfGrids": [
+        {
+          "heading": "Covenants",
+          "fields": [
+            "lpc003",
+            "lpc004",
+            "lpc005",
+            "lpc006",
+            "lpc007",
+            "lpc008",
+            "lpc009"
+          ]
+        }
+      ],
       "title": "Loan Covenant",
       "fields": [
         {
@@ -3078,6 +3150,22 @@
     {
       "name": "eird",
       "hierarchical": true,
+      "pdfGrids": [
+        {
+          "heading": "Embedded Interest Rate Derivatives",
+          "fields": [
+            "lpf004",
+            "lpl002b",
+            "lpc013",
+            "lpc014",
+            "lpc015",
+            "lpc016",
+            "lpc017",
+            "lpc018a",
+            "lpc018b"
+          ]
+        }
+      ],
       "title": "Embedded Interest Rate Derivative",
       "fields": [
         {
