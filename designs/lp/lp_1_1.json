@@ -7,6 +7,9 @@
   "editRole": "LPS Approver",
   "pdfFileName": "LPReturn.pdf",
   "hierarchical": true,
+  "pdfPages": [
+    "facility"
+  ],
   "pages": [
     {
       "name": "f1",
@@ -1923,6 +1926,26 @@
           "page": "loan",
           "fields": [
             "lpl007"
+          ]
+        }
+      ],
+      "pdfGrids": [
+        {
+          "heading": "Facilities",
+          "fields": [
+            "lpf004",
+            "lpf001",
+            "lpf005b",
+            "lpf006",
+            "lpf007",
+            "lpf008",
+            "lpf009",
+            "lpf010",
+            "lpf011",
+            "lpf012",
+            "lpf013",
+            "lpf014",
+            "lpf015"
           ]
         }
       ],

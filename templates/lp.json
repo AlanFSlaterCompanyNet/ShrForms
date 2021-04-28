@@ -1,13 +1,19 @@
 {
   "processing": [
-    [ "loadFields", "Data" ],
-    [ "loadPages", "Sections" ],
+    [
+      "loadFields",
+      "Data"
+    ],
+    [
+      "loadPages",
+      "Sections"
+    ],
     [
       "generate",
       "Lp",
       "1_1",
       false
-    ]    
+    ]
   ],
   "$schema": "./formDesignSchema.json",
   "title": "LP Return",
@@ -17,6 +23,9 @@
   "editRole": "LPS Approver",
   "pdfFileName": "LPReturn.pdf",
   "hierarchical": true,
+  "pdfPages": [
+    "facility"
+  ],
   "pages": [
     {
       "action": "insertPage",
@@ -33,44 +42,71 @@
     {
       "action": "insertPage",
       "row": 5,
-      "values":{
+      "values": {
         "hierarchical": true
       }
     },
     {
       "action": "insertPage",
       "row": 6,
-      "values":{
+      "values": {
         "hierarchical": true
       }
     },
     {
       "action": "insertPage",
       "row": 7,
-      "values":{
+      "values": {
         "hierarchical": true
       }
     },
     {
       "action": "insertPage",
       "row": 8,
-      "values":{
+      "values": {
         "hierarchical": true
       }
     },
     {
       "action": "insertPage",
       "row": 9,
-      "values":{
+      "values": {
         "hierarchical": true,
         "crumbField": "lpf004",
-        "totals": [{"page":"loan", "fields":["lpl007"]}]        
+        "totals": [
+          {
+            "page": "loan",
+            "fields": [
+              "lpl007"
+            ]
+          }
+        ],
+        "pdfGrids": [
+          {
+            "heading": "Facilities",
+            "fields": [
+              "lpf004",
+              "lpf001",
+              "lpf005b",
+              "lpf006",
+              "lpf007",
+              "lpf008",
+              "lpf009",
+              "lpf010",
+              "lpf011",
+              "lpf012",
+              "lpf013",
+              "lpf014",
+              "lpf015"
+            ]
+          }
+        ]
       }
     },
     {
       "action": "insertPage",
       "row": 10,
-      "values":{
+      "values": {
         "hierarchical": true,
         "crumbField": "lpl002b"
       }
@@ -78,16 +114,16 @@
     {
       "action": "insertPage",
       "row": 11,
-      "values":{
+      "values": {
         "hierarchical": true
       }
     },
     {
       "action": "insertPage",
       "row": 12,
-      "values":{
+      "values": {
         "hierarchical": true
       }
     }
- ]
+  ]
 }
