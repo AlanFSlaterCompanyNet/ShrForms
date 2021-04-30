@@ -24,6 +24,7 @@
   "pdfFileName": "LPReturn.pdf",
   "hierarchical": true,
   "pdfPages": [
+    "submission",
     "facility",
     "loan",
     "loancovenant",
@@ -70,7 +71,7 @@
               "lpigf022",
               "lpigf023"
             ],
-            "labels":[
+            "labels": [
               "Sequence Number",
               "Name of the organisation that the funding is provided to",
               "Relationship to RSL",
@@ -108,10 +109,10 @@
             "excludeFromTotals": [
               "lpigf015"
             ],
-            "labels":[
+            "labels": [
               "Sequence Number",
               "Name of the organisation that the funding is provided to",
-              "Security taken?",	
+              "Security taken?",
               "Type of Security",
               "Type of Security details",
               "Value of Security (£'000s)",
@@ -149,12 +150,12 @@
               "lpigf034",
               "lpigf035"
             ],
-            "labels":[
+            "labels": [
               "Sequence Number",
               "Name of organisation that the funding is provided from",
               "Relationship to RSL",
               "Amount Received (£'000s)",
-              "Balance O/S (£'000s)", 
+              "Balance O/S (£'000s)",
               "Purpose of loan",
               "Details",
               "Duration of funding arrangement (months)",
@@ -181,7 +182,7 @@
               "lpigf044b",
               "lpigf050"
             ],
-            "labels":[
+            "labels": [
               "Sequence Number",
               "Name of organisation that the funding is provided from",
               "Security taken?",
@@ -199,7 +200,7 @@
             ],
             "excludeFromTotals": [
               "lpigf039"
-            ]          
+            ]
           }
         ]
       }
@@ -230,8 +231,8 @@
               "lpc032",
               "lpc040"
             ],
-            "labels":[
-              "Sequence Number",	
+            "labels": [
+              "Sequence Number",
               "Name of Lender",
               "Amount (£'000s)",
               "Start Date",
@@ -270,14 +271,14 @@
               "lpc008",
               "lpc009"
             ],
-            "labels":[
-              "ISDA Sequence Number",	
-              "Sequence Number", 
-              "Type of covenant applied",	
-              "How is this Covenant calculated?",	
-              "Required levels",	
-              "Frequency of reporting to lender",	
-              "Date of last report to lender",	
+            "labels": [
+              "ISDA Sequence Number",
+              "Sequence Number",
+              "Type of covenant applied",
+              "How is this Covenant calculated?",
+              "Required levels",
+              "Frequency of reporting to lender",
+              "Date of last report to lender",
               "Actual levels achieved at that date"
             ]
           }
@@ -316,12 +317,12 @@
               "lpf014",
               "lpf015"
             ],
-            "labels":[
+            "labels": [
               "Facility Reference Number",
               "Name of Lender",
               "Charge holder",
               "Security Trustee in place?",
-              "Start Date",	
+              "Start Date",
               "End Date",
               "Total Facility (£’000s)",
               "Balance of Facility Outstanding (£’000s)",
@@ -344,7 +345,7 @@
               "lpf003",
               "lpf030"
             ],
-            "labels":[
+            "labels": [
               "Facility Reference Number",
               "Name of Lender",
               "Fees - Arrangement",
@@ -352,7 +353,7 @@
               "Fees - Other",
               "Fees - Details",
               "All lenders within this syndicate",
-              "Facility Comments"          
+              "Facility Comments"
             ]
           }
         ]
@@ -384,7 +385,7 @@
               "lpl013",
               "lpl018"
             ],
-            "labels":[
+            "labels": [
               "Facility Reference Number",
               "Loan Reference Number",
               "Loan Type",
@@ -424,7 +425,7 @@
             "excludeFromTotals": [
               "lpl024"
             ],
-            "labels":[
+            "labels": [
               "Facility Reference Number",
               "Loan Reference Number",
               "Start Date",
@@ -432,14 +433,38 @@
               "Current deal expiry date",
               "Forward fixes neg with Lender?",
               "Fees - Arrangement",
-              "Fees - Non-utilisation",	
+              "Fees - Non-utilisation",
               "Fees - Other",
               "Fees - Details",
               "Percentage of Security provided by Social Housing assets (%)",
-              "Value of Security provided by Social Housing units (£'000s)",              
-              "Basis of valuation",	
+              "Value of Security provided by Social Housing units (£'000s)",
+              "Basis of valuation",
               "Date of valuation",
               "Loan Comments"
+            ]
+          },
+          {
+            "heading": "Loans and Covenants",
+            "fields": [
+              "lpf004",
+              "lpl002b",
+              "lpc003",
+              "lpc004",
+              "lpc005",
+              "lpc006",
+              "lpc007",
+              "lpc009"
+            ],
+            "joinField": "lpl101",
+            "labels":[
+              "Facility Reference Number",
+              "Loan Reference Number",
+              "Covenant Sequence Number",
+              "Type of Covenant applied",
+              "How is this Covenant calculated?",
+              "Required levels",
+              "Frequency of reporting to lender",
+              "Actual levels achieved at that date"
             ]
           }
         ]
@@ -461,7 +486,7 @@
               "lpc007",
               "lpc009"
             ],
-            "labels":[
+            "labels": [
               "Covenant Sequence Number",
               "Type of Covenant applied",
               "How is this Covenant calculated?",
@@ -492,7 +517,7 @@
               "lpc018a",
               "lpc018b"
             ],
-            "labels":[
+            "labels": [
               "Facility Reference Number",
               "Loan Reference Number",
               "Sequence Number",

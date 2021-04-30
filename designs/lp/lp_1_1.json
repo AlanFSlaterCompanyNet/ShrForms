@@ -8,6 +8,7 @@
   "pdfFileName": "LPReturn.pdf",
   "hierarchical": true,
   "pdfPages": [
+    "submission",
     "facility",
     "loan",
     "loancovenant",
@@ -2678,6 +2679,30 @@
             "Basis of valuation",
             "Date of valuation",
             "Loan Comments"
+          ]
+        },
+        {
+          "heading": "Loans and Covenants",
+          "fields": [
+            "lpf004",
+            "lpl002b",
+            "lpc003",
+            "lpc004",
+            "lpc005",
+            "lpc006",
+            "lpc007",
+            "lpc009"
+          ],
+          "joinField": "lpl101",
+          "labels": [
+            "Facility Reference Number",
+            "Loan Reference Number",
+            "Covenant Sequence Number",
+            "Type of Covenant applied",
+            "How is this Covenant calculated?",
+            "Required levels",
+            "Frequency of reporting to lender",
+            "Actual levels achieved at that date"
           ]
         }
       ],
