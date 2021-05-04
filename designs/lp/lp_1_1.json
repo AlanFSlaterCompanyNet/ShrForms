@@ -320,6 +320,7 @@
             "csvColumnName": null
           },
           "help": "A nil Return can only be entered if:\n1. No in-year return exists for that financial year;\n2. No live Facility or ISDA or Inter Group Finance record exists in the previous annual return;",
+          "hidden": true,
           "required": false
         },
         {
@@ -348,10 +349,9 @@
           "width": 2,
           "type": "date",
           "aux": {
-            "sampleValue": "31/03/2021 00:00:00",
             "csvColumnName": null
           },
-          "required": false
+          "required": true
         },
         {
           "name": "lpr005a",
@@ -364,6 +364,7 @@
             "csvColumnName": null
           },
           "help": "Return date for current submission cannot be less than Return data for previous submission",
+          "hidden": true,
           "required": true
         },
         {
@@ -385,6 +386,7 @@
             "sampleValue": "Change in Loan details",
             "csvColumnName": null
           },
+          "hidden": true,
           "required": true
         },
         {
@@ -464,7 +466,7 @@
           "percentage": true,
           "validatedPositive": true,
           "validation": "((( $value  >= 0))&&(( $value  <= 100)))",
-          "validationMessage": "8. What Percentage of unencumbered housing units must be between 0 and 100",
+          "validationMessage": "7. What Percentage of unencumbered housing units must be between 0 and 100",
           "aux": {
             "sampleValue": "99.99",
             "csvColumnName": null
@@ -970,6 +972,8 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "13. Value of Security must be greater than 0",
           "activation": " lpigf012 ==3",
           "aux": {
             "sampleValue": "2500",
@@ -1007,7 +1011,7 @@
           },
           "activation": " lpigf016a ==3",
           "aux": {
-            "sampleValue": "Variable Rate Loan",
+            "sampleValue": "1",
             "csvColumnName": null
           },
           "required": true
@@ -1022,6 +1026,8 @@
           "maximumValue": 1000000000,
           "decimalPlaces": 0,
           "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "16. Repayment Period must be greater than 0",
           "activation": " lpigf016a ==3",
           "aux": {
             "sampleValue": "36",
@@ -1058,7 +1064,7 @@
             "valueColumn": "value",
             "file": "reference_interest_rate.csv"
           },
-          "activation": " lpigf016a ==3",
+          "activation": " lpigf016b !=3",
           "aux": {
             "sampleValue": "LIBOR 1 month",
             "csvColumnName": null
@@ -1096,7 +1102,7 @@
           "validatedPositive": true,
           "activation": " lpigf016a ==3",
           "aux": {
-            "sampleValue": "3.375",
+            "sampleValue": "3.5",
             "csvColumnName": null
           },
           "required": true
@@ -1109,7 +1115,7 @@
           "type": "boolean",
           "validation": " $value ",
           "validationMessage": "19. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
-          "activation": "(( lpigf016a ==3)&&(((( lpigf020a  > 20))||(( lpigf020b  < 3.5)))))",
+          "activation": "(( lpigf016a ==3)&&(((( lpigf020a  > 20))||(((( lpigf020b  >= 0))&&(( lpigf020b  < 3.5)))))))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -1154,7 +1160,7 @@
           "csv": {
             "labelColumn": "label",
             "valueColumn": "value",
-            "file": "yes_no_na.csv"
+            "file": "yes_no.csv"
           },
           "activation": " lpigf021 ==3",
           "aux": {
@@ -1503,7 +1509,8 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
-          "validationMessage": "13. Value of Security is required if 11. Security taken = \"Yes\"",
+          "validation": "( $value  > 0)",
+          "validationMessage": "13. Value of Security must be greater than 0",
           "activation": " lpigf036 ==3",
           "aux": {
             "sampleValue": "1250",
@@ -1541,7 +1548,7 @@
           },
           "activation": " lpigf040a ==3",
           "aux": {
-            "sampleValue": "Variable Rate Loan",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -1556,7 +1563,8 @@
           "maximumValue": 1000000000,
           "decimalPlaces": 0,
           "validatedPositive": true,
-          "validationMessage": "16. Repayment Period is required if 14. Loan Agreement in Place = \"Yes\"",
+          "validation": "( $value  > 0)",
+          "validationMessage": "13. Value of Security must be greater than 0",
           "activation": " lpigf040a ==3",
           "aux": {
             "sampleValue": "24",
@@ -1593,7 +1601,7 @@
             "valueColumn": "value",
             "file": "reference_interest_rate.csv"
           },
-          "activation": " lpigf040a ==3",
+          "activation": " lpigf040b !=3",
           "aux": {
             "sampleValue": "LIBOR 2 month",
             "csvColumnName": null
@@ -1611,9 +1619,9 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "activation": " lpigf040a ==3",
+          "activation": " lpigf040b !=3",
           "aux": {
-            "sampleValue": "20.0001",
+            "sampleValue": "20",
             "csvColumnName": null
           },
           "required": true
@@ -1629,9 +1637,9 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "activation": " lpigf040a ==3",
+          "activation": " lpigf040b ==3",
           "aux": {
-            "sampleValue": "3.375",
+            "sampleValue": "3.5",
             "csvColumnName": null
           },
           "required": true
@@ -1642,7 +1650,9 @@
           "label": "19b. I confirm that the value entered is correct",
           "width": 1,
           "type": "boolean",
-          "activation": "(( lpigf040a ==3)&&(((( lpigf044a  > 20))||(( lpigf044b  < 3.5)))))",
+          "validation": " $value ",
+          "validationMessage": "19. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
+          "activation": "(( lpigf040a ==3)&&(((( lpigf044a  > 20))||(((( lpigf044b  >= 0))&&(( lpigf044b  < 3.5)))))))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -1721,7 +1731,7 @@
           "width": 4,
           "type": "textarea",
           "validation": "(( $value ).length <= 2000)",
-          "validationMessage": "ISDAl Comments must be 2000 characters or less",
+          "validationMessage": "ISDA Comments must be 2000 characters or less",
           "aux": {
             "sampleValue": "Comments for ISDA",
             "csvColumnName": null
@@ -1773,6 +1783,8 @@
           "decimalPlaces": 1,
           "showCurrencySymbol": false,
           "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "Amount must have a value greater than 0",
           "aux": {
             "sampleValue": "10000",
             "csvColumnName": null
@@ -1835,7 +1847,7 @@
           "validatedPositive": true,
           "activation": " lpc024 !=3",
           "aux": {
-            "sampleValue": "20.0001",
+            "sampleValue": "20",
             "csvColumnName": null
           },
           "required": true
@@ -1853,7 +1865,7 @@
           "validatedPositive": true,
           "activation": " lpc024 ==3",
           "aux": {
-            "sampleValue": "3.875",
+            "sampleValue": "3.4999",
             "csvColumnName": null
           },
           "required": true
@@ -1864,7 +1876,9 @@
           "label": "7b. I confirm that the value entered is correct",
           "width": 1,
           "type": "boolean",
-          "activation": "((( lpc025  > 20))||(( lpc025a  < 3.5)))",
+          "validation": " $value ",
+          "validationMessage": "7. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
+          "activation": "((( lpc025  > 20))||(( lpc025a  > 20)))",
           "aux": {
             "sampleValue": "False",
             "csvColumnName": null
@@ -2275,7 +2289,7 @@
             "sampleValue": "AXA",
             "csvColumnName": null
           },
-          "required": false
+          "required": true
         },
         {
           "name": "lpf004",
@@ -2414,7 +2428,7 @@
           "validationList": [
             {
               "validation": "( $value  <=  lpf009 )",
-              "message": "8. Balance of Facility outstaning cannot be greater than 7. Total Facility"
+              "message": "8. Balance of Facility outstanding cannot be greater than 7. Total Facility"
             },
             {
               "validation": " $value ==pfo_total_loan_lpl007",
@@ -2441,7 +2455,7 @@
           "validation": "( $value  <=  lpf009 )",
           "validationMessage": "9. Facility Undrawn cannot be greater than 7. Total Facility",
           "aux": {
-            "sampleValue": "10000",
+            "sampleValue": "0",
             "csvColumnName": null
           },
           "required": true
@@ -2459,7 +2473,7 @@
           },
           "activation": "( lpf011  > 0)",
           "aux": {
-            "sampleValue": "Yes",
+            "sampleValue": "2",
             "csvColumnName": null
           },
           "required": true
@@ -2475,7 +2489,7 @@
             "valueColumn": "value",
             "file": "fac_undrawn_purpose.csv"
           },
-          "activation": " lpf012 ==3",
+          "activation": "(( lpf012 ==3)&&(( lpf011  > 0)))",
           "aux": {
             "sampleValue": "4",
             "csvColumnName": null
@@ -2488,7 +2502,7 @@
           "label": "Undrawn Facility for Details",
           "width": 2,
           "type": "text",
-          "activation": " lpf013 ==4",
+          "activation": "(( lpf012 ==3)&&( lpf013 ==4)&&(( lpf011  > 0)))",
           "aux": {
             "sampleValue": "The undrawn Facility details are…",
             "csvColumnName": null
@@ -2506,7 +2520,7 @@
             "valueColumn": "value",
             "file": "yes_no.csv"
           },
-          "activation": " lpf012 ==3",
+          "activation": "(( lpf012 ==3)&&(( lpf011  > 0)))",
           "aux": {
             "sampleValue": "Yes",
             "csvColumnName": null
@@ -2886,7 +2900,7 @@
             },
             {
               "validation": "(( $value ==4)||( $value ==5)||( $value ==10))?( lpl013  <  lpl012 ):true",
-              "message": "12.First interest payment date must be the same as 10.First Capital Repayment Date for Repayment Terms"
+              "message": "12.First interest payment date must be prior to 11.Final Capital Repayment Date for Repayment Terms"
             },
             {
               "validation": "(( $value ==9)||( $value ==11))?( lpl013  <  lpl011 ):true",
@@ -2894,7 +2908,7 @@
             }
           ],
           "aux": {
-            "sampleValue": "Fully Amortising",
+            "sampleValue": "11",
             "csvColumnName": null
           },
           "required": true
@@ -2947,10 +2961,10 @@
           "percentage": true,
           "validatedPositive": true,
           "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  >= 0)))))",
-          "validationMessage": "If 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\" then \"9. Margin Over Reference Interest Rate (%) must = 0.",
+          "validationMessage": "If 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\" then \"9. Margin Over Reference Interest Rate (%)\" must = 0.",
           "activation": "(( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS'))",
           "aux": {
-            "sampleValue": "0",
+            "sampleValue": "20",
             "csvColumnName": null
           },
           "required": true
@@ -2966,19 +2980,11 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "validationList": [
-            {
-              "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  >= 0)))))",
-              "message": "If 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\" then \"9. All in fixed rate (%) must = 0."
-            },
-            {
-              "validation": "( $value  > 0)",
-              "message": "9. All in fixed rate (%) must have a value greater than 0"
-            }
-          ],
+          "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  > 0)))))",
+          "validationMessage": "9. All in fixed rate (%) must have a value greater than 0 unless 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\".",
           "activation": "!((( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS')))",
           "aux": {
-            "sampleValue": "3.875",
+            "sampleValue": "3.4999",
             "csvColumnName": null
           },
           "required": true
@@ -2989,8 +2995,9 @@
           "label": "9b. I confirm that the value entered is correct",
           "width": 1,
           "type": "boolean",
-          "validation": "((((( lpl010a  < 3.5))&&(( lpl010a  > 0))))||(( lpl010  > 20)))? $value :true",
+          "validation": " $value ",
           "validationMessage": "8. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
+          "activation": "((( lpl010  > 20))||(((( lpl010a  > 0))&&(( lpl010a  < 3.5)))))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -3014,7 +3021,7 @@
           ],
           "activation": "(( lpl008 !=4)&&( lpl008 !=5)&&( lpl008 !=10))",
           "aux": {
-            "sampleValue": "01/04/2021 00:00:00",
+            "sampleValue": "04/04/2021 00:00:00",
             "csvColumnName": null
           },
           "required": true
@@ -3036,7 +3043,7 @@
             }
           ],
           "aux": {
-            "sampleValue": "02/04/2021 00:00:00",
+            "sampleValue": "04/04/2021 00:00:00",
             "csvColumnName": null
           },
           "required": true
@@ -3059,7 +3066,7 @@
           ],
           "activation": "(( lpl009 !=4)&&( lpl009 !=5))",
           "aux": {
-            "sampleValue": "02/04/2021 00:00:00",
+            "sampleValue": "03/04/2021 00:00:00",
             "csvColumnName": null
           },
           "required": true
