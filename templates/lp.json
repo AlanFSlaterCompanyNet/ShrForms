@@ -16,8 +16,8 @@
     ]
   ],
   "$schema": "./formDesignSchema.json",
-  "title": "LP Return",
-  "formTitle": "LP Return",
+  "title": "Loan Portfolio",
+  "formTitle": "Loan Portfolio",
   "outputTable": "LP Submissions",
   "readRole": "LPS User",
   "editRole": "LPS Approver",

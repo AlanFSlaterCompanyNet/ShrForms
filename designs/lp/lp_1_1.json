@@ -1,7 +1,7 @@
 {
   "$schema": "./formDesignSchema.json",
-  "title": "LP Return",
-  "formTitle": "LP Return",
+  "title": "Loan Portfolio Annual Return 2020/2021",
+  "formTitle": "Loan Portfolio Annual Return 2020/2021",
   "outputTable": "LP Submissions",
   "readRole": "LPS User",
   "editRole": "LPS Approver",
@@ -3296,23 +3296,6 @@
           "required": false
         },
         {
-          "name": "lpl100",
-          "labelWidth": 5,
-          "label": "Embedded Interest Rate Derivatives",
-          "type": "linkedPageGrid",
-          "page": "eird",
-          "createLabel": "Create Embedded Interest Rate Derivative",
-          "columns": [
-            "lpc014",
-            "lpc016",
-            "lpc017"
-          ],
-          "aux": {
-            "csvColumnName": null
-          },
-          "required": true
-        },
-        {
           "name": "lpl101",
           "labelWidth": 5,
           "label": "Loan Covenants",
@@ -3325,6 +3308,23 @@
             "lpc004",
             "lpc005",
             "lpc007"
+          ],
+          "aux": {
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl100",
+          "labelWidth": 5,
+          "label": "Embedded Interest Rate Derivatives",
+          "type": "linkedPageGrid",
+          "page": "eird",
+          "createLabel": "Create Embedded Interest Rate Derivative",
+          "columns": [
+            "lpc014",
+            "lpc016",
+            "lpc017"
           ],
           "aux": {
             "csvColumnName": null
