@@ -1,7 +1,7 @@
 {
   "$schema": "./formDesignSchema.json",
-  "title": "Loan Portfolio Annual Return 2020/2021",
-  "formTitle": "Loan Portfolio Annual Return 2020/2021",
+  "title": "Loan Portfolio",
+  "formTitle": "Loan Portfolio",
   "outputTable": "LP Submissions",
   "readRole": "LPS User",
   "editRole": "LPS Approver",
@@ -510,16 +510,19 @@
           "required": true
         },
         {
-          "name": "lpr102",
+          "name": "lpr104",
           "labelWidth": 5,
-          "label": "ISDA",
+          "label": "Covenant For Loan",
           "type": "linkedPageGrid",
-          "page": "isda",
-          "createLabel": "Create ISDA",
+          "page": "loancovenant",
+          "createLabel": "Create Covenant for Loan",
           "columns": [
-            "LPC019",
-            "LPC020",
-            "LPC021"
+            "lpc003",
+            "lpc004",
+            "lpc005",
+            "lpc006",
+            "lpc009",
+            "lpc008"
           ],
           "aux": {
             "csvColumnName": null
@@ -563,16 +566,16 @@
           "required": true
         },
         {
-          "name": "lpr104",
+          "name": "lpr102",
           "labelWidth": 5,
-          "label": "Loan Covenant",
+          "label": "ISDA",
           "type": "linkedPageGrid",
-          "page": "loancovenant",
-          "createLabel": "Create Loan Covenant",
+          "page": "isda",
+          "createLabel": "Create ISDA",
           "columns": [
-            "lpc004",
-            "lpc005",
-            "lpc007"
+            "LPC019",
+            "LPC020",
+            "LPC021"
           ],
           "aux": {
             "csvColumnName": null
@@ -634,7 +637,7 @@
           "required": true
         },
         {
-          "name": "lpainf003",
+          "name": "lpainf004",
           "labelWidth": 3,
           "label": "",
           "commentsRequiredMessage": "A1.4 Submit",
@@ -728,7 +731,7 @@
       "title": "Inter Group Finance - Lend",
       "fields": [
         {
-          "name": "lpigf030",
+          "name": "lpigf030a",
           "labelWidth": 5,
           "label": "IGF Comments Lend",
           "width": 4,
@@ -1142,8 +1145,10 @@
           "name": "lpigf022",
           "labelWidth": 5,
           "label": "21. If you answered YES to question (19) please enter the Loan Reference Number",
-          "width": 2,
-          "type": "text",
+          "width": 3,
+          "type": "choice",
+          "page": "loan",
+          "pageField": "lpl002b",
           "activation": " lpigf021 ==3",
           "aux": {
             "sampleValue": "BCHFIXED11052",
@@ -1999,7 +2004,7 @@
           "required": true
         },
         {
-          "name": "lpc100",
+          "name": "lpc033",
           "labelWidth": 5,
           "label": "ISDA Covenant",
           "type": "linkedPageGrid",
@@ -2008,7 +2013,7 @@
           "columns": [
             "LPC003a",
             "LPC004a",
-            "LPC007"
+            "LPC007a"
           ],
           "aux": {
             "csvColumnName": null
@@ -2027,11 +2032,15 @@
             "lpc019",
             "lpc003a",
             "lpc004a",
-            "lpc005",
-            "lpc006",
-            "lpc007",
-            "lpc008",
-            "lpc009"
+            "lpc005a",
+            "lpc006a",
+            "lpc007a",
+            "lpc008a",
+            "lpc009a"
+          ],
+          "sortBy": [
+            "lpc019",
+            "lpc003a"
           ],
           "labels": [
             "ISDA Sequence Number",
@@ -2081,7 +2090,7 @@
           "required": true
         },
         {
-          "name": "lpc005",
+          "name": "lpc005a",
           "labelWidth": 5,
           "label": "3. How is this Covenant calculated?",
           "width": 4,
@@ -2095,7 +2104,7 @@
           "required": true
         },
         {
-          "name": "lpc006",
+          "name": "lpc006a",
           "labelWidth": 5,
           "label": "4. Required levels",
           "width": 2,
@@ -2107,7 +2116,7 @@
           "required": true
         },
         {
-          "name": "lpc007",
+          "name": "lpc007a",
           "labelWidth": 5,
           "label": "5. Frequency of reporting to lender",
           "width": 2,
@@ -2124,7 +2133,7 @@
           "required": true
         },
         {
-          "name": "lpc008",
+          "name": "lpc008a",
           "labelWidth": 5,
           "label": "6. Date of last report to lender",
           "width": 2,
@@ -2136,7 +2145,7 @@
           "required": true
         },
         {
-          "name": "lpc009",
+          "name": "lpc009a",
           "labelWidth": 5,
           "label": "7. Actual levels achieved at that date",
           "width": 2,
@@ -2637,6 +2646,10 @@
             "lpl013",
             "lpl018"
           ],
+          "sortBy": [
+            "lpf004",
+            "lpl002b"
+          ],
           "labels": [
             "Facility Reference Number",
             "Loan Reference Number",
@@ -2674,6 +2687,10 @@
             "lpl026",
             "lpl030"
           ],
+          "sortBy": [
+            "lpf004",
+            "lpl002b"
+          ],
           "excludeFromTotals": [
             "lpl024"
           ],
@@ -2706,6 +2723,11 @@
             "lpc006",
             "lpc007",
             "lpc009"
+          ],
+          "sortBy": [
+            "lpf004",
+            "lpl002b",
+            "lpc003"
           ],
           "joinField": "lpl101",
           "labels": [
@@ -3478,6 +3500,11 @@
             "lpc017",
             "lpc018a",
             "lpc018b"
+          ],
+          "sortBy": [
+            "lpf004",
+            "lpl002b",
+            "lpc013"
           ],
           "labels": [
             "Facility Reference Number",
