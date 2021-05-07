@@ -271,6 +271,10 @@
               "lpc008a",
               "lpc009a"
             ],
+            "sortBy":[
+              "lpc019",
+              "lpc003a"
+            ],
             "labels": [
               "ISDA Sequence Number",
               "Sequence Number",
@@ -385,6 +389,10 @@
               "lpl013",
               "lpl018"
             ],
+            "sortBy": [
+              "lpf004",
+              "lpl002b"
+            ],
             "labels": [
               "Facility Reference Number",
               "Loan Reference Number",
@@ -422,6 +430,10 @@
               "lpl026",
               "lpl030"
             ],
+            "sortBy": [
+              "lpf004",
+              "lpl002b"
+            ],
             "excludeFromTotals": [
               "lpl024"
             ],
@@ -454,6 +466,11 @@
               "lpc006",
               "lpc007",
               "lpc009"
+            ],
+            "sortBy":[
+              "lpf004",
+              "lpl002b",
+              "lpc003"
             ],
             "joinField": "lpl101",
             "labels":[
@@ -516,6 +533,11 @@
               "lpc017",
               "lpc018a",
               "lpc018b"
+            ],
+            "sortBy":[
+              "lpf004",
+              "lpl002b",
+              "lpc013"
             ],
             "labels": [
               "Facility Reference Number",
