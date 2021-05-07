@@ -265,11 +265,11 @@
               "lpc019",
               "lpc003a",
               "lpc004a",
-              "lpc005",
-              "lpc006",
-              "lpc007",
-              "lpc008",
-              "lpc009"
+              "lpc005a",
+              "lpc006a",
+              "lpc007a",
+              "lpc008a",
+              "lpc009a"
             ],
             "labels": [
               "ISDA Sequence Number",
