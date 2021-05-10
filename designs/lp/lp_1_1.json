@@ -506,8 +506,7 @@
           ],
           "aux": {
             "csvColumnName": null
-          },
-          "required": true
+          }
         },
         {
           "name": "lpr104",
@@ -526,8 +525,7 @@
           ],
           "aux": {
             "csvColumnName": null
-          },
-          "required": true
+          }
         },
         {
           "name": "lpr100",
@@ -544,8 +542,7 @@
           ],
           "aux": {
             "csvColumnName": null
-          },
-          "required": true
+          }
         },
         {
           "name": "lpr101",
@@ -562,8 +559,7 @@
           ],
           "aux": {
             "csvColumnName": null
-          },
-          "required": true
+          }
         },
         {
           "name": "lpr102",
@@ -579,8 +575,7 @@
           ],
           "aux": {
             "csvColumnName": null
-          },
-          "required": true
+          }
         }
       ]
     },
@@ -2017,8 +2012,7 @@
           ],
           "aux": {
             "csvColumnName": null
-          },
-          "required": true
+          }
         }
       ]
     },
@@ -2617,8 +2611,7 @@
           ],
           "aux": {
             "csvColumnName": null
-          },
-          "required": true
+          }
         }
       ]
     },
@@ -3350,8 +3343,7 @@
           ],
           "aux": {
             "csvColumnName": null
-          },
-          "required": true
+          }
         }
       ]
     },
