@@ -9,7 +9,6 @@
   "illegalValueMessage": "-",
   "financialFormatting": true,
   "excelFileName": "fyfp.xlsx",
-  "multipleOutputTables": true,
   "pages": [
     {
       "name": "f1",
@@ -234,11 +233,11 @@
           "width": 8,
           "type": "static",
           "aux": {
-            "sampleValue": "Welcome to the Landlord Portal for the Five Year Financial Projections return (FYFP).\n\nFYFP is an online form designed to collate information on the projections of RSLs in Scotland.  This information must be submitted by the 31st May each year.\n\nPlease make sure that the return is approved by the governing body and is signed off by the relevant senior officer in your organisation.\n\nWe will use the information to inform our annual financial risk assessment.  Where we publish any information, this will be at the aggregate level and not at individual RSL level as the information provided is commercially sensitive.",
+            "sampleValue": "Welcome to the Landlord Portal for the Five Year Financial Projections return (FYFP).\n\nFYFP is an online form designed to collate information on the projections of RSLs in Scotland.  This information must be submitted by the 30th June.\n\nPlease make sure that the return is approved by the governing body and is signed off by the relevant senior officer in your organisation.\n\nWe will use the information to inform our annual financial risk assessment.  Where we publish any information, this will be at the aggregate level and not at individual RSL level as the information provided is commercially sensitive.",
             "csvColumnName": null
           },
           "title": "Welcome",
-          "text": "<p>Welcome to the Landlord Portal for the Five Year Financial Projections return (FYFP).</p>\n<p>FYFP is an online form designed to collate information on the projections of RSLs in Scotland.  This information must be submitted by the 31st May each year.</p>\n<p>Please make sure that the return is approved by the governing body and is signed off by the relevant senior officer in your organisation.</p>\n<p>We will use the information to inform our annual financial risk assessment.  Where we publish any information, this will be at the aggregate level and not at individual RSL level as the information provided is commercially sensitive.</p>\n",
+          "text": "<p>Welcome to the Landlord Portal for the Five Year Financial Projections return (FYFP).</p>\n<p>FYFP is an online form designed to collate information on the projections of RSLs in Scotland.  This information must be submitted by the 30th June.</p>\n<p>Please make sure that the return is approved by the governing body and is signed off by the relevant senior officer in your organisation.</p>\n<p>We will use the information to inform our annual financial risk assessment.  Where we publish any information, this will be at the aggregate level and not at individual RSL level as the information provided is commercially sensitive.</p>\n",
           "style": "htmlcard"
         },
         {
