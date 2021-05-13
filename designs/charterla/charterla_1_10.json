@@ -4,7 +4,7 @@
   "formTitle": "Charter Return",
   "outputTable": "Charter",
   "readRole": "Charter Reader",
-  "editRole": "Charter Full Return User",
+  "editRole": "Charter User",
   "pdfFileName": "CharterReturn.pdf",
   "pages": [
     {

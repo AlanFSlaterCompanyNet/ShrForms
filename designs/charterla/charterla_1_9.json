@@ -8,13 +8,13 @@
   "pdfFileName": "CharterReturn.pdf",
   "pages": [
     {
-      "name": "section1",
+      "name": "section34",
       "title": "Introduction",
       "fields": [],
       "sectionLevel": 1
     },
     {
-      "name": "section2",
+      "name": "section35",
       "title": "Welcome to the portal for the Annual Return on the Charter (ARC)",
       "fields": [],
       "sectionLevel": 2
@@ -39,7 +39,7 @@
         },
         {
           "name": "cha_y6_847",
-          "labelWidth": 3,
+          "labelWidth": 5,
           "label": "F1.2 Financial year",
           "required": true,
           "width": 2,
@@ -53,10 +53,10 @@
         },
         {
           "name": "cha_y6_848",
-          "labelWidth": 3,
+          "labelWidth": 5,
           "label": "F1.3 Landlord name",
           "required": true,
-          "width": 5,
+          "width": 2,
           "type": "text",
           "aux": {
             "sampleValue": "Abbeyfield Scotland Ltd",
@@ -67,7 +67,7 @@
         },
         {
           "name": "cha_y6_849",
-          "labelWidth": 3,
+          "labelWidth": 5,
           "label": "F1.4 RSL Registration Number",
           "required": true,
           "width": 2,
@@ -80,7 +80,6 @@
             "csvColumnName": "F1.4 RSL Registration Number"
           },
           "outputColumn": "cha_rsl_reg_no",
-          "showDigitGroupSeparator": false,
           "readonly": true
         },
         {
@@ -230,213 +229,13 @@
       ]
     },
     {
-      "name": "section3",
+      "name": "section36",
       "title": "Social landlord contextual information",
       "fields": [],
       "sectionLevel": 1
     },
     {
-      "name": "section4",
-      "title": "Staff",
-      "fields": [],
-      "sectionLevel": 2
-    },
-    {
-      "name": "c1",
-      "title": "Staff information, staff turnover and sickness rates (Indicator C1)",
-      "fields": [
-        {
-          "type": "static",
-          "style": "heading",
-          "level": 5,
-          "title": "Please state:",
-          "name": "static_c1_0",
-          "borderTop": false
-        },
-        {
-          "name": "cha_y1_299",
-          "readonly": true,
-          "labelWidth": 5,
-          "label": "C1.1 The name of Chief Executive",
-          "required": true,
-          "width": 2,
-          "type": "text",
-          "aux": {
-            "sampleValue": null,
-            "csvColumnName": "C1.1 Name of Chief Executive"
-          },
-          "outputColumn": "cha_indc1_ceo_name",
-          "help": "C1.1 'the name of Chief Executive' is non-enterable, and is derived from 'Senior Officer' in CRM.\nIf this needs to be amended, please contact 'shr@shr.gov.scot' with details."
-        },
-        {
-          "type": "static",
-          "style": "heading",
-          "level": 5,
-          "title": "C1.2 Staff employed by the RSL",
-          "name": "static_c1_1",
-          "borderTop": false
-        },
-        {
-          "name": "cha_y1_300",
-          "labelWidth": 5,
-          "label": "C1.2.1 The number of senior staff",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "aux": {
-            "sampleValue": "14.01",
-            "csvColumnName": "C1.2.1 Senior staff employed by the RSL"
-          },
-          "outputColumn": "cha_indc1_senior_num"
-        },
-        {
-          "name": "cha_y1_301",
-          "labelWidth": 5,
-          "label": "C1.2.2 The number of office based staff",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "aux": {
-            "sampleValue": "69.96",
-            "csvColumnName": "C1.2.2 Office based staff employed by the RSL"
-          },
-          "outputColumn": "cha_indc1_office_num"
-        },
-        {
-          "name": "cha_y1_302",
-          "labelWidth": 5,
-          "label": "C1.2.3 The number of care / support staff",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "aux": {
-            "sampleValue": "222.05",
-            "csvColumnName": "C1.2.3 Care / support staff employed by the RSL"
-          },
-          "outputColumn": "cha_indc1_care_num"
-        },
-        {
-          "name": "cha_y1_303",
-          "labelWidth": 5,
-          "label": "C1.2.4 The number of concierge staff",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "aux": {
-            "sampleValue": "0",
-            "csvColumnName": "C1.2.4 Concierge staff employed by the RSL"
-          },
-          "outputColumn": "cha_indc1_concierge_num"
-        },
-        {
-          "name": "cha_y1_304",
-          "labelWidth": 5,
-          "label": "C1.2.5 The number of direct labour staff",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "aux": {
-            "sampleValue": "0",
-            "csvColumnName": "C1.2.5 Direct labour staff employed by the RSL"
-          },
-          "outputColumn": "cha_indc1_dirlab_num"
-        },
-        {
-          "name": "cha_y1_589_1",
-          "labelWidth": 5,
-          "label": "C1.2.6 The total number of staff",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "calculation": "(( cha_y1_300 + cha_y1_301 + cha_y1_302 + cha_y1_303 + cha_y1_304 ))",
-          "aux": {
-            "sampleValue": "306.02",
-            "csvColumnName": "C1.2.6 Total staff employed by the RSL"
-          },
-          "outputColumn": "cha_indc1_staff_gt",
-          "help": "Total = C1.2.1 + C1.2.2 + C1.2.3 + C1.2.4 + C1.2.5"
-        },
-        {
-          "type": "static",
-          "style": "heading",
-          "level": 5,
-          "title": "C1.3.1 Staff turnover and sickness absence",
-          "name": "static_c1_2",
-          "borderTop": false
-        },
-        {
-          "name": "cha_y1_305",
-          "labelWidth": 5,
-          "label": "C1.3.1 The percentage of senior staff turnover in the year to the end of the reporting year",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "percentage": true,
-          "aux": {
-            "sampleValue": "6.52",
-            "csvColumnName": "C1.3.1 Percentage senior staff turnover"
-          },
-          "outputColumn": "cha_indc1_senior_turn_pct"
-        },
-        {
-          "name": "cha_y1_306",
-          "labelWidth": 5,
-          "label": "C1.3.2 The percentage of total staff turnover in the year to the end of the reporting year",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "percentage": true,
-          "aux": {
-            "sampleValue": "33.75",
-            "csvColumnName": "C1.3.2 Percentage of total staff turnover"
-          },
-          "outputColumn": "cha_indc1_total_turn_pct"
-        },
-        {
-          "name": "cha_y1_307",
-          "labelWidth": 5,
-          "label": "C1.3.3 The percentage of days lost through staff sickness absence in the reporting year",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "percentage": true,
-          "aux": {
-            "sampleValue": "5.75",
-            "csvColumnName": "C1.3.3 Percentage days lost through staff sickness absence"
-          },
-          "outputColumn": "cha_indc1_days_lost_pct"
-        }
-      ]
-    },
-    {
-      "name": "section5",
+      "name": "section37",
       "title": "Lets",
       "fields": [],
       "sectionLevel": 2
@@ -450,7 +249,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state, excluding mutual exchanges:",
-          "name": "static_c3_0",
+          "name": "static_c3_2",
           "borderTop": false
         },
         {
@@ -490,7 +289,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_c3_1",
+          "name": "static_c3_3",
           "borderTop": true
         },
         {
@@ -521,11 +320,11 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_c2_0",
+          "name": "static_c2_2",
           "borderTop": false
         },
         {
-          "name": "cha_y1_341",
+          "name": "cha_y6_250",
           "labelWidth": 5,
           "label": "C2.1 The number of lets to existing tenants",
           "required": true,
@@ -536,12 +335,12 @@
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "1",
-            "csvColumnName": "C2.1 Number of lets to existing tenants (RSL)"
+            "csvColumnName": "C2.1 Number of lets to existing tenants"
           },
-          "outputColumn": "cha_indc2_rsl_exist_num"
+          "outputColumn": "cha_indc2_la_exist_num"
         },
         {
-          "name": "cha_y1_342",
+          "name": "cha_y6_251",
           "labelWidth": 5,
           "label": "C2.2 The number of lets to housing list applicants",
           "required": true,
@@ -552,12 +351,12 @@
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "69",
-            "csvColumnName": "C2.2 Number of lets to housing list applicants (RSL)"
+            "csvColumnName": "C2.2 Number of lets to housing list applicants"
           },
-          "outputColumn": "cha_indc2_rsl_list_num"
+          "outputColumn": "cha_indc2_la_list_num"
         },
         {
-          "name": "cha_y1_648",
+          "name": "cha_y6_252",
           "labelWidth": 5,
           "label": "C2.3 The number of mutual exchanges",
           "required": true,
@@ -568,12 +367,12 @@
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "2",
-            "csvColumnName": "C2.3 Number of mutual exchanges (RSL)"
+            "csvColumnName": "C2.3 Number of mutual exchanges"
           },
-          "outputColumn": "cha_indc2_rsl_exch_num"
+          "outputColumn": "cha_indc2_la_exch_num"
         },
         {
-          "name": "cha_y1_343",
+          "name": "cha_y6_253",
           "labelWidth": 5,
           "label": "C2.4 The number of lets from other sources",
           "required": true,
@@ -584,22 +383,14 @@
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "13",
-            "csvColumnName": "C2.4 Number of lets from other sources (RSL)"
+            "csvColumnName": "C2.4 Number of lets from other sources"
           },
-          "outputColumn": "cha_indc2_rsl_other_num"
+          "outputColumn": "cha_indc2_la_other_num"
         },
         {
-          "type": "static",
-          "style": "heading",
-          "level": 5,
-          "title": "C2.5 The number of applicants who have been assessed as statutorily homeless by the local authority as",
-          "name": "static_c2_1",
-          "borderTop": false
-        },
-        {
-          "name": "cha_y1_345",
+          "name": "cha_y1_344",
           "labelWidth": 5,
-          "label": "C2.5.1 Section 5 referrals (RSLs)",
+          "label": "C2.5 The number of lets to homeless applicants.",
           "required": true,
           "width": 2,
           "type": "numeric",
@@ -607,83 +398,35 @@
           "maximumValue": 1000000.0,
           "decimalPlaces": 0,
           "aux": {
-            "sampleValue": "11",
-            "csvColumnName": "C2.5.1 Number of applicants assessed as statutorily homeless by LA - section 5 referrals (RSL)"
+            "sampleValue": "43",
+            "csvColumnName": "C2.5 Number of lets to homeless applicants."
           },
-          "outputColumn": "cha_indc2_rsl_sec5_hless"
+          "outputColumn": "cha_indc2_la_list_hless"
         },
         {
-          "name": "cha_y1_346",
+          "name": "cha_y6_823",
           "labelWidth": 5,
-          "label": "C2.5.2 Nominations from the local authority",
+          "label": "C2.6 Total number of lets excluding exchanges",
           "required": true,
           "width": 2,
           "type": "numeric",
           "minimumValue": 0,
           "maximumValue": 1000000.0,
           "decimalPlaces": 0,
-          "aux": {
-            "sampleValue": "0",
-            "csvColumnName": "C2.5.2 Number of applicants assessed as statutorily homeless by LA - nominations from LA (RSL)"
-          },
-          "outputColumn": "cha_indc2_rsl_lanom_hless"
-        },
-        {
-          "name": "cha_y1_347",
-          "labelWidth": 5,
-          "label": "C2.5.3 Other",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000.0,
-          "decimalPlaces": 0,
-          "aux": {
-            "sampleValue": "5",
-            "csvColumnName": "C2.5.3 Number of applicants assessed as statutorily homeless by LA - other (RSL)"
-          },
-          "outputColumn": "cha_indc2_rsl_other_hless"
-        },
-        {
-          "name": "cha_y1_348",
-          "labelWidth": 5,
-          "label": "C2.6 The number of other nominations from local authorities",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000.0,
-          "decimalPlaces": 0,
-          "aux": {
-            "sampleValue": "27",
-            "csvColumnName": "C2.6 Number of other nominations from local authorities (RSL)"
-          },
-          "outputColumn": "cha_indc2_rsl_laother_hless"
-        },
-        {
-          "name": "cha_y6_810",
-          "labelWidth": 5,
-          "label": "C2.7 Total number of lets excluding exchanges",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000.0,
-          "decimalPlaces": 0,
-          "calculation": "( cha_y1_341 + cha_y1_342 + cha_y1_343 + cha_y1_345 + cha_y1_346 + cha_y1_347 + cha_y1_348 )",
+          "calculation": "( cha_y6_250 + cha_y6_251 + cha_y6_253 + cha_y1_344 )",
           "validation": " $value == indicator_c3 ",
           "validationMessage": "Total of all lets (C2) minus Mutual exchanges (C2.3) must be = C3.1 + C3.2",
           "aux": {
             "sampleValue": "126",
-            "csvColumnName": "C2.7 Total number of lets excluding exchanges (RSL)"
+            "csvColumnName": "C2.6 Total number of lets excluding exchanges"
           },
-          "outputColumn": "cha_indc2_rsl_lets_gt",
-          "help": "Total = C2.1 + C2.2 + C2.4  + C2.5.1 + C2.5.2 + C2.5.3 + C2.6 "
+          "outputColumn": "cha_indc2_la_lets_gt",
+          "help": "Total = C2.1 + C2.2 + C2.4  + C2.5"
         }
       ]
     },
     {
-      "name": "section6",
+      "name": "section38",
       "title": "Comments",
       "fields": [],
       "sectionLevel": 2
@@ -697,7 +440,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Social landlord contextual information'' section.",
-          "name": "static_comment_slc_0",
+          "name": "static_comment_slc_1",
           "borderTop": false
         },
         {
@@ -716,13 +459,13 @@
       ]
     },
     {
-      "name": "section7",
+      "name": "section39",
       "title": "Overall satisfaction",
       "fields": [],
       "sectionLevel": 1
     },
     {
-      "name": "section8",
+      "name": "section40",
       "title": "All outcomes",
       "fields": [],
       "sectionLevel": 2
@@ -736,7 +479,7 @@
           "style": "heading",
           "level": 5,
           "title": "1.1 In relation to the overall tenant satisfaction survey carried out, please state",
-          "name": "static_1_0",
+          "name": "static_1_4",
           "borderTop": false
         },
         {
@@ -775,7 +518,7 @@
           "style": "heading",
           "level": 5,
           "title": "1.1.3 The method(s) of administering the survey",
-          "name": "static_1_1",
+          "name": "static_1_5",
           "borderTop": false
         },
         {
@@ -851,7 +594,7 @@
           "style": "heading",
           "level": 5,
           "title": "1.2 In relation to the tenant satisfaction question on overall services, please state the number of tenants who responded",
-          "name": "static_1_2",
+          "name": "static_1_6",
           "borderTop": false
         },
         {
@@ -975,7 +718,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_1_3",
+          "name": "static_1_7",
           "borderTop": true
         },
         {
@@ -999,7 +742,7 @@
       ]
     },
     {
-      "name": "section9",
+      "name": "section41",
       "title": "Comments",
       "fields": [],
       "sectionLevel": 2
@@ -1013,7 +756,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Overall satisfaction'' section.",
-          "name": "static_comment_os_0",
+          "name": "static_comment_os_1",
           "borderTop": false
         },
         {
@@ -1032,13 +775,13 @@
       ]
     },
     {
-      "name": "section10",
+      "name": "section42",
       "title": "The customer / landlord relationship",
       "fields": [],
       "sectionLevel": 1
     },
     {
-      "name": "section11",
+      "name": "section43",
       "title": "Communication",
       "fields": [],
       "sectionLevel": 2
@@ -1052,7 +795,7 @@
           "style": "heading",
           "level": 5,
           "title": "In relation to satisfaction with how well their landlord keeps tenants informed about their services, please state:",
-          "name": "static_2_0",
+          "name": "static_2_3",
           "borderTop": false
         },
         {
@@ -1076,7 +819,7 @@
           "style": "heading",
           "level": 5,
           "title": "2.2 Of the tenants who answered, how many said that their landlord was",
-          "name": "static_2_1",
+          "name": "static_2_4",
           "borderTop": false
         },
         {
@@ -1184,7 +927,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_2_2",
+          "name": "static_2_5",
           "borderTop": true
         },
         {
@@ -1208,7 +951,7 @@
       ]
     },
     {
-      "name": "section12",
+      "name": "section44",
       "title": "Participation",
       "fields": [],
       "sectionLevel": 2
@@ -1222,7 +965,7 @@
           "style": "heading",
           "level": 5,
           "title": "In relation to satisfaction with opportunities given to tenants to participate in their landlord's decision making process, please state:",
-          "name": "static_5_0",
+          "name": "static_5_3",
           "borderTop": false
         },
         {
@@ -1246,7 +989,7 @@
           "style": "heading",
           "level": 5,
           "title": "5.2 Of the tenants who answered, how many said that they were",
-          "name": "static_5_1",
+          "name": "static_5_4",
           "borderTop": false
         },
         {
@@ -1354,7 +1097,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_5_2",
+          "name": "static_5_5",
           "borderTop": true
         },
         {
@@ -1378,7 +1121,7 @@
       ]
     },
     {
-      "name": "section13",
+      "name": "section45",
       "title": "Comments",
       "fields": [],
       "sectionLevel": 2
@@ -1392,7 +1135,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''The customer / landlord relationship'' section.",
-          "name": "static_comment_clr_0",
+          "name": "static_comment_clr_1",
           "borderTop": false
         },
         {
@@ -1411,13 +1154,13 @@
       ]
     },
     {
-      "name": "section14",
+      "name": "section46",
       "title": "Housing quality and maintenance",
       "fields": [],
       "sectionLevel": 1
     },
     {
-      "name": "section15",
+      "name": "section47",
       "title": "Quality of housing",
       "fields": [],
       "sectionLevel": 2
@@ -1431,7 +1174,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_c8_0",
+          "name": "static_c8_1",
           "borderTop": false
         },
         {
@@ -1513,7 +1256,7 @@
     },
     {
       "formTypes": [
-        "Rsl"
+        "La"
       ],
       "fields": [
         {
@@ -1521,7 +1264,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_c9_0",
+          "name": "static_c9_1",
           "borderTop": false
         },
         {
@@ -1539,7 +1282,7 @@
               "header": "C9.1 Total self-contained stock",
               "children": [
                 {
-                  "name": "cha_y1_468",
+                  "name": "cha_y6_832",
                   "labelWidth": 5,
                   "label": "C9.1 Total self-contained stock (at end of the reporting year)",
                   "required": true,
@@ -1549,13 +1292,13 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "1498",
+                    "sampleValue": "1524",
                     "csvColumnName": "C9.1 Total self-contained stock (at end of the reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_curr_9_1"
+                  "outputColumn": "cha_indc9_la_curr_9_1"
                 },
                 {
-                  "name": "cha_y1_474",
+                  "name": "cha_y6_839",
                   "labelWidth": 5,
                   "label": "C9.1 Total self-contained stock (at end of the next reporting year)",
                   "required": true,
@@ -1565,10 +1308,10 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "1498",
+                    "sampleValue": "1540",
                     "csvColumnName": "C9.1 Total self-contained stock (at end of the next reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_next_9_1"
+                  "outputColumn": "cha_indc9_la_next_9_1"
                 }
               ]
             },
@@ -1578,7 +1321,7 @@
               "header": "C9.2 Self-contained stock exempt from SHQS",
               "children": [
                 {
-                  "name": "cha_y1_469",
+                  "name": "cha_y6_833",
                   "labelWidth": 5,
                   "label": "C9.2 Self-contained stock exempt from SHQS (at end of the reporting year)",
                   "required": true,
@@ -1588,13 +1331,13 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "5",
                     "csvColumnName": "C9.2 Self-contained stock exempt from SHQS (at end of the reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_curr_9_2"
+                  "outputColumn": "cha_indc9_la_curr_9_2"
                 },
                 {
-                  "name": "cha_y1_475",
+                  "name": "cha_y6_840",
                   "labelWidth": 5,
                   "label": "C9.2 Self-contained stock exempt from SHQS (at end of the next reporting year)",
                   "required": true,
@@ -1604,10 +1347,10 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "8",
                     "csvColumnName": "C9.2 Self-contained stock exempt from SHQS (at end of the next reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_next_9_2"
+                  "outputColumn": "cha_indc9_la_next_9_2"
                 }
               ]
             },
@@ -1617,7 +1360,7 @@
               "header": "C9.3 Self-contained stock in abeyance from SHQS",
               "children": [
                 {
-                  "name": "cha_y1_649",
+                  "name": "cha_y6_834",
                   "labelWidth": 5,
                   "label": "C9.3 Self-contained stock in abeyance from SHQS (at end of the reporting year)",
                   "required": true,
@@ -1627,13 +1370,13 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "6",
                     "csvColumnName": "C9.3 Self-contained stock in abeyance from SHQS (at end of the reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_curr_9_3"
+                  "outputColumn": "cha_indc9_la_curr_9_3"
                 },
                 {
-                  "name": "cha_y1_650",
+                  "name": "cha_y6_841",
                   "labelWidth": 5,
                   "label": "C9.3 Self-contained stock in abeyance from SHQS (at end of the next reporting year)",
                   "required": true,
@@ -1643,10 +1386,10 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "10",
                     "csvColumnName": "C9.3 Self-contained stock in abeyance from SHQS (at end of the next reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_next_9_3"
+                  "outputColumn": "cha_indc9_la_next_9_3"
                 }
               ]
             },
@@ -1656,7 +1399,7 @@
               "header": "C9.4.1 Self-contained stock failing SHQS for one criterion",
               "children": [
                 {
-                  "name": "cha_y1_470",
+                  "name": "cha_y6_835",
                   "labelWidth": 5,
                   "label": "C9.4.1 Self-contained stock failing SHQS for one criterion (at end of the reporting year)",
                   "required": true,
@@ -1666,13 +1409,13 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "7",
                     "csvColumnName": "C9.4.1 Self-contained stock failing SHQS for one criterion (at end of the reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_curr_9_4_1"
+                  "outputColumn": "cha_indc9_la_curr_9_4_1"
                 },
                 {
-                  "name": "cha_y1_476",
+                  "name": "cha_y6_842",
                   "labelWidth": 5,
                   "label": "C9.4.1 Self-contained stock failing SHQS for one criterion (at end of the next reporting year)",
                   "required": true,
@@ -1682,10 +1425,10 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "11",
                     "csvColumnName": "C9.4.1 Self-contained stock failing SHQS for one criterion (at end of the next reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_next_9_4_1"
+                  "outputColumn": "cha_indc9_la_next_9_4_1"
                 }
               ]
             },
@@ -1695,7 +1438,7 @@
               "header": "C9.4.2 Self-contained stock failing SHQS for two or more criteria",
               "children": [
                 {
-                  "name": "cha_y1_471",
+                  "name": "cha_y6_836",
                   "labelWidth": 5,
                   "label": "C9.4.2 Self-contained stock failing SHQS for two or more criteria (at end of the reporting year)",
                   "required": true,
@@ -1705,13 +1448,13 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "8",
                     "csvColumnName": "C9.4.2 Self-contained stock failing SHQS for two or more criteria (at end of the reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_curr_9_4_2"
+                  "outputColumn": "cha_indc9_la_curr_9_4_2"
                 },
                 {
-                  "name": "cha_y1_477",
+                  "name": "cha_y6_843",
                   "labelWidth": 5,
                   "label": "C9.4.2 Self-contained stock failing SHQS for two or more criteria (at end of the next reporting year)",
                   "required": true,
@@ -1721,10 +1464,10 @@
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "12",
                     "csvColumnName": "C9.4.2 Self-contained stock failing SHQS for two or more criteria (at end of the next reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_next_9_4_2"
+                  "outputColumn": "cha_indc9_la_next_9_4_2"
                 }
               ]
             },
@@ -1734,7 +1477,7 @@
               "header": "C9.4.3 Total self-contained stock failing SHQS",
               "children": [
                 {
-                  "name": "cha_y1_616",
+                  "name": "cha_y6_837",
                   "labelWidth": 5,
                   "label": "C9.4.3 Total self-contained stock failing SHQS (at end of the reporting year)",
                   "required": true,
@@ -1743,16 +1486,16 @@
                   "minimumValue": 0,
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
-                  "calculation": "(( cha_y1_470 + cha_y1_471 ))",
+                  "calculation": "(( cha_y6_835 + cha_y6_836 ))",
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "15",
                     "csvColumnName": "C9.4.3 Total self-contained stock failing SHQS (at end of the reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_curr_9_4_3",
+                  "outputColumn": "cha_indc9_la_curr_9_4_3",
                   "tooltip": "Equal to C9.4.1 (at end of the reporting year) + C9.4.2 (at end of the reporting year)"
                 },
                 {
-                  "name": "cha_y1_617",
+                  "name": "cha_y6_844",
                   "labelWidth": 5,
                   "label": "C9.4.3 Total self-contained stock failing SHQS (at end of the next reporting year)",
                   "required": true,
@@ -1761,12 +1504,12 @@
                   "minimumValue": 0,
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
-                  "calculation": "(( cha_y1_476 + cha_y1_477 ))",
+                  "calculation": "(( cha_y6_842 + cha_y6_843 ))",
                   "aux": {
-                    "sampleValue": "0",
+                    "sampleValue": "23",
                     "csvColumnName": "C9.4.3 Total self-contained stock failing SHQS (at end of the next reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_next_9_4_3",
+                  "outputColumn": "cha_indc9_la_next_9_4_3",
                   "tooltip": "Equal to C9.4.1 (at end of the next reporting year) + C9.4.2 (at end of the next reporting year)"
                 }
               ]
@@ -1777,7 +1520,7 @@
               "header": "C9.5 Stock meeting the SHQS",
               "children": [
                 {
-                  "name": "cha_y1_472",
+                  "name": "cha_y6_838",
                   "labelWidth": 5,
                   "label": "C9.5 Stock meeting the SHQS (at end of the reporting year)",
                   "required": true,
@@ -1786,18 +1529,18 @@
                   "minimumValue": 0,
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
-                  "calculation": "( cha_y1_468 +( -  cha_y1_469 )+( -  cha_y1_649 )+( -  cha_y1_470 )+( -  cha_y1_471 ))",
+                  "calculation": "( cha_y6_832 +( -  cha_y6_833 )+( -  cha_y6_834 )+( -  cha_y6_835 )+( -  cha_y6_836 ))",
                   "validation": "( $value  >= 0)",
                   "validationMessage": "C9.5 (at end of the reporting year) must be >= 0",
                   "aux": {
                     "sampleValue": "1498",
                     "csvColumnName": "C9.5 Stock meeting the SHQS (at end of the reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_curr_9_5",
+                  "outputColumn": "cha_indc9_la_curr_9_5",
                   "tooltip": "Equal to [C9.1 - C9.2 - C9.3 - C9.4.1 - C9.4.2] (at end of the reporting year)"
                 },
                 {
-                  "name": "cha_y1_478",
+                  "name": "cha_y6_845",
                   "labelWidth": 5,
                   "label": "C9.5 Stock meeting the SHQS (at end of the next reporting year)",
                   "required": true,
@@ -1806,1321 +1549,15 @@
                   "minimumValue": 0,
                   "maximumValue": 100000000.0,
                   "decimalPlaces": 0,
-                  "calculation": "( cha_y1_474 +( -  cha_y1_475 )+( -  cha_y1_650 )+( -  cha_y1_476 )+( -  cha_y1_477 ))",
+                  "calculation": "( cha_y6_839 +( -  cha_y6_840 )+( -  cha_y6_841 )+( -  cha_y6_842 )+( -  cha_y6_843 ))",
                   "validation": "( $value  >= 0)",
                   "validationMessage": "C9.5 (at end of the next reporting year) must be >= 0",
                   "aux": {
-                    "sampleValue": "1498",
+                    "sampleValue": "1499",
                     "csvColumnName": "C9.5 Stock meeting the SHQS (at end of the next reporting year)"
                   },
-                  "outputColumn": "cha_indc9_rsl_next_9_5",
+                  "outputColumn": "cha_indc9_la_next_9_5",
                   "tooltip": "Equal to [C9.1 - C9.2 - C9.3 - C9.4.1 - C9.4.2] (at end of the next reporting year)"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "table",
-          "headers": [
-            "End of the reporting year",
-            "End of the next reporting year"
-          ],
-          "name": "c9_2",
-          "label": "C9.6 Total self-contained stock meeting the SHQS by local authority",
-          "children": [
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_13",
-              "header": "Aberdeen City",
-              "children": [
-                {
-                  "name": "cha_y1_473_1",
-                  "labelWidth": 5,
-                  "label": "C9.6.1 Aberdeen City (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "81",
-                    "csvColumnName": "C9.6.1 Aberdeen City (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_01"
-                },
-                {
-                  "name": "cha_y1_479_1",
-                  "labelWidth": 5,
-                  "label": "C9.6.1 Aberdeen City (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "81",
-                    "csvColumnName": "C9.6.1 Aberdeen City (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_01"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_14",
-              "header": "Aberdeenshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_2",
-                  "labelWidth": 5,
-                  "label": "C9.6.2 Aberdeenshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "25",
-                    "csvColumnName": "C9.6.2 Aberdeenshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_02"
-                },
-                {
-                  "name": "cha_y1_479_2",
-                  "labelWidth": 5,
-                  "label": "C9.6.2 Aberdeenshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "25",
-                    "csvColumnName": "C9.6.2 Aberdeenshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_02"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_15",
-              "header": "Angus",
-              "children": [
-                {
-                  "name": "cha_y1_473_3",
-                  "labelWidth": 5,
-                  "label": "C9.6.3 Angus (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "65",
-                    "csvColumnName": "C9.6.3 Angus (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_03"
-                },
-                {
-                  "name": "cha_y1_479_3",
-                  "labelWidth": 5,
-                  "label": "C9.6.3 Angus (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "65",
-                    "csvColumnName": "C9.6.3 Angus (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_03"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_16",
-              "header": "Argyll & Bute",
-              "children": [
-                {
-                  "name": "cha_y1_473_4",
-                  "labelWidth": 5,
-                  "label": "C9.6.4 Argyll & Bute (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "14",
-                    "csvColumnName": "C9.6.4 Argyll & Bute (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_04"
-                },
-                {
-                  "name": "cha_y1_479_4",
-                  "labelWidth": 5,
-                  "label": "C9.6.4 Argyll & Bute (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "14",
-                    "csvColumnName": "C9.6.4 Argyll & Bute (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_04"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_17",
-              "header": "City of Edinburgh",
-              "children": [
-                {
-                  "name": "cha_y1_473_5",
-                  "labelWidth": 5,
-                  "label": "C9.6.5 City of Edinburgh (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "218",
-                    "csvColumnName": "C9.6.5 City of Edinburgh (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_05"
-                },
-                {
-                  "name": "cha_y1_479_5",
-                  "labelWidth": 5,
-                  "label": "C9.6.5 City of Edinburgh (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "218",
-                    "csvColumnName": "C9.6.5 City of Edinburgh (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_05"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_18",
-              "header": "Clackmannanshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_6",
-                  "labelWidth": 5,
-                  "label": "C9.6.6 Clackmannanshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "16",
-                    "csvColumnName": "C9.6.6 Clackmannanshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_06"
-                },
-                {
-                  "name": "cha_y1_479_6",
-                  "labelWidth": 5,
-                  "label": "C9.6.6 Clackmannanshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "16",
-                    "csvColumnName": "C9.6.6 Clackmannanshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_06"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_19",
-              "header": "Dumfries & Galloway",
-              "children": [
-                {
-                  "name": "cha_y1_473_7",
-                  "labelWidth": 5,
-                  "label": "C9.6.7 Dumfries & Galloway (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "14",
-                    "csvColumnName": "C9.6.7 Dumfries & Galloway (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_07"
-                },
-                {
-                  "name": "cha_y1_479_7",
-                  "labelWidth": 5,
-                  "label": "C9.6.7 Dumfries & Galloway (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "14",
-                    "csvColumnName": "C9.6.7 Dumfries & Galloway (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_07"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_20",
-              "header": "Dundee City",
-              "children": [
-                {
-                  "name": "cha_y1_473_8",
-                  "labelWidth": 5,
-                  "label": "C9.6.8 Dundee City (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "110",
-                    "csvColumnName": "C9.6.8 Dundee City (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_08"
-                },
-                {
-                  "name": "cha_y1_479_8",
-                  "labelWidth": 5,
-                  "label": "C9.6.8 Dundee City (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "110",
-                    "csvColumnName": "C9.6.8 Dundee City (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_08"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_21",
-              "header": "East Ayrshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_9",
-                  "labelWidth": 5,
-                  "label": "C9.6.9 East Ayrshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "26",
-                    "csvColumnName": "C9.6.9 East Ayrshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_09"
-                },
-                {
-                  "name": "cha_y1_479_9",
-                  "labelWidth": 5,
-                  "label": "C9.6.9 East Ayrshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "26",
-                    "csvColumnName": "C9.6.9 East Ayrshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_09"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_22",
-              "header": "East Dunbartonshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_10",
-                  "labelWidth": 5,
-                  "label": "C9.6.10 East Dunbartonshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "9",
-                    "csvColumnName": "C9.6.10 East Dunbartonshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_10"
-                },
-                {
-                  "name": "cha_y1_479_10",
-                  "labelWidth": 5,
-                  "label": "C9.6.10 East Dunbartonshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "9",
-                    "csvColumnName": "C9.6.10 East Dunbartonshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_10"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_23",
-              "header": "East Lothian",
-              "children": [
-                {
-                  "name": "cha_y1_473_11",
-                  "labelWidth": 5,
-                  "label": "C9.6.11 East Lothian (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "24",
-                    "csvColumnName": "C9.6.11 East Lothian (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_11"
-                },
-                {
-                  "name": "cha_y1_479_11",
-                  "labelWidth": 5,
-                  "label": "C9.6.11 East Lothian (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "24",
-                    "csvColumnName": "C9.6.11 East Lothian (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_11"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_24",
-              "header": "East Renfrewshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_12",
-                  "labelWidth": 5,
-                  "label": "C9.6.12 East Renfrewshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "1",
-                    "csvColumnName": "C9.6.12 East Renfrewshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_12"
-                },
-                {
-                  "name": "cha_y1_479_12",
-                  "labelWidth": 5,
-                  "label": "C9.6.12 East Renfrewshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "1",
-                    "csvColumnName": "C9.6.12 East Renfrewshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_12"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_25",
-              "header": "Eilean Siar",
-              "children": [
-                {
-                  "name": "cha_y1_473_13",
-                  "labelWidth": 5,
-                  "label": "C9.6.13 Eilean Siar (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "0",
-                    "csvColumnName": "C9.6.13 Eilean Siar (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_13"
-                },
-                {
-                  "name": "cha_y1_479_13",
-                  "labelWidth": 5,
-                  "label": "C9.6.13 Eilean Siar (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "0",
-                    "csvColumnName": "C9.6.13 Eilean Siar (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_13"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_26",
-              "header": "Falkirk",
-              "children": [
-                {
-                  "name": "cha_y1_473_14",
-                  "labelWidth": 5,
-                  "label": "C9.6.14 Falkirk (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "37",
-                    "csvColumnName": "C9.6.14 Falkirk (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_14"
-                },
-                {
-                  "name": "cha_y1_479_14",
-                  "labelWidth": 5,
-                  "label": "C9.6.14 Falkirk (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "37",
-                    "csvColumnName": "C9.6.14 Falkirk (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_14"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_27",
-              "header": "Fife",
-              "children": [
-                {
-                  "name": "cha_y1_473_15",
-                  "labelWidth": 5,
-                  "label": "C9.6.15 Fife (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "50",
-                    "csvColumnName": "C9.6.15 Fife (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_15"
-                },
-                {
-                  "name": "cha_y1_479_15",
-                  "labelWidth": 5,
-                  "label": "C9.6.15 Fife (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "50",
-                    "csvColumnName": "C9.6.15 Fife (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_15"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_28",
-              "header": "Glasgow City",
-              "children": [
-                {
-                  "name": "cha_y1_473_16",
-                  "labelWidth": 5,
-                  "label": "C9.6.16 Glasgow City (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "88",
-                    "csvColumnName": "C9.6.16 Glasgow City (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_16"
-                },
-                {
-                  "name": "cha_y1_479_16",
-                  "labelWidth": 5,
-                  "label": "C9.6.16 Glasgow City (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "88",
-                    "csvColumnName": "C9.6.16 Glasgow City (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_16"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_29",
-              "header": "Highland",
-              "children": [
-                {
-                  "name": "cha_y1_473_17",
-                  "labelWidth": 5,
-                  "label": "C9.6.17 Highland (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "53",
-                    "csvColumnName": "C9.6.17 Highland (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_17"
-                },
-                {
-                  "name": "cha_y1_479_17",
-                  "labelWidth": 5,
-                  "label": "C9.6.17 Highland (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "53",
-                    "csvColumnName": "C9.6.17 Highland (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_17"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_30",
-              "header": "Inverclyde",
-              "children": [
-                {
-                  "name": "cha_y1_473_18",
-                  "labelWidth": 5,
-                  "label": "C9.6.18 Inverclyde (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "47",
-                    "csvColumnName": "C9.6.18 Inverclyde (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_18"
-                },
-                {
-                  "name": "cha_y1_479_18",
-                  "labelWidth": 5,
-                  "label": "C9.6.18 Inverclyde (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "47",
-                    "csvColumnName": "C9.6.18 Inverclyde (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_18"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_31",
-              "header": "Midlothian",
-              "children": [
-                {
-                  "name": "cha_y1_473_19",
-                  "labelWidth": 5,
-                  "label": "C9.6.19 Midlothian (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "23",
-                    "csvColumnName": "C9.6.19 Midlothian (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_19"
-                },
-                {
-                  "name": "cha_y1_479_19",
-                  "labelWidth": 5,
-                  "label": "C9.6.19 Midlothian (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "23",
-                    "csvColumnName": "C9.6.19 Midlothian (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_19"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_32",
-              "header": "Moray",
-              "children": [
-                {
-                  "name": "cha_y1_473_20",
-                  "labelWidth": 5,
-                  "label": "C9.6.20 Moray (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "67",
-                    "csvColumnName": "C9.6.20 Moray (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_20"
-                },
-                {
-                  "name": "cha_y1_479_20",
-                  "labelWidth": 5,
-                  "label": "C9.6.20 Moray (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "67",
-                    "csvColumnName": "C9.6.20 Moray (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_20"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_33",
-              "header": "North Aryshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_21",
-                  "labelWidth": 5,
-                  "label": "C9.6.21 North Ayrshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "19",
-                    "csvColumnName": "C9.6.21 North Ayrshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_21"
-                },
-                {
-                  "name": "cha_y1_479_21",
-                  "labelWidth": 5,
-                  "label": "C9.6.21 North Ayrshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "19",
-                    "csvColumnName": "C9.6.21 North Ayrshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_21"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_34",
-              "header": "North Lanarkshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_22",
-                  "labelWidth": 5,
-                  "label": "C9.6.22 North Lanarkshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "85",
-                    "csvColumnName": "C9.6.22 North Lanarkshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_22"
-                },
-                {
-                  "name": "cha_y1_479_22",
-                  "labelWidth": 5,
-                  "label": "C9.6.22 North Lanarkshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "85",
-                    "csvColumnName": "C9.6.22 North Lanarkshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_22"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_35",
-              "header": "Orkney Islands",
-              "children": [
-                {
-                  "name": "cha_y1_473_23",
-                  "labelWidth": 5,
-                  "label": "C9.6.23 Orkney Islands (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "0",
-                    "csvColumnName": "C9.6.23 Orkney Islands (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_23"
-                },
-                {
-                  "name": "cha_y1_479_23",
-                  "labelWidth": 5,
-                  "label": "C9.6.23 Orkney Islands (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "0",
-                    "csvColumnName": "C9.6.23 Orkney Islands (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_23"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_36",
-              "header": "Perth & Kinross",
-              "children": [
-                {
-                  "name": "cha_y1_473_24",
-                  "labelWidth": 5,
-                  "label": "C9.6.24 Perth & Kinross (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "35",
-                    "csvColumnName": "C9.6.24 Perth & Kinross (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_24"
-                },
-                {
-                  "name": "cha_y1_479_24",
-                  "labelWidth": 5,
-                  "label": "C9.6.24 Perth & Kinross (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "35",
-                    "csvColumnName": "C9.6.24 Perth & Kinross (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_24"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_37",
-              "header": "Renfrewshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_25",
-                  "labelWidth": 5,
-                  "label": "C9.6.25 Renfrewshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "48",
-                    "csvColumnName": "C9.6.25 Renfrewshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_25"
-                },
-                {
-                  "name": "cha_y1_479_25",
-                  "labelWidth": 5,
-                  "label": "C9.6.25 Renfrewshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "48",
-                    "csvColumnName": "C9.6.25 Renfrewshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_25"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_38",
-              "header": "Scottish Borders",
-              "children": [
-                {
-                  "name": "cha_y1_473_26",
-                  "labelWidth": 5,
-                  "label": "C9.6.26 Scottish Borders (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "7",
-                    "csvColumnName": "C9.6.26 Scottish Borders (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_26"
-                },
-                {
-                  "name": "cha_y1_479_26",
-                  "labelWidth": 5,
-                  "label": "C9.6.26 Scottish Borders (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "7",
-                    "csvColumnName": "C9.6.26 Scottish Borders (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_26"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_39",
-              "header": "Shetland Islands",
-              "children": [
-                {
-                  "name": "cha_y1_473_27",
-                  "labelWidth": 5,
-                  "label": "C9.6.27 Shetland Islands (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "0",
-                    "csvColumnName": "C9.6.27 Shetland Islands (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_27"
-                },
-                {
-                  "name": "cha_y1_479_27",
-                  "labelWidth": 5,
-                  "label": "C9.6.27 Shetland Islands (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "0",
-                    "csvColumnName": "C9.6.27 Shetland Islands (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_27"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_40",
-              "header": "South Ayrshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_28",
-                  "labelWidth": 5,
-                  "label": "C9.6.28 South Ayrshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "68",
-                    "csvColumnName": "C9.6.28 South Ayrshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_28"
-                },
-                {
-                  "name": "cha_y1_479_28",
-                  "labelWidth": 5,
-                  "label": "C9.6.28 South Ayrshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "68",
-                    "csvColumnName": "C9.6.28 South Ayrshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_28"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_41",
-              "header": "South Lanarkshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_29",
-                  "labelWidth": 5,
-                  "label": "C9.6.29 South Lanarkshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "87",
-                    "csvColumnName": "C9.6.29 South Lanarkshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_29"
-                },
-                {
-                  "name": "cha_y1_479_29",
-                  "labelWidth": 5,
-                  "label": "C9.6.29 South Lanarkshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "87",
-                    "csvColumnName": "C9.6.29 South Lanarkshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_29"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_42",
-              "header": "Stirling ",
-              "children": [
-                {
-                  "name": "cha_y1_473_30",
-                  "labelWidth": 5,
-                  "label": "C9.6.30 Stirling (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "73",
-                    "csvColumnName": "C9.6.30 Stirling (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_30"
-                },
-                {
-                  "name": "cha_y1_479_30",
-                  "labelWidth": 5,
-                  "label": "C9.6.30 Stirling (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "73",
-                    "csvColumnName": "C9.6.30 Stirling (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_30"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_43",
-              "header": "West Dunbartonshire",
-              "children": [
-                {
-                  "name": "cha_y1_473_31",
-                  "labelWidth": 5,
-                  "label": "C9.6.31 West Dunbartonshire (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "46",
-                    "csvColumnName": "C9.6.31 West Dunbartonshire (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_31"
-                },
-                {
-                  "name": "cha_y1_479_31",
-                  "labelWidth": 5,
-                  "label": "C9.6.31 West Dunbartonshire (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "46",
-                    "csvColumnName": "C9.6.31 West Dunbartonshire (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_31"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_44",
-              "header": "West Lothian",
-              "children": [
-                {
-                  "name": "cha_y1_473_32",
-                  "labelWidth": 5,
-                  "label": "C9.6.32 West Lothian (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "62",
-                    "csvColumnName": "C9.6.32 West Lothian (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_32"
-                },
-                {
-                  "name": "cha_y1_479_32",
-                  "labelWidth": 5,
-                  "label": "C9.6.32 West Lothian (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "aux": {
-                    "sampleValue": "62",
-                    "csvColumnName": "C9.6.32 West Lothian (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_32"
-                }
-              ]
-            },
-            {
-              "type": "tablerow",
-              "name": "table_c9_2_row_45",
-              "header": "Totals",
-              "children": [
-                {
-                  "name": "cha_y6_248",
-                  "labelWidth": 5,
-                  "label": "C9.6.33 Total (at end of the reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "calculation": "(( cha_y1_473_1 + cha_y1_473_2 + cha_y1_473_3 + cha_y1_473_4 + cha_y1_473_5 + cha_y1_473_6 + cha_y1_473_7 + cha_y1_473_8 + cha_y1_473_9 + cha_y1_473_10 + cha_y1_473_11 + cha_y1_473_12 + cha_y1_473_13 + cha_y1_473_14 + cha_y1_473_15 + cha_y1_473_16 + cha_y1_473_17 + cha_y1_473_18 + cha_y1_473_19 + cha_y1_473_20 + cha_y1_473_21 + cha_y1_473_22 + cha_y1_473_23 + cha_y1_473_24 + cha_y1_473_25 + cha_y1_473_26 + cha_y1_473_27 + cha_y1_473_28 + cha_y1_473_29 + cha_y1_473_30 + cha_y1_473_31 + cha_y1_473_32 ))",
-                  "validation": " $value == cha_y1_472 ",
-                  "validationMessage": "C9.6 Total of all properties meeting the standard (at end of the reporting year) must be = C9.5 (at end of the reporting year)",
-                  "aux": {
-                    "sampleValue": "1498",
-                    "csvColumnName": "C9.6.33 Total (at end of the reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_curr_la_gt",
-                  "tooltip": "Equal to sum of all Local Authorities (at end of the reporting year)"
-                },
-                {
-                  "name": "cha_y6_249",
-                  "labelWidth": 5,
-                  "label": "C9.6.33 Total (at end of the next reporting year)",
-                  "required": true,
-                  "width": 2,
-                  "type": "numeric",
-                  "minimumValue": 0,
-                  "maximumValue": 100000000.0,
-                  "decimalPlaces": 0,
-                  "calculation": "(( cha_y1_479_1 + cha_y1_479_2 + cha_y1_479_3 + cha_y1_479_4 + cha_y1_479_5 + cha_y1_479_6 + cha_y1_479_7 + cha_y1_479_8 + cha_y1_479_9 + cha_y1_479_10 + cha_y1_479_11 + cha_y1_479_12 + cha_y1_479_13 + cha_y1_479_14 + cha_y1_479_15 + cha_y1_479_16 + cha_y1_479_17 + cha_y1_479_18 + cha_y1_479_19 + cha_y1_479_20 + cha_y1_479_21 + cha_y1_479_22 + cha_y1_479_23 + cha_y1_479_24 + cha_y1_479_25 + cha_y1_479_26 + cha_y1_479_27 + cha_y1_479_28 + cha_y1_479_29 + cha_y1_479_30 + cha_y1_479_31 + cha_y1_479_32 ))",
-                  "validation": " $value == cha_y1_478 ",
-                  "validationMessage": "C9.6 Total of all properties meeting the standard (at end of the next reporting year) must be = C9.5 (at end of the next reporting year)",
-                  "aux": {
-                    "sampleValue": "1498",
-                    "csvColumnName": "C9.6.33 Total (at end of the next reporting year)"
-                  },
-                  "outputColumn": "cha_indc9_rsl_next_la_gt",
-                  "tooltip": "Equal to sum of all Local Authorities (at end of the next reporting year)"
                 }
               ]
             }
@@ -3139,7 +1576,7 @@
           "style": "heading",
           "level": 5,
           "title": "For properties within scope of the SHQS, please state:",
-          "name": "static_6_0",
+          "name": "static_6_4",
           "borderTop": false
         },
         {
@@ -3147,11 +1584,11 @@
           "style": "heading",
           "level": 5,
           "title": "6.1.1 The total number of properties within scope of the SHQS",
-          "name": "static_6_1",
+          "name": "static_6_5",
           "borderTop": false
         },
         {
-          "name": "cha_y1_156",
+          "name": "cha_y6_850",
           "labelWidth": 5,
           "label": "6.1.1 At the end of the reporting year",
           "required": true,
@@ -3160,16 +1597,16 @@
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "calculation": " cha_y1_468 ",
+          "calculation": " cha_y6_832 ",
           "aux": {
-            "sampleValue": "1498",
+            "sampleValue": "1524",
             "csvColumnName": "6.1.1 Properties within scope of SHQS year end"
           },
-          "outputColumn": "cha_ind6_rsl_scope_curr_num",
-          "help": "Derived from C9.1 (at end of the reporting year)"
+          "outputColumn": "cha_ind6_la_scope_curr_num",
+          "help": "Derived from  C9.1 (at end of the reporting year)"
         },
         {
-          "name": "cha_y1_157",
+          "name": "cha_y6_851",
           "labelWidth": 5,
           "label": "6.1.2 Projected to the end of the next reporting year",
           "required": true,
@@ -3178,12 +1615,12 @@
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "calculation": " cha_y1_474 ",
+          "calculation": " cha_y6_839 ",
           "aux": {
-            "sampleValue": "1498",
+            "sampleValue": "1540",
             "csvColumnName": "6.1.2 Properties within scope of SHQS next year"
           },
-          "outputColumn": "cha_ind6_rsl_scope_next_num",
+          "outputColumn": "cha_ind6_la_scope_next_num",
           "help": "Derived from C9.1 (at end of the next reporting year)"
         },
         {
@@ -3191,11 +1628,11 @@
           "style": "heading",
           "level": 5,
           "title": "6.2.1 The number of properties meeting the SHQS",
-          "name": "static_6_2",
+          "name": "static_6_6",
           "borderTop": false
         },
         {
-          "name": "cha_y1_159",
+          "name": "cha_y6_852",
           "labelWidth": 5,
           "label": "6.2.1 At the end of the reporting year",
           "required": true,
@@ -3204,16 +1641,16 @@
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "calculation": " cha_y1_472 ",
+          "calculation": " cha_y6_838 ",
           "aux": {
             "sampleValue": "1498",
             "csvColumnName": "6.2.1 Properties meeting SHQS year end"
           },
-          "outputColumn": "cha_ind6_rsl_shqs_curr_num",
+          "outputColumn": "cha_ind6_la_shqs_curr_num",
           "help": "Derived from C9.5 (at end of the reporting year)"
         },
         {
-          "name": "cha_y1_160",
+          "name": "cha_y6_853",
           "labelWidth": 5,
           "label": "6.2.2 Projected to the end of the next reporting year",
           "required": true,
@@ -3222,12 +1659,12 @@
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "calculation": " cha_y1_478 ",
+          "calculation": " cha_y6_845 ",
           "aux": {
-            "sampleValue": "1498",
+            "sampleValue": "1499",
             "csvColumnName": "6.2.2 Properties meeting SHQS next year"
           },
-          "outputColumn": "cha_ind6_rsl_shqs_next_num",
+          "outputColumn": "cha_ind6_la_shqs_next_num",
           "help": "Derived from C9.5 (at end of the next reporting year)"
         },
         {
@@ -3235,11 +1672,11 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_6_3",
+          "name": "static_6_7",
           "borderTop": true
         },
         {
-          "name": "indicator_6",
+          "name": "indicator_6_3",
           "labelWidth": 5,
           "label": "Percentage of stock meeting the SHQS at the end of the reporting year (Indicator 6)",
           "required": true,
@@ -3249,15 +1686,15 @@
           "maximumValue": 1000000,
           "decimalPlaces": 2,
           "percentage": true,
-          "calculation": "(( cha_y1_159  /  cha_y1_156 ) * 100)",
+          "calculation": "(( cha_y6_852  /  cha_y6_850 ) * 100)",
           "aux": {
-            "sampleValue": "100",
+            "sampleValue": "98.2939632545932",
             "csvColumnName": "6 - Percentage properties meeting SHQS year end"
           },
-          "outputColumn": "cha_ind6_rsl_curr_year_pct"
+          "outputColumn": "cha_ind6_la_curr_year_pct"
         },
         {
-          "name": "indicator_6_2",
+          "name": "indicator_6_4",
           "labelWidth": 5,
           "label": "Percentage of stock meeting the SHQS projected to the end of the next reporting year (Indicator 6)",
           "required": true,
@@ -3267,12 +1704,12 @@
           "maximumValue": 1000000,
           "decimalPlaces": 2,
           "percentage": true,
-          "calculation": "(( cha_y1_160  /  cha_y1_157 ) * 100)",
+          "calculation": "(( cha_y6_853  /  cha_y6_851 ) * 100)",
           "aux": {
-            "sampleValue": "100",
+            "sampleValue": "97.3376623376623",
             "csvColumnName": "6 - Percentage properties meeting SHQS next year"
           },
-          "outputColumn": "cha_ind6_rsl_next_year_pct"
+          "outputColumn": "cha_ind6_la_next_year_pct"
         }
       ]
     },
@@ -3285,7 +1722,7 @@
           "style": "heading",
           "level": 5,
           "title": "In relation to tenant satisfaction with the quality of their home, please state:",
-          "name": "static_7_0",
+          "name": "static_7_3",
           "borderTop": false
         },
         {
@@ -3309,7 +1746,7 @@
           "style": "heading",
           "level": 5,
           "title": "7.2 Of the tenants who answered, how many said that they were",
-          "name": "static_7_1",
+          "name": "static_7_4",
           "borderTop": false
         },
         {
@@ -3416,7 +1853,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_7_2",
+          "name": "static_7_5",
           "borderTop": true
         },
         {
@@ -3440,7 +1877,7 @@
       ]
     },
     {
-      "name": "section16",
+      "name": "section48",
       "title": "Repairs, maintenance & improvements",
       "fields": [],
       "sectionLevel": 2
@@ -3454,7 +1891,7 @@
           "style": "heading",
           "level": 5,
           "title": "Emergency repairs are reactive repairs necessary to prevent serious damage to the building, danger to health, risk to safety or risk of serious loss or damage to the occupier's property.\n\nPlease state:",
-          "name": "static_8_0",
+          "name": "static_8_2",
           "borderTop": false
         },
         {
@@ -3498,7 +1935,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_8_1",
+          "name": "static_8_3",
           "borderTop": true
         },
         {
@@ -3529,7 +1966,7 @@
           "style": "heading",
           "level": 5,
           "title": "Non-emergency repairs are reactive repairs that are not categorised as emergency.\n\nPlease state:",
-          "name": "static_9_0",
+          "name": "static_9_2",
           "borderTop": false
         },
         {
@@ -3573,7 +2010,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_9_1",
+          "name": "static_9_3",
           "borderTop": true
         },
         {
@@ -3604,7 +2041,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_10_0",
+          "name": "static_10_2",
           "borderTop": false
         },
         {
@@ -3648,7 +2085,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_10_1",
+          "name": "static_10_3",
           "borderTop": true
         },
         {
@@ -3680,7 +2117,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_11_0",
+          "name": "static_11_2",
           "borderTop": false
         },
         {
@@ -3720,7 +2157,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_11_1",
+          "name": "static_11_3",
           "borderTop": true
         },
         {
@@ -3751,7 +2188,7 @@
           "style": "heading",
           "level": 5,
           "title": "In relation to tenant satisfaction with the repairs service provided for those with a repair carried out in the reporting year, please state:",
-          "name": "static_12_0",
+          "name": "static_12_3",
           "borderTop": false
         },
         {
@@ -3775,7 +2212,7 @@
           "style": "heading",
           "level": 5,
           "title": "12.2 Of the tenants who answered, how many said that they were",
-          "name": "static_12_1",
+          "name": "static_12_4",
           "borderTop": false
         },
         {
@@ -3883,7 +2320,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_12_2",
+          "name": "static_12_5",
           "borderTop": true
         },
         {
@@ -3907,7 +2344,7 @@
       ]
     },
     {
-      "name": "section17",
+      "name": "section49",
       "title": "EESSH",
       "fields": [],
       "sectionLevel": 2
@@ -3923,7 +2360,7 @@
           "style": "heading",
           "level": 5,
           "title": "By dwelling type and fuel type as at the end of the reporting year, please state:",
-          "name": "static_c10_0",
+          "name": "static_c10_1",
           "borderTop": false
         },
         {
@@ -6823,7 +5260,7 @@
           "style": "heading",
           "level": 5,
           "title": "For properties anticipated as being exempt from EESSH please state:",
-          "name": "static_c11_0",
+          "name": "static_c11_1",
           "borderTop": false
         },
         {
@@ -7509,7 +5946,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_c12_1",
+          "name": "static_c12_3",
           "borderTop": false
         },
         {
@@ -8029,7 +6466,7 @@
           "level": 5,
           "title": "Indicator",
           "borderTop": true,
-          "name": "static_c12_0"
+          "name": "static_c12_2"
         },
         {
           "name": "indicator_c12",
@@ -8083,7 +6520,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "53386",
@@ -8099,7 +6536,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "551097",
@@ -8115,7 +6552,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "13599",
@@ -8131,7 +6568,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "calculation": "(( cha_y6_234 + cha_y6_235 + cha_y6_236 ))",
           "aux": {
@@ -8160,7 +6597,7 @@
       ]
     },
     {
-      "name": "section18",
+      "name": "section50",
       "title": "Comments",
       "fields": [],
       "sectionLevel": 2
@@ -8174,7 +6611,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Housing quality and maintenance'' section.",
-          "name": "static_comment_hqm_0",
+          "name": "static_comment_hqm_1",
           "borderTop": false
         },
         {
@@ -8193,13 +6630,13 @@
       ]
     },
     {
-      "name": "section19",
+      "name": "section51",
       "title": "Neighbourhood & community",
       "fields": [],
       "sectionLevel": 1
     },
     {
-      "name": "section20",
+      "name": "section52",
       "title": "Estate management, anti-social behaviour, neighbour nuisance and tenancy disputes",
       "fields": [],
       "sectionLevel": 2
@@ -8211,7 +6648,7 @@
           "style": "heading",
           "level": 5,
           "title": "Complaints are expressions of dissatisfaction by one, or more, members of the public about the landlord’s action or lack of action, or about the standard of service provided by or on behalf of the landlord.\n\nPlease state the number of:",
-          "name": "static_3_4_0",
+          "name": "static_3_4_1",
           "borderTop": false
         },
         {
@@ -8536,7 +6973,7 @@
           "style": "heading",
           "level": 5,
           "title": "In relation to tenant satisfaction with their landlord’s management of the neighbourhood in which they live, please state:",
-          "name": "static_13_0",
+          "name": "static_13_3",
           "borderTop": false
         },
         {
@@ -8560,7 +6997,7 @@
           "style": "heading",
           "level": 5,
           "title": "13.2 Of the tenants who answered, how many said that they were",
-          "name": "static_13_1",
+          "name": "static_13_4",
           "borderTop": false
         },
         {
@@ -8668,7 +7105,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_13_2",
+          "name": "static_13_5",
           "borderTop": true
         },
         {
@@ -8700,7 +7137,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_14_0",
+          "name": "static_14_2",
           "borderTop": false
         },
         {
@@ -8744,7 +7181,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_14_1",
+          "name": "static_14_3",
           "borderTop": true
         },
         {
@@ -8776,7 +7213,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_15_0",
+          "name": "static_15_2",
           "borderTop": false
         },
         {
@@ -8818,7 +7255,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_15_1",
+          "name": "static_15_3",
           "borderTop": true
         },
         {
@@ -8850,7 +7287,7 @@
           "style": "heading",
           "level": 5,
           "title": "As defined by the Housing (Scotland) Act 2001, a property is abandoned where the landlord has reasonable grounds to believe that:\nthe property is unoccupied; and\nthe tenant does not intend to occupy the property as their home\n\nPlease state:",
-          "name": "static_c4_0",
+          "name": "static_c4_1",
           "borderTop": false
         },
         {
@@ -8880,7 +7317,7 @@
           "style": "heading",
           "level": 5,
           "title": "Court actions are initiated by a landlord after a Notice of Proceedings has been issued and raising of a court order.\n\nPlease state:",
-          "name": "static_22_0",
+          "name": "static_22_3",
           "borderTop": false
         },
         {
@@ -8904,7 +7341,7 @@
           "style": "heading",
           "level": 5,
           "title": "22.2 The number of properties recovered",
-          "name": "static_22_1",
+          "name": "static_22_4",
           "borderTop": false
         },
         {
@@ -8960,7 +7397,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_22_2",
+          "name": "static_22_5",
           "borderTop": true
         },
         {
@@ -9038,7 +7475,7 @@
       ]
     },
     {
-      "name": "section21",
+      "name": "section53",
       "title": "Comments",
       "fields": [],
       "sectionLevel": 2
@@ -9052,7 +7489,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Neighbourhood & community'' section.",
-          "name": "static_comment_nc_0",
+          "name": "static_comment_nc_1",
           "borderTop": false
         },
         {
@@ -9071,13 +7508,13 @@
       ]
     },
     {
-      "name": "section22",
+      "name": "section54",
       "title": "Access to housing and support",
       "fields": [],
       "sectionLevel": 1
     },
     {
-      "name": "section23",
+      "name": "section55",
       "title": "Housing options and access to social housing",
       "fields": [],
       "sectionLevel": 2
@@ -9091,7 +7528,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_17_0",
+          "name": "static_17_2",
           "borderTop": false
         },
         {
@@ -9133,7 +7570,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_17_1",
+          "name": "static_17_3",
           "borderTop": true
         },
         {
@@ -9231,7 +7668,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_19_0",
+          "name": "static_19_1",
           "borderTop": true
         },
         {
@@ -9265,7 +7702,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "10001",
@@ -9281,7 +7718,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "5500",
@@ -9297,7 +7734,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "3500",
@@ -9310,7 +7747,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_20_0",
+          "name": "static_20_1",
           "borderTop": true
         },
         {
@@ -9321,7 +7758,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "calculation": "(( cha_y6_016 + cha_y6_017 + cha_y6_018 ))",
           "aux": {
@@ -9373,7 +7810,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_21_0",
+          "name": "static_21_1",
           "borderTop": true
         },
         {
@@ -9396,21 +7833,21 @@
       ]
     },
     {
-      "name": "23",
-      "title": "Homelessness (RSLs only)– the percentage of referrals under Section 5, and other referrals for homeless households made by the local authority, that result in an offer, and the percentage of those offers that result in a let (Indicator 23).",
+      "name": "24",
+      "title": "Homelessness (LAs only) – the percentage of homeless households referred to RSLs under section 5 and through other referral routes (Indicator 24).",
       "fields": [
         {
           "type": "static",
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_23_0",
+          "name": "static_24_0",
           "borderTop": false
         },
         {
-          "name": "cha_y6_022",
+          "name": "cha_y6_240",
           "labelWidth": 5,
-          "label": "23.1 The total number of individual homeless households referrals received under section 5",
+          "label": "24.1 The total number of individual homeless households referred to RSLs under section 5",
           "required": true,
           "width": 2,
           "type": "numeric",
@@ -9418,15 +7855,15 @@
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
           "aux": {
-            "sampleValue": "24",
-            "csvColumnName": "23.1 Individual homeless households referrals received under section 5"
+            "sampleValue": "565",
+            "csvColumnName": "24.1 Individual homeless households referred to RSLs under section 5."
           },
-          "outputColumn": "cha_ind23_sec5_num"
+          "outputColumn": "cha_ind24_sec5_num"
         },
         {
-          "name": "cha_y6_023",
+          "name": "cha_y6_241",
           "labelWidth": 5,
-          "label": "23.2 The total number of individual homeless households referrals received under other referral routes.",
+          "label": "24.2 The total number of individual homeless households referred to RSLs under other referral routes",
           "required": true,
           "width": 2,
           "type": "numeric",
@@ -9434,113 +7871,57 @@
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
           "aux": {
-            "sampleValue": "169",
-            "csvColumnName": "23.2 Individual homeless households referrals received under other referral routes"
+            "sampleValue": "185",
+            "csvColumnName": "24.2 Individual homeless households referred to RSLs under other referral routes"
           },
-          "outputColumn": "cha_ind23_other_num"
+          "outputColumn": "cha_ind24_other_num"
         },
         {
-          "name": "cha_y6_024",
+          "name": "cha_y6_242",
           "labelWidth": 5,
-          "label": "23.3 The total number of individual homeless households referrals received under section 5 and other referral routes.",
+          "label": "24.3 The total number of individual homeless households referred to RSLs under section 5 and other referral routes",
           "required": true,
           "width": 2,
           "type": "numeric",
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "calculation": "(( cha_y6_022 + cha_y6_023 ))",
+          "calculation": "(( cha_y6_240 + cha_y6_241 ))",
           "aux": {
-            "sampleValue": "193",
-            "csvColumnName": "23.3 Individual homeless households referrals received under section 5 and other referral routes"
+            "sampleValue": "750",
+            "csvColumnName": "24.3 Individual homeless households referred to RSLs under section 5 and other referral routes"
           },
-          "outputColumn": "cha_ind23_referr_gt",
-          "help": "Total = 23.1 + 23.2"
+          "outputColumn": "cha_ind24_referr_gt",
+          "help": "Total = 24.1 + 24.2"
         },
         {
-          "name": "cha_y6_025",
+          "name": "cha_y6_243",
           "labelWidth": 5,
-          "label": "23.4 The total number of individual homeless households referrals received under section 5 that result in an offer of a permanent home.",
+          "label": "24.4 The total number of homeless households to whom the local authority has a statutory duty to secure permanent accommodation",
           "required": true,
           "width": 2,
           "type": "numeric",
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "validation": "( $value  <=  cha_y6_022 )",
-          "validationMessage": "23.4 must be <= 23.1",
           "aux": {
-            "sampleValue": "20",
-            "csvColumnName": "23.4 Individual homeless households section 5 referrals result in permanent home offer"
+            "sampleValue": "793",
+            "csvColumnName": "24.4 Homeless households LA has statutory duty to secure permanent accommodation"
           },
-          "outputColumn": "cha_ind23_sec5_offer_num"
-        },
-        {
-          "name": "cha_y6_026",
-          "labelWidth": 5,
-          "label": "23.5 The total number of individual homeless households referrals received under other referral routes that result in an offer of a permanent home.",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 100000000.0,
-          "decimalPlaces": 0,
-          "validation": "( $value  <=  cha_y6_023 )",
-          "validationMessage": "23.5 must be <= 23.2",
-          "aux": {
-            "sampleValue": "150",
-            "csvColumnName": "23.5 Individual homeless households referrals received under other referral routes result permanent home offer"
-          },
-          "outputColumn": "cha_ind23_other_offer_num"
-        },
-        {
-          "name": "cha_y6_027",
-          "labelWidth": 5,
-          "label": "23.6 The total number of individual homeless households referrals received under section 5 and other referral routes that result in an offer of a permanent home.",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 100000000.0,
-          "decimalPlaces": 0,
-          "calculation": "(( cha_y6_025 + cha_y6_026 ))",
-          "aux": {
-            "sampleValue": "170",
-            "csvColumnName": "23.6 Individual homeless households referrals received under section 5 and other referral routes result in permanent home offer"
-          },
-          "outputColumn": "cha_ind23_offer_gt",
-          "help": "Total = 23.4 + 23.5"
-        },
-        {
-          "name": "cha_y6_028",
-          "labelWidth": 5,
-          "label": "23.7 The total number of accepted offers.",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 100000000.0,
-          "decimalPlaces": 0,
-          "validation": "( $value  <=  cha_y6_027 )",
-          "validationMessage": "23.7 must be <= 23.6",
-          "aux": {
-            "sampleValue": "150",
-            "csvColumnName": "23.7 Accepted offers"
-          },
-          "outputColumn": "cha_ind23_accept_offer_num"
+          "outputColumn": "cha_ind24_perm_accom_num"
         },
         {
           "type": "static",
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_23_1",
+          "name": "static_24_1",
           "borderTop": true
         },
         {
-          "name": "indicator_23_1",
+          "name": "indicator_24",
           "labelWidth": 5,
-          "label": "The percentage of referrals under Section 5, and other referrals for homeless households made by a local authority, that result in an offer (Indicator 23)",
+          "label": "Homelessness (LAs only) – the percentage of homeless households referred to RSLs under Section 5 and through other referral routes (Indicator 24)",
           "required": true,
           "width": 2,
           "type": "numeric",
@@ -9548,30 +7929,12 @@
           "maximumValue": 1000000,
           "decimalPlaces": 2,
           "percentage": true,
-          "calculation": "(( cha_y6_027  / ( cha_y6_022  +  cha_y6_023 )) * 100)",
+          "calculation": "((( cha_y6_240  +  cha_y6_241 ) /  cha_y6_243 ) * 100)",
           "aux": {
-            "sampleValue": "88.0829015544041",
-            "csvColumnName": "23 - Percentage of Section 5 and other  referrals for homeless households by LA result in offer"
+            "sampleValue": "94.577553593947",
+            "csvColumnName": "24 - Percentage of homeless households referred to RSLs under Section 5 and other referral routes"
           },
-          "outputColumn": "cha_ind23_referr_pct"
-        },
-        {
-          "name": "indicator_23_2",
-          "labelWidth": 5,
-          "label": "The percentage of those offers that result in a let (Indicator 23)",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "percentage": true,
-          "calculation": "(( cha_y6_028  /  cha_y6_027 ) * 100)",
-          "aux": {
-            "sampleValue": "88.2352941176471",
-            "csvColumnName": "23 - Percentage of offers result in let"
-          },
-          "outputColumn": "cha_ind23_let_pct"
+          "outputColumn": "cha_ind24_pct"
         }
       ]
     },
@@ -9584,7 +7947,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_30_0",
+          "name": "static_30_2",
           "borderTop": false
         },
         {
@@ -9626,7 +7989,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_30_1",
+          "name": "static_30_3",
           "borderTop": true
         },
         {
@@ -9649,7 +8012,7 @@
       ]
     },
     {
-      "name": "section24",
+      "name": "section56",
       "title": "Tenancy sustainment",
       "fields": [],
       "sectionLevel": 2
@@ -9663,7 +8026,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_16_0",
+          "name": "static_16_4",
           "borderTop": false
         },
         {
@@ -9671,11 +8034,11 @@
           "style": "heading",
           "level": 5,
           "title": "16.1 The number of tenancies which began in the previous reporting year by",
-          "name": "static_16_1",
+          "name": "static_16_5",
           "borderTop": false
         },
         {
-          "name": "cha_y1_207",
+          "name": "cha_y6_824",
           "labelWidth": 5,
           "label": "16.1.1 Existing tenants",
           "required": true,
@@ -9688,10 +8051,10 @@
             "sampleValue": "8",
             "csvColumnName": "16.1.1 Tenancies began in previous year - existing tenants"
           },
-          "outputColumn": "cha_ind16_rsl_exist_num"
+          "outputColumn": "cha_ind16_la_exist_num"
         },
         {
-          "name": "cha_y1_208",
+          "name": "cha_y6_825",
           "labelWidth": 5,
           "label": "16.1.2 Applicants who were assessed as statutory homeless by the local authority\n",
           "required": true,
@@ -9704,10 +8067,10 @@
             "sampleValue": "9",
             "csvColumnName": "16.1.2 Tenancies began in previous year - applicants assessed as statutory homeless by LA"
           },
-          "outputColumn": "cha_ind16_rsl_hless_num"
+          "outputColumn": "cha_ind16_la_hless_num"
         },
         {
-          "name": "cha_y1_209",
+          "name": "cha_y6_826",
           "labelWidth": 5,
           "label": "16.1.3 Applicants from your organisation's housing list\n",
           "required": true,
@@ -9720,28 +8083,12 @@
             "sampleValue": "63",
             "csvColumnName": "16.1.3 Tenancies began in previous year - applicants from housing list"
           },
-          "outputColumn": "cha_ind16_rsl_list_num"
+          "outputColumn": "cha_ind16_la_list_num"
         },
         {
-          "name": "cha_y1_210",
+          "name": "cha_y6_827",
           "labelWidth": 5,
-          "label": "16.1.4 Nominations from local authority",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 100000000.0,
-          "decimalPlaces": 0,
-          "aux": {
-            "sampleValue": "35",
-            "csvColumnName": "16.1.4 Tenancies began in previous year - nominations from LA"
-          },
-          "outputColumn": "cha_ind16_rsl_lanom_num"
-        },
-        {
-          "name": "cha_y1_211",
-          "labelWidth": 5,
-          "label": "16.1.5 Other",
+          "label": "16.1.4 Other",
           "required": true,
           "width": 2,
           "type": "numeric",
@@ -9750,20 +8097,20 @@
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "11",
-            "csvColumnName": "16.1.5 Tenancies began in previous year - others"
+            "csvColumnName": "16.1.4 Tenancies began in previous year - others"
           },
-          "outputColumn": "cha_ind16_rsl_other_num"
+          "outputColumn": "cha_ind16_la_other_num"
         },
         {
           "type": "static",
           "style": "heading",
           "level": 5,
           "title": "16.2.1 The number of tenants at 16.1 who remained in their tenancy for more than a year by",
-          "name": "static_16_2",
+          "name": "static_16_6",
           "borderTop": false
         },
         {
-          "name": "cha_y1_212",
+          "name": "cha_y6_828",
           "labelWidth": 5,
           "label": "16.2.1 Existing tenants",
           "required": true,
@@ -9772,16 +8119,16 @@
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "validation": "( $value  <=  cha_y1_207 )",
+          "validation": "( $value  <=  cha_y6_824 )",
           "validationMessage": "16.2.1 must be <= 16.1.1",
           "aux": {
             "sampleValue": "8",
             "csvColumnName": "16.2.1 Tenancies began in previous year remained more than a year - existing tenants"
           },
-          "outputColumn": "cha_ind16_rsl_exist_remain"
+          "outputColumn": "cha_ind16_la_exist_remain"
         },
         {
-          "name": "cha_y1_213",
+          "name": "cha_y6_829",
           "labelWidth": 5,
           "label": "16.2.2 Applicants who were assessed as statutory homeless by the local authority\n",
           "required": true,
@@ -9790,16 +8137,16 @@
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "validation": "( $value  <=  cha_y1_208 )",
+          "validation": "( $value  <=  cha_y6_825 )",
           "validationMessage": "16.2.2 must be <= 16.1.2",
           "aux": {
             "sampleValue": "8",
             "csvColumnName": "16.2.2 Tenancies began in previous year remained more than a year - applicants assessed as statutory homeless"
           },
-          "outputColumn": "cha_ind16_rsl_hless_remain"
+          "outputColumn": "cha_ind16_la_hless_remain"
         },
         {
-          "name": "cha_y1_214",
+          "name": "cha_y6_830",
           "labelWidth": 5,
           "label": "16.2.3 Applicants from your organisation's housing list\n",
           "required": true,
@@ -9808,60 +8155,42 @@
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "validation": "( $value  <=  cha_y1_209 )",
+          "validation": "( $value  <=  cha_y6_826 )",
           "validationMessage": "16.2.3 must be <= 16.1.3",
           "aux": {
             "sampleValue": "53",
             "csvColumnName": "16.2.3 Tenancies began in previous year remained more than a year - applicants from housing list"
           },
-          "outputColumn": "cha_ind16_rsl_list_remain"
+          "outputColumn": "cha_ind16_la_list_remain"
         },
         {
-          "name": "cha_y1_215",
+          "name": "cha_y6_831",
           "labelWidth": 5,
-          "label": "16.2.4 Nominations from local authority",
+          "label": "16.2.4 Other",
           "required": true,
           "width": 2,
           "type": "numeric",
           "minimumValue": 0,
           "maximumValue": 100000000.0,
           "decimalPlaces": 0,
-          "validation": "( $value  <=  cha_y1_210 )",
+          "validation": "( $value  <=  cha_y6_827 )",
           "validationMessage": "16.2.4 must be <= 16.1.4",
-          "aux": {
-            "sampleValue": "30",
-            "csvColumnName": "16.2.4 Tenancies began in previous year remained more than a year - nominations from LA (RSLs only)"
-          },
-          "outputColumn": "cha_ind16_rsl_lanom_remain"
-        },
-        {
-          "name": "cha_y1_216",
-          "labelWidth": 5,
-          "label": "16.2.5 Other",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 100000000.0,
-          "decimalPlaces": 0,
-          "validation": "( $value  <=  cha_y1_211 )",
-          "validationMessage": "16.2.5 must be <= 16.1.5",
           "aux": {
             "sampleValue": "10",
             "csvColumnName": "16.2.5 Tenancies began in previous year remained more than a year - others"
           },
-          "outputColumn": "cha_ind16_rsl_other_remain"
+          "outputColumn": "cha_ind16_la_other_remain"
         },
         {
           "type": "static",
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_16_3",
+          "name": "static_16_7",
           "borderTop": true
         },
         {
-          "name": "indicator_16_1",
+          "name": "indicator_16_6",
           "labelWidth": 5,
           "label": "Percentage of new tenancies to existing tenants sustained for more than a year (Indicator 16)",
           "required": true,
@@ -9871,15 +8200,15 @@
           "maximumValue": 1000000,
           "decimalPlaces": 2,
           "percentage": true,
-          "calculation": "(( cha_y1_212  /  cha_y1_207 ) * 100)",
+          "calculation": "(( cha_y6_828  /  cha_y6_824 ) * 100)",
           "aux": {
             "sampleValue": "100",
             "csvColumnName": "16 - Percentage new tenancies sustained more than a year - existing tenants"
           },
-          "outputColumn": "cha_ind16_rsl_exist_pct"
+          "outputColumn": "cha_ind16_la_exist_pct"
         },
         {
-          "name": "indicator_16_2",
+          "name": "indicator_16_7",
           "labelWidth": 5,
           "label": "Percentage of new tenancies to applicants who were assessed as statutory homeless by the local authority sustained for more than a year (Indicator 16)",
           "required": true,
@@ -9889,15 +8218,15 @@
           "maximumValue": 1000000,
           "decimalPlaces": 2,
           "percentage": true,
-          "calculation": "(( cha_y1_213  /  cha_y1_208 ) * 100)",
+          "calculation": "(( cha_y6_829  /  cha_y6_825 ) * 100)",
           "aux": {
             "sampleValue": "88.8888888888889",
             "csvColumnName": "16 - Percentage new tenancies sustained more than a year - applicants assessed as statutory homeless by LA"
           },
-          "outputColumn": "cha_ind16_rsl_hless_pct"
+          "outputColumn": "cha_ind16_la_hless_pct"
         },
         {
-          "name": "indicator_16_3",
+          "name": "indicator_16_8",
           "labelWidth": 5,
           "label": "Percentage of new tenancies to applicants from the landlord's housing list sustained for more than a year (Indicator 16)",
           "required": true,
@@ -9907,33 +8236,15 @@
           "maximumValue": 1000000,
           "decimalPlaces": 2,
           "percentage": true,
-          "calculation": "(( cha_y1_214  /  cha_y1_209 ) * 100)",
+          "calculation": "(( cha_y6_830  /  cha_y6_826 ) * 100)",
           "aux": {
             "sampleValue": "84.1269841269841",
             "csvColumnName": "16 - Percentage new tenancies sustained more than a year - applicants from housing list"
           },
-          "outputColumn": "cha_ind16_rsl_list_pct"
+          "outputColumn": "cha_ind16_la_list_pct"
         },
         {
-          "name": "indicator_16_4",
-          "labelWidth": 5,
-          "label": "Percentage of new tenancies through nominations from local authority sustained for more than a year (Indicator 16)",
-          "required": true,
-          "width": 2,
-          "type": "numeric",
-          "minimumValue": 0,
-          "maximumValue": 1000000,
-          "decimalPlaces": 2,
-          "percentage": true,
-          "calculation": "(( cha_y1_215  /  cha_y1_210 ) * 100)",
-          "aux": {
-            "sampleValue": "85.7142857142857",
-            "csvColumnName": "16 - Percentage new tenancies sustained more than a year - nominations from LA (RSLs only)"
-          },
-          "outputColumn": "cha_ind16_rsl_lanom_pct"
-        },
-        {
-          "name": "indicator_16_5",
+          "name": "indicator_16_9",
           "labelWidth": 5,
           "label": "Percentage of new tenancies to others sustained for more than a year (Indicator 16)",
           "required": true,
@@ -9943,17 +8254,17 @@
           "maximumValue": 1000000,
           "decimalPlaces": 2,
           "percentage": true,
-          "calculation": "(( cha_y1_216  /  cha_y1_211 ) * 100)",
+          "calculation": "(( cha_y6_831  /  cha_y6_827 ) * 100)",
           "aux": {
             "sampleValue": "90.9090909090909",
             "csvColumnName": "16 - Percentage new tenancies sustained more than a year - others"
           },
-          "outputColumn": "cha_ind16_rsl_other_pct"
+          "outputColumn": "cha_ind16_lla_other_pct"
         }
       ]
     },
     {
-      "name": "section25",
+      "name": "section57",
       "title": "Comments",
       "fields": [],
       "sectionLevel": 2
@@ -9967,7 +8278,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Access to housing and support'' section.",
-          "name": "static_comment_hs_0",
+          "name": "static_comment_hs_1",
           "borderTop": false
         },
         {
@@ -9986,13 +8297,13 @@
       ]
     },
     {
-      "name": "section26",
+      "name": "section58",
       "title": "Getting good value from rents and service charges",
       "fields": [],
       "sectionLevel": 1
     },
     {
-      "name": "section27",
+      "name": "section59",
       "title": "Rents and service charges",
       "fields": [],
       "sectionLevel": 2
@@ -10006,7 +8317,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_26_0",
+          "name": "static_26_2",
           "borderTop": false
         },
         {
@@ -10017,7 +8328,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "7751982",
@@ -10033,7 +8344,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validation": "(( $value  +  cha_y1_288 ) <=  cha_y1_278 )",
           "validationMessage": "26.2 + 18.2 must be <= 27.2",
@@ -10048,7 +8359,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_26_1",
+          "name": "static_26_3",
           "borderTop": true
         },
         {
@@ -10080,7 +8391,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_27_0",
+          "name": "static_27_2",
           "borderTop": false
         },
         {
@@ -10091,7 +8402,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "224050",
@@ -10107,7 +8418,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validation": "(( cha_y1_276  +  cha_y1_288 ) <=  $value )",
           "validationMessage": "26.2 + 18.2 must be <= 27.2",
@@ -10122,7 +8433,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_27_1",
+          "name": "static_27_3",
           "borderTop": true
         },
         {
@@ -10154,7 +8465,7 @@
           "style": "heading",
           "level": 5,
           "title": "A factored property is where a landlord is responsible for the delivery of a management service to the owner of the property.\n\nPlease state:",
-          "name": "static_28_0",
+          "name": "static_28_2",
           "borderTop": false
         },
         {
@@ -10182,7 +8493,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validationMessage": "28.2 is required if 28.1 > 0",
           "activation": "( cha_y1_279  > 0)",
@@ -10198,7 +8509,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_28_1",
+          "name": "static_28_3",
           "borderTop": true
         },
         {
@@ -10209,7 +8520,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 2,
           "calculation": "( cha_y1_280  /  cha_y1_279 )",
           "aux": {
@@ -10229,7 +8540,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_18_0",
+          "name": "static_18_2",
           "borderTop": false
         },
         {
@@ -10240,7 +8551,7 @@
           "width": 2,
           "type": "numeric",
           "minimumValue": 0,
-          "maximumValue": 100000000.0,
+          "maximumValue": 1000000000.0,
           "decimalPlaces": 0,
           "calculation": " cha_y1_278 ",
           "aux": {
@@ -10273,7 +8584,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_18_1",
+          "name": "static_18_3",
           "borderTop": true
         },
         {
@@ -10305,7 +8616,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_c5_0",
+          "name": "static_c5_1",
           "borderTop": false
         },
         {
@@ -10336,7 +8647,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_c6_0",
+          "name": "static_c6_1",
           "borderTop": false
         },
         {
@@ -10363,7 +8674,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "aux": {
             "sampleValue": "5038900",
@@ -10382,7 +8693,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please state:",
-          "name": "static_c7_0",
+          "name": "static_c7_2",
           "borderTop": false
         },
         {
@@ -10393,7 +8704,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validation": "( $value  <=  cha_y1_277 )",
           "validationMessage": "C7.1 must be <= 27.1",
@@ -10411,7 +8722,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validation": "( $value  <=  cha_y1_461 )",
           "validationMessage": "C7.2 must be <= C7.1",
@@ -10426,7 +8737,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_c7_1",
+          "name": "static_c7_3",
           "borderTop": true
         },
         {
@@ -10450,7 +8761,7 @@
       ]
     },
     {
-      "name": "section28",
+      "name": "section60",
       "title": "Value for money",
       "fields": [],
       "sectionLevel": 2
@@ -10464,7 +8775,7 @@
           "style": "heading",
           "level": 5,
           "title": "In relation to tenant satisfaction with the value for money provided by the rent they pay, please state:",
-          "name": "static_25_0",
+          "name": "static_25_3",
           "borderTop": false
         },
         {
@@ -10488,7 +8799,7 @@
           "style": "heading",
           "level": 5,
           "title": "25.2 Of the tenants who answered, how many said that their rent represented",
-          "name": "static_25_1",
+          "name": "static_25_4",
           "borderTop": false
         },
         {
@@ -10596,7 +8907,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_25_2",
+          "name": "static_25_5",
           "borderTop": true
         },
         {
@@ -10628,7 +8939,7 @@
           "style": "heading",
           "level": 5,
           "title": "In relation to tenant satisfaction with the factoring services provided, please state:",
-          "name": "static_29_0",
+          "name": "static_29_3",
           "borderTop": false
         },
         {
@@ -10655,7 +8966,7 @@
           "style": "heading",
           "level": 5,
           "title": "29.2 Of the factored owners who answered, how many said that they were",
-          "name": "static_29_1",
+          "name": "static_29_4",
           "borderTop": false
         },
         {
@@ -10779,7 +9090,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_29_2",
+          "name": "static_29_5",
           "borderTop": true
         },
         {
@@ -10804,7 +9115,7 @@
       ]
     },
     {
-      "name": "section29",
+      "name": "section61",
       "title": "Comments",
       "fields": [],
       "sectionLevel": 2
@@ -10818,7 +9129,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Getting good value from rents and service charges'' section.",
-          "name": "static_comment_gv_0",
+          "name": "static_comment_gv_1",
           "borderTop": false
         },
         {
@@ -10837,13 +9148,13 @@
       ]
     },
     {
-      "name": "section30",
+      "name": "section62",
       "title": "Other customers",
       "fields": [],
       "sectionLevel": 1
     },
     {
-      "name": "section31",
+      "name": "section63",
       "title": "Gypsies / Travellers",
       "fields": [],
       "sectionLevel": 2
@@ -10857,7 +9168,7 @@
           "style": "heading",
           "level": 5,
           "title": "A pitch is a defined serviced area provided by a landlord for mainly Gypsies and Travellers to place their homes.\n\nPlease state:",
-          "name": "static_31_0",
+          "name": "static_31_2",
           "borderTop": false
         },
         {
@@ -10887,7 +9198,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 0,
           "validationMessage": "31.2 is required if 31.1 > 0",
           "activation": "( cha_y1_292  > 0)",
@@ -10903,7 +9214,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_31_1",
+          "name": "static_31_3",
           "borderTop": true
         },
         {
@@ -10914,7 +9225,7 @@
           "width": 2,
           "type": "currency",
           "minimumValue": 0,
-          "maximumValue": 999999999.0,
+          "maximumValue": 10000000.0,
           "decimalPlaces": 2,
           "calculation": "(( cha_y1_291  /  cha_y1_292 ) / 52)",
           "aux": {
@@ -10934,7 +9245,7 @@
           "style": "heading",
           "level": 5,
           "title": "In relation to the satisfaction question on the management of sites provided to gypsies/travellers, please state:",
-          "name": "static_32_0",
+          "name": "static_32_3",
           "borderTop": false
         },
         {
@@ -10961,7 +9272,7 @@
           "style": "heading",
           "level": 5,
           "title": "32.2 Of the Gypsies/Travellers who answered, how many said that they were",
-          "name": "static_32_1",
+          "name": "static_32_4",
           "borderTop": false
         },
         {
@@ -11085,7 +9396,7 @@
           "style": "heading",
           "level": 5,
           "title": "Indicator",
-          "name": "static_32_2",
+          "name": "static_32_5",
           "borderTop": true
         },
         {
@@ -11110,7 +9421,7 @@
       ]
     },
     {
-      "name": "section32",
+      "name": "section64",
       "title": "Comments",
       "fields": [],
       "sectionLevel": 2
@@ -11124,7 +9435,7 @@
           "style": "heading",
           "level": 5,
           "title": "Please use the comment field below to tell the regulator about any exceptional circumstances regards the figures supplied in the ''Other customers'' section.",
-          "name": "static_comment_oc_0",
+          "name": "static_comment_oc_1",
           "borderTop": false
         },
         {
@@ -11143,7 +9454,7 @@
       ]
     },
     {
-      "name": "section33",
+      "name": "section65",
       "title": "Approval",
       "fields": [],
       "sectionLevel": 1
@@ -11158,7 +9469,7 @@
           "style": "heading",
           "level": 5,
           "title": "A1.1 We confirm that this organisation has completed the Annual Return on the Charter in accordance with the Technical Guidance and has been reviewed and approved by the Governing Body at its meeting",
-          "name": "static_a1_0",
+          "name": "static_a1_1",
           "borderTop": false,
           "labelWidth": 3
         },
@@ -11182,7 +9493,7 @@
           "labelWidth": 3,
           "label": "A1.2 Approver",
           "required": true,
-          "width": 5,
+          "width": 2,
           "type": "text",
           "aux": {
             "sampleValue": "A N Other",
@@ -11195,7 +9506,7 @@
           "labelWidth": 3,
           "label": "A1.3 Approver job title",
           "required": true,
-          "width": 5,
+          "width": 2,
           "type": "text",
           "aux": {
             "sampleValue": "Finance Manager",
@@ -11313,8 +9624,8 @@
       "page": "22"
     },
     {
-      "label": "Homelessness (RSLs only)– the percentage of referrals under Section 5, and other referrals for homeless households made by the local authority, that result in an offer, and the percentage of those offers that result in a let (Indicator 23).",
-      "page": "23"
+      "label": "Homelessness (LAs only) – the percentage of homeless households referred to RSLs under section 5 and through other referral routes (Indicator 24).",
+      "page": "24"
     },
     {
       "label": "Percentage of tenants who feel that the rent for their property represents good value for money (Indicator 25)",
@@ -11347,10 +9658,6 @@
     {
       "label": "For those who provide sites – percentage of Gypsies/Travellers satisfied with the landlord’s management of the site (Indicator 32)",
       "page": "32"
-    },
-    {
-      "label": "Staff information, staff turnover and sickness rates (Indicator C1)",
-      "page": "c1"
     },
     {
       "label": "The number of lets during the reporting year by source of let (Indicator C2)",
