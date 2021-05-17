@@ -25,9 +25,9 @@
   "hierarchical": true,
   "pdfPages": [
     "submission",
+    "loancovenant",
     "facility",
     "loan",
-    "loancovenant",
     "eird",
     "igflend",
     "igfborrow",
@@ -54,7 +54,7 @@
         "hierarchical": true,
         "pdfGrids": [
           {
-            "heading": "IGF Lends",
+            "heading": "IGF Lend",
             "fields": [
               "lpigf001",
               "lpigf002",
@@ -89,7 +89,7 @@
             ]
           },
           {
-            "heading": "IGF Lends",
+            "heading": "IGF Lend",
             "fields": [
               "lpigf001",
               "lpigf002",
@@ -104,7 +104,7 @@
               "lpigf019",
               "lpigf020a",
               "lpigf020b",
-              "lpigf030"
+              "lpigf030a"
             ],
             "excludeFromTotals": [
               "lpigf015"
@@ -136,7 +136,7 @@
         "hierarchical": true,
         "pdfGrids": [
           {
-            "heading": "IGF Borrows",
+            "heading": "IGF Borrow",
             "fields": [
               "lpigf100",
               "lpigf026",
@@ -165,7 +165,7 @@
             ]
           },
           {
-            "heading": "IGF Borrows",
+            "heading": "IGF Borrow",
             "fields": [
               "lpigf100",
               "lpigf026",
@@ -456,7 +456,7 @@
             ]
           },
           {
-            "heading": "Loans and Covenants",
+            "heading": "Loans Covenants",
             "fields": [
               "lpf004",
               "lpl002b",
@@ -494,7 +494,7 @@
         "hierarchical": true,
         "pdfGrids": [
           {
-            "heading": "Covenants",
+            "heading": "Covenants for Loans",
             "fields": [
               "lpc003",
               "lpc004",

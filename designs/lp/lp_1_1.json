@@ -9,9 +9,9 @@
   "hierarchical": true,
   "pdfPages": [
     "submission",
+    "loancovenant",
     "facility",
     "loan",
-    "loancovenant",
     "eird",
     "igflend",
     "igfborrow",
@@ -638,7 +638,7 @@
           "commentsRequiredMessage": "A1.4 Submit",
           "width": 5,
           "type": "submit",
-          "allowErrors": false,
+          "allowErrors": true,
           "aux": {
             "csvColumnName": null
           }
@@ -650,7 +650,7 @@
       "hierarchical": true,
       "pdfGrids": [
         {
-          "heading": "IGF Lends",
+          "heading": "IGF Lend",
           "fields": [
             "lpigf001",
             "lpigf002",
@@ -685,7 +685,7 @@
           ]
         },
         {
-          "heading": "IGF Lends",
+          "heading": "IGF Lend",
           "fields": [
             "lpigf001",
             "lpigf002",
@@ -700,7 +700,8 @@
             "lpigf019",
             "lpigf020a",
             "lpigf020b",
-            "lpigf030"
+            "lpigf022",
+            "lpigf030a"
           ],
           "excludeFromTotals": [
             "lpigf015"
@@ -719,6 +720,7 @@
             "Reference Interest Rate",
             "Margin Over Ref Int Rate (%)",
             "‘All in’ Fixed Rate (%)",
+            "Loan Reference Number",
             "IGF Lend Comments"
           ]
         }
@@ -1194,7 +1196,7 @@
       "hierarchical": true,
       "pdfGrids": [
         {
-          "heading": "IGF Borrows",
+          "heading": "IGF Borrow",
           "fields": [
             "lpigf100",
             "lpigf026",
@@ -1223,7 +1225,7 @@
           ]
         },
         {
-          "heading": "IGF Borrows",
+          "heading": "IGF Borrow",
           "fields": [
             "lpigf100",
             "lpigf026",
@@ -2302,7 +2304,7 @@
           "type": "text",
           "calculation": "( lpfd016 + lpf001 +Pfo_Page_Serial_Padded_4)",
           "aux": {
-            "sampleValue": "DMOBOS0002",
+            "sampleValue": "#NAME?",
             "csvColumnName": null
           },
           "help": "DERIVED\n(a) RSL short code\n + (b) Lender short code\n + (c) Facility counter + 1: Sequence number 4 digits with leading zeroes"
@@ -2706,7 +2708,7 @@
           ]
         },
         {
-          "heading": "Loans and Covenants",
+          "heading": "Loans Covenants",
           "fields": [
             "lpf004",
             "lpl002b",
@@ -2786,7 +2788,7 @@
           "type": "text",
           "calculation": "( lpf001 + lpl002a +Pfo_Page_Serial_Padded_4)",
           "aux": {
-            "sampleValue": "BOSVAR0002",
+            "sampleValue": "#NAME?",
             "csvColumnName": null
           },
           "help": "DERIVED\n(a) Bank short code\n+ (b) Loan short code\n+ © Loan counter + 1: Sequence number 4 digits with leading zeroes"
@@ -3350,7 +3352,7 @@
       "hierarchical": true,
       "pdfGrids": [
         {
-          "heading": "Covenants",
+          "heading": "Covenants for Loans",
           "fields": [
             "lpc003",
             "lpc004",
@@ -3369,7 +3371,7 @@
           ]
         }
       ],
-      "title": "Covenant for Loan",
+      "title": "Loan Covenant",
       "fields": [
         {
           "name": "lpc003",
