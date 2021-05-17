@@ -3071,6 +3071,10 @@
             {
               "validation": "( $value  >=  lpf007 )",
               "message": "12. First interest payment date should be the same as or later than the Start date of the Facility to which it relates"
+            },
+            {
+              "validation": "( $value  <=  lpl012 )",
+              "message": "12. First interest payment date must be the same as or earlier than 11. Final Capital Repayment Date"
             }
           ],
           "activation": "(( lpl009 !=4)&&( lpl009 !=5))",
