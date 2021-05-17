@@ -638,7 +638,7 @@
           "commentsRequiredMessage": "A1.4 Submit",
           "width": 5,
           "type": "submit",
-          "allowErrors": true,
+          "allowErrors": false,
           "aux": {
             "csvColumnName": null
           }
@@ -2302,7 +2302,7 @@
           "type": "text",
           "calculation": "( lpfd016 + lpf001 +Pfo_Page_Serial_Padded_4)",
           "aux": {
-            "sampleValue": "#NAME?",
+            "sampleValue": "DMOBOS0002",
             "csvColumnName": null
           },
           "help": "DERIVED\n(a) RSL short code\n + (b) Lender short code\n + (c) Facility counter + 1: Sequence number 4 digits with leading zeroes"
@@ -2786,7 +2786,7 @@
           "type": "text",
           "calculation": "( lpf001 + lpl002a +Pfo_Page_Serial_Padded_4)",
           "aux": {
-            "sampleValue": "#NAME?",
+            "sampleValue": "BOSVAR0002",
             "csvColumnName": null
           },
           "help": "DERIVED\n(a) Bank short code\n+ (b) Loan short code\n+ © Loan counter + 1: Sequence number 4 digits with leading zeroes"
@@ -3369,7 +3369,7 @@
           ]
         }
       ],
-      "title": "Loan Covenant",
+      "title": "Covenant for Loan",
       "fields": [
         {
           "name": "lpc003",
