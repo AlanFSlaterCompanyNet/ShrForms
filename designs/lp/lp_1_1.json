@@ -519,7 +519,6 @@
           "page": "loancovenant",
           "createLabel": "Create Covenant for Loan",
           "columns": [
-            "lpc003",
             "lpc004",
             "lpc005",
             "lpc006",
@@ -2304,7 +2303,7 @@
           "type": "text",
           "calculation": "( lpfd016 + lpf001 +Pfo_Page_Serial_Padded_3)",
           "aux": {
-            "sampleValue": "#NAME?",
+            "sampleValue": "DMOBOS002",
             "csvColumnName": null
           },
           "help": "DERIVED\n(a) RSL short code\n + (b) Lender short code\n + (c) Facility counter + 1: Sequence number 4 digits with leading zeroes"
@@ -2606,6 +2605,7 @@
           "type": "linkedPageGrid",
           "page": "loan",
           "createLabel": "Create Loan",
+          "closedLabel": "Repaid",
           "columns": [
             "lpl002b",
             "lpl006",
@@ -2788,7 +2788,7 @@
           "type": "text",
           "calculation": "( lpf001 + lpl002a +Pfo_Page_Serial_Padded_3)",
           "aux": {
-            "sampleValue": "#NAME?",
+            "sampleValue": "BOSVAR002",
             "csvColumnName": null
           },
           "help": "DERIVED\n(a) Bank short code\n+ (b) Loan short code\n+ © Loan counter + 1: Sequence number 4 digits with leading zeroes"
@@ -3322,6 +3322,9 @@
           "columns": [
             "lpc004",
             "lpc005",
+            "lpc006",
+            "lpc009",
+            "lpc008",
             "lpc007"
           ],
           "aux": {
@@ -3338,6 +3341,7 @@
           "createLabel": "Create Embedded Interest Rate Derivative",
           "columns": [
             "lpc014",
+            "lpc015",
             "lpc016",
             "lpc017"
           ],
