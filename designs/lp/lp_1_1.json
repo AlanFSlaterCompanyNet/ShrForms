@@ -132,7 +132,7 @@
           "maximumValue": 10000.0,
           "decimalPlaces": 0,
           "aux": {
-            "sampleValue": "1",
+            "sampleValue": "0",
             "csvColumnName": null
           },
           "required": true
@@ -147,7 +147,7 @@
           "maximumValue": 10000.0,
           "decimalPlaces": 0,
           "aux": {
-            "sampleValue": "12",
+            "sampleValue": "0",
             "csvColumnName": null
           },
           "required": true
@@ -162,7 +162,7 @@
           "maximumValue": 10000.0,
           "decimalPlaces": 0,
           "aux": {
-            "sampleValue": "2",
+            "sampleValue": "0",
             "csvColumnName": null
           },
           "required": true
@@ -177,7 +177,7 @@
           "maximumValue": 1000000.0,
           "decimalPlaces": 0,
           "aux": {
-            "sampleValue": "1",
+            "sampleValue": "0",
             "csvColumnName": null
           },
           "required": true
@@ -316,7 +316,7 @@
           "width": 2,
           "type": "text",
           "aux": {
-            "sampleValue": "No",
+            "sampleValue": "2",
             "csvColumnName": null
           },
           "help": "A nil Return can only be entered if:\n1. No in-year return exists for that financial year;\n2. No live Facility or ISDA or Inter Group Finance record exists in the previous annual return;",
@@ -334,9 +334,10 @@
             "valueColumn": "value",
             "file": "yes_no.csv"
           },
-          "activation": "(((( lpfd007 + lpfd008 + lpfd009 + lpfd010 ))==0)&&( lpfd003 =='Annual'))",
+          "validation": "(( $value ==2)||((( $value ==3)&&((( lpfd007 + lpfd008 + lpfd009 + lpfd010 ))==0))))",
+          "validationMessage": "A Nil Return can only be entered if: a) No in-year return exists for that Financial year; b) No live Facility or ISDA or Inter Group Finance record exists in the previous Annual return\n",
           "aux": {
-            "sampleValue": "No",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "help": "A nil Return can only be entered if :-\na) No in-year return exists for that financial year\nb) No live Facility or ISDA or Inter Group Finance record exists in the previous annual return\n",
@@ -348,10 +349,12 @@
           "label": "2. Date of Return",
           "width": 2,
           "type": "date",
+          "calculation": "'31/03/2021'",
           "aux": {
+            "sampleValue": "31/03/2021",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true
         },
         {
           "name": "lpr005a",
@@ -365,7 +368,7 @@
           },
           "help": "Return date for current submission cannot be less than Return data for previous submission",
           "hidden": true,
-          "required": true
+          "required": false
         },
         {
           "name": "lpr006",
@@ -387,7 +390,7 @@
             "csvColumnName": null
           },
           "hidden": true,
-          "required": true
+          "required": false
         },
         {
           "name": "lpr007",
@@ -485,7 +488,7 @@
             "file": "yes_no.csv"
           },
           "aux": {
-            "sampleValue": "Yes",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -700,7 +703,6 @@
             "lpigf019",
             "lpigf020a",
             "lpigf020b",
-            "lpigf022",
             "lpigf030a"
           ],
           "excludeFromTotals": [
@@ -720,7 +722,6 @@
             "Reference Interest Rate",
             "Margin Over Ref Int Rate (%)",
             "‘All in’ Fixed Rate (%)",
-            "Loan Reference Number",
             "IGF Lend Comments"
           ]
         }
@@ -836,7 +837,7 @@
             "file": "igf_purpose.csv"
           },
           "aux": {
-            "sampleValue": "4",
+            "sampleValue": "2",
             "csvColumnName": null
           },
           "required": true
@@ -847,7 +848,7 @@
           "label": "Purpose of Loan details",
           "width": 2,
           "type": "text",
-          "activation": " lpigf006 !=4",
+          "activation": "(( lpigf006 ==2)||( lpigf006 ==3))",
           "aux": {
             "sampleValue": "The details are as follows…",
             "csvColumnName": null
@@ -1064,9 +1065,8 @@
             "valueColumn": "value",
             "file": "reference_interest_rate.csv"
           },
-          "activation": "(( lpigf016b =='BDGFIN')||( lpigf016b =='DEVDFT')||( lpigf016b =='REVLNF')||( lpigf016b =='VAR')||( lpigf016b =='VWES')||( lpigf016b =='VNES')||( lpigf016b =='WCPDFT'))",
+          "activation": "(( lpigf016a ==3)&&((( lpigf016b =='BDGFIN')||( lpigf016b =='DEVDFT')||( lpigf016b =='REVLNF')||( lpigf016b =='VAR')||( lpigf016b =='VWES')||( lpigf016b =='VNES')||( lpigf016b =='WCPDFT'))))",
           "aux": {
-            "sampleValue": "LIBOR 1 month",
             "csvColumnName": null
           },
           "required": true
@@ -1082,9 +1082,9 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "activation": "(( lpigf016b =='BDGFIN')||( lpigf016b =='DEVDFT')||( lpigf016b =='REVLNF')||( lpigf016b =='VAR')||( lpigf016b =='VWES')||( lpigf016b =='VNES')||( lpigf016b =='WCPDFT'))",
+          "activation": "(( lpigf016a ==3)&&((( lpigf016b =='BDGFIN')||( lpigf016b =='DEVDFT')||( lpigf016b =='REVLNF')||( lpigf016b =='VAR')||( lpigf016b =='VWES')||( lpigf016b =='VNES')||( lpigf016b =='WCPDFT'))))",
           "aux": {
-            "sampleValue": "4",
+            "sampleValue": "20",
             "csvColumnName": null
           },
           "required": true
@@ -1100,9 +1100,9 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "activation": "(( lpigf016b =='FIXIF')||( lpigf016b =='BNDCAP')||( lpigf016b =='FIXED')||( lpigf016b =='FWEIRS')||( lpigf016b =='FNEIRS'))",
+          "activation": "(( lpigf016a ==3)&&((( lpigf016b =='FIXIF')||( lpigf016b =='BNDCAP')||( lpigf016b =='FIXED')||( lpigf016b =='FWEIRS')||( lpigf016b =='FNEIRS'))))",
           "aux": {
-            "sampleValue": "0",
+            "sampleValue": "3.5",
             "csvColumnName": null
           },
           "required": true
@@ -1115,7 +1115,7 @@
           "type": "boolean",
           "validation": " $value ",
           "validationMessage": "19. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
-          "activation": "((( lpigf020a  > 20))||(((( lpigf020b  >= 0))&&(( lpigf020b  < 3.5)))))",
+          "activation": "(( lpigf016a ==3)&&(((( lpigf020a  > 20))||(((( lpigf020b  >= 0))&&(( lpigf020b  < 3.5)))))))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -1375,7 +1375,7 @@
             "file": "igf_purpose.csv"
           },
           "aux": {
-            "sampleValue": "Capital Purchase (give details)",
+            "sampleValue": "4",
             "csvColumnName": null
           },
           "required": true
@@ -1386,7 +1386,7 @@
           "label": "Details",
           "width": 2,
           "type": "text",
-          "activation": " lpigf030 !=4",
+          "activation": "(( lpigf030 ==2)||( lpigf030 ==3))",
           "aux": {
             "sampleValue": "The details are as follows…",
             "csvColumnName": null
@@ -1550,7 +1550,7 @@
           },
           "activation": " lpigf040a ==3",
           "aux": {
-            "sampleValue": "VAR",
+            "sampleValue": "FIXED",
             "csvColumnName": null
           },
           "required": true
@@ -1603,7 +1603,7 @@
             "valueColumn": "value",
             "file": "reference_interest_rate.csv"
           },
-          "activation": "(( lpigf040b =='BDGFIN')||( lpigf040b =='DEVDFT')||( lpigf040b =='REVLNF')||( lpigf040b =='VAR')||( lpigf040b =='VWES')||( lpigf040b =='VNES')||( lpigf040b =='WCPDFT'))",
+          "activation": "(( lpigf040a ==3)&&((( lpigf040b =='BDGFIN')||( lpigf040b =='DEVDFT')||( lpigf040b =='REVLNF')||( lpigf040b =='VAR')||( lpigf040b =='VWES')||( lpigf040b =='VNES')||( lpigf040b =='WCPDFT'))))",
           "aux": {
             "sampleValue": "LIBOR 2 month",
             "csvColumnName": null
@@ -1621,7 +1621,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "activation": "(( lpigf040b =='BDGFIN')||( lpigf040b =='DEVDFT')||( lpigf040b =='REVLNF')||( lpigf040b =='VAR')||( lpigf040b =='VWES')||( lpigf040b =='VNES')||( lpigf040b =='WCPDFT'))",
+          "activation": "(( lpigf040a ==3)&&((( lpigf040b =='BDGFIN')||( lpigf040b =='DEVDFT')||( lpigf040b =='REVLNF')||( lpigf040b =='VAR')||( lpigf040b =='VWES')||( lpigf040b =='VNES')||( lpigf040b =='WCPDFT'))))",
           "aux": {
             "sampleValue": "20",
             "csvColumnName": null
@@ -1639,7 +1639,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "activation": "(( lpigf040b =='FIXIF')||( lpigf040b =='BNDCAP')||( lpigf040b =='FIXED')||( lpigf040b =='FWEIRS')||( lpigf040b =='FNEIRS'))",
+          "activation": "(( lpigf040a ==3)&&((( lpigf040b =='FIXIF')||( lpigf040b =='BNDCAP')||( lpigf040b =='FIXED')||( lpigf040b =='FWEIRS')||( lpigf040b =='FNEIRS'))))",
           "aux": {
             "sampleValue": "3.5",
             "csvColumnName": null
@@ -1654,7 +1654,7 @@
           "type": "boolean",
           "validation": " $value ",
           "validationMessage": "19. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
-          "activation": "((( lpigf044a  > 20))||(((( lpigf044b  >= 0))&&(( lpigf044b  < 3.5)))))",
+          "activation": "(( lpigf040a ==3)&&(((( lpigf044a  > 20))||(((( lpigf044b  >= 0))&&(( lpigf044b  < 3.5)))))))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -1831,7 +1831,7 @@
             "file": "reference_interest_rate.csv"
           },
           "aux": {
-            "sampleValue": "3",
+            "sampleValue": "4",
             "csvColumnName": null
           },
           "required": true
@@ -1847,7 +1847,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "activation": " lpc024 !=3",
+          "activation": "!( lpc024 ==3)",
           "aux": {
             "sampleValue": "20",
             "csvColumnName": null
@@ -2302,7 +2302,7 @@
           "label": "2. Facility Reference Number",
           "width": 2,
           "type": "text",
-          "calculation": "( lpfd016 + lpf001 +Pfo_Page_Serial_Padded_4)",
+          "calculation": "( lpfd016 + lpf001 +Pfo_Page_Serial_Padded_3)",
           "aux": {
             "sampleValue": "#NAME?",
             "csvColumnName": null
@@ -2786,7 +2786,7 @@
           "label": "2. Loan Reference Number",
           "width": 2,
           "type": "text",
-          "calculation": "( lpf001 + lpl002a +Pfo_Page_Serial_Padded_4)",
+          "calculation": "( lpf001 + lpl002a +Pfo_Page_Serial_Padded_3)",
           "aux": {
             "sampleValue": "#NAME?",
             "csvColumnName": null
@@ -2965,7 +2965,7 @@
           "validatedPositive": true,
           "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  > 0)))))",
           "validationMessage": "9. Margin over Reference Interest Rate (%) must have a value greater than 0 unless 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\".",
-          "activation": "(( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS'))",
+          "activation": "(( lpl002a =='BDGFIN')||( lpl002a =='DEVDFT')||( lpl002a =='REVLNF')||( lpl002a =='VAR')||( lpl002a =='VWES')||( lpl002a =='VNES')||( lpl002a =='WCPDFT'))",
           "aux": {
             "sampleValue": "20",
             "csvColumnName": null
@@ -3371,7 +3371,7 @@
           ]
         }
       ],
-      "title": "Loan Covenant",
+      "title": "Covenant for Loan",
       "fields": [
         {
           "name": "lpc003",
@@ -3603,7 +3603,7 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "activation": "(( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS'))",
+          "activation": "(( lpl002a =='BDGFIN')||( lpl002a =='DEVDFT')||( lpl002a =='REVLNF')||( lpl002a =='VAR')||( lpl002a =='VWES')||( lpl002a =='VNES')||( lpl002a =='WCPDFT'))",
           "aux": {
             "sampleValue": "20.0001",
             "csvColumnName": null
