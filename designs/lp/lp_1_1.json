@@ -536,6 +536,7 @@
           "type": "linkedPageGrid",
           "page": "igflend",
           "createLabel": "Create IGF Lend",
+          "closedLabel": "Repaid",
           "columns": [
             "LPIGF001",
             "LPIGF004",
@@ -553,6 +554,7 @@
           "type": "linkedPageGrid",
           "page": "igfborrow",
           "createLabel": "Create IGF Borrow",
+          "closedLabel": "Repaid",
           "columns": [
             "LPIGF100",
             "LPIGF028",
