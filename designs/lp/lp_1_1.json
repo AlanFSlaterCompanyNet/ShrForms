@@ -1116,7 +1116,7 @@
           "type": "boolean",
           "validation": " $value ",
           "validationMessage": "19. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
-          "activation": "(( lpigf016a ==3)&&(((( lpigf020a  > 20))||(((( lpigf020b  >= 0))&&(( lpigf020b  < 3.5)))))))",
+          "activation": "(( lpigf016a ==3)&&(((( lpigf020a  > 20))||(((( lpigf020b  >= 0))&&(( lpigf020b  < 3.5))&&( lpigf019 ==''))))))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
@@ -1142,7 +1142,7 @@
         {
           "name": "lpigf022",
           "labelWidth": 5,
-          "label": "21. If you answered YES to question (19) please enter the Loan Reference Number",
+          "label": "21. If you answered YES to question (20) please enter the Loan Reference Number",
           "width": 3,
           "type": "choice",
           "page": "loan",
@@ -1606,7 +1606,7 @@
           },
           "activation": "(( lpigf040a ==3)&&((( lpigf040b =='BDGFIN')||( lpigf040b =='DEVDFT')||( lpigf040b =='REVLNF')||( lpigf040b =='VAR')||( lpigf040b =='VWES')||( lpigf040b =='VNES')||( lpigf040b =='WCPDFT'))))",
           "aux": {
-            "sampleValue": "LIBOR 2 month",
+            "sampleValue": "3",
             "csvColumnName": null
           },
           "required": true
@@ -1624,7 +1624,7 @@
           "validatedPositive": true,
           "activation": "(( lpigf040a ==3)&&((( lpigf040b =='BDGFIN')||( lpigf040b =='DEVDFT')||( lpigf040b =='REVLNF')||( lpigf040b =='VAR')||( lpigf040b =='VWES')||( lpigf040b =='VNES')||( lpigf040b =='WCPDFT'))))",
           "aux": {
-            "sampleValue": "20",
+            "sampleValue": "20.0001",
             "csvColumnName": null
           },
           "required": true
@@ -1655,7 +1655,7 @@
           "type": "boolean",
           "validation": " $value ",
           "validationMessage": "19. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
-          "activation": "(( lpigf040a ==3)&&(((( lpigf044a  > 20))||(((( lpigf044b  >= 0))&&(( lpigf044b  < 3.5)))))))",
+          "activation": "(( lpigf040a ==3)&&(((( lpigf044a  > 20))||(((( lpigf044b  >= 0))&&(( lpigf044b  < 3.5))&&( lpigf043 ==''))))))",
           "aux": {
             "sampleValue": "True",
             "csvColumnName": null
