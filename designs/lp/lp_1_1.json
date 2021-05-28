@@ -33,6 +33,7 @@
             "sampleValue": "lps",
             "csvColumnName": null
           },
+          "readonly": true,
           "required": true
         },
         {
@@ -45,6 +46,7 @@
             "sampleValue": "2020/2021",
             "csvColumnName": null
           },
+          "readonly": true,
           "required": true
         },
         {
@@ -57,7 +59,8 @@
             "sampleValue": "Annual",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd004",
@@ -69,7 +72,8 @@
             "sampleValue": "01/04/2021 00:00:00",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd005",
@@ -81,7 +85,8 @@
             "sampleValue": "31/03/2022 00:00:00",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd006",
@@ -93,6 +98,7 @@
             "sampleValue": "ED6CA976-CFA9-E311-93F1-005056B555E6",
             "csvColumnName": null
           },
+          "readonly": true,
           "required": false
         },
         {
@@ -105,6 +111,7 @@
             "sampleValue": "Abbeyfield Scotland Ltd",
             "csvColumnName": null
           },
+          "readonly": true,
           "required": true
         },
         {
@@ -120,6 +127,7 @@
             "sampleValue": "20",
             "csvColumnName": null
           },
+          "readonly": true,
           "required": true
         },
         {
@@ -135,7 +143,8 @@
             "sampleValue": "0",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd008",
@@ -150,7 +159,8 @@
             "sampleValue": "0",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd009",
@@ -165,7 +175,8 @@
             "sampleValue": "0",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd010",
@@ -180,7 +191,8 @@
             "sampleValue": "0",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd011",
@@ -195,7 +207,8 @@
             "sampleValue": "18264",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd012",
@@ -263,7 +276,8 @@
             "sampleValue": "DMO",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd017",
@@ -275,7 +289,8 @@
             "sampleValue": "16/04/1971 00:00:00",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         },
         {
           "name": "lpfd018",
@@ -287,7 +302,8 @@
             "sampleValue": "16/04/2071 00:00:00",
             "csvColumnName": null
           },
-          "required": true
+          "readonly": true,
+          "required": false
         }
       ]
     },
@@ -1111,7 +1127,7 @@
         {
           "name": "lpc020bx",
           "labelWidth": 5,
-          "label": "19b. I confirm that the value entered is correct",
+          "label": "19b. Confirmation required?",
           "width": 1,
           "type": "boolean",
           "validation": " $value ",
@@ -1187,7 +1203,7 @@
             "sampleValue": "False",
             "csvColumnName": null
           },
-          "help": "To change loan status to repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater than date of return.",
+          "help": "To change Loan status to Repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater than Submission Date of return.",
           "required": false
         }
       ]
@@ -1650,7 +1666,7 @@
         {
           "name": "lpigf044x",
           "labelWidth": 5,
-          "label": "19b. I confirm that the value entered is correct",
+          "label": "19b. Confirmation required?",
           "width": 1,
           "type": "boolean",
           "validation": " $value ",
@@ -1676,7 +1692,7 @@
             "sampleValue": "False",
             "csvColumnName": null
           },
-          "help": "To change loan status to repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater than date of return.",
+          "help": "To change Loan status to Repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater than Submission Date of return.",
           "required": false
         }
       ]
@@ -1876,7 +1892,7 @@
         {
           "name": "lpc025b",
           "labelWidth": 5,
-          "label": "7b. I confirm that the value entered is correct",
+          "label": "7b. Confirmation required?",
           "width": 1,
           "type": "boolean",
           "validation": " $value ",
@@ -2308,7 +2324,7 @@
             "sampleValue": "DMOBOS002",
             "csvColumnName": null
           },
-          "help": "DERIVED\n(a) RSL short code\n + (b) Lender short code\n + (c) Facility counter + 1: Sequence number 4 digits with leading zeroes"
+          "help": "(a) RSL short code\n + (b) Lender short code\n + (c) Facility counter + 1: Sequence number 3 digits with leading zeroes"
         },
         {
           "name": "lpf005",
@@ -2597,7 +2613,7 @@
             "sampleValue": "False",
             "csvColumnName": null
           },
-          "help": "To change Facility status to closed please ensure that\n• All Loan records have Balance Outstanding = 0\n• The end date is entered and is not greater than date of return.",
+          "help": "To change Facility status to Closed please ensure that\n• All Loan records have Balance Outstanding = 0\n• The end date is entered and is not greater than Submission Date of return.",
           "required": false
         },
         {
@@ -2793,7 +2809,7 @@
             "sampleValue": "BOSVAR002",
             "csvColumnName": null
           },
-          "help": "DERIVED\n(a) Bank short code\n+ (b) Loan short code\n+ © Loan counter + 1: Sequence number 4 digits with leading zeroes"
+          "help": "(a) Bank short code\n+ (b) Loan short code\n+ © Loan counter + 1: Sequence number 3 digits with leading zeroes"
         },
         {
           "name": "lpl003",
@@ -2948,7 +2964,7 @@
             }
           ],
           "aux": {
-            "sampleValue": "10",
+            "sampleValue": "4",
             "csvColumnName": null
           },
           "help": "If Reference Interest Rate is Fixed Rate Percentage Loan Type must be Fixed Rate Loan OR Fixed with embedded Interest Rate Swaps OR Fixed without embedded Interest Rate Swaps OR Bond / Capital Market product.\n\nIf Reference Interest Rate is 'Interest Free' Loan type must be 'Fixed Interest Free'.",
@@ -2965,11 +2981,11 @@
           "decimalPlaces": 4,
           "percentage": true,
           "validatedPositive": true,
-          "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  > 0)))))",
+          "validation": "(((( lpl009 ==4)&&( $value ==0)))||((( lpl009 ==5)&&(( $value  >= 0))))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  > 0)))))",
           "validationMessage": "9. Margin over Reference Interest Rate (%) must have a value greater than 0 unless 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\".",
           "activation": "(( lpl002a =='BDGFIN')||( lpl002a =='DEVDFT')||( lpl002a =='REVLNF')||( lpl002a =='VAR')||( lpl002a =='VWES')||( lpl002a =='VNES')||( lpl002a =='WCPDFT'))",
           "aux": {
-            "sampleValue": "20",
+            "sampleValue": "0",
             "csvColumnName": null
           },
           "required": true
@@ -2997,7 +3013,7 @@
         {
           "name": "lpl010b",
           "labelWidth": 5,
-          "label": "9b. I confirm that the value entered is correct",
+          "label": "9b. Confirmation required?",
           "width": 1,
           "type": "boolean",
           "validation": " $value ",
@@ -3309,7 +3325,7 @@
             "sampleValue": "False",
             "csvColumnName": null
           },
-          "help": "To change Loan status to repaid please ensure that\n• Balance Outstanding must be 0\n• The Final Capital Repayment date must be entered\n• Repayment date cannot be greater than the Submission Date of Return",
+          "help": "To change Loan status to Repaid please ensure that\n• Balance Outstanding must be 0\n• The Final Capital Repayment date must be entered\n• Repayment date cannot be greater than the Submission Date of Return",
           "required": false
         },
         {
@@ -3332,7 +3348,7 @@
           "aux": {
             "csvColumnName": null
           },
-          "required": true
+          "required": false
         },
         {
           "name": "lpl100",
@@ -3637,7 +3653,7 @@
         {
           "name": "lpc018c",
           "labelWidth": 5,
-          "label": "6b. I confirm that the value entered is correct",
+          "label": "6b. Confirmation required?",
           "width": 1,
           "type": "boolean",
           "validation": " $value ",
