@@ -3,8 +3,8 @@
   "title": "Loan Portfolio",
   "formTitle": "Loan Portfolio",
   "outputTable": "LP",
-  "readRole": "LPS User",
-  "editRole": "LPS Approver",
+  "readRole": "LPS Reader",
+  "editRole": "LPS User",
   "pdfFileName": "LPReturn.pdf",
   "hierarchical": true,
   "pdfPages": [
