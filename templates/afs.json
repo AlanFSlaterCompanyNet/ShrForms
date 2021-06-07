@@ -48,6 +48,7 @@
   "formTitle": "AFS Return",
   "outputTable": "AFS",
   "readRole": "AFS Reader",
+  "approveRole": "AFS Approver",
   "editRole": "AFS User",
   "pdfFileName": "AfsReturn.pdf",
   "illegalValueMessage": "-",
@@ -428,7 +429,8 @@
     },
     {
       "action": "insertPage",
-      "row": 15
+      "row": 15,
+      "editRole": "AFS Approver"
     }
   ]
 }

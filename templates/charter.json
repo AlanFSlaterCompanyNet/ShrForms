@@ -14,6 +14,7 @@
   "formTitle": "Charter Return",
   "outputTable": "Charter",
   "readRole": "Charter Reader",
+  "approveRole": "Charter Approver",
   "editRole": "Charter User",
   "pdfFileName": "CharterReturn.pdf",
   "pages": [
@@ -406,7 +407,8 @@
     {
       "action": "insertPage",
       "row": 55,
-      "sheet": "Contextual and EESSH"
+      "sheet": "Contextual and EESSH",
+      "editRole": "Charter Approver"
     }
   ]
 }

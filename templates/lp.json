@@ -11,7 +11,7 @@
     [
       "generate",
       "Lp",
-      "1_2",
+      "1_3",
       false
     ]
   ],
@@ -19,7 +19,8 @@
   "title": "Loan Portfolio",
   "formTitle": "Loan Portfolio",
   "outputTable": "LP",
-  "readRole": "LPS Reader",
+  "readRole": "LPS Approver",
+  "approveRole": "LPS Approver",
   "editRole": "LPS User",
   "pdfFileName": "LPReturn.pdf",
   "hierarchical": true,
@@ -45,7 +46,8 @@
     },
     {
       "action": "insertPage",
-      "row": 4
+      "row": 4,
+      "editRole" : "LPS Approver"
     },
     {
       "action": "insertPage",

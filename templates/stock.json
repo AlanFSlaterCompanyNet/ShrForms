@@ -25,6 +25,7 @@
   "formTitle": "Stock",
   "outputTable": "Stock",
   "readRole": "Organisational Details Reader",
+  "approveRole": "Organisational Details",
   "editRole": "Organisational Details",
   "illegalValueMessage": "-",
   "financialFormatting": true,  
@@ -143,6 +144,7 @@
     {
       "name":"f1",
       "title":"Approval",
+      "editRole": "Organisational Details",
       "fields": [
         {
           "name": "cn_localauthority2",

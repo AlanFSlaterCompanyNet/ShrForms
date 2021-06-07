@@ -24,6 +24,7 @@
   "formTitle": "FYFP Return",
   "outputTable": "FYFP",
   "readRole": "FYFP Reader",
+  "approveRole": "FYFP Approver",
   "editRole": "FYFP User",
   "pdfFileName": "FYFPReturn.pdf",
   "illegalValueMessage": "-",
@@ -244,7 +245,8 @@
     },
     {
       "action": "insertPage",
-      "row": 8
+      "row": 8,
+      "editRole": "FYFP Approver"
     }
   ]
 }
