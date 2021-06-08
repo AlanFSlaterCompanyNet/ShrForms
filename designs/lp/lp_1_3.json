@@ -1,0 +1,3671 @@
+{
+  "$schema": "./formDesignSchema.json",
+  "title": "Loan Portfolio",
+  "formTitle": "Loan Portfolio",
+  "outputTable": "LP",
+  "readRole": "LPS Approver",
+  "approveRole": "LPS Approver",
+  "editRole": "LPS User",
+  "pdfFileName": "LPReturn.pdf",
+  "hierarchical": true,
+  "pdfPages": [
+    "submission",
+    "loancovenant",
+    "facility",
+    "loan",
+    "eird",
+    "igflend",
+    "igfborrow",
+    "isda",
+    "isdacovenant"
+  ],
+  "pages": [
+    {
+      "name": "f1",
+      "title": "Introduction",
+      "fields": [
+        {
+          "name": "lpfd001",
+          "labelWidth": 5,
+          "label": "F1.1 Form type",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "lps",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "lpfd002",
+          "labelWidth": 5,
+          "label": "F1.2 Financial year",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "2020/2021",
+            "csvColumnName": null
+          },
+          "readonly": true,
+          "required": true
+        },
+        {
+          "name": "lpfd003",
+          "labelWidth": 5,
+          "label": "F1.3 Type of Return",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Annual",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd004",
+          "labelWidth": 5,
+          "label": "F1.4 CY Start date",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "01/04/2021 00:00:00",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd005",
+          "labelWidth": 5,
+          "label": "F1.5 CY End date",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "31/03/2022 00:00:00",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd006",
+          "labelWidth": 5,
+          "label": "F1.6 Social Landlord ID",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "ED6CA976-CFA9-E311-93F1-005056B555E6",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd020",
+          "labelWidth": 5,
+          "label": "F1.20 Landlord name",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Abbeyfield Scotland Ltd",
+            "csvColumnName": null
+          },
+          "readonly": true,
+          "required": true
+        },
+        {
+          "name": "lpfd021",
+          "labelWidth": 5,
+          "label": "F1.21 RSL Registration Number",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 10000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "20",
+            "csvColumnName": null
+          },
+          "readonly": true,
+          "required": true
+        },
+        {
+          "name": "lpfd007",
+          "labelWidth": 5,
+          "label": "F1.7 CY In-year count",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 10000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "0",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd008",
+          "labelWidth": 5,
+          "label": "F1.8 PY live Facility count",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 10000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "0",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd009",
+          "labelWidth": 5,
+          "label": "F1.9 PY live IGF count",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 10000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "0",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd010",
+          "labelWidth": 5,
+          "label": "F1.10 PY ISDA count",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "0",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd011",
+          "labelWidth": 5,
+          "label": "F1.11 Fifty years (days)",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 10000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "18264",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd012",
+          "labelWidth": 0,
+          "label": "F1.12 Welcome",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "Welcome to the Landlord Portal for the Loan Portfolio return (LPS).\n\nLPS is an online form designed to collate information on the Facilities and Loans of RSLs in Scotland.  This information must be submitted by the 31st August 2021.\n\nPlease make sure that the return is approved by the Governing Body and is signed off by the relevant Senior Officer in your organisation.\n\nWe will use the information to inform our annual financial risk assessment.  Where we publish any information, this will be at the aggregate level and not at individual RSL level as the information provided is commercially sensitive.",
+            "csvColumnName": null
+          },
+          "title": "Welcome",
+          "text": "<p>Welcome to the Landlord Portal for the Loan Portfolio return (LPS).</p>\n<p>LPS is an online form designed to collate information on the Facilities and Loans of RSLs in Scotland.  This information must be submitted by the 31st August 2021.</p>\n<p>Please make sure that the return is approved by the Governing Body and is signed off by the relevant Senior Officer in your organisation.</p>\n<p>We will use the information to inform our annual financial risk assessment.  Where we publish any information, this will be at the aggregate level and not at individual RSL level as the information provided is commercially sensitive.</p>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "lpfd013",
+          "labelWidth": 0,
+          "label": "F1.13 About the online LPS return",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "The online Loan Portfolio has twelve sections:\n\n* Validation Summary\n* Submission\n* Facility\n* Loan\n* Loan Covenant\n* Embedded Interest Rate Derivative\n* Covenant for Loan\n* Intra Group Finance (Lend)\n* Intra Group Financr (Borrow)\n* ISDA\n* ISDA Covenant\n* Approval\n\nEach section is accessed via the menu on the left hand side of the screen.  Once in a section, you will be able to use the navigation buttons on the input screens to move between screens.\n\nFull details of how to complete the return is available in the Loan Portfolio User Guide which can be found in the Portal / Documents.  We encourage users to read this and refer to it in the first instance where they have any queries relating to the Loan Portfolio.\n\nEvery activated data entry field requires a value.  Activated blank fields are not permitted and will produce a validation error.  \nYou will be able to generate a PDF version of the Loan Portfolio form.  The PDF can be generated at any time and will only include the information that is input at that stage.",
+            "csvColumnName": null
+          },
+          "title": "About the online LPS return",
+          "text": "<p>The online Loan Portfolio has twelve sections:</p>\n<ul>\n<li>Validation Summary</li>\n<li>Submission</li>\n<li>Facility</li>\n<li>Loan</li>\n<li>Loan Covenant</li>\n<li>Embedded Interest Rate Derivative</li>\n<li>Covenant for Loan</li>\n<li>Intra Group Finance (Lend)</li>\n<li>Intra Group Financr (Borrow)</li>\n<li>ISDA</li>\n<li>ISDA Covenant</li>\n<li>Approval</li>\n</ul>\n<p>Each section is accessed via the menu on the left hand side of the screen.  Once in a section, you will be able to use the navigation buttons on the input screens to move between screens.</p>\n<p>Full details of how to complete the return is available in the Loan Portfolio User Guide which can be found in the Portal / Documents.  We encourage users to read this and refer to it in the first instance where they have any queries relating to the Loan Portfolio.</p>\n<p>Every activated data entry field requires a value.  Activated blank fields are not permitted and will produce a validation error.<br />\nYou will be able to generate a PDF version of the Loan Portfolio form.  The PDF can be generated at any time and will only include the information that is input at that stage.</p>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "lpfd014",
+          "labelWidth": 0,
+          "label": "F1.14 Validation Summary",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "The Validation Summary identifies any fields where you need to take further action e.g. because some information is missing or certain fields do not add up to match a field elsewhere in the form.\n\nThe form includes real-time validation to help you enter the data correctly",
+            "csvColumnName": null
+          },
+          "title": "Validation Summary",
+          "text": "<p>The Validation Summary identifies any fields where you need to take further action e.g. because some information is missing or certain fields do not add up to match a field elsewhere in the form.</p>\n<p>The form includes real-time validation to help you enter the data correctly</p>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "lpfd015",
+          "labelWidth": 0,
+          "label": "F1.15 Buttons",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "Button|Action\n--------|--------\nPrevious|This button will take you to the previous available page and save all content on the current page \nNext|This button will take you to the next available page and save all content on the current page\nSave|This button will save all content within the form and allow further editing\nPDF|This button will download a pdf document of the Loan Portfolio return form\nClose|This button will take you to a Close screen",
+            "csvColumnName": null
+          },
+          "title": "Buttons",
+          "text": "<table>\n<thead>\n<tr>\n<th>Button</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Previous</td>\n<td>This button will take you to the previous available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Next</td>\n<td>This button will take you to the next available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Save</td>\n<td>This button will save all content within the form and allow further editing</td>\n</tr>\n<tr>\n<td>PDF</td>\n<td>This button will download a pdf document of the Loan Portfolio return form</td>\n</tr>\n<tr>\n<td>Close</td>\n<td>This button will take you to a Close screen</td>\n</tr>\n</tbody>\n</table>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "lpfd016",
+          "labelWidth": 5,
+          "label": "F1.16 Landlord short code",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "DMO",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd017",
+          "labelWidth": 5,
+          "label": "F1.17 50YearsInPast",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "16/04/1971 00:00:00",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpfd018",
+          "labelWidth": 5,
+          "label": "F1.18 50YearsInFuture",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "16/04/2071 00:00:00",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "submission",
+      "title": "Submission",
+      "fields": [
+        {
+          "name": "lpr020",
+          "labelWidth": 5,
+          "label": "Submission Comments",
+          "width": 4,
+          "type": "textarea",
+          "validation": "(( $value ).length <= 1500)",
+          "validationMessage": "Submission Comments must be 1500 characters or less",
+          "aux": {
+            "sampleValue": "Comments for an Annual Submission",
+            "csvColumnName": null
+          },
+          "required": false
+        },
+        {
+          "name": "lpr003",
+          "labelWidth": 5,
+          "label": "1. Nil return",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "2",
+            "csvColumnName": null
+          },
+          "help": "A nil Return can only be entered if:\n1. No in-year return exists for that financial year;\n2. No live Facility or ISDA or Inter Group Finance record exists in the previous annual return;",
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpr003a",
+          "labelWidth": 5,
+          "label": "1. Do you want to submit a Nil Return?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "validation": "(( $value ==2)||((( $value ==3)&&((( lpfd007 + lpfd008 + lpfd009 + lpfd010 ))==0))))",
+          "validationMessage": "A Nil Return can only be entered if: a) No in-year return exists for that Financial year; b) No live Facility or ISDA or Inter Group Finance record exists in the previous Annual return\n",
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "help": "A nil Return can only be entered if :-\na) No in-year return exists for that financial year\nb) No live Facility or ISDA or Inter Group Finance record exists in the previous annual return\n",
+          "required": true
+        },
+        {
+          "name": "lpr005",
+          "labelWidth": 5,
+          "label": "2. Date of Return",
+          "width": 2,
+          "type": "date",
+          "calculation": "'31/03/2021'",
+          "aux": {
+            "sampleValue": "31/03/2021",
+            "csvColumnName": null
+          },
+          "readonly": true
+        },
+        {
+          "name": "lpr005a",
+          "labelWidth": 5,
+          "label": "2. Date of Return",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "01/04/2021 00:00:00",
+            "csvColumnName": null
+          },
+          "help": "Return date for current submission cannot be less than Return data for previous submission",
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpr006",
+          "labelWidth": 5,
+          "label": "3. Reason for return",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "return_reason.csv"
+          },
+          "multiple": true,
+          "validation": "(((pfo_lpr006_length >= 1))&&(pfo_lpr006_first!=''))",
+          "validationMessage": "One or more 3. Reason for return required if Return type = \"In-Year\"",
+          "activation": " lpfd003 =='In-Year'",
+          "aux": {
+            "sampleValue": "Change in Loan details",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "lpr007",
+          "labelWidth": 5,
+          "label": "4. Accounting year-end",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "accounting_year_end.csv"
+          },
+          "aux": {
+            "sampleValue": "March",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpr010",
+          "labelWidth": 5,
+          "label": "5. Number of housing units owned by RSL",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "aux": {
+            "sampleValue": "350",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpr011",
+          "labelWidth": 5,
+          "label": "6. Number of housing units used for Security",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "aux": {
+            "sampleValue": "300",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpr012",
+          "labelWidth": 5,
+          "label": "7. Unencumbered housing units",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "calculation": "( lpr010 +( -  lpr011 ))",
+          "aux": {
+            "sampleValue": "50",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpr013",
+          "labelWidth": 5,
+          "label": "8. What Percentage of unencumbered housing units in Question (7) has a Positive value?",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 2,
+          "percentage": true,
+          "validatedPositive": true,
+          "validation": "((( $value  >= 0))&&(( $value  <= 100)))",
+          "validationMessage": "7. What Percentage of unencumbered housing units must be between 0 and 100",
+          "aux": {
+            "sampleValue": "99.99",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpr014",
+          "labelWidth": 5,
+          "label": "9. Does a Lender have a floating charge over the company assets?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpr103",
+          "labelWidth": 5,
+          "label": "Facility",
+          "type": "linkedPageGrid",
+          "page": "facility",
+          "createLabel": "Create Facility",
+          "columns": [
+            "LPF004",
+            "LPF001",
+            "LPF009",
+            "LPF010",
+            "LPF011"
+          ],
+          "aux": {
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpr104",
+          "labelWidth": 5,
+          "label": "Covenant For Loan",
+          "type": "linkedPageGrid",
+          "page": "loancovenant",
+          "createLabel": "Create Covenant for Loan",
+          "columns": [
+            "lpc004",
+            "lpc005",
+            "lpc006",
+            "lpc009",
+            "lpc008"
+          ],
+          "aux": {
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpr100",
+          "labelWidth": 5,
+          "label": "Intra Group Finance - Lend",
+          "type": "linkedPageGrid",
+          "page": "igflend",
+          "createLabel": "Create IGF Lend",
+          "closedLabel": "Repaid",
+          "columns": [
+            "LPIGF001",
+            "LPIGF004",
+            "LPIGF009",
+            "LPIGF010"
+          ],
+          "aux": {
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpr101",
+          "labelWidth": 5,
+          "label": "Intra Group Finance - Borrow",
+          "type": "linkedPageGrid",
+          "page": "igfborrow",
+          "createLabel": "Create IGF Borrow",
+          "closedLabel": "Repaid",
+          "columns": [
+            "LPIGF100",
+            "LPIGF028",
+            "LPIGF033",
+            "LPIGF034"
+          ],
+          "aux": {
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpr102",
+          "labelWidth": 5,
+          "label": "ISDA",
+          "type": "linkedPageGrid",
+          "page": "isda",
+          "createLabel": "Create ISDA",
+          "columns": [
+            "LPC019",
+            "LPC020",
+            "LPC021"
+          ],
+          "aux": {
+            "csvColumnName": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "a1",
+      "title": "Approval",
+      "editRole": "LPS Approver",
+      "fields": [
+        {
+          "type": "static",
+          "style": "heading",
+          "level": 5,
+          "title": "A1.1 I confirm that this organisation has completed the Loan Portfolio return in accordance with the Scottish Housing Regulator’s policy document “Financial Viability of Registered Social Landlords Information Requirements” and that this report accurately reflects the financial statements approved by the Governing Body at its meeting on",
+          "name": "static_a1_0",
+          "borderTop": false,
+          "labelWidth": 3
+        },
+        {
+          "name": "lpainf001",
+          "labelWidth": 3,
+          "label": "A1.1 Date approved",
+          "width": 2,
+          "type": "date",
+          "validation": "( $value  <= new Date())",
+          "validationMessage": "Date approved cannot be a date in the future.",
+          "aux": {
+            "sampleValue": "15/04/2021 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpainf002",
+          "labelWidth": 3,
+          "label": "A1.2 Approver",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "A N Other",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpainf003",
+          "labelWidth": 3,
+          "label": "A1.3 Approver job title",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Finance Manager",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpainf004",
+          "labelWidth": 3,
+          "label": "",
+          "commentsRequiredMessage": "A1.4 Submit",
+          "width": 5,
+          "type": "submit",
+          "allowErrors": true,
+          "aux": {
+            "csvColumnName": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "igflend",
+      "hierarchical": true,
+      "pdfGrids": [
+        {
+          "heading": "IGF Lend",
+          "fields": [
+            "lpigf001",
+            "lpigf002",
+            "lpigf003",
+            "lpigf004",
+            "lpigf005",
+            "lpigf006",
+            "lpigf007",
+            "lpigf008",
+            "lpigf009",
+            "lpigf010",
+            "lpigf011",
+            "lpigf021",
+            "lpigf022",
+            "lpigf023"
+          ],
+          "labels": [
+            "Sequence Number",
+            "Name of the organisation that the funding is provided to",
+            "Relationship to RSL",
+            "Amount Provided (£'000s)",
+            "Balance O/S (£'000s)",
+            "Purpose of loan",
+            "Details",
+            "Duration of funding arrangement (months)",
+            "Start Date",
+            "End Date",
+            "First repayment date",
+            "Is Funding Provided Part of Funds Borrowed?",
+            "Loan Reference Number",
+            "Lender aware of on Lending Arrangement?"
+          ]
+        },
+        {
+          "heading": "IGF Lend",
+          "fields": [
+            "lpigf001",
+            "lpigf002",
+            "lpigf012",
+            "lpigf013",
+            "lpigf014",
+            "lpigf015",
+            "lpigf016a",
+            "lpigf016b",
+            "lpigf017",
+            "lpigf018",
+            "lpigf019",
+            "lpigf020a",
+            "lpigf020b",
+            "lpigf030a"
+          ],
+          "excludeFromTotals": [
+            "lpigf015"
+          ],
+          "labels": [
+            "Sequence Number",
+            "Name of the organisation that the funding is provided to",
+            "Security taken?",
+            "Type of Security",
+            "Type of Security details",
+            "Value of Security (£'000s)",
+            "Loan Agreement in Place?",
+            "Loan Type",
+            "Repayment Period (months)",
+            "Repayment terms",
+            "Reference Interest Rate",
+            "Margin Over Ref Int Rate (%)",
+            "‘All in’ Fixed Rate (%)",
+            "IGF Lend Comments"
+          ]
+        }
+      ],
+      "title": "Inter Group Finance - Lend",
+      "fields": [
+        {
+          "name": "lpigf030a",
+          "labelWidth": 5,
+          "label": "IGF Comments Lend",
+          "width": 4,
+          "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "Intra Group Financial Comments must be 2000 characters or less",
+          "aux": {
+            "sampleValue": "Comments for Intra Group Finance Lend",
+            "csvColumnName": null
+          },
+          "required": false
+        },
+        {
+          "name": "lpigf001",
+          "labelWidth": 5,
+          "label": "1. Sequence Number",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "calculation": "Pfo_Page_Serial",
+          "aux": {
+            "sampleValue": "1",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpigf002",
+          "labelWidth": 5,
+          "label": "2. Name of the organisation that the funding is provided to",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Acme Group Ltd",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf003",
+          "labelWidth": 5,
+          "label": "3. Relationship to RSL",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "igf_relationship.csv"
+          },
+          "aux": {
+            "sampleValue": "Subsidiary",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf004",
+          "labelWidth": 5,
+          "label": "4. Amount Provided (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "4. Amount Provided must be greater than 0",
+          "aux": {
+            "sampleValue": "10000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf005",
+          "labelWidth": 5,
+          "label": "5. Balance outstanding as at date of return (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  <=  lpigf004 )",
+          "validationMessage": "5. Balance Outstanding as at date of return cannot be greater than Amount Provided",
+          "aux": {
+            "sampleValue": "5000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf006",
+          "labelWidth": 5,
+          "label": "6. Purpose of loan",
+          "width": 4,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "igf_purpose.csv"
+          },
+          "aux": {
+            "sampleValue": "2",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf007",
+          "labelWidth": 5,
+          "label": "Purpose of Loan details",
+          "width": 2,
+          "type": "text",
+          "activation": "(( lpigf006 ==2)||( lpigf006 ==3))",
+          "aux": {
+            "sampleValue": "The details are as follows…",
+            "csvColumnName": null
+          },
+          "help": "Requires 6. Purpose of Loan to contain 'give details' to activate",
+          "required": true
+        },
+        {
+          "name": "lpigf008",
+          "labelWidth": 5,
+          "label": "7. Duration of funding arrangement (months)",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "7. Duration of Funding must be greater than 0",
+          "aux": {
+            "sampleValue": "12",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf009",
+          "labelWidth": 5,
+          "label": "8. Start Date",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "01/01/2010 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf010",
+          "labelWidth": 5,
+          "label": "9. End Date",
+          "width": 2,
+          "type": "date",
+          "validation": "( $value  >=  lpigf009 )",
+          "validationMessage": "9. End Date cannot be less than 8. Start Date",
+          "aux": {
+            "sampleValue": "31/12/2050 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf011",
+          "labelWidth": 5,
+          "label": "10. First repayment date (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "01/04/2035 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf012",
+          "labelWidth": 5,
+          "label": "11. Security taken?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf013",
+          "labelWidth": 5,
+          "label": "12. Type of Security",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "igf_security_type.csv"
+          },
+          "activation": " lpigf012 ==3",
+          "aux": {
+            "sampleValue": "Standard security over stock (give details)",
+            "csvColumnName": null
+          },
+          "help": "Requires 11. Security taken = \"Yes\" to activate",
+          "required": true
+        },
+        {
+          "name": "lpigf014",
+          "labelWidth": 5,
+          "label": "Type of Security details",
+          "width": 2,
+          "type": "text",
+          "activation": " lpigf012 ==3",
+          "aux": {
+            "sampleValue": "The security details are…",
+            "csvColumnName": null
+          },
+          "help": "Requires 11. Security taken = \"Yes\" to activate",
+          "required": true
+        },
+        {
+          "name": "lpigf015",
+          "labelWidth": 5,
+          "label": "13. Value of Security (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "13. Value of Security must be greater than 0",
+          "activation": " lpigf012 ==3",
+          "aux": {
+            "sampleValue": "2500",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf016a",
+          "labelWidth": 5,
+          "label": "14. Loan Agreement in Place?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf016b",
+          "labelWidth": 5,
+          "label": "15. Loan Type",
+          "width": 4,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "loan_type.csv"
+          },
+          "activation": " lpigf016a ==3",
+          "aux": {
+            "sampleValue": "FIXED",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf017",
+          "labelWidth": 5,
+          "label": "16. Repayment Period (months)",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "16. Repayment Period must be greater than 0",
+          "activation": " lpigf016a ==3",
+          "aux": {
+            "sampleValue": "36",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf018",
+          "labelWidth": 5,
+          "label": "17. Repayment terms",
+          "width": 6,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "repayment_terms.csv"
+          },
+          "activation": " lpigf016a ==3",
+          "aux": {
+            "sampleValue": "Converted to Loan",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf019",
+          "labelWidth": 5,
+          "label": "18. Reference Interest Rate",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "reference_interest_rate.csv"
+          },
+          "activation": "(( lpigf016a ==3)&&((( lpigf016b =='BDGFIN')||( lpigf016b =='DEVDFT')||( lpigf016b =='REVLNF')||( lpigf016b =='VAR')||( lpigf016b =='VWES')||( lpigf016b =='VNES')||( lpigf016b =='WCPDFT'))))",
+          "aux": {
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf020a",
+          "labelWidth": 5,
+          "label": "19. Margin Over Reference Interest Rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "activation": "(( lpigf016a ==3)&&((( lpigf016b =='BDGFIN')||( lpigf016b =='DEVDFT')||( lpigf016b =='REVLNF')||( lpigf016b =='VAR')||( lpigf016b =='VWES')||( lpigf016b =='VNES')||( lpigf016b =='WCPDFT'))))",
+          "aux": {
+            "sampleValue": "20",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf020b",
+          "labelWidth": 5,
+          "label": "19. All in fixed rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "activation": "(( lpigf016a ==3)&&((( lpigf016b =='FIXIF')||( lpigf016b =='BNDCAP')||( lpigf016b =='FIXED')||( lpigf016b =='FWEIRS')||( lpigf016b =='FNEIRS'))))",
+          "aux": {
+            "sampleValue": "3.5",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc020bx",
+          "labelWidth": 5,
+          "label": "19b. Confirmation required?",
+          "width": 1,
+          "type": "boolean",
+          "validation": " $value ",
+          "validationMessage": "19. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
+          "activation": "(( lpigf016a ==3)&&(((( lpigf020a  > 20))||(((( lpigf020b  >= 0))&&(( lpigf020b  < 3.5))&&( lpigf019 ==''))))))",
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpigf021",
+          "labelWidth": 5,
+          "label": "20. Is the funding provided part of funds borrowed by you?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf022",
+          "labelWidth": 5,
+          "label": "21. If you answered YES to question (20) please enter the Loan Reference Number",
+          "width": 3,
+          "type": "choice",
+          "page": "loan",
+          "pageField": "lpl002b",
+          "activation": " lpigf021 ==3",
+          "aux": {
+            "sampleValue": "BCHFIXED11052",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf023",
+          "labelWidth": 5,
+          "label": "22. Is your lender aware of this on Lending arrangement?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "activation": " lpigf021 ==3",
+          "aux": {
+            "sampleValue": "Yes",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf024",
+          "labelWidth": 5,
+          "label": "23. Has this Loan been repaid?",
+          "type": "close",
+          "closeChildren": false,
+          "closeLabel": "Close IGF Lend",
+          "message": "Are you sure you want to close this IGF Lend?",
+          "closedMessage": "This IGF Lend has been closed",
+          "cantCloseMessage": "Can't mark this IGF Loan as closed.",
+          "activation": "(( lpigf005 ==0)&&( lpigf010 !='')&&(( lpigf010  <=  lpr005 )))",
+          "aux": {
+            "sampleValue": "False",
+            "csvColumnName": null
+          },
+          "tooltip": "To change Loan status to Repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater than Submission Date of return.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "igfborrow",
+      "hierarchical": true,
+      "pdfGrids": [
+        {
+          "heading": "IGF Borrow",
+          "fields": [
+            "lpigf100",
+            "lpigf026",
+            "lpigf027",
+            "lpigf028",
+            "lpigf029",
+            "lpigf030",
+            "lpigf031",
+            "lpigf032",
+            "lpigf033",
+            "lpigf034",
+            "lpigf035"
+          ],
+          "labels": [
+            "Sequence Number",
+            "Name of organisation that the funding is provided from",
+            "Relationship to RSL",
+            "Amount Received (£'000s)",
+            "Balance O/S (£'000s)",
+            "Purpose of loan",
+            "Details",
+            "Duration of funding arrangement (months)",
+            "Start Date",
+            "End Date",
+            "First repayment date"
+          ]
+        },
+        {
+          "heading": "IGF Borrow",
+          "fields": [
+            "lpigf100",
+            "lpigf026",
+            "lpigf036",
+            "lpigf037",
+            "lpigf038",
+            "lpigf039",
+            "lpigf040a",
+            "lpigf040b",
+            "lpigf041",
+            "lpigf042",
+            "lpigf043",
+            "lpigf044a",
+            "lpigf044b",
+            "lpigf050"
+          ],
+          "labels": [
+            "Sequence Number",
+            "Name of organisation that the funding is provided from",
+            "Security taken?",
+            "Type of security",
+            "Details",
+            "Value of security (£'000s)",
+            "Loan Agreement in place?",
+            "Loan Type",
+            "Repayment period (months)",
+            "Repayment terms",
+            "Reference Interest Rate",
+            "Margin Over Ref Int Rate (%)",
+            "‘All in’ Fixed Rate (%)",
+            "IGF Borrow Comments"
+          ],
+          "excludeFromTotals": [
+            "lpigf039"
+          ]
+        }
+      ],
+      "title": "Inter Group Finance - Borrow",
+      "fields": [
+        {
+          "name": "lpigf050",
+          "labelWidth": 5,
+          "label": "IGF Comments Borrow",
+          "width": 4,
+          "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "Intra Group Financial Comments must be 2000 characters or less",
+          "aux": {
+            "sampleValue": "Comments for Intra Group Finance Borrow",
+            "csvColumnName": null
+          },
+          "required": false
+        },
+        {
+          "name": "lpigf100",
+          "labelWidth": 5,
+          "label": "1. Sequence Number",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "calculation": "Pfo_Page_Serial",
+          "aux": {
+            "sampleValue": "1",
+            "csvColumnName": null
+          },
+          "readonly": true
+        },
+        {
+          "name": "lpigf026",
+          "labelWidth": 5,
+          "label": "2. Name of organisation that the funding is provided from",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Peak Group Ltd",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf027",
+          "labelWidth": 5,
+          "label": "3. Relationship to RSL",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "igf_relationship.csv"
+          },
+          "aux": {
+            "sampleValue": "Parent",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf028",
+          "labelWidth": 5,
+          "label": "4. Amount Received (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "4. Amount Received must be greater than 0",
+          "aux": {
+            "sampleValue": "5000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf029",
+          "labelWidth": 5,
+          "label": "5. Balance Outstanding as at date of return (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  <=  lpigf028 )",
+          "validationMessage": "5. Balance Outstanding as at date of return cannot be greater than Amount Received",
+          "aux": {
+            "sampleValue": "2500",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf030",
+          "labelWidth": 5,
+          "label": "6. Purpose of loan",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "igf_purpose.csv"
+          },
+          "aux": {
+            "sampleValue": "4",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf031",
+          "labelWidth": 5,
+          "label": "Details",
+          "width": 2,
+          "type": "text",
+          "activation": "(( lpigf030 ==2)||( lpigf030 ==3))",
+          "aux": {
+            "sampleValue": "The details are as follows…",
+            "csvColumnName": null
+          },
+          "help": "Requires 6. Purpose of Loan to contain 'give details' to activate",
+          "required": true
+        },
+        {
+          "name": "lpigf032",
+          "labelWidth": 5,
+          "label": "7. Duration of funding arrangement (months)",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "7. Duration of Funding must be greater than 0",
+          "aux": {
+            "sampleValue": "24",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf033",
+          "labelWidth": 5,
+          "label": "8. Start Date",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "01/04/2005 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf034",
+          "labelWidth": 5,
+          "label": "9. End Date ",
+          "width": 2,
+          "type": "date",
+          "validation": "( $value  >=  lpigf033 )",
+          "validationMessage": "9. End Date cannot be less than 8. Start Date",
+          "aux": {
+            "sampleValue": "31/03/2035 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf035",
+          "labelWidth": 5,
+          "label": "10. First repayment date (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "01/04/2020 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf036",
+          "labelWidth": 5,
+          "label": "11. Security taken by lending organisation in question (2)?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf037",
+          "labelWidth": 5,
+          "label": "12. Type of security",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "igf_security_type.csv"
+          },
+          "activation": " lpigf036 ==3",
+          "aux": {
+            "sampleValue": "Standard security over stock (give details)",
+            "csvColumnName": null
+          },
+          "help": "Requires 11. Security taken = \"Yes\" to activate",
+          "required": true
+        },
+        {
+          "name": "lpigf038",
+          "labelWidth": 5,
+          "label": "Details",
+          "width": 2,
+          "type": "text",
+          "activation": " lpigf036 ==3",
+          "aux": {
+            "sampleValue": "The security details are…",
+            "csvColumnName": null
+          },
+          "help": "Requires 11. Security taken = \"Yes\" to activate",
+          "required": true
+        },
+        {
+          "name": "lpigf039",
+          "labelWidth": 5,
+          "label": "13. Value of security (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "13. Value of Security must be greater than 0",
+          "activation": " lpigf036 ==3",
+          "aux": {
+            "sampleValue": "1250",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf040a",
+          "labelWidth": 5,
+          "label": "14. Loan Agreement in place?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf040b",
+          "labelWidth": 5,
+          "label": "15. Loan Type",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "loan_type.csv"
+          },
+          "activation": " lpigf040a ==3",
+          "aux": {
+            "sampleValue": "FIXED",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf041",
+          "labelWidth": 5,
+          "label": "16. Repayment period (months)",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "13. Value of Security must be greater than 0",
+          "activation": " lpigf040a ==3",
+          "aux": {
+            "sampleValue": "24",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf042",
+          "labelWidth": 5,
+          "label": "17. Repayment terms",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "repayment_terms.csv"
+          },
+          "activation": " lpigf040a ==3",
+          "aux": {
+            "sampleValue": "Converted to Loan",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf043",
+          "labelWidth": 5,
+          "label": "18. Reference Interest Rate",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "reference_interest_rate.csv"
+          },
+          "activation": "(( lpigf040a ==3)&&((( lpigf040b =='BDGFIN')||( lpigf040b =='DEVDFT')||( lpigf040b =='REVLNF')||( lpigf040b =='VAR')||( lpigf040b =='VWES')||( lpigf040b =='VNES')||( lpigf040b =='WCPDFT'))))",
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf044a",
+          "labelWidth": 5,
+          "label": "19. Margin Over Reference Interest Rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "activation": "(( lpigf040a ==3)&&((( lpigf040b =='BDGFIN')||( lpigf040b =='DEVDFT')||( lpigf040b =='REVLNF')||( lpigf040b =='VAR')||( lpigf040b =='VWES')||( lpigf040b =='VNES')||( lpigf040b =='WCPDFT'))))",
+          "aux": {
+            "sampleValue": "20.0001",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf044b",
+          "labelWidth": 5,
+          "label": "19. All in fixed rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "activation": "(( lpigf040a ==3)&&((( lpigf040b =='FIXIF')||( lpigf040b =='BNDCAP')||( lpigf040b =='FIXED')||( lpigf040b =='FWEIRS')||( lpigf040b =='FNEIRS'))))",
+          "aux": {
+            "sampleValue": "3.5",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpigf044x",
+          "labelWidth": 5,
+          "label": "19b. Confirmation required?",
+          "width": 1,
+          "type": "boolean",
+          "validation": " $value ",
+          "validationMessage": "19. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
+          "activation": "(( lpigf040a ==3)&&(((( lpigf044a  > 20))||(((( lpigf044b  >= 0))&&(( lpigf044b  < 3.5))&&( lpigf043 ==''))))))",
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpigf045",
+          "labelWidth": 5,
+          "label": "20. Has this Loan been repaid?",
+          "type": "close",
+          "closeChildren": false,
+          "closeLabel": "Close IGF Borrow",
+          "message": "Are you sure you want to close this IGF Borrow?",
+          "closedMessage": "This IGF Borrow has been closed",
+          "cantCloseMessage": "Can't mark this IGF Loan as closed.",
+          "activation": "(( lpigf029 ==0)&&( lpigf034 !='')&&(( lpigf034  <=  lpr005 )))",
+          "aux": {
+            "sampleValue": "False",
+            "csvColumnName": null
+          },
+          "tooltip": "To change Loan status to Repaid please ensure that\n•The balance outstanding equals zero\n•The end date is entered and is not greater than Submission Date of return.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "isda",
+      "hierarchical": true,
+      "pdfGrids": [
+        {
+          "heading": "ISDAs",
+          "fields": [
+            "lpc019",
+            "lpc020",
+            "lpc021",
+            "lpc022",
+            "lpc023",
+            "lpc024",
+            "lpc025",
+            "lpc025a",
+            "lpc026",
+            "lpc027",
+            "lpc028",
+            "lpc029",
+            "lpc030",
+            "lpc031",
+            "lpc032",
+            "lpc040"
+          ],
+          "labels": [
+            "Sequence Number",
+            "Name of Lender",
+            "Amount (£'000s)",
+            "Start Date",
+            "End Date",
+            "Reference Interest Rate",
+            "Margin Over Ref Int Rate (%)",
+            "‘All in’ Fixed Rate (%)",
+            "Mark to Market Threshold before collateral calls (£'000s)",
+            "Mark to Market Value (£'000s)",
+            "Date of Mark to Market Valuation",
+            "Implied loss or gain on Mark to Market Valuation (£'000s)",
+            "Type of collateral calls",
+            "Under which method are they marked?",
+            "Frequency of Call",
+            "ISDA Comments"
+          ]
+        }
+      ],
+      "title": "ISDA",
+      "fields": [
+        {
+          "name": "lpc040",
+          "labelWidth": 5,
+          "label": "Comments for ISDA",
+          "width": 4,
+          "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "ISDA Comments must be 2000 characters or less",
+          "aux": {
+            "sampleValue": "Comments for ISDA",
+            "csvColumnName": null
+          },
+          "required": false
+        },
+        {
+          "name": "lpc019",
+          "labelWidth": 5,
+          "label": "1. Sequence Number",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "calculation": "Pfo_Page_Serial",
+          "aux": {
+            "sampleValue": "1",
+            "csvColumnName": null
+          },
+          "readonly": true
+        },
+        {
+          "name": "lpc020",
+          "labelWidth": 5,
+          "label": "2. Name of Lender",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "lender.csv"
+          },
+          "aux": {
+            "sampleValue": "Clydesdale Bank plc",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc021",
+          "labelWidth": 5,
+          "label": "3. Amount (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "Amount must have a value greater than 0",
+          "aux": {
+            "sampleValue": "10000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc022",
+          "labelWidth": 5,
+          "label": "4. Start Date (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "01/04/2010 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc023",
+          "labelWidth": 5,
+          "label": "5. End Date (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validation": "( $value  >=  lpc022 )",
+          "validationMessage": "5. End Date cannot be before 4. Start date.",
+          "aux": {
+            "sampleValue": "31/03/2030 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc024",
+          "labelWidth": 5,
+          "label": "6. Reference Interest Rate",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "reference_interest_rate.csv"
+          },
+          "aux": {
+            "sampleValue": "4",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc025",
+          "labelWidth": 5,
+          "label": "7. Margin Over Reference Interest Rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "activation": "!( lpc024 ==3)",
+          "aux": {
+            "sampleValue": "20",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc025a",
+          "labelWidth": 5,
+          "label": "7. All in fixed rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "activation": " lpc024 ==3",
+          "aux": {
+            "sampleValue": "3.4999",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc025b",
+          "labelWidth": 5,
+          "label": "7b. Confirmation required?",
+          "width": 1,
+          "type": "boolean",
+          "validation": " $value ",
+          "validationMessage": "7. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
+          "activation": "((( lpc025  > 20))||(( lpc025a  > 20)))",
+          "aux": {
+            "sampleValue": "False",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpc026",
+          "labelWidth": 5,
+          "label": "8. Mark to Market Threshold before collateral calls (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "aux": {
+            "sampleValue": "-5000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc027",
+          "labelWidth": 5,
+          "label": "9. Mark to Market Value (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "aux": {
+            "sampleValue": "-3500",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc028",
+          "labelWidth": 5,
+          "label": "10. Date of Mark to Market Valuation (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validation": "((( $value  >=  lpc022 ))&&(( $value  <=  lpc023 )))",
+          "validationMessage": "10. Date of Mark to Market Valuation must be on or between 4. Start_Date and 5. End Date",
+          "aux": {
+            "sampleValue": "31/03/2010 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc029",
+          "labelWidth": 5,
+          "label": "11. Implied loss or gain on Mark to Market Valuation (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "aux": {
+            "sampleValue": "-1500",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc030",
+          "labelWidth": 5,
+          "label": "12. Type of collateral calls",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "isda_collateral_call.csv"
+          },
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc031",
+          "labelWidth": 5,
+          "label": "13. If answer to question 12 is 'Secured Assets', under which method are they marked?",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "basis_of_valuation.csv"
+          },
+          "activation": " lpc030 ==3",
+          "aux": {
+            "sampleValue": "EUV",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc032",
+          "labelWidth": 5,
+          "label": "14. Frequency of Call",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "isda_frequency_call.csv"
+          },
+          "aux": {
+            "sampleValue": "Weekly",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc033",
+          "labelWidth": 5,
+          "label": "ISDA Covenant",
+          "type": "linkedPageGrid",
+          "page": "isdacovenant",
+          "createLabel": "Create ISDA Covenant",
+          "columns": [
+            "LPC003a",
+            "LPC004a",
+            "LPC007a"
+          ],
+          "aux": {
+            "csvColumnName": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "isdacovenant",
+      "hierarchical": true,
+      "pdfGrids": [
+        {
+          "heading": "ISDA Covenants",
+          "fields": [
+            "lpc019",
+            "lpc003a",
+            "lpc004a",
+            "lpc005a",
+            "lpc006a",
+            "lpc007a",
+            "lpc008a",
+            "lpc009a"
+          ],
+          "sortBy": [
+            "lpc019",
+            "lpc003a"
+          ],
+          "labels": [
+            "ISDA Sequence Number",
+            "Sequence Number",
+            "Type of covenant applied",
+            "How is this Covenant calculated?",
+            "Required levels",
+            "Frequency of reporting to lender",
+            "Date of last report to lender",
+            "Actual levels achieved at that date"
+          ]
+        }
+      ],
+      "title": "ISDA Covenant",
+      "fields": [
+        {
+          "name": "lpc003a",
+          "labelWidth": 5,
+          "label": "1. Sequence Number",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "calculation": "Pfo_Page_Serial",
+          "aux": {
+            "sampleValue": "1",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpc004a",
+          "labelWidth": 5,
+          "label": "2. Type of covenant applied",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "covenant_type.csv"
+          },
+          "aux": {
+            "sampleValue": "Interest Cover",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc005a",
+          "labelWidth": 5,
+          "label": "3. How is this Covenant calculated?",
+          "width": 4,
+          "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "3. How is this Covenant calculated must be 2000 characters or less.",
+          "aux": {
+            "sampleValue": "How the Covenant calculated …",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc006a",
+          "labelWidth": 5,
+          "label": "4. Required levels",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "100%",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc007a",
+          "labelWidth": 5,
+          "label": "5. Frequency of reporting to lender",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "covenant_frequency_call.csv"
+          },
+          "aux": {
+            "sampleValue": "Annually",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc008a",
+          "labelWidth": 5,
+          "label": "6. Date of last report to lender",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "01/12/2009 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc009a",
+          "labelWidth": 5,
+          "label": "7. Actual levels achieved at that date",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "110%",
+            "csvColumnName": null
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "facility",
+      "hierarchical": true,
+      "crumbField": "lpf004",
+      "totals": [
+        {
+          "page": "loan",
+          "fields": [
+            "lpl007"
+          ]
+        }
+      ],
+      "pdfGrids": [
+        {
+          "heading": "Facilities",
+          "fields": [
+            "lpf004",
+            "lpf001",
+            "lpf005b",
+            "lpf006",
+            "lpf007",
+            "lpf008",
+            "lpf009",
+            "lpf010",
+            "lpf011",
+            "lpf012",
+            "lpf013",
+            "lpf014",
+            "lpf015"
+          ],
+          "labels": [
+            "Facility Reference Number",
+            "Name of Lender",
+            "Charge holder",
+            "Security Trustee in place?",
+            "Start Date",
+            "End Date",
+            "Total Facility (£’000s)",
+            "Balance of Facility Outstanding (£’000s)",
+            "Facility Undrawn (£’000s)",
+            "Next five years?",
+            "Undrawn Facility for?",
+            "Details",
+            "Funds Committed?"
+          ]
+        },
+        {
+          "heading": "Facilities",
+          "fields": [
+            "lpf004",
+            "lpf001",
+            "lpf016",
+            "lpf017",
+            "lpf018",
+            "lpf019",
+            "lpf003",
+            "lpf030"
+          ],
+          "labels": [
+            "Facility Reference Number",
+            "Name of Lender",
+            "Fees - Arrangement",
+            "Fees - Non-utilisation",
+            "Fees - Other",
+            "Fees - Details",
+            "All lenders within this syndicate",
+            "Facility Comments"
+          ]
+        }
+      ],
+      "title": "Facility",
+      "fields": [
+        {
+          "name": "lpf030",
+          "labelWidth": 5,
+          "label": "Comments for Facility",
+          "width": 4,
+          "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "Facility Comments must be 2000 characters or less",
+          "aux": {
+            "sampleValue": "Comments for Facility",
+            "csvColumnName": null
+          },
+          "required": false
+        },
+        {
+          "name": "lpf001",
+          "labelWidth": 5,
+          "label": "1. Name of Lender",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "lender.csv"
+          },
+          "aux": {
+            "sampleValue": "BOS",
+            "csvColumnName": null
+          },
+          "help": "if more than one, please choose name of lead lender",
+          "required": true
+        },
+        {
+          "name": "lpf002",
+          "labelWidth": 5,
+          "label": "1.1. Is there a syndicate involved with this Facility?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf003",
+          "labelWidth": 5,
+          "label": "1.2 If answer to 1.1 above is Yes, please enter all lenders within this syndicate.",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "lender.csv"
+          },
+          "multiple": true,
+          "validation": "(((pfo_lpf003_length >= 1))&&(pfo_lpf003_first!=''))",
+          "validationMessage": "A minimum of one Lender must be added if more than 1.1 Is there a syndicate involved = \"Yes\"'",
+          "activation": " lpf002 ==3",
+          "aux": {
+            "sampleValue": "AXA",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf004",
+          "labelWidth": 5,
+          "label": "2. Facility Reference Number",
+          "width": 2,
+          "type": "text",
+          "calculation": "( lpfd016 + lpf001 +Pfo_Page_Serial_Padded_3)",
+          "aux": {
+            "sampleValue": "#NAME?",
+            "csvColumnName": null
+          },
+          "help": "a. RSL short code\n + b. Lender short code\n + c. Facility counter + 1: Sequence number 3 digits with leading zeroes"
+        },
+        {
+          "name": "lpf005",
+          "labelWidth": 5,
+          "label": "3. Is the charge holder different from the lead lender/lender",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "Yes",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf005b",
+          "labelWidth": 5,
+          "label": "3a. If the charge holder is different from the lead lender/lender in Q3 above please list all charge holders",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "fac_charge_holder.csv"
+          },
+          "multiple": true,
+          "validation": "(((pfo_lpf005b_length >= 1))&&(pfo_lpf005b_first!=''))",
+          "validationMessage": "3a. Charge holder must be added if 3. Is the Charge holder different from Lender / lead Lender = \"Yes\"",
+          "activation": " lpf005 ==3",
+          "aux": {
+            "sampleValue": "BAE Pension Fund",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf006",
+          "labelWidth": 5,
+          "label": "4. Is there a Security Trustee arrangement in place?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "Yes",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf007",
+          "labelWidth": 5,
+          "label": "5. Start Date (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validation": "((( $value  >  lpfd017 ))&&(( $value  <  lpfd018 )))",
+          "validationMessage": "5. Start Date must fall within default date range based on Date of Return  (50 years)",
+          "aux": {
+            "sampleValue": "01/04/2000 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf008",
+          "labelWidth": 5,
+          "label": "6. End Date (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validationList": [
+            {
+              "validation": "( $value  >  lpf007 )",
+              "message": "6. End Date must be greater than 5. Start Date"
+            },
+            {
+              "validation": "((( $value  >  lpfd017 ))&&(( $value  <  lpfd018 )))",
+              "message": "6. End Date must fall within default date range based on Date of Return (50 years)"
+            }
+          ],
+          "aux": {
+            "sampleValue": "31/03/2045 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf009",
+          "labelWidth": 5,
+          "label": "7. Total Facility (£’000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "7. Total Facility must be greater than 0",
+          "aux": {
+            "sampleValue": "20000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf010",
+          "labelWidth": 5,
+          "label": "8. Balance of Facility Outstanding (£’000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validationList": [
+            {
+              "validation": "( $value  <=  lpf009 )",
+              "message": "8. Balance of Facility outstanding cannot be greater than 7. Total Facility"
+            },
+            {
+              "validation": " $value ==pfo_total_loan_lpl007",
+              "message": "Must equal sum of all balances outstanding for all Loans in this facility."
+            }
+          ],
+          "aux": {
+            "sampleValue": "10000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf011",
+          "labelWidth": 5,
+          "label": "9(i). Facility Undrawn (£’000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  <=  lpf009 )",
+          "validationMessage": "9. Facility Undrawn cannot be greater than 7. Total Facility",
+          "aux": {
+            "sampleValue": "0",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf012",
+          "labelWidth": 5,
+          "label": "9(ii). Is the undrawn Facility likely to be drawn down in the next five years?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "activation": "( lpf011  > 0)",
+          "aux": {
+            "sampleValue": "2",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf013",
+          "labelWidth": 5,
+          "label": "9(iii). What is the undrawn Facility for?",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "fac_undrawn_purpose.csv"
+          },
+          "activation": "(( lpf012 ==3)&&(( lpf011  > 0)))",
+          "aux": {
+            "sampleValue": "4",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf014",
+          "labelWidth": 5,
+          "label": "Undrawn Facility for Details",
+          "width": 2,
+          "type": "text",
+          "activation": "(( lpf012 ==3)&&( lpf013 ==4)&&(( lpf011  > 0)))",
+          "aux": {
+            "sampleValue": "The undrawn Facility details are…",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf015",
+          "labelWidth": 5,
+          "label": "9(iv). Are these funds committed?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "activation": "(( lpf012 ==3)&&(( lpf011  > 0)))",
+          "aux": {
+            "sampleValue": "Yes",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf016",
+          "labelWidth": 5,
+          "label": "10. Please tell us what fees you have incurred / may incur in arranging this Facility. \n(i) Arrangement fees (paid directly to the lender)",
+          "width": 2,
+          "type": "boolean",
+          "checkbox": true,
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpf017",
+          "labelWidth": 5,
+          "label": "(ii). Non-utilisation fees",
+          "width": 2,
+          "type": "boolean",
+          "checkbox": true,
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpf018",
+          "labelWidth": 5,
+          "label": "(iii). Other fees - please provide details",
+          "width": 2,
+          "type": "boolean",
+          "checkbox": true,
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpf019",
+          "labelWidth": 5,
+          "label": "Other fees Details",
+          "width": 2,
+          "type": "text",
+          "activation": " lpf018 ",
+          "aux": {
+            "sampleValue": "Other fees details are…",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpf020",
+          "labelWidth": 5,
+          "label": "11. Is this Facility Closed?",
+          "type": "close",
+          "closeChildren": false,
+          "closeLabel": "Close facility",
+          "message": "Are you sure you want to close this facility?",
+          "closedMessage": "Facility has been closed",
+          "cantCloseMessage": "Can't close this facility.",
+          "activation": "(( lpf010 ==0)&&( lpf008 !='')&&(( lpf008  <=  lpr005 )))",
+          "aux": {
+            "sampleValue": "False",
+            "csvColumnName": null
+          },
+          "tooltip": "To change Facility status to Closed please ensure that\n• All Loan records have Balance Outstanding = 0\n• The end date is entered and is not greater than Submission Date of return.",
+          "required": false
+        },
+        {
+          "name": "lpc100",
+          "labelWidth": 5,
+          "label": "Loan",
+          "type": "linkedPageGrid",
+          "page": "loan",
+          "createLabel": "Create Loan",
+          "closedLabel": "Repaid",
+          "columns": [
+            "lpl002b",
+            "lpl006",
+            "lpl007"
+          ],
+          "aux": {
+            "csvColumnName": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "loan",
+      "hierarchical": true,
+      "crumbField": "lpl002b",
+      "pdfGrids": [
+        {
+          "heading": "Loans",
+          "fields": [
+            "lpf004",
+            "lpl002b",
+            "lpl002a",
+            "lpl003",
+            "lpl004",
+            "lpl006",
+            "lpl007",
+            "lpl008",
+            "lpl009",
+            "lpl010",
+            "lpl010a",
+            "lpl011",
+            "lpl012",
+            "lpl013",
+            "lpl018"
+          ],
+          "sortBy": [
+            "lpf004",
+            "lpl002b"
+          ],
+          "labels": [
+            "Facility Reference Number",
+            "Loan Reference Number",
+            "Loan Type",
+            "Purpose of Loan",
+            "Loan Purpose Details",
+            "Total Loan Amt (£'000s)",
+            "Balance O/S (£'000s)",
+            "Repmnt Terms",
+            "Ref Int Rate",
+            "Margin Over Ref Int Rate (%)",
+            "‘All in’ Fixed Rate (%)",
+            "First Cap Repmnt Date",
+            "Final Cap Repmnt Date",
+            "First Int Pmnt Date",
+            "Interest is being"
+          ]
+        },
+        {
+          "heading": "Loans",
+          "fields": [
+            "lpf004",
+            "lpl002b",
+            "lpl005",
+            "lpl014",
+            "lpl015",
+            "lpl016",
+            "lpl019",
+            "lpl020",
+            "lpl021",
+            "lpl022",
+            "lpl023",
+            "lpl024",
+            "lpl025",
+            "lpl026",
+            "lpl030"
+          ],
+          "sortBy": [
+            "lpf004",
+            "lpl002b"
+          ],
+          "excludeFromTotals": [
+            "lpl024"
+          ],
+          "labels": [
+            "Facility Reference Number",
+            "Loan Reference Number",
+            "Start Date",
+            "Fin cap Rep Date Ind",
+            "Current deal expiry date",
+            "Forward fixes neg with Lender?",
+            "Fees - Arrangement",
+            "Fees - Non-utilisation",
+            "Fees - Other",
+            "Fees - Details",
+            "Percentage of Security provided by Social Housing assets (%)",
+            "Value of Security provided by Social Housing units (£'000s)",
+            "Basis of valuation",
+            "Date of valuation",
+            "Loan Comments"
+          ]
+        },
+        {
+          "heading": "Loans Covenants",
+          "fields": [
+            "lpf004",
+            "lpl002b",
+            "lpc003",
+            "lpc004",
+            "lpc005",
+            "lpc006",
+            "lpc007",
+            "lpc009"
+          ],
+          "sortBy": [
+            "lpf004",
+            "lpl002b",
+            "lpc003"
+          ],
+          "joinField": "lpl101",
+          "labels": [
+            "Facility Reference Number",
+            "Loan Reference Number",
+            "Covenant Sequence Number",
+            "Type of Covenant applied",
+            "How is this Covenant calculated?",
+            "Required levels",
+            "Frequency of reporting to lender",
+            "Actual levels achieved at that date"
+          ]
+        }
+      ],
+      "title": "Loan",
+      "fields": [
+        {
+          "name": "lpl030",
+          "labelWidth": 5,
+          "label": "Comments for Loan",
+          "width": 4,
+          "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "Loan Comments must be 2000 characters or less",
+          "aux": {
+            "sampleValue": "Comments for Loan",
+            "csvColumnName": null
+          },
+          "required": false
+        },
+        {
+          "name": "lpl002a",
+          "labelWidth": 5,
+          "label": "1. Loan Type",
+          "width": 4,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "loan_type.csv"
+          },
+          "validationList": [
+            {
+              "validation": "(( $value =='FWEIRS')||( $value =='VWES'))?(pfo_count_eird > 0):true",
+              "message": "If Loan Type = \"Fixed with embedded Interest Rate Swaps\" OR Loan Type = 'Variable with embedded Interest Rate Swaps\" then at least 1 Embedded Interest Rate must exist"
+            },
+            {
+              "validation": "(pfo_count_eird > 0)?(( $value =='FWEIRS')||( $value =='REVLNF')||( $value =='VWES')):true",
+              "message": "Interest Rate Derivative exists but Loan type not (Fixed with embedded Interest Rate Swaps) OR(Revolving Loan / Credit Facility) OR (Variable with embedded Interest Rate Swaps)"
+            }
+          ],
+          "aux": {
+            "sampleValue": "VAR",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl002b",
+          "labelWidth": 5,
+          "label": "2. Loan Reference Number",
+          "width": 2,
+          "type": "text",
+          "calculation": "( lpf001 + lpl002a +Pfo_Page_Serial_Padded_3)",
+          "aux": {
+            "sampleValue": "BOSVAR002",
+            "csvColumnName": null
+          },
+          "help": "a. Bank short code\n+ b. Loan short code\n+ c. Loan counter + 1: Sequence number 3 digits with leading zeroes"
+        },
+        {
+          "name": "lpl003",
+          "labelWidth": 5,
+          "label": "3. What is the purpose of the Loan?",
+          "width": 4,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "loan_purpose.csv"
+          },
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl004",
+          "labelWidth": 5,
+          "label": "Loan Purpose Details",
+          "width": 2,
+          "type": "text",
+          "activation": " lpl003 ==14",
+          "aux": {
+            "sampleValue": "The Loan Purpose Details are …",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl005",
+          "labelWidth": 5,
+          "label": "4. Start Date (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validationList": [
+            {
+              "validation": "( $value  >=  lpf007 )",
+              "message": "4. Loan Start date should be the same as or later than the Start date of the Facility to which it relates"
+            },
+            {
+              "validation": "( $value  <=  lpf008 )",
+              "message": "4. Loan Start date should be the same as or earlier than the End date of the Facility to which it relates"
+            }
+          ],
+          "aux": {
+            "sampleValue": "01/04/2000 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl006",
+          "labelWidth": 5,
+          "label": "5. Total Loan Amount (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validationList": [
+            {
+              "validation": "( $value  > 0)",
+              "message": "5. Total Loan amount must be greater than 0"
+            },
+            {
+              "validation": "( $value  <=  lpf009 )",
+              "message": "5. Total Loan amount cannot be greater than its Total Facility."
+            }
+          ],
+          "aux": {
+            "sampleValue": "10000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl007",
+          "labelWidth": 5,
+          "label": "6. Balance Outstanding as at date of return (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validationList": [
+            {
+              "validation": "( $value  <=  lpl006 )",
+              "message": "6. Balance Outstanding cannot be greater than 5. Total Loan Amount"
+            },
+            {
+              "validation": "( $value  <=  lpf010 )",
+              "message": "6. Balance Outstanding cannot be greater than Balance of Facility Outstanding"
+            }
+          ],
+          "aux": {
+            "sampleValue": "9000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl008",
+          "labelWidth": 5,
+          "label": "7. Repayment Terms",
+          "width": 4,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "repayment_terms.csv"
+          },
+          "aux": {
+            "sampleValue": "11",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl009",
+          "labelWidth": 5,
+          "label": "8. Reference Interest Rate",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "reference_interest_rate.csv"
+          },
+          "validationList": [
+            {
+              "validation": "(( lpl002a =='FIXED')||( lpl002a =='FWEIRS')||( lpl002a =='FNEIRS')||( lpl002a =='BNDCAP'))? $value ==3:true",
+              "message": "If 1. Loan Type = \"Fixed Rate Loan\", \"Fixed with embedded Intereat Rate Swaps\", \"Fixed without embedded Intererest Rate Swaps\" or \"Bond / Capital Market product\", then 8. Reference Interest Rate must = \"Fixed Rate Percentage\""
+            },
+            {
+              "validation": " lpl002a =='FIXIF'? $value ==4:true",
+              "message": "If 1. Loan Type = \"Fixed Interest Free\" then 8. Reference Interest Rate must = \"Interest Free\""
+            },
+            {
+              "validation": " $value ==3?(( lpl002a =='FIXED')||( lpl002a =='FWEIRS')||( lpl002a =='FNEIRS')||( lpl002a =='BNDCAP')):true",
+              "message": "8. Reference Interest Rate is \"Fixed Rate Percentage\" but 1. Loan Type is not \"Fixed Rate Loan\" OR \"Fixed with embedded Interest Rate Swaps\" OR \"Fixed without embedded Interest Rate Swaps\" OR \"Bond / Capital Market product\""
+            },
+            {
+              "validation": " $value ==4? lpl002a =='FIXIF':true",
+              "message": "8. Reference Interest Rate is \"Interest Free\" but Loan type is not \"Fixed Interest Free\"."
+            }
+          ],
+          "aux": {
+            "sampleValue": "4",
+            "csvColumnName": null
+          },
+          "help": "If Reference Interest Rate is Fixed Rate Percentage Loan Type must be Fixed Rate Loan OR Fixed with embedded Interest Rate Swaps OR Fixed without embedded Interest Rate Swaps OR Bond / Capital Market product.\n\nIf Reference Interest Rate is 'Interest Free' Loan type must be 'Fixed Interest Free'.",
+          "required": true
+        },
+        {
+          "name": "lpl010",
+          "labelWidth": 5,
+          "label": "9. Margin Over Reference Interest Rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "validation": "(((( lpl009 ==4)&&( $value ==0)))||((( lpl009 ==5)&&(( $value  >= 0))))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  > 0)))))",
+          "validationMessage": "9. Margin over Reference Interest Rate (%) must have a value greater than 0 unless 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\".",
+          "activation": "(( lpl002a =='BDGFIN')||( lpl002a =='DEVDFT')||( lpl002a =='REVLNF')||( lpl002a =='VAR')||( lpl002a =='VWES')||( lpl002a =='VNES')||( lpl002a =='WCPDFT'))",
+          "aux": {
+            "sampleValue": "0",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl010a",
+          "labelWidth": 5,
+          "label": "9. All in fixed rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "validation": "(((((( lpl009 ==4)||( lpl009 ==5)))&&( $value ==0)))||((( lpl009 !=4)&&( lpl009 !=5)&&(( $value  > 0)))))",
+          "validationMessage": "9. All in fixed rate (%) must have a value greater than 0 unless 8. Reference Interest Rate = \"Interest Free\" OR \"Lenders Mortgage Base Rate\".",
+          "activation": "!((( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS')))",
+          "aux": {
+            "sampleValue": "3.4999",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl010b",
+          "labelWidth": 5,
+          "label": "9b. Confirmation required?",
+          "width": 1,
+          "type": "boolean",
+          "validation": " $value ",
+          "validationMessage": "8. Margin Over Reference Interest Rate / all-in fixed rate is outside the range set by SHR",
+          "activation": "((( lpl010  > 20))||(((( lpl010a  > 0))&&(( lpl010a  < 3.5)))))",
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpl011",
+          "labelWidth": 5,
+          "label": "10. First Capital Repayment Date (DD/MM/YYYY).",
+          "width": 2,
+          "type": "date",
+          "validationList": [
+            {
+              "validation": "( $value  >=  lpf007 )",
+              "message": "10. First Capital Repayment Date should be the same as or later than the Start date of the Facility to which it relates"
+            },
+            {
+              "validation": "((( $value  >=  lpfd017 ))&&(( $value  <=  lpfd018 )))",
+              "message": "10. First Capital Repayment Date must fall within default date range based on Date of Return (50 years)"
+            }
+          ],
+          "activation": "(( lpl008 !=4)&&( lpl008 !=5))",
+          "aux": {
+            "sampleValue": "04/04/2021 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl012",
+          "labelWidth": 5,
+          "label": "11. Final Capital Repayment Date (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validationList": [
+            {
+              "validation": "( $value  >=  lpl011 )",
+              "message": "11. Final Capital Repayment date cannot be less than First Capital Repayment date"
+            },
+            {
+              "validation": "((( $value  >=  lpfd017 ))&&(( $value  <=  lpfd018 )))",
+              "message": "10. Final Capital Repayment Date must fall within default date range based on Date of Return (50 years)"
+            }
+          ],
+          "aux": {
+            "sampleValue": "04/04/2021 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl013",
+          "labelWidth": 5,
+          "label": "12. First interest payment date (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validationList": [
+            {
+              "validation": "(( lpl008 ==2)||( lpl008 ==3)||( lpl008 ==12)||( lpl008 ==13))? $value == lpl011 :true",
+              "message": "12.First interest payment date must be the same as 10.First Capital Repayment Date for Repayment Terms"
+            },
+            {
+              "validation": "(( lpl008 ==4)||( lpl008 ==5)||( lpl008 ==10))?( $value  <  lpl012 ):true",
+              "message": "12.First interest payment date must be prior to 11.Final Capital Repayment Date for Repayment Terms"
+            },
+            {
+              "validation": "(( lpl008 ==9)||( lpl008 ==11))?( $value  <  lpl011 ):true",
+              "message": "12.First interest payment date must be prior to 10.First Capital Repayment Date for Repayment Terms"
+            },
+            {
+              "validation": "( $value  >=  lpf007 )",
+              "message": "12. First interest payment date should be the same as or later than the Start date of the Facility to which it relates"
+            },
+            {
+              "validation": "( $value  <=  lpl012 )",
+              "message": "12. First interest payment date must be the same as or earlier than 11. Final Capital Repayment Date"
+            }
+          ],
+          "activation": "(( lpl009 !=4)&&( lpl009 !=5))",
+          "aux": {
+            "sampleValue": "31/03/1999 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl014",
+          "labelWidth": 5,
+          "label": "13 (i). Are the terms of the loan above relevant until Final capital Repayment Date in question (11)?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "aux": {
+            "sampleValue": "2",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl015",
+          "labelWidth": 5,
+          "label": "If NO, then please enter 13(ii) and 13(iii) below. \nii) What is the expiry date of the current deal? (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validationList": [
+            {
+              "validation": "( $value  >=  lpf007 )",
+              "message": "13(ii) Date when the current deal expires should be the same as or later than the Start date of the Facility to which it relates"
+            },
+            {
+              "validation": "( $value  >  lpr005 )",
+              "message": "13(ii) Date when the current deal expires must be greater than General Information Date of return "
+            }
+          ],
+          "activation": " lpl014 ==2",
+          "aux": {
+            "sampleValue": "01/04/2030 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl016",
+          "labelWidth": 5,
+          "label": "(iii) Have any forward fixes been negotiated with the lender?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "yes_no.csv"
+          },
+          "activation": " lpl014 ==2",
+          "aux": {
+            "sampleValue": "Yes",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl018",
+          "labelWidth": 5,
+          "label": "14. How is interest being treated?",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "loan_interest_treated.csv"
+          },
+          "validation": " lpl009 ==4? $value ==4:true",
+          "validationMessage": "If Reference Interest Rate = 'Interest free' then must = 'Waived'",
+          "aux": {
+            "sampleValue": "Paid",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl019",
+          "labelWidth": 5,
+          "label": "15. Please tell us what fees you have incurred / may incur in arranging this Loan. Please select all that apply.\n(i) Arrangement fees (paid directly to the lender)",
+          "width": 2,
+          "type": "boolean",
+          "checkbox": true,
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpl020",
+          "labelWidth": 5,
+          "label": "(ii). Non-utilsation fees",
+          "width": 2,
+          "type": "boolean",
+          "checkbox": true,
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpl021",
+          "labelWidth": 5,
+          "label": "(iii) Other Fees - please provide details",
+          "width": 2,
+          "type": "boolean",
+          "checkbox": true,
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "lpl022",
+          "labelWidth": 5,
+          "label": "Other Fees Details",
+          "width": 2,
+          "type": "text",
+          "activation": " lpl021 ",
+          "aux": {
+            "sampleValue": "Other fees details are…",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl023",
+          "labelWidth": 5,
+          "label": "16(i). Percentage of Security provided by Social Housing assets",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 2,
+          "percentage": true,
+          "validatedPositive": true,
+          "validation": "((( $value  >= 0))&&(( $value  <= 100)))",
+          "validationMessage": "16(i). Percentage of Security provided by Social Housing assets must be between 0 and 100",
+          "aux": {
+            "sampleValue": "99.99",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl024",
+          "labelWidth": 5,
+          "label": "16(ii). Value of Security (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "16(ii). Value of Security must be greater than 0",
+          "activation": "( lpl023  > 0)",
+          "aux": {
+            "sampleValue": "100",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl025",
+          "labelWidth": 5,
+          "label": "16(iii). Basis of valuation",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "basis_of_valuation.csv"
+          },
+          "activation": "( lpl023  > 0)",
+          "aux": {
+            "sampleValue": "MV-ST",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl026",
+          "labelWidth": 5,
+          "label": "16(iv). Date of valuation (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validationList": [
+            {
+              "validation": "( $value  <=  lpr005a )",
+              "message": "16(iv). Date of valuation cannot be after Date of return."
+            },
+            {
+              "validation": "((( $value  >=  lpfd017 ))&&(( $value  <=  lpfd018 )))",
+              "message": "16(iv). Date of valuation must fall within default date range based on Date of Return (50 years)"
+            }
+          ],
+          "activation": "( lpl023  > 0)",
+          "aux": {
+            "sampleValue": "01/04/2010 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpl028",
+          "labelWidth": 5,
+          "label": "17. Has this Loan been repaid?",
+          "type": "close",
+          "closeChildren": true,
+          "closeLabel": "Repay loan",
+          "message": "Are you sure you want to repay this loan?",
+          "closedMessage": "Loan has been repaid",
+          "cantCloseMessage": "Can't mark this loan as repaid.",
+          "activation": "(( lpl007 ==0)&&( lpl012 !='')&&(( lpl012  <=  lpr005 )))",
+          "aux": {
+            "sampleValue": "False",
+            "csvColumnName": null
+          },
+          "tooltip": "To change Loan status to Repaid please ensure that\n• Balance Outstanding must be 0\n• The Final Capital Repayment date must be entered\n• Repayment date cannot be greater than the Submission Date of Return",
+          "required": false
+        },
+        {
+          "name": "lpl101",
+          "labelWidth": 5,
+          "label": "Loan Covenants",
+          "type": "linkedPageSelect",
+          "page": "global.loancovenant",
+          "createLabel": "Manage Linked Loan Covenants",
+          "title": "Loan Covenants",
+          "useParent": true,
+          "columns": [
+            "lpc004",
+            "lpc005",
+            "lpc006",
+            "lpc009",
+            "lpc008",
+            "lpc007"
+          ],
+          "aux": {
+            "csvColumnName": null
+          },
+          "required": false
+        },
+        {
+          "name": "lpl100",
+          "labelWidth": 5,
+          "label": "Embedded Interest Rate Derivatives",
+          "type": "linkedPageGrid",
+          "page": "eird",
+          "createLabel": "Create Embedded Interest Rate Derivative",
+          "columns": [
+            "lpc014",
+            "lpc015",
+            "lpc016",
+            "lpc017"
+          ],
+          "aux": {
+            "csvColumnName": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "loancovenant",
+      "hierarchical": true,
+      "pdfGrids": [
+        {
+          "heading": "Covenants for Loans",
+          "fields": [
+            "lpc003",
+            "lpc004",
+            "lpc005",
+            "lpc006",
+            "lpc007",
+            "lpc009"
+          ],
+          "labels": [
+            "Covenant Sequence Number",
+            "Type of Covenant applied",
+            "How is this Covenant calculated?",
+            "Required levels",
+            "Frequency of reporting to lender",
+            "Actual levels achieved at that date"
+          ]
+        }
+      ],
+      "title": "Covenant for Loan",
+      "fields": [
+        {
+          "name": "lpc003",
+          "labelWidth": 5,
+          "label": "1. Sequence Number",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "calculation": "Pfo_Page_Serial",
+          "aux": {
+            "sampleValue": "1",
+            "csvColumnName": null
+          },
+          "readonly": true
+        },
+        {
+          "name": "lpc004",
+          "labelWidth": 5,
+          "label": "2. Type of covenant applied",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "covenant_type.csv"
+          },
+          "aux": {
+            "sampleValue": "Debt Service Test (DST)",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc005",
+          "labelWidth": 5,
+          "label": "3. How is this Covenant calculated?",
+          "width": 4,
+          "type": "textarea",
+          "validation": "(( $value ).length <= 2000)",
+          "validationMessage": "3. How is this Covenant calculated must be 2000 characters or less.",
+          "aux": {
+            "sampleValue": "This is how the Covenant is calculated…",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc006",
+          "labelWidth": 5,
+          "label": "4. Required levels",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "105%",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc007",
+          "labelWidth": 5,
+          "label": "5. Frequency of reporting to lender",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "covenant_frequency_call.csv"
+          },
+          "aux": {
+            "sampleValue": "Monthly",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc008",
+          "labelWidth": 5,
+          "label": "6. Date of last report to lender",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "40269",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc009",
+          "labelWidth": 5,
+          "label": "7. Actual levels achieved at that date",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "115%",
+            "csvColumnName": null
+          },
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "eird",
+      "hierarchical": true,
+      "pdfGrids": [
+        {
+          "heading": "Embedded Interest Rate Derivatives",
+          "fields": [
+            "lpf004",
+            "lpl002b",
+            "lpc013",
+            "lpc014",
+            "lpc015",
+            "lpc016",
+            "lpc017",
+            "lpc018a",
+            "lpc018b"
+          ],
+          "sortBy": [
+            "lpf004",
+            "lpl002b",
+            "lpc013"
+          ],
+          "labels": [
+            "Facility Reference Number",
+            "Loan Reference Number",
+            "Sequence Number",
+            "Derivative Type",
+            "Amount (£'000s)",
+            "Date From",
+            "Date To",
+            "Margin Over Ref Int Rate (%)",
+            "'All in' Fixed Rate (%)"
+          ]
+        }
+      ],
+      "title": "Embedded Interest Rate Derivative",
+      "fields": [
+        {
+          "name": "lpc013",
+          "labelWidth": 5,
+          "label": "1. Sequence Number",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "calculation": "Pfo_Page_Serial",
+          "aux": {
+            "sampleValue": "1",
+            "csvColumnName": null
+          },
+          "readonly": true
+        },
+        {
+          "name": "lpc014",
+          "labelWidth": 5,
+          "label": "2. Derivative Type",
+          "width": 3,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "derivative_type.csv"
+          },
+          "aux": {
+            "sampleValue": "Embedded interest rate swap",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc015",
+          "labelWidth": 5,
+          "label": "3. Amount (£'000s)",
+          "width": 2,
+          "type": "currency",
+          "minimumValue": -999999999,
+          "maximumValue": 999999999,
+          "decimalPlaces": 1,
+          "showCurrencySymbol": false,
+          "validatedPositive": true,
+          "validation": "( $value  > 0)",
+          "validationMessage": "3. Amount must have a value greater than 0",
+          "aux": {
+            "sampleValue": "5000",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc016",
+          "labelWidth": 5,
+          "label": "4. Date From (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "aux": {
+            "sampleValue": "01/04/2005 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc017",
+          "labelWidth": 5,
+          "label": "5. Date To (DD/MM/YYYY)",
+          "width": 2,
+          "type": "date",
+          "validation": "( $value  >=  lpc016 )",
+          "validationMessage": "5. Date To cannot be before 4. Date From",
+          "aux": {
+            "sampleValue": "31/03/2015 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc018a",
+          "labelWidth": 5,
+          "label": "6. Margin Over Reference Interest Rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "activation": "(( lpl002a =='BDGFIN')||( lpl002a =='DEVDFT')||( lpl002a =='REVLNF')||( lpl002a =='VAR')||( lpl002a =='VWES')||( lpl002a =='VNES')||( lpl002a =='WCPDFT'))",
+          "aux": {
+            "sampleValue": "20.0001",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc018b",
+          "labelWidth": 5,
+          "label": "6. All in fixed rate (%)",
+          "width": 2,
+          "type": "numeric",
+          "maximumValue": 1000000000,
+          "minimumValue": -1000000000,
+          "decimalPlaces": 4,
+          "percentage": true,
+          "validatedPositive": true,
+          "activation": "!((( lpl002a !='FIXIF')&&( lpl002a !='BNDCAP')&&( lpl002a !='FIXED')&&( lpl002a !='FWEIRS')&&( lpl002a !='FNEIRS')))",
+          "aux": {
+            "sampleValue": "3.875",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "lpc018c",
+          "labelWidth": 5,
+          "label": "6b. Confirmation required?",
+          "width": 1,
+          "type": "boolean",
+          "validation": " $value ",
+          "validationMessage": "6. Margin Over Reference Interest Rate / 6. All-in fixed rate is outside the range set by SHR",
+          "activation": "((( lpc018a  > 20))||(( lpc018b  > 20)))",
+          "aux": {
+            "sampleValue": "True",
+            "csvColumnName": null
+          }
+        }
+      ]
+    }
+  ]
+}
