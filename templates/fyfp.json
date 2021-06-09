@@ -30,6 +30,7 @@
   "illegalValueMessage": "-",
   "financialFormatting": true,
   "excelFileName": "fyfp.xlsx",
+  "multipleOutputTables": true,
   "pages": [
     {
       "action": "insertPage",
