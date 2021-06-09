@@ -5,9 +5,9 @@
     [ "loadFields", "Charter Data" ],
     [ "loadFields", "Contextual and EESSH" ],
     [ "loadPages", "ARC structure & wording" ],
-    [ "generateCharter", "Rsl", "1_9", true ],
-    [ "generateCharter", "La", "1_12", true ],
-    [ "generateCharter", "LaHo", "1_6", true ]
+    [ "generateCharter", "Rsl", "1_10", true ],
+    [ "generateCharter", "La", "1_13", true ],
+    [ "generateCharter", "LaHo", "1_7", true ]
   ],
   "$schema": "./formDesignSchema.json",
   "title": "Charter Return",
