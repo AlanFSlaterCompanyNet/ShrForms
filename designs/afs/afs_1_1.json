@@ -8,6 +8,7 @@
   "pdfFileName": "AfsReturn.pdf",
   "excelFileName": "AfsReturn.xlsx",
   "illegalValueMessage": "-",
+  "multipleOutputTables": true,
   "pages": [
     {
       "name": "f1",

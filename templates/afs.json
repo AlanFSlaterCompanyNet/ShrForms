@@ -53,6 +53,7 @@
   "pdfFileName": "AfsReturn.pdf",
   "illegalValueMessage": "-",
   "financialFormatting": true,  
+  "multipleOutputTables": true,
   "pages": [
     {
       "action": "insertPage",

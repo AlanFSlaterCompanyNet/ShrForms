@@ -8,6 +8,7 @@
   "pdfFileName": "AfsReturn.pdf",
   "illegalValueMessage": "-",
   "financialFormatting": true,
+  "multipleOutputTables": true,
   "pages": [
     {
       "name": "f1",
