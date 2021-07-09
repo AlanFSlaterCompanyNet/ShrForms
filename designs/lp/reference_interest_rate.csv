@@ -18,3 +18,4 @@ value,label
 17,LIBOR 9 month
 18,Rate paid by on lender (for on lending only)
 19,RPI linked
+20,SONIA
