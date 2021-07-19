@@ -1453,10 +1453,11 @@
                   "decimalPlaces": 1,
                   "showCurrencySymbol": false,
                   "validatedPositive": true,
+                  "calculation": "prior_year$AFSSOCE007",
                   "aux": {
+                    "sampleValue": "50",
                     "csvColumnName": "SOCE - Balance at end of the previous year - Share capital"
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "name": "afssoce070",
@@ -1468,10 +1469,11 @@
                   "maximumValue": 999999999,
                   "decimalPlaces": 1,
                   "showCurrencySymbol": false,
+                  "calculation": "prior_year$AFSSOCE076",
                   "aux": {
+                    "sampleValue": "51",
                     "csvColumnName": "SOCE - Balance at end of the previous year - Revenue reserve Restricted fund"
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "name": "afssoce077",
@@ -1483,10 +1485,11 @@
                   "maximumValue": 999999999,
                   "decimalPlaces": 1,
                   "showCurrencySymbol": false,
+                  "calculation": "prior_year$AFSSOCE083",
                   "aux": {
+                    "sampleValue": "52",
                     "csvColumnName": "SOCE - Balance at end of the previous year - Revenue reserve Unrestricted fund"
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "name": "afssoce015",
@@ -1498,10 +1501,11 @@
                   "maximumValue": 999999999,
                   "decimalPlaces": 1,
                   "showCurrencySymbol": false,
+                  "calculation": "prior_year$AFSSOCE021",
                   "aux": {
+                    "sampleValue": "53",
                     "csvColumnName": "SOCE - Balance at end of the previous year - Restricted reserve"
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "name": "afssoce022",
@@ -1513,10 +1517,11 @@
                   "maximumValue": 999999999,
                   "decimalPlaces": 1,
                   "showCurrencySymbol": false,
+                  "calculation": "prior_year$AFSSOCE028",
                   "aux": {
+                    "sampleValue": "54",
                     "csvColumnName": "SOCE - Balance at end of the previous year - Revenue reserve Restricted fund"
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "name": "soce_11",
@@ -2306,10 +2311,11 @@
                   "maximumValue": 999999999,
                   "decimalPlaces": 1,
                   "showCurrencySymbol": false,
+                  "calculation": "prior_year$AFSSOCE042",
                   "aux": {
+                    "sampleValue": "55",
                     "csvColumnName": "SOCE - Balance at end of the previous year - Total excluding non-controlling interest"
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "name": "afssoce091",
@@ -5452,10 +5458,11 @@
                   "maximumValue": 999999999,
                   "decimalPlaces": 1,
                   "showCurrencySymbol": false,
+                  "calculation": "prior_year$AFSSOCF024",
                   "aux": {
+                    "sampleValue": "1969",
                     "csvColumnName": "SOCF - Cash and cash equivalents at beginning of the year"
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "name": "socf_40",
@@ -13126,10 +13133,11 @@
           "name": "afsa004",
           "labelWidth": 3,
           "label": "",
-          "commentsRequiredMessage": "A1.4 Under exceptional circumstances, if the return is to be approved with validation messages showing on your Validation Summary, you must provide reason(s) why these cannot be cleared. Enter your comments and Save the page before Submitting the form.",
+          "commentsRequiredMessage": "A1.4 ",
           "width": 5,
           "type": "submit",
-          "allowErrors": true,
+          "allowErrors": false,
+          "showComments": false,
           "aux": {
             "csvColumnName": null
           }
