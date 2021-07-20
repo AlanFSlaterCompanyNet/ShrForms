@@ -39,7 +39,7 @@
     [
       "generate",
       "Afs",
-      "2_2",
+      "2_3",
       false
     ]
   ],
@@ -305,6 +305,7 @@
           "data": "Data",
           "row": 1,
           "name": "ci_1",
+          "columnCount": 2,
           "properties": {
             "labelWidth": 2,
             "headerWidths": [2,2]
