@@ -39,7 +39,7 @@
     [
       "generate",
       "Afs",
-      "2_4",
+      "2_5",
       false
     ]
   ],
@@ -337,6 +337,7 @@
                   "label": "Scheme",
                   "width": 3,
                   "required": true,
+                  "unique": true,
                   "csv": {
                     "file": "pension_schemes.csv",
                     "labelColumn": "Name",

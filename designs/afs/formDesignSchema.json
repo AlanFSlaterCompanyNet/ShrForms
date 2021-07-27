@@ -261,7 +261,11 @@
         "help": { "$ref": "#/definitions/helpPropertyDefinition" },
         "tooltip": { "$ref": "#/definitions/tooltipPropertyDefinition" },
         "csv": { "$ref": "#/definitions/csvPropertyDefinition" },
-        "aux": { "$ref": "#/definitions/auxPropertyDefinition" }
+        "aux": { "$ref": "#/definitions/auxPropertyDefinition" },
+        "unique": { 
+          "description": "Set to require this field to have unique values inside a dynamic table",
+          "type" : "boolean" 
+        }
       },
       "required": [ "type", "name", "label" ]
     },
