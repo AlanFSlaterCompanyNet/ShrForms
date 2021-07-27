@@ -1,19 +1,21 @@
 Id,Name
 ,
-8,LGPS - Dumfries & Galloway Pension Fund
 9,Employee Personal Pension Plan
-10,LPGS - Fife Pension Fund
 11,Group DB Scheme
 12,Group DC Scheme
 13,Group Personal Pension Plan
-14,LPGS - Highland Pension Fund
 27,Legal & General (DC)
+8,LGPS - Dumfries & Galloway Pension Fund
+10,LPGS - Fife Pension Fund
+14,LPGS - Highland Pension Fund
 15,LPGS - Lothian Pension Fund
-24,NEST
 16,LPGS - North East Scotland Pension Fund
+18,LPGS - Scottish Borders Pension Fund
+22,LPGS - Strathclyde Pension Fund
+23,LPGS - Tayside Superannuation Fund
+24,NEST
 26,Now: Pensions
 17,Pensions Trust Money Purchase Pension Scheme
-18,LPGS - Scottish Borders Pension Fund
 6,SHAPS CARE 120th
 3,SHAPS CARE 60th
 4,SHAPS CARE 70th
@@ -23,6 +25,4 @@ Id,Name
 19,SHIPS DC
 20,SHIPS Final Salary
 21,Social Housing Pension Scheme
-22,LPGS - Strathclyde Pension Fund
-23,LPGS - Tayside Superannuation Fund
 25,The People's Pension
