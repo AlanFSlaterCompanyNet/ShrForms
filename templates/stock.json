@@ -16,7 +16,7 @@
     [
       "generate",
       "Stock",
-      "1_3",
+      "1_4",
       false
     ]
   ],
@@ -165,16 +165,26 @@
           "labelWidth": 2,
           "label": "Provision Update",
           "width": 2,
-          "type": "text",
-          "readonly": true
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "provisionupdate.csv"
+          },
+          "required": true
         },
         {
           "name": "cn_provisionasatfy",
           "labelWidth": 2,
           "label": "Provision Update as at Financial Year",
           "width": 2,
-          "type": "text",
-          "readonly": true
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "provisionasatFY.csv"
+          },
+          "required": true
         },
         {
           "name": "cn_provisionasatdate",
