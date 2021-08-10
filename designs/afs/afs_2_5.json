@@ -1520,7 +1520,7 @@
                   "calculation": "prior_year$AFSSOCE028",
                   "aux": {
                     "sampleValue": "54",
-                    "csvColumnName": "SOCE - Balance at end of the previous year - Revenue reserve Restricted fund"
+                    "csvColumnName": "SOCE - Balance at end of the previous year - Revaluation reserve"
                   }
                 },
                 {
@@ -1532,7 +1532,7 @@
                   "isComment": true,
                   "aux": {
                     "sampleValue": "Balance at end of the previous year comment",
-                    "csvColumnName": "SOCE - Balance at beginning of the year - Funds & Reserves Comment"
+                    "csvColumnName": "SOCE - Balance at end of the previous year - Funds & Reserves Comment"
                   },
                   "required": false
                 }
@@ -1557,7 +1557,7 @@
                   "showCurrencySymbol": false,
                   "aux": {
                     "sampleValue": "-2",
-                    "csvColumnName": "SOCE - Adjusment - Share capital"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Share capital"
                   },
                   "required": true
                 },
@@ -1573,7 +1573,7 @@
                   "showCurrencySymbol": false,
                   "aux": {
                     "sampleValue": "-3",
-                    "csvColumnName": "SOCE - Adjusment - Revenue reserve Restricted fund"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Revenue reserve Restricted fund"
                   },
                   "required": true
                 },
@@ -1589,7 +1589,7 @@
                   "showCurrencySymbol": false,
                   "aux": {
                     "sampleValue": "-4",
-                    "csvColumnName": "SOCE - Adjusment - Revenue reserve Unrestricted fund"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Revenue reserve Unrestricted fund"
                   },
                   "required": true
                 },
@@ -1605,7 +1605,7 @@
                   "showCurrencySymbol": false,
                   "aux": {
                     "sampleValue": "-5",
-                    "csvColumnName": "SOCE - Adjusment - Restricted reserve"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Restricted reserve"
                   },
                   "required": true
                 },
@@ -1621,7 +1621,7 @@
                   "showCurrencySymbol": false,
                   "aux": {
                     "sampleValue": "-6",
-                    "csvColumnName": "SOCE - Adjusment - Revenue reserve Restricted fund"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Revaluation reserve"
                   },
                   "required": true
                 },
@@ -1634,7 +1634,7 @@
                   "isComment": true,
                   "aux": {
                     "sampleValue": "Opening balance adjustments comment",
-                    "csvColumnName": "SOCE - Adjustment - Funds & Reserves Comment"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Funds & Reserves Comment"
                   },
                   "required": false
                 }
@@ -2238,7 +2238,7 @@
                   "calculation": "( afssoce022 +( afssoce104 + afssoce023 + afssoce024 + afssoce025 + afssoce026 + afssoce027 ))",
                   "aux": {
                     "sampleValue": "393",
-                    "csvColumnName": "SOCE - Balance at end of the year - Revaluation reserve"
+                    "csvColumnName": "SOCE - Balance at end of the current year - Revaluation reserve"
                   }
                 },
                 {
@@ -2298,7 +2298,7 @@
                   "calculation": "( afssoce001 + afssoce070 + afssoce077 + afssoce015 + afssoce022 )",
                   "aux": {
                     "sampleValue": "260",
-                    "csvColumnName": "SOCE - Total excluding non-controlling interest - Balance at end of the previous year"
+                    "csvColumnName": "SOCE - Balance at end of the previous year - Total excluding non-controlling interest "
                   }
                 },
                 {
@@ -2314,7 +2314,7 @@
                   "calculation": "prior_year$AFSSOCE042",
                   "aux": {
                     "sampleValue": "55",
-                    "csvColumnName": "SOCE - Balance at end of the previous year - Total excluding non-controlling interest"
+                    "csvColumnName": "SOCE - Balance at end of the previous year - Non-controlling interest"
                   }
                 },
                 {
@@ -2330,7 +2330,7 @@
                   "calculation": "( afssoce084 + afssoce036 )",
                   "aux": {
                     "sampleValue": "315",
-                    "csvColumnName": "Total including non-controlling interest - Balance at end of the previous year"
+                    "csvColumnName": "SOCE - Balance at end of the previous year - Total including non-controlling interest"
                   }
                 },
                 {
@@ -2342,7 +2342,7 @@
                   "isComment": true,
                   "aux": {
                     "sampleValue": "Balance at end of the previous year Comment",
-                    "csvColumnName": "SOCE - Balance at beginning of the year - Non-controlling interest & Totals Comment"
+                    "csvColumnName": "SOCE - Balance at end of the previous year - Non-controlling interest & Totals Comment"
                   },
                   "required": false
                 }
@@ -2367,7 +2367,7 @@
                   "calculation": "( afssoce100 + afssoce101 + afssoce102 + afssoce103 + afssoce104 )",
                   "aux": {
                     "sampleValue": "-20",
-                    "csvColumnName": "SOCE - Total excluding non-controlling interest - Adjustment"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Total excluding non-controlling interest"
                   }
                 },
                 {
@@ -2382,7 +2382,7 @@
                   "showCurrencySymbol": false,
                   "aux": {
                     "sampleValue": "-7",
-                    "csvColumnName": "SOCE - Adjusment - Total excluding non-controlling interest"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Non-controlling interest"
                   },
                   "required": true
                 },
@@ -2401,7 +2401,7 @@
                   "validationMessage": "Total including non-controlling interest - Opening balance adjustments is not zero. Please enter a brief explanation in the comments box.",
                   "aux": {
                     "sampleValue": "-27",
-                    "csvColumnName": "Total including non-controlling interest - Adjustment"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Total including non-controlling interest"
                   }
                 },
                 {
@@ -2413,7 +2413,7 @@
                   "isComment": true,
                   "aux": {
                     "sampleValue": "Opening balance adjustments comment",
-                    "csvColumnName": "SOCE - Adjustment - Non-controlling interest & Totals Comment"
+                    "csvColumnName": "SOCE - Opening balance adjustments - Non-controlling interest & Totals Comment"
                   },
                   "required": false
                 }
@@ -2829,7 +2829,7 @@
                   "calculation": "( afssoce090 + afssoce042 )",
                   "aux": {
                     "sampleValue": "2313",
-                    "csvColumnName": "SOCE - Balance at end of the year - Total including non-controlling interest"
+                    "csvColumnName": "SOCE - Balance at end of the current year - Total including non-controlling interest"
                   }
                 },
                 {
@@ -5461,7 +5461,7 @@
                   "calculation": "prior_year$AFSSOCF024",
                   "aux": {
                     "sampleValue": "1969",
-                    "csvColumnName": "SOCF - Cash and cash equivalents at beginning of the year"
+                    "csvColumnName": "SOCF - Cash and cash equivalents at end of the previous year"
                   }
                 },
                 {
@@ -5473,7 +5473,7 @@
                   "isComment": true,
                   "aux": {
                     "sampleValue": "Cash and cash equivalents at end of the previous year comment",
-                    "csvColumnName": "SOCF - Cash and cash equivalents at beginning of the year Comment"
+                    "csvColumnName": "SOCF - Cash and cash equivalents at end of the previous year"
                   },
                   "required": false
                 }
@@ -5500,7 +5500,7 @@
                   "validationMessage": "Opening balance adjustment is not zero. Please enter a brief explanation in the comments box.",
                   "aux": {
                     "sampleValue": "875.1",
-                    "csvColumnName": "SOCF - Cash and cash equivalents at beginning of the year"
+                    "csvColumnName": "SOCF - Opening balance adjustment"
                   },
                   "required": true
                 },
@@ -5513,7 +5513,7 @@
                   "isComment": true,
                   "aux": {
                     "sampleValue": "Cash and cash equivalents Opening balance adjustment",
-                    "csvColumnName": "SOCF - Cash and cash equivalents at beginning of the year Comment"
+                    "csvColumnName": "SOCF - Cash and cash equivalents - Opening balance adjustment"
                   },
                   "required": false
                 }
@@ -5540,7 +5540,7 @@
                   "validationMessage": "SOCF cash and cash equivalents at end of the year must equal cash and cash equivalents in the statement of financial position",
                   "aux": {
                     "sampleValue": "8308.1",
-                    "csvColumnName": "SOCF - Cash and cash equivalents at end of the year"
+                    "csvColumnName": "SOCF - Cash and cash equivalents at end of the current year"
                   }
                 },
                 {
