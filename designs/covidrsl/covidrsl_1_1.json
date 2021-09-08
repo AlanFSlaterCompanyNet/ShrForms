@@ -1,0 +1,1837 @@
+{
+  "$schema": "./formDesignSchema.json",
+  "title": "Covid Return",
+  "formTitle": "Covid Return",
+  "outputTable": "Covid",
+  "readRole": "Organisational Details Reader",
+  "approveRole": "Organisational Details",
+  "editRole": "Organisational Details",
+  "pages": [
+    {
+      "name": "f1",
+      "title": "Introduction",
+      "fields": [
+        {
+          "name": "cvdf001",
+          "labelWidth": 5,
+          "label": "F1.1 Form type",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "cvd",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "cvdf002",
+          "labelWidth": 5,
+          "label": "F1.2 Financial year",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "2021/2022",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "cvdf003",
+          "labelWidth": 5,
+          "label": "F1.3 Quarter",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "aux": {
+            "sampleValue": "3",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "cvdf004",
+          "labelWidth": 5,
+          "label": "F1.4 Social Landlord ID",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "ED6CA976-CFA9-E311-93F1-005056B555E6",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": true
+        }
+      ]
+    },
+    {
+      "formTypes": [
+        "CovidRsl"
+      ],
+      "fields": [
+        {
+          "type": "table",
+          "headers": [],
+          "name": "indicators_rsl",
+          "label": "COVID-19 Quarterly Return",
+          "children": [
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_3",
+              "header": "Please tell us your staff absence level on the last day of the quarter:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_0"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_1"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_4",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_2"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_3"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_5",
+              "header": "Total number of staff (FTE)",
+              "children": [
+                {
+                  "name": "cvd001",
+                  "labelWidth": 5,
+                  "label": " Total number of staff (FTE)",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "101",
+                    "csvColumnName": null
+                  },
+                  "help": "Permanent or temporary staff employed by the RSL or by any of its subsidiaries on the last day of the reporting quarter which carry out duties for the RSL. The number of staff should be reported in terms of full-time equivalents (FTE). For example, if the hours of two people working part-time are added together that might be the same as one full-time job.",
+                  "required": true
+                },
+                {
+                  "name": "cvd006",
+                  "labelWidth": 5,
+                  "label": " Total number of staff (FTE)",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Total number of staff (FTE) Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_6",
+              "header": "Total number absent (FTE)",
+              "children": [
+                {
+                  "name": "cvd002",
+                  "labelWidth": 5,
+                  "label": " Total number absent (FTE)",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "11",
+                    "csvColumnName": null
+                  },
+                  "help": "Number of staff (FTE) not available to work, because of ill-health, care responsibilities, compassionate leave, other reasons (excluding those placed on furlough) on the last day of the reporting quarter.",
+                  "required": true
+                },
+                {
+                  "name": "cvd007",
+                  "labelWidth": 5,
+                  "label": " Total number absent (FTE)",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Total number absent (FTE) Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_7",
+              "header": "Percentage of staff absent",
+              "children": [
+                {
+                  "name": "cvd003",
+                  "labelWidth": 5,
+                  "label": " Percentage of staff absent",
+                  "width": 2,
+                  "type": "numeric",
+                  "maximumValue": 1000000000,
+                  "minimumValue": -1000000000,
+                  "decimalPlaces": 2,
+                  "percentage": true,
+                  "calculation": "(( cvd002  /  cvd001 ) * 100)",
+                  "aux": {
+                    "sampleValue": "10.891089108910892",
+                    "csvColumnName": null
+                  },
+                  "help": "To calculate the percentage we will divide the total number absent (FTE) by the total number of staff (FTE) and multiply by 100."
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_4"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_8",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_5"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_6"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_9",
+              "header": "Number of staff placed on furlough (FTE)",
+              "children": [
+                {
+                  "name": "cvd004",
+                  "labelWidth": 5,
+                  "label": " Number of staff placed on furlough (FTE)",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 2,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "80.75",
+                    "csvColumnName": null
+                  },
+                  "help": "Number of staff placed on furlough in accordance with the UK Government's furlough scheme. From 1 July 2020 employers can bring furloughed employees back to work for any amount of time and any shift pattern.  Where employees are brought back to work for any amount of time, provide the FTE of furloughed staff time\nFurloughed Staff Calculation Example\nStaff members's total working hours = 40\nActual hours worked = 10\nHours on furlough = 30\nFTE for staff placed on furlough = (30 / 40) = 0.75",
+                  "required": true
+                },
+                {
+                  "name": "cvd008",
+                  "labelWidth": 5,
+                  "label": " Number of staff placed on furlough (FTE)",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Number of staff placed on furlough (FTE) Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_10",
+              "header": "Percentage of staff placed on furlough",
+              "children": [
+                {
+                  "name": "cvd005",
+                  "labelWidth": 5,
+                  "label": " Percentage of staff placed on furlough",
+                  "width": 2,
+                  "type": "numeric",
+                  "maximumValue": 1000000000,
+                  "minimumValue": -1000000000,
+                  "decimalPlaces": 2,
+                  "percentage": true,
+                  "calculation": "(( cvd004  /  cvd001 ) * 100)",
+                  "aux": {
+                    "sampleValue": "79.95049504950495",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_7"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_11",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_8"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_9"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_12",
+              "header": "Please tell us your rent and arrears on the last day of the quarter:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_10"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_11"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_13",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_12"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_13"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_14",
+              "header": "Gross rent arrears",
+              "children": [
+                {
+                  "name": "cvd009",
+                  "labelWidth": 5,
+                  "label": " Gross rent arrears",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 0,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1250000",
+                    "csvColumnName": null
+                  },
+                  "help": "Gross rent arrears for the reporting quarter. Gross rent arrears consists of the value (to the nearest £) of current and former tenant rent arrears as at the end of each quarter or the closest end of debit period prior to any arrears write-off. Rent paid in advance should not be used to offset the overall value.\nDo not include as arrears:\n• The value of any outstanding payments from people who have an agreement to pay their rent slightly later than the landlord’s normal monthly rent cycle i.e. agreements to make payments in the next rental cycle; and\n• The value of any outstanding Housing Benefit/Universal Credit payments due for that quarter but not received until after the start of the next quarter.",
+                  "required": true
+                },
+                {
+                  "name": "cvd012",
+                  "labelWidth": 5,
+                  "label": " Gross rent arrears",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Gross rent arrears Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_15",
+              "header": "Total annual rent due",
+              "children": [
+                {
+                  "name": "cvd010",
+                  "labelWidth": 5,
+                  "label": " Total annual rent due",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 0,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1500000",
+                    "csvColumnName": null
+                  },
+                  "help": "Total rent due is the value (to the nearest £) of the total annual charges levied by the landlord in respect of rent and service charges for dwellings.",
+                  "required": true
+                },
+                {
+                  "name": "cvd013",
+                  "labelWidth": 5,
+                  "label": " Total annual rent due",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Total annual rent due Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_16",
+              "header": "Gross rent arrears (%)",
+              "children": [
+                {
+                  "name": "cvd011",
+                  "labelWidth": 5,
+                  "label": " Gross rent arrears (%)",
+                  "width": 2,
+                  "type": "numeric",
+                  "maximumValue": 1000000000,
+                  "minimumValue": -1000000000,
+                  "decimalPlaces": 2,
+                  "percentage": true,
+                  "calculation": "(( cvd009  /  cvd010 ) * 100)",
+                  "aux": {
+                    "sampleValue": "83.33333333333334",
+                    "csvColumnName": null
+                  },
+                  "help": "To calculate the percentage we will divide the total value of gross rent arrears by the total rent due for the year and multiply by 100."
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_14"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_17",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_15"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_16"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_18",
+              "header": "Please tell us your direct housing payments during the quarter:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_17"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_18"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_19",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_19"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_20"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_20",
+              "header": "Direct housing cost payments received ",
+              "children": [
+                {
+                  "name": "cvd014",
+                  "labelWidth": 5,
+                  "label": " Direct housing cost payments received ",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 0,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "975000",
+                    "csvColumnName": null
+                  },
+                  "help": "Value of payments received: The total amount (£s) of housing costs (Housing Benefit/Universal Credit/Discretionary Housing Payments) paid directly to the landlord during the reporting quarter, irrespective of what period the payments relate to.\nEnsure to deduct any overpayments of housing costs recovered from direct payments received (regardless to which quarter the recovery is in respect of) when calculating the value of payments received.\nWe recognise that this figure may change after the reporting quarter due to the timing of payments. As a result we are not asking landlords to submit updates or corrections to the reported figures for this indicator.",
+                  "required": true
+                },
+                {
+                  "name": "cvd016",
+                  "labelWidth": 5,
+                  "label": " Direct housing cost payments received ",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Direct housing cost payments received Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_21",
+              "header": "Percentage of rental income from direct housing cost payments (%)",
+              "children": [
+                {
+                  "name": "cvd015",
+                  "labelWidth": 5,
+                  "label": " Percentage of rental income from direct housing cost payments (%)",
+                  "width": 2,
+                  "type": "numeric",
+                  "maximumValue": 1000000000,
+                  "minimumValue": -1000000000,
+                  "decimalPlaces": 2,
+                  "percentage": true,
+                  "calculation": "(( cvd014  /  cvd010 ) * 100)",
+                  "aux": {
+                    "sampleValue": "65",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_21"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_22",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_22"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_23"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_23",
+              "header": "Please tell us about your empty homes:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_24"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_25"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_24",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_26"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_27"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_25",
+              "header": "Empty homes (last day of previous quarter) ",
+              "children": [
+                {
+                  "name": "cvd017",
+                  "labelWidth": 5,
+                  "label": " Empty homes (last day of previous quarter) ",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "csvColumnName": null
+                  },
+                  "help": "The total number of empty dwellings on the last day of the previous reporting quarter. An empty home is a property owned by a landlord which has no tenant. We will pre populate this field using the figure submitted in the previous quarter’s return.",
+                  "required": true
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_28"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_26",
+              "header": "Empty homes (arose during the quarter)",
+              "children": [
+                {
+                  "name": "cvd018",
+                  "labelWidth": 5,
+                  "label": " Empty homes (arose during the quarter)",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "15",
+                    "csvColumnName": null
+                  },
+                  "help": "The number of empty dwellings that arose during the reporting quarter in self-contained lettable stock.",
+                  "required": true
+                },
+                {
+                  "name": "cvd020",
+                  "labelWidth": 5,
+                  "label": " Empty homes (arose during the quarter)",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Empty homes (arose during the quarter) Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_27",
+              "header": "Empty homes (last day of the quarter)",
+              "children": [
+                {
+                  "name": "cvd019",
+                  "labelWidth": 5,
+                  "label": " Empty homes (last day of the quarter)",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "21",
+                    "csvColumnName": null
+                  },
+                  "help": "The total number of dwellings in self-contained lettable stock that were empty on the last day of the reporting quarter.",
+                  "required": true
+                },
+                {
+                  "name": "cvd021",
+                  "labelWidth": 5,
+                  "label": " Empty homes (last day of the quarter)",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Empty homes (last day of the quarter) Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_28",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_29"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_30"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_29",
+              "header": "Please tell us your rent lost through properties being empty during the quarter:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_31"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_32"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_30",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_33"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_34"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_31",
+              "header": "Total amount of rent due for the reporting quarter",
+              "children": [
+                {
+                  "name": "cvd022",
+                  "labelWidth": 5,
+                  "label": " Total amount of rent due for the reporting quarter",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 0,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2000000",
+                    "csvColumnName": null
+                  },
+                  "help": "The total charges levied by the landlord in respect of rent and service charges for the reporting quarter. Subject to the exclusions listed below.\nWhen calculating the total rent due and the rent loss do not include:\n• lock-ups and garages\n• sharing owners\n• Properties used for temporary homeless lets\n• Leased properties\n• Rent (including service charges) for periods when properties are empty subject to an insurance claim being raised because of fire of flood damage\n• Empty properties awaiting or undergoing major repairs/restructural work during which the period it would be unsafe for them to be occupied (N.B. Following completion of major repair work any subsequent void period occurring until the date of re-let should be counted as a void (i.e. any void period from the start date of a new tenancy is to be included in the reported rent lost through properties being empty and rental income lost)).\n• Rent lost due to periods of time when major improvement/modernisation works are being undertaken. So major that it cannot reasonably be occupied\n• Rent lost due to reasonable time taken to clear the house following a tenant’s death\n• Rent for properties where the keys are held by the Police to assist with their investigation\n• Properties held for decanting tenants\n• Properties which are empty and subject of a Governing Body/Sub-Committee/Council decision that they are not to be let because they are surplus to long-term requirements, or to be transferred, disposed of or demolished; or reconfigured.\nEnsure to include:\n• only the amount (£’s) of rent lost for the current rent accounting quarter when reporting loss for a property that spans across two rent accounting quarters, and\n• service charges, in the calculations",
+                  "required": true
+                },
+                {
+                  "name": "cvd025",
+                  "labelWidth": 5,
+                  "label": " Total amount of rent due for the reporting quarter",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Total amount of rent due for the reporting quarter Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_32",
+              "header": "Rent due lost through properties being empty during the quarter",
+              "children": [
+                {
+                  "name": "cvd023",
+                  "labelWidth": 5,
+                  "label": " Rent due lost through properties being empty during the quarter",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 0,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "50000",
+                    "csvColumnName": null
+                  },
+                  "help": "To calculate the percentage of rent lost through properties being empty during the last quarter we will divide total amount of rent due for the reporting quarter, by total amount of rent lost through properties being empty during the reporting quarter. Multiply by 100.\nThe rent loss for an empty property in relation to a new let is the amount of lost rental income (including services charges) for the time – measured in calendar days – from the date of handover to the landlord following the issue of the certificate of practical completion and the start date of the first tenancy. Subject to the exclusions listed below.\nThe rent loss for an empty property for a re-let is the amount of lost rental income (including services charges) for the time – measured in calendar days – between the date of termination of a previous tenancy or repossession and the start date of a new tenancy. Subject to the exclusions listed below",
+                  "required": true
+                },
+                {
+                  "name": "cvd026",
+                  "labelWidth": 5,
+                  "label": " Rent due lost through properties being empty during the quarter",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Rent due lost through properties being empty during the quarter Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_33",
+              "header": "Percentage of rent due lost through properties being empty (%)",
+              "children": [
+                {
+                  "name": "cvd024",
+                  "labelWidth": 5,
+                  "label": " Percentage of rent due lost through properties being empty (%)",
+                  "width": 2,
+                  "type": "numeric",
+                  "maximumValue": 1000000000,
+                  "minimumValue": -1000000000,
+                  "decimalPlaces": 2,
+                  "percentage": true,
+                  "calculation": "(( cvd023  /  cvd022 ) * 100)",
+                  "aux": {
+                    "sampleValue": "2.5",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_35"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_34",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_36"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_37"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_35",
+              "header": "Please tell us the average length of time to re-let properties in the last quarter:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_38"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_39"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_36",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_40"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_41"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_37",
+              "header": "Properties re-let",
+              "children": [
+                {
+                  "name": "cvd027",
+                  "labelWidth": 5,
+                  "label": " Properties re-let",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "250",
+                    "csvColumnName": null
+                  },
+                  "help": "Lets: Lettings in this context are lets to individual tenants. Properties leased during the year to other organisations (i.e. to Social Work Department) should not be recorded as a let in this return. The houses may be managed by the landlord itself or by an agent on its behalf.\nA re-let: A property where the previous tenancy has ended or the property has been repossessed and a new tenancy has commenced. Houses remaining empty at the end of the quarter are to be included in the following quarter’s return when they are let.",
+                  "required": true
+                },
+                {
+                  "name": "cvd030",
+                  "labelWidth": 5,
+                  "label": " Properties re-let",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Properties re-let Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_38",
+              "header": "Calendar days properites were empty",
+              "children": [
+                {
+                  "name": "cvd028",
+                  "labelWidth": 5,
+                  "label": " Calendar days properites were empty",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "21",
+                    "csvColumnName": null
+                  },
+                  "help": "Time taken to re-let: This is measured in calendar days, between the date of termination of a previous tenancy or repossession (i.e. the first date from which the rent loss is charged to voids) and the start date of a new tenancy (i.e. the last date from which the rent loss is charged to voids) subject to the exclusions listed below.\nWhen calculating the total number of properties that are re-let do not include:\n• Mutual exchanges, successions and assignations\n• New lets\n• Tenancies on properties acquired through the mortgage to rent scheme or a stock transfer as re-lets at the point of acquisition. Any subsequent changes in these tenancies would be recorded in the normal manner\n• Lets for lock-ups and garages\n• Houses held for decanting tenants.\nWhen calculating the time taken to re-let, do not include periods where the property is empty due to:\n• An insurance claim because of fire or flood damage\n• Awaiting or undergoing major repairs/ structural work during which period it would be unsafe for it to be occupied\n• A Governing Body/Sub-Committee/Council decision that they are not to be let because they are to be transferred; reconfigured or disposed of/demolished or are surplus to long term requirements\n• The periods of time when major improvements/modernisation works are being undertaken. So major that it cannot reasonably be occupied\n• A reasonable time taken to clear the house following a tenant’s death\n• Keys being held by the Police to assist with their investigation.\n\nEnsure to include:\n• following completion of major repair work any subsequent period when the property is empty until the date it is re-let\nonly properties that were re-let during the reporting quarter\n• in the re-let calculation the total number of days where a re-let spans two reporting quarters.",
+                  "required": true
+                },
+                {
+                  "name": "cvd031",
+                  "labelWidth": 5,
+                  "label": " Calendar days properites were empty",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Calendar days properites were empty Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_39",
+              "header": "Average length of time to re-let properties",
+              "children": [
+                {
+                  "name": "cvd029",
+                  "labelWidth": 5,
+                  "label": " Average length of time to re-let properties",
+                  "width": 2,
+                  "type": "numeric",
+                  "maximumValue": 1000000000,
+                  "minimumValue": -1000000000,
+                  "decimalPlaces": 2,
+                  "percentage": true,
+                  "calculation": "( cvd028  /  cvd027 )",
+                  "aux": {
+                    "sampleValue": "0.084",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_42"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_40",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_43"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_44"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_41",
+              "header": "Please tell us your lets during the quarter:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_45"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_46"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_42",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_47"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_48"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_43",
+              "header": "Number of lets to existing tenants",
+              "children": [
+                {
+                  "name": "cvd032",
+                  "labelWidth": 5,
+                  "label": " Number of lets to existing tenants",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "33",
+                    "csvColumnName": null
+                  },
+                  "help": "Number of lets commenced during the reporting quarter to households assessed as statutory homeless by the local authority and to whom the local authority has a duty to provide permanent housing.",
+                  "required": true
+                },
+                {
+                  "name": "cvd040",
+                  "labelWidth": 5,
+                  "label": " Number of lets to existing tenants",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Number of lets to existing tenants RSL Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_44",
+              "header": "Number of lets to housing list applicants",
+              "children": [
+                {
+                  "name": "cvd033",
+                  "labelWidth": 5,
+                  "label": " Number of lets to housing list applicants",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "11",
+                    "csvColumnName": null
+                  },
+                  "help": "Number of lets commenced during the reporting quarter to households assessed as statutory homeless by the local authority and to whom the local authority has a duty to provide permanent housing.",
+                  "required": true
+                },
+                {
+                  "name": "cvd041",
+                  "labelWidth": 5,
+                  "label": " Number of lets to housing list applicants",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Number of lets to housing list applicants RSL Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_45",
+              "header": "Number of lets to homeless (SST)",
+              "children": [
+                {
+                  "name": "cvd034",
+                  "labelWidth": 5,
+                  "label": " Number of lets to homeless (SST)",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "45",
+                    "csvColumnName": null
+                  },
+                  "help": "Number of lets commenced during the reporting quarter to those who were already tenants in one of the landlord’s properties, who applied through the landlord’s housing list/s. (This covers all lists. For example, waiting or transfer lists or common housing registers).",
+                  "required": true
+                },
+                {
+                  "name": "cvd042",
+                  "labelWidth": 5,
+                  "label": " Number of lets to homeless (SST)",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Number of lets to homeless (SST) RSL Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_46",
+              "header": "Number of lets to homeless (short SST)",
+              "children": [
+                {
+                  "name": "cvd035",
+                  "labelWidth": 5,
+                  "label": " Number of lets to homeless (short SST)",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "3",
+                    "csvColumnName": null
+                  },
+                  "help": "Number of lets commenced during the reporting quarter to people who were not existing tenants and who were on the landlord’s housing list or the common housing register in which the landlord participates. Do not include section 5 referrals or LA nominations.",
+                  "required": true
+                },
+                {
+                  "name": "cvd043",
+                  "labelWidth": 5,
+                  "label": " Number of lets to homeless (short SST)",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Number of lets to homeless (short SST) RSL Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_47",
+              "header": "Number leased to relevant local authority ",
+              "children": [
+                {
+                  "name": "cvd036",
+                  "labelWidth": 5,
+                  "label": " Number leased to relevant local authority ",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2",
+                    "csvColumnName": null
+                  },
+                  "help": "Number of properties leased during the reporting quarter to the local authority, including those for use as temporary accommodation for people who are homeless. Include only those properties that were first leased to the local authority during the reporting quarter. ",
+                  "required": true
+                },
+                {
+                  "name": "cvd044",
+                  "labelWidth": 5,
+                  "label": " Number leased to relevant local authority ",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Number leased to relevant local authority RSL Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_48",
+              "header": "Number of lets to others",
+              "children": [
+                {
+                  "name": "cvd037",
+                  "labelWidth": 5,
+                  "label": " Number of lets to others",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "7",
+                    "csvColumnName": null
+                  },
+                  "help": "Number of new tenancies commenced during the reporting quarter from any other source not covered by the other categories.",
+                  "required": true
+                },
+                {
+                  "name": "cvd045",
+                  "labelWidth": 5,
+                  "label": " Number of lets to others",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Number of lets to others RSL Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_49",
+              "header": "Total lets and leased (during quarter)",
+              "children": [
+                {
+                  "name": "cvd038",
+                  "labelWidth": 5,
+                  "label": " Total lets and leased (during quarter)",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cvd032 + cvd033 + cvd034 + cvd035 + cvd036 + cvd037 ))",
+                  "aux": {
+                    "sampleValue": "101",
+                    "csvColumnName": null
+                  },
+                  "help": "Total number of new tenancies commenced and properties first leased to the local authority for use as temporary accommodation during the reporting quarter."
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_49"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_50",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_50"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_51"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_51",
+              "header": "Balance",
+              "children": [
+                {
+                  "name": "cvd039",
+                  "labelWidth": 5,
+                  "label": " Balance",
+                  "width": 2,
+                  "type": "numeric",
+                  "decimalPlaces": 0,
+                  "calculation": "( cvd017 + cvd018 +( -  cvd019 )+( -  cvd038 ))",
+                  "validation": "(( $value ==0)||( cvd046 !=''))",
+                  "validationMessage": "Difference between Voids and Lets is not 0. Please add a comment to explain the difference.",
+                  "aux": {
+                    "sampleValue": "-85",
+                    "csvColumnName": null
+                  },
+                  "help": "Balance Calculated Example\na. Empty Homes (last day of previous quarter) = 17\nb. Empty homes (arose during the quarter) = 14\nc. Empty homes a the end of the quarter = 17\nd. Number of lets to homeless (SST) = 6\ne. Number of lets to homeles (short SST) = 6\nf. Number leased to relevant local authority = 1\ng. Number of lets to others (e.g. waiting list applicants) = 1\nh. Total lets and leased (during quarter) = 14\nBalance (this figure should be 0 to reconcile the voids and lets)\n= (a + b - c) - h = 14 - 14 = 0"
+                },
+                {
+                  "name": "cvd046",
+                  "labelWidth": 5,
+                  "label": " Balance",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Balance RSL Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_52",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_52"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_53"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_53",
+              "header": "Please tell us your cash balance on the last day of the quarter:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_54"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_55"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_54",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_56"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_57"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_55",
+              "header": "Cash balance",
+              "children": [
+                {
+                  "name": "cvd047",
+                  "labelWidth": 5,
+                  "label": " Cash balance",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": 0,
+                  "maximumValue": 999999999.0,
+                  "decimalPlaces": 0,
+                  "aux": {
+                    "sampleValue": "-25000",
+                    "csvColumnName": null
+                  },
+                  "help": "Cash balances as per general ledger, including cash investments, on the last day of the reporting quarter.",
+                  "required": true
+                },
+                {
+                  "name": "cvd048",
+                  "labelWidth": 5,
+                  "label": " Cash balance",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Cash balance Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_56",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_58"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_59"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_57",
+              "header": "Number of court actions initiated and properties recovered during the quarter:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_60"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_61"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_58",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_62"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_63"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_59",
+              "header": "Total number of court actions initiated",
+              "children": [
+                {
+                  "name": "cvd049",
+                  "labelWidth": 5,
+                  "label": " Total number of court actions initiated",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "35",
+                    "csvColumnName": null
+                  },
+                  "help": "Recovery of Possession (Eviction) \nSection 16 of the Housing (Scotland) Act 2001 as amended by Section 153 of the Housing (Scotland) Act 2010, sets out the grounds on which a court can issue an order to terminate a SST and gives the landlord the right to recover possession of the property. Where landlords seek possession on the grounds of non-payment of rent, they must confirm to the court that they have met the pre-action requirements, as set out in the Housing (Scotland) Act 2010. \n\nCourt actions initiated \nFollowing the issue of a notice of proceedings and raising a court order a landlord may initiate court action. \n\nReasons for eviction \nWhen an action has been taken based on both rent arrears and anti-social behaviour, record the main reason. \n\nInclude: \n∙ tenants that you have actively evicted; and \n∙ tenants that abandoned their home after you had obtained decree.",
+                  "required": true
+                },
+                {
+                  "name": "cvd053",
+                  "labelWidth": 5,
+                  "label": " Total number of court actions initiated",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Total number of court actions initiated Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_60",
+              "header": "The number of properties recovered having obtained decree for non-payment of rent",
+              "children": [
+                {
+                  "name": "cvd050",
+                  "labelWidth": 5,
+                  "label": " The number of properties recovered having obtained decree for non-payment of rent",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "11",
+                    "csvColumnName": null
+                  },
+                  "help": "Notice of proceedings (NOP)\nAs defined by Section 14 of the Housing (Scotland) Act 2001 as amended by Section 155 of the Housing (Scotland) Act 2010, a NOP is a legal document issued at the first stage in the legal process for a landlord to evict a tenant. For Notice of proceedings issued, include the total number for the reporting period (not the cumulative total across quarters).",
+                  "required": true
+                },
+                {
+                  "name": "cvd054",
+                  "labelWidth": 5,
+                  "label": " The number of properties recovered having obtained decree for non-payment of rent",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "The number of properties recovered having obtained decree for non-payment of rent Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_61",
+              "header": "The number of properties recovered having obtained decree for anti-social behaviour",
+              "children": [
+                {
+                  "name": "cvd051",
+                  "labelWidth": 5,
+                  "label": " The number of properties recovered having obtained decree for anti-social behaviour",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "7",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cvd055",
+                  "labelWidth": 5,
+                  "label": " The number of properties recovered having obtained decree for anti-social behaviour",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "The number of properties recovered having obtained decree for anti-social behaviour Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_62",
+              "header": "The number of properties recovered having obtained decree for other reasons",
+              "children": [
+                {
+                  "name": "cvd052",
+                  "labelWidth": 5,
+                  "label": " The number of properties recovered having obtained decree for other reasons",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "8",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cvd056",
+                  "labelWidth": 5,
+                  "label": " The number of properties recovered having obtained decree for other reasons",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "The number of properties recovered having obtained decree for other reasons Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_63",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_64"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_65"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_64",
+              "header": "Number of Notice of Proceedings issued during the quarter for:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_66"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_67"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_65",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_68"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_69"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_66",
+              "header": "Rent arrears",
+              "children": [
+                {
+                  "name": "cvd057",
+                  "labelWidth": 5,
+                  "label": " Rent arrears",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "721",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cvd060",
+                  "labelWidth": 5,
+                  "label": " Rent arrears",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Rent arrears Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_67",
+              "header": "Antisocial behaviour / criminal activity",
+              "children": [
+                {
+                  "name": "cvd058",
+                  "labelWidth": 5,
+                  "label": " Antisocial behaviour / criminal activity",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "31",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cvd061",
+                  "labelWidth": 5,
+                  "label": " Antisocial behaviour / criminal activity",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Antisocial behaviour / criminal activity Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_rsl_row_68",
+              "header": "Other reasons",
+              "children": [
+                {
+                  "name": "cvd059",
+                  "labelWidth": 5,
+                  "label": " Other reasons",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "9",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cvd062",
+                  "labelWidth": 5,
+                  "label": " Other reasons",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Other reasons Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "indicators",
+      "title": "Indicators"
+    },
+    {
+      "name": "a1",
+      "title": "Approval",
+      "fields": [
+        {
+          "name": "cvda001",
+          "labelWidth": 3,
+          "label": "A1.1 Date approved",
+          "width": 2,
+          "type": "date",
+          "validation": "( $value  <= new Date())",
+          "validationMessage": "Date approved cannot be a date in the future.",
+          "aux": {
+            "sampleValue": "31/12/2021 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "cvda002",
+          "labelWidth": 3,
+          "label": "A1.2 Approver",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "A N Other",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "cvda003",
+          "labelWidth": 3,
+          "label": "A1.3 Approver job title",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Finance Manager",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "cvda004",
+          "labelWidth": 3,
+          "label": "",
+          "commentsRequiredMessage": "A1.4 Submit",
+          "width": 5,
+          "type": "submit",
+          "allowErrors": true,
+          "aux": {
+            "csvColumnName": null
+          }
+        }
+      ]
+    }
+  ]
+}

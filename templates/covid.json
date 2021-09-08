@@ -1,0 +1,51 @@
+{
+    "processing": [
+        [ "loadFields", "Data" ],
+        [ "loadPages", "Structure & wording" ],
+        [ "generateCovid", "CovidRsl", "1_1", false ],
+        [ "generateCovid", "CovidLa", "1_1", false ]
+      ],
+      "$schema": "./formDesignSchema.json",
+      "title": "Covid Return",
+      "formTitle": "Covid Return",
+      "outputTable": "Covid",
+      "readRole": "Organisational Details Reader",
+      "approveRole": "Organisational Details",
+      "editRole": "Organisational Details",
+      "pages": [
+        {
+            "action": "insertPage",
+            "row": 2
+        },
+        {
+            "formTypes": [ "CovidRsl" ],
+            "row": 3,
+            "fields": [
+              {
+                "action": "insertTable",
+                "sheet": "Indicators RSL",
+                "data": "Data",
+                "row": 1,
+                "name": "indicators_rsl"
+              }
+            ]
+        },
+        {
+            "formTypes": [ "CovidLa" ],
+            "row": 3,
+            "fields": [
+              {
+                "action": "insertTable",
+                "sheet": "Indicators LA",
+                "data": "Data",
+                "row": 1,
+                "name": "indicators_la"
+              }
+            ]
+        },
+        {
+            "action": "insertPage",
+            "row": 4
+        }
+      ]
+}
