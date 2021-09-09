@@ -3,7 +3,8 @@
         [ "loadFields", "Data" ],
         [ "loadPages", "Structure & wording" ],
         [ "generateCovid", "CovidRsl", "1_1", false ],
-        [ "generateCovid", "CovidLa", "1_1", false ]
+        [ "generateCovid", "CovidLa", "1_1", false ],
+        [ "generateCovid", "CovidLaHo", "1_1", false ]
       ],
       "$schema": "./formDesignSchema.json",
       "title": "Covid Return",
@@ -40,6 +41,19 @@
                 "data": "Data",
                 "row": 1,
                 "name": "indicators_la"
+              }
+            ]
+        },
+        {
+            "formTypes": [ "CovidLaHo" ],
+            "row": 3,
+            "fields": [
+              {
+                "action": "insertTable",
+                "sheet": "Indicators LAHO",
+                "data": "Data",
+                "row": 1,
+                "name": "indicators_laho"
               }
             ]
         },

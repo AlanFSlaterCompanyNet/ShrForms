@@ -66,6 +66,34 @@
           },
           "hidden": true,
           "required": true
+        },
+        {
+          "name": "cvdf005",
+          "labelWidth": 0,
+          "label": "F1.5 Welcome",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "Some introductory text for the return",
+            "csvColumnName": null
+          },
+          "title": "Welcome",
+          "text": "<p>Some introductory text for the return</p>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "cvdf006",
+          "labelWidth": 0,
+          "label": "F1.6 Buttons",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "Button|Action\n--------|--------\nPrevious|This button will take you to the previous available page and save all content on the current page \nNext|This button will take you to the next available page and save all content on the current page\nSave|This button will save all content within the form and allow further editing\nPDF|This button will download a pdf document of the charter return form\nClose|This button will take you to a Close screen",
+            "csvColumnName": null
+          },
+          "title": "Buttons",
+          "text": "<table>\n<thead>\n<tr>\n<th>Button</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Previous</td>\n<td>This button will take you to the previous available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Next</td>\n<td>This button will take you to the next available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Save</td>\n<td>This button will save all content within the form and allow further editing</td>\n</tr>\n<tr>\n<td>PDF</td>\n<td>This button will download a pdf document of the charter return form</td>\n</tr>\n<tr>\n<td>Close</td>\n<td>This button will take you to a Close screen</td>\n</tr>\n</tbody>\n</table>\n",
+          "style": "htmlcard"
         }
       ]
     },
