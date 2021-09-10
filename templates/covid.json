@@ -10,9 +10,9 @@
       "title": "Covid Return",
       "formTitle": "Covid Return",
       "outputTable": "Covid",
-      "readRole": "Organisational Details Reader",
-      "approveRole": "Organisational Details",
-      "editRole": "Organisational Details",
+      "readRole": "Charter Reader",
+      "approveRole": "Charter Approver",
+      "editRole": "Charter User",
       "pages": [
         {
             "action": "insertPage",
