@@ -306,7 +306,7 @@
                     "sampleValue": "44",
                     "csvColumnName": null
                   },
-                  "help": "This part of the return corresponds with the Scottish Government’s HL2 return (the monitoring of households* placed in temporary accommodation as part of local authorities’ duties under the homeless persons’ legislation). The Scottish Government’s \"guidance on how to complete the HL2 return\" definitions should be applied when supplying this information. Local authorities should provide the relevant information quarterly.\n* households placed in temporary accommodation as part of local authorities’ duties under the homeless persons’ legislation",
+                  "help": "This part of the return corresponds with the Scottish Government’s HL2 return (the monitoring of households* placed in temporary accommodation as part of local authorities’ duties under the homeless persons’ legislation). The Scottish Government’s \"guidance on how to complete the HL2 return\" definitions should be applied when supplying this information. Local authorities should provide the relevant information quarterly.<br />* households placed in temporary accommodation as part of local authorities’ duties under the homeless persons’ legislation",
                   "required": true
                 },
                 {
