@@ -11,7 +11,7 @@
     [
       "generate",
       "Lp",
-      "2_1",
+      "2_2",
       false
     ]
   ],
@@ -394,6 +394,13 @@
             "sortBy": [
               "lpf004",
               "lpl002b"
+            ],
+            "groupBy": [
+              "lpf004"
+            ],
+            "subtotals": [
+              "lpl006",
+              "lpl007"
             ],
             "labels": [
               "Facility Reference Number",
