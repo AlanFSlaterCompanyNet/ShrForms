@@ -546,6 +546,11 @@
             "LPF010",
             "LPF011"
           ],
+          "totals": [
+            "LPF009",
+            "LPF010",
+            "LPF011"
+          ],
           "aux": {
             "csvColumnName": null
           }
