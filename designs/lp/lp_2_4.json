@@ -600,11 +600,14 @@
           "createLabel": "Create IGF Lend",
           "closedLabel": "Repaid",
           "columns": [
+            "LPIGF002",
             "LPIGF001",
-            "lpigf002",
             "LPIGF004",
-            "LPIGF009",
-            "LPIGF010"
+            "LPIGF005"
+          ],
+          "totals": [
+            "LPIGF004",
+            "LPIGF005"
           ],
           "aux": {
             "csvColumnName": null
@@ -619,10 +622,14 @@
           "createLabel": "Create IGF Borrow",
           "closedLabel": "Repaid",
           "columns": [
+            "LPIGF026",
             "LPIGF100",
             "LPIGF028",
-            "LPIGF033",
-            "LPIGF034"
+            "LPIGF029"
+          ],
+          "totals": [
+            "LPIGF028",
+            "LPIGF029"
           ],
           "aux": {
             "csvColumnName": null
