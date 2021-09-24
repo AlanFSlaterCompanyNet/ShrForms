@@ -569,6 +569,10 @@
             "lpl006",
             "lpl007"
           ],
+          "totals": [
+            "lpl006",
+            "lpl007"
+          ],
           "aux": {
             "csvColumnName": null
           }
