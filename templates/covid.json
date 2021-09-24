@@ -2,9 +2,9 @@
     "processing": [
         [ "loadFields", "Data" ],
         [ "loadPages", "Structure & wording" ],
-        [ "generateCovid", "CovidRsl", "1_4", false ],
-        [ "generateCovid", "CovidLa", "1_4", false ],
-        [ "generateCovid", "CovidLaHo", "1_4", false ]
+        [ "generateCovid", "CovidRsl", "1_5", false ],
+        [ "generateCovid", "CovidLa", "1_5", false ],
+        [ "generateCovid", "CovidLaHo", "1_5", false ]
       ],
       "$schema": "./formDesignSchema.json",
       "title": "Covid Return",
