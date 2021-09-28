@@ -1,0 +1,427 @@
+{
+  "$schema": "./formDesignSchema.json",
+  "title": "Covid Return",
+  "formTitle": "Covid Return",
+  "outputTable": "Covid",
+  "readRole": "Charter Reader",
+  "approveRole": "Charter Approver",
+  "editRole": "Charter User",
+  "pages": [
+    {
+      "name": "f1",
+      "title": "Introduction",
+      "fields": [
+        {
+          "name": "cvdf001",
+          "labelWidth": 5,
+          "label": "F1.1 Form type",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "cvd",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "cvdf002",
+          "labelWidth": 5,
+          "label": "F1.2 Financial year",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "2021/2022",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "cvdf003",
+          "labelWidth": 5,
+          "label": "F1.3 Quarter",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 1000000000,
+          "decimalPlaces": 0,
+          "validatedPositive": true,
+          "aux": {
+            "sampleValue": "2",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "cvdf007",
+          "labelWidth": 5,
+          "label": "F1.7 Landlord name",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Abbeyfield Scotland Ltd",
+            "csvColumnName": null
+          },
+          "readonly": true,
+          "required": true
+        },
+        {
+          "name": "cvdf008",
+          "labelWidth": 5,
+          "label": "F1.8 RSL Registration Number",
+          "width": 2,
+          "type": "numeric",
+          "minimumValue": 0,
+          "maximumValue": 10000.0,
+          "decimalPlaces": 0,
+          "aux": {
+            "sampleValue": "20",
+            "csvColumnName": null
+          },
+          "readonly": true,
+          "required": true
+        },
+        {
+          "name": "cvdf004",
+          "labelWidth": 5,
+          "label": "F1.4 Social Landlord ID",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "ED6CA976-CFA9-E311-93F1-005056B555E6",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "cvdf005",
+          "labelWidth": 0,
+          "label": "F1.5 Welcome",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "Welcome to the Covid-19 quarterly return. \n\nThe information provided in this return will help the Social Housing Resilience Group (SHRG) and interested stakeholders monitor the potential impact, including financial impact, on landlords and to consider support that landlords may need in the longer term.\n\nThe SHRG will keep under review the ongoing need for this information, and we will continue to collect the information until the SHRG confirms it no longer requires it.\n\nThe quarterly return is made available at the end of each quarter and a submission date 14 working days after the quarter end. \n\nThank you once again for your assistance. If you have any questions on this please contact your lead regulator in the first instance.",
+            "csvColumnName": null
+          },
+          "title": "Welcome",
+          "text": "<p>Welcome to the Covid-19 quarterly return.</p>\n<p>The information provided in this return will help the Social Housing Resilience Group (SHRG) and interested stakeholders monitor the potential impact, including financial impact, on landlords and to consider support that landlords may need in the longer term.</p>\n<p>The SHRG will keep under review the ongoing need for this information, and we will continue to collect the information until the SHRG confirms it no longer requires it.</p>\n<p>The quarterly return is made available at the end of each quarter and a submission date 14 working days after the quarter end.</p>\n<p>Thank you once again for your assistance. If you have any questions on this please contact your lead regulator in the first instance.</p>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "cvdf006",
+          "labelWidth": 0,
+          "label": "F1.6 Buttons",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "Button|Action\n--------|--------\nPrevious|This button will take you to the previous available page and save all content on the current page \nNext|This button will take you to the next available page and save all content on the current page\nSave|This button will save all content within the form and allow further editing\nPDF|This button will download a pdf document of the charter return form\nClose|This button will take you to a Close screen",
+            "csvColumnName": null
+          },
+          "title": "Buttons",
+          "text": "<table>\n<thead>\n<tr>\n<th>Button</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Previous</td>\n<td>This button will take you to the previous available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Next</td>\n<td>This button will take you to the next available page and save all content on the current page</td>\n</tr>\n<tr>\n<td>Save</td>\n<td>This button will save all content within the form and allow further editing</td>\n</tr>\n<tr>\n<td>PDF</td>\n<td>This button will download a pdf document of the charter return form</td>\n</tr>\n<tr>\n<td>Close</td>\n<td>This button will take you to a Close screen</td>\n</tr>\n</tbody>\n</table>\n",
+          "style": "htmlcard"
+        }
+      ]
+    },
+    {
+      "formTypes": [
+        "CovidLaHo"
+      ],
+      "fields": [
+        {
+          "type": "table",
+          "headers": [
+            "",
+            ""
+          ],
+          "name": "indicators_laho",
+          "label": "COVID-19 Quarterly Return",
+          "children": [
+            {
+              "type": "tablerow",
+              "name": "table_indicators_laho_row_3",
+              "header": "Homeless applications received in the quarter:",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_130"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_131"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_laho_row_4",
+              "header": "",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_132"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_133"
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_laho_row_5",
+              "header": "Homeless applications received",
+              "children": [
+                {
+                  "name": "cvd078",
+                  "labelWidth": 5,
+                  "label": " Homeless applications received",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "55",
+                    "csvColumnName": null
+                  },
+                  "help": "Total number of homelessness applications taken by the local authority under the homeless persons legislation in the reporting quarter.",
+                  "required": true
+                },
+                {
+                  "name": "cvd083",
+                  "labelWidth": 5,
+                  "label": " Homeless applications received",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Homeless applications received LA Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_laho_row_6",
+              "header": "Households offered and accepted temporary accommodation",
+              "children": [
+                {
+                  "name": "cvd079",
+                  "labelWidth": 5,
+                  "label": " Households offered and accepted temporary accommodation",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "45",
+                    "csvColumnName": null
+                  },
+                  "help": "This part of the return corresponds with the Scottish Government’s HL3 return (the monitoring of households placed in temporary accommodation as part of local authorities’ duties under the homeless persons’ legislation). The Scottish Government’s \"guidance on how to complete the HL3 return\" definitions should be applied when supplying this information. Local authorities should provide the relevant information quarterly.",
+                  "required": true
+                },
+                {
+                  "name": "cvd084",
+                  "labelWidth": 5,
+                  "label": " Households offered and accepted temporary accommodation",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Households offered and accepted temporary accommodation LA Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_laho_row_7",
+              "header": "Offered and refused temporary accommodation",
+              "children": [
+                {
+                  "name": "cvd080",
+                  "labelWidth": 5,
+                  "label": " Offered and refused temporary accommodation",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "5",
+                    "csvColumnName": null
+                  },
+                  "help": "This part of the return corresponds with the Scottish Government’s HL3 return (the monitoring of households placed in temporary accommodation as part of local authorities’ duties under the homeless persons’ legislation). The Scottish Government’s \"guidance on how to complete the HL3 return\" definitions should be applied when supplying this information. Local authorities should provide the relevant information quarterly.",
+                  "required": true
+                },
+                {
+                  "name": "cvd085",
+                  "labelWidth": 5,
+                  "label": " Offered and refused temporary accommodation",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Offered and refused temporary accommodation LA Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_laho_row_8",
+              "header": "Not offered temporary accommodation when needed",
+              "children": [
+                {
+                  "name": "cvd081",
+                  "labelWidth": 5,
+                  "label": " Not offered temporary accommodation when needed",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "3",
+                    "csvColumnName": null
+                  },
+                  "help": "This part of the return corresponds with the Scottish Government’s HL3 return (the monitoring of households placed in temporary accommodation as part of local authorities’ duties under the homeless persons’ legislation). The Scottish Government’s \"guidance on how to complete the HL3 return\" definitions should be applied when supplying this information. Local authorities should provide the relevant information quarterly.",
+                  "required": true
+                },
+                {
+                  "name": "cvd086",
+                  "labelWidth": 5,
+                  "label": " Not offered temporary accommodation when needed",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Not offered temporary accommodation when needed LA Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "tablerow",
+              "name": "table_indicators_laho_row_9",
+              "header": "Households in temporary accommodation on the last day of the quarter",
+              "children": [
+                {
+                  "name": "cvd082",
+                  "labelWidth": 5,
+                  "label": " Households in temporary accommodation on the last day of the quarter",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "44",
+                    "csvColumnName": null
+                  },
+                  "help": "This part of the return corresponds with the Scottish Government’s HL2 return (the monitoring of households* placed in temporary accommodation as part of local authorities’ duties under the homeless persons’ legislation). The Scottish Government’s \"guidance on how to complete the HL2 return\" definitions should be applied when supplying this information. Local authorities should provide the relevant information quarterly.<br />* households placed in temporary accommodation as part of local authorities’ duties under the homeless persons’ legislation",
+                  "required": true
+                },
+                {
+                  "name": "cvd087",
+                  "labelWidth": 5,
+                  "label": " Households in temporary accommodation on the last day of the quarter",
+                  "width": 2,
+                  "type": "text",
+                  "isComment": true,
+                  "aux": {
+                    "sampleValue": "Households in temporary accommodation on the last day of the quarter LA Comment",
+                    "csvColumnName": null
+                  },
+                  "required": false
+                }
+              ]
+            }
+          ],
+          "labelWidth": 5,
+          "headerWidths": [
+            2,
+            4
+          ]
+        }
+      ],
+      "name": "indicators",
+      "title": "Indicators"
+    },
+    {
+      "name": "a1",
+      "title": "Approval",
+      "fields": [
+        {
+          "name": "cvda001",
+          "labelWidth": 3,
+          "label": "A1.1 Date approved",
+          "width": 2,
+          "type": "date",
+          "validation": "( $value  <= new Date())",
+          "validationMessage": "Date approved cannot be a date in the future.",
+          "aux": {
+            "sampleValue": "31/12/2021 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "cvda002",
+          "labelWidth": 3,
+          "label": "A1.2 Approver",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "A N Other",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "cvda003",
+          "labelWidth": 3,
+          "label": "A1.3 Approver job title",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Finance Manager",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "cvda004",
+          "labelWidth": 3,
+          "label": "",
+          "commentsRequiredMessage": "A1.4 Under exceptional circumstances, if the return is to be approved with validation messages showing on your Validation Summary, you must provide reason(s) why these cannot be cleared. Enter your comments and Save the page before Submitting the form.",
+          "width": 5,
+          "type": "submit",
+          "allowErrors": true,
+          "aux": {
+            "csvColumnName": null
+          }
+        }
+      ]
+    }
+  ]
+}

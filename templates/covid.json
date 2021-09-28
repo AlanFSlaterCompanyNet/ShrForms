@@ -2,9 +2,9 @@
     "processing": [
         [ "loadFields", "Data" ],
         [ "loadPages", "Structure & wording" ],
-        [ "generateCovid", "CovidRsl", "1_5", false ],
-        [ "generateCovid", "CovidLa", "1_5", false ],
-        [ "generateCovid", "CovidLaHo", "1_5", false ]
+        [ "generateCovid", "CovidRsl", "1_6", false ],
+        [ "generateCovid", "CovidLa", "1_6", false ],
+        [ "generateCovid", "CovidLaHo", "1_6", false ]
       ],
       "$schema": "./formDesignSchema.json",
       "title": "Covid Return",
@@ -29,8 +29,9 @@
                 "row": 1,
                 "name": "indicators_rsl",
                 "properties": {
-                  "labelWidth": 5,
-                  "headerWidths": [1,2]
+                  "labelWidth": 4,
+                  "headers": ["",""],
+                  "headerWidths": [2,4]
                 }
               }
             ]
@@ -46,8 +47,9 @@
                 "row": 1,
                 "name": "indicators_la",
                 "properties": {
-                  "labelWidth": 5,
-                  "headerWidths": [1,2]
+                  "labelWidth": 4,
+                  "headers": ["",""],
+                  "headerWidths": [2,4]
                 }
               }
             ]
@@ -64,7 +66,8 @@
                 "name": "indicators_laho",
                 "properties": {
                   "labelWidth": 5,
-                  "headerWidths": [1,2]
+                  "headers": ["",""],
+                  "headerWidths": [2,4]
                 }
               }
             ]
