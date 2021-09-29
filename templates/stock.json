@@ -16,7 +16,7 @@
     [
       "generate",
       "Stock",
-      "1_4",
+      "1_5",
       false
     ]
   ],
@@ -142,67 +142,9 @@
       ]
     },
     {
-      "name":"f1",
-      "title":"Approval",
-      "editRole": "Organisational Details",
-      "fields": [
-        {
-          "name": "cn_localauthority2",
-          "labelWidth": 2,
-          "label": "Local Authority",
-          "required": false,
-          "width": 2,
-          "type": "text",
-          "aux": {
-            "sampleValue": "Moray",
-            "csvColumnName": "Local Authority"
-          },
-          "outputColumn": "cn_localauthority",
-          "readonly": true
-        },
-        {
-          "name": "cn_provisionupdate",
-          "labelWidth": 2,
-          "label": "Provision Update",
-          "width": 2,
-          "type": "choice",
-          "csv": {
-            "labelColumn": "label",
-            "valueColumn": "value",
-            "file": "provisionupdate.csv"
-          },
-          "required": true
-        },
-        {
-          "name": "cn_provisionasatfy",
-          "labelWidth": 2,
-          "label": "Provision Update as at Financial Year",
-          "width": 2,
-          "type": "choice",
-          "csv": {
-            "labelColumn": "label",
-            "valueColumn": "value",
-            "file": "provisionasatFY.csv"
-          },
-          "required": true
-        },
-        {
-          "name": "cn_provisionasatdate",
-          "labelWidth": 2,
-          "label": "Provision Update as at Date",
-          "width": 2,
-          "type": "date",
-          "required": true
-        },
-        {
-          "submit": "submit",
-          "labelWidth": 2,
-          "label": "",
-          "width": 3,
-          "type": "submit",
-          "allowErrors": true
-        }
-      ]
+      "action": "insertPage",
+      "row": 5,
+      "sheet": "Data"
     }
   ]
 }

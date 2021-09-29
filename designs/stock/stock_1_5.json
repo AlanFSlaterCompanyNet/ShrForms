@@ -1,0 +1,3552 @@
+{
+  "$schema": "./formDesignSchema.json",
+  "title": "Stock Form",
+  "formTitle": "Stock",
+  "outputTable": "Stock",
+  "readRole": "Organisational Details Reader",
+  "approveRole": "Organisational Details",
+  "editRole": "Organisational Details",
+  "illegalValueMessage": "-",
+  "financialFormatting": true,
+  "pages": [
+    {
+      "name": "intro",
+      "title": "Introduction",
+      "fields": [
+        {
+          "name": "static1",
+          "labelWidth": 0,
+          "label": "intro.s1 ",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "Welcome to the Landlord Portal for the Stock return.\n\nThis is an online form designed to collate information on the projections of RSLs in Scotland.  An Annual Stock return must be submitted by the 31st May each year.",
+            "csvColumnName": null
+          },
+          "title": null,
+          "text": "<p>Welcome to the Landlord Portal for the Stock return.</p>\n<p>This is an online form designed to collate information on the projections of RSLs in Scotland.  An Annual Stock return must be submitted by the 31st May each year.</p>\n",
+          "style": "htmlcard"
+        },
+        {
+          "name": "static2",
+          "labelWidth": 0,
+          "label": "intro.s2 ",
+          "width": 8,
+          "type": "static",
+          "aux": {
+            "sampleValue": "The online Stock form has three sections:\n\n* Stock by Provision\n* Stock by Type, Apartment Size and Rent\n* Approval\n\nEach section is accessed via the menu on the left hand side of the screen.  Once in a section, you will be able to use the navigation buttons on the input screens to move between screens.\n\nEvery data entry field requires a value.  Blank fields are not permitted and will produce a validation error.",
+            "csvColumnName": null
+          },
+          "title": null,
+          "text": "<p>The online Stock form has three sections:</p>\n<ul>\n<li>Stock by Provision</li>\n<li>Stock by Type, Apartment Size and Rent</li>\n<li>Approval</li>\n</ul>\n<p>Each section is accessed via the menu on the left hand side of the screen.  Once in a section, you will be able to use the navigation buttons on the input screens to move between screens.</p>\n<p>Every data entry field requires a value.  Blank fields are not permitted and will produce a validation error.</p>\n",
+          "style": "htmlcard"
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "table",
+          "headers": [
+            "Owned",
+            "Leased Elsewhere",
+            "Total Units"
+          ],
+          "name": "provision_1",
+          "label": "Stock by Provision Type",
+          "children": [
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_3",
+              "header": "General Needs Social Housing",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_0"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_1"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_2"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_4",
+              "header": "SC Units",
+              "children": [
+                {
+                  "name": "cn_generalneedssocialhousingscunitsowned",
+                  "labelWidth": 5,
+                  "label": " SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "101",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_genneedssocialhousingscunitsleasedelsewhe",
+                  "labelWidth": 5,
+                  "label": " SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "11",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_generalneedssocialhousingsctotalunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_generalneedssocialhousingscunitsowned + cn_genneedssocialhousingscunitsleasedelsewhe ))",
+                  "aux": {
+                    "sampleValue": "112",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Total Units = SC Units Owned + SC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_5",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_generalneedssocialhousingnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "201",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_genneedssocialhousingnscunitsleasedelsewh",
+                  "labelWidth": 5,
+                  "label": " NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "12",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_generalneedssocialhousingnsctotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_generalneedssocialhousingnscunitsowned + cn_genneedssocialhousingnscunitsleasedelsewh ))",
+                  "aux": {
+                    "sampleValue": "213",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Units = NSC Units Owned + NSC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_6",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_generalneedssocialhousingnscbedsunitsowne",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "301",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_genneedssocialhousingnscbedsunitsleasedel",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "13",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_generalneedssocialhousingnscbedstotalunit",
+                  "labelWidth": 5,
+                  "label": " NSC Total Beds",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_generalneedssocialhousingnscbedsunitsowne + cn_genneedssocialhousingnscbedsunitsleasedel ))",
+                  "aux": {
+                    "sampleValue": "314",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Beds = NSC Beds Owned + NSC Beds Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_7",
+              "header": "Sheltered Housing",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_3"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_4"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_5"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_8",
+              "header": "SC Units",
+              "children": [
+                {
+                  "name": "cn_shelteredhousingscunitsowned",
+                  "labelWidth": 5,
+                  "label": " SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "401",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredhousingscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "14",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredhousingsctotalunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_shelteredhousingscunitsowned + cn_shelteredhousingscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "415",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Total Units = SC Units Owned + SC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_9",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_shelteredhousingnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "501",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredhousingnscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "15",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredhousingnsctotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_shelteredhousingnscunitsowned + cn_shelteredhousingnscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "516",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Units = NSC Units Owned + NSC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_10",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_shelteredhousingnscbedsunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "601",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredhousingnscbedsunitsleasedelsewhe",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "16",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredhousingnscbedstotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Beds",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_shelteredhousingnscbedsunitsowned + cn_shelteredhousingnscbedsunitsleasedelsewhe ))",
+                  "aux": {
+                    "sampleValue": "617",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Beds = NSC Beds Owned + NSC Beds Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_11",
+              "header": "Very Sheltered Housing",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_6"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_7"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_8"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_12",
+              "header": "SC Units",
+              "children": [
+                {
+                  "name": "cn_veryshelteredhousingscunitsowned",
+                  "labelWidth": 5,
+                  "label": " SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "701",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_veryshelteredhousingscunitsleasedelsewher",
+                  "labelWidth": 5,
+                  "label": " SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "17",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_veryshelteredhousingsctotalunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_veryshelteredhousingscunitsowned + cn_veryshelteredhousingscunitsleasedelsewher ))",
+                  "aux": {
+                    "sampleValue": "718",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Total Units = SC Units Owned + SC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_13",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_veryshelteredhousingnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "801",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_veryshelteredhousingnscunitsleasedelsewhe",
+                  "labelWidth": 5,
+                  "label": " NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "18",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_veryshelteredhousingnsctotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_veryshelteredhousingnscunitsowned + cn_veryshelteredhousingnscunitsleasedelsewhe ))",
+                  "aux": {
+                    "sampleValue": "819",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Units = NSC Units Owned + NSC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_14",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_veryshelteredhousingnscbedsunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "901",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_veryshelteredhousingnscbedsunitsleasedels",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "19",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_veryshelteredhousingnscbedstotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Beds",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_veryshelteredhousingnscbedsunitsowned + cn_veryshelteredhousingnscbedsunitsleasedels ))",
+                  "aux": {
+                    "sampleValue": "920",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Beds = NSC Beds Owned + NSC Beds Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_15",
+              "header": "Sheltered Wheelchair Housing",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_9"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_10"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_11"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_16",
+              "header": "SC Units",
+              "children": [
+                {
+                  "name": "cn_shelteredwheelchairhousingscunitsowned",
+                  "labelWidth": 5,
+                  "label": " SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1001",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredwheelchairhousingscunitsleasedel",
+                  "labelWidth": 5,
+                  "label": " SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "20",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredwheelchairhousingsctotalunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_shelteredwheelchairhousingscunitsowned + cn_shelteredwheelchairhousingscunitsleasedel ))",
+                  "aux": {
+                    "sampleValue": "1021",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Total Units = SC Units Owned + SC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_17",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_shelteredwheelchairhousingnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1101",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredwheelchairhousingnscunitsleasede",
+                  "labelWidth": 5,
+                  "label": " NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "21",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredwheelchairhousingnsctotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_shelteredwheelchairhousingnscunitsowned + cn_shelteredwheelchairhousingnscunitsleasede ))",
+                  "aux": {
+                    "sampleValue": "1122",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Units = NSC Units Owned + NSC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_18",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_shelteredwheelchairhousingnscbedsunitsown",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1201",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredwheelchairhousingnscbedsunitsle",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "22",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_shelteredwheelchairhousingnscbedstotaluni",
+                  "labelWidth": 5,
+                  "label": " NSC Total Beds",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_shelteredwheelchairhousingnscbedsunitsown + cn_shelteredwheelchairhousingnscbedsunitsle ))",
+                  "aux": {
+                    "sampleValue": "1223",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Beds = NSC Beds Owned + NSC Beds Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_19",
+              "header": "Amenity Housing",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_12"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_13"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_14"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_20",
+              "header": "SC Units",
+              "children": [
+                {
+                  "name": "cn_amenityhousingscunitsowned",
+                  "labelWidth": 5,
+                  "label": " SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1301",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_amenityhousingscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "23",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_amenityhousingsctotalunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_amenityhousingscunitsowned + cn_amenityhousingscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "1324",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Total Units = SC Units Owned + SC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_21",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_amenityhousingnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1401",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_amenityhousingnscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "24",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_amenityhousingnsctotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_amenityhousingnscunitsowned + cn_amenityhousingnscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "1425",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Units = NSC Units Owned + NSC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_22",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_amenityhousingnscbedsunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1501",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_amenityhousingnscbedsunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "25",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_amenityhousingnscbedstotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Beds",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_amenityhousingnscbedsunitsowned + cn_amenityhousingnscbedsunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "1526",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Beds = NSC Beds Owned + NSC Beds Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_23",
+              "header": "Community Alarm",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_15"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_16"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_17"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_24",
+              "header": "SC Units",
+              "children": [
+                {
+                  "name": "cn_communityalarmscunitsowned",
+                  "labelWidth": 5,
+                  "label": " SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1601",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_communityalarmscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "26",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_communityalarmsctotalunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_communityalarmscunitsowned + cn_communityalarmscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "1627",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Total Units = SC Units Owned + SC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_25",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_communityalarmnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1701",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_communityalarmnscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "27",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_communityalarmnsctotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_communityalarmnscunitsowned + cn_communityalarmnscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "1728",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Units = NSC Units Owned + NSC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_26",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_communityalarmnscbedsunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1801",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_communityalarmnscbedsunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "28",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_communityalarmnscbedstotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Beds",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_communityalarmnscbedsunitsowned + cn_communityalarmnscbedsunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "1829",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Beds = NSC Beds Owned + NSC Beds Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_27",
+              "header": "Wheelchair Housing",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_18"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_19"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_20"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_28",
+              "header": "SC Units",
+              "children": [
+                {
+                  "name": "cn_wheelchairhousingscunitsowned",
+                  "labelWidth": 5,
+                  "label": " SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "1901",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_wheelchairhousingscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "29",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_wheelchairhousingsctotalunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_wheelchairhousingscunitsowned + cn_wheelchairhousingscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "1930",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Total Units = SC Units Owned + SC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_29",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_wheelchairhousingnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2001",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_wheelchairhousingnscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "30",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_wheelchairhousingnsctotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_wheelchairhousingnscunitsowned + cn_wheelchairhousingnscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "2031",
+                    "csvColumnName": null
+                  },
+                  "help": "Total NSC Units = NSC Units Owned + NSC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_30",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_wheelchairhousingnscbedsunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2101",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_wheelchairhousingnscbedsunitsleasedelsewh",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "31",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_wheelchairhousingnscbedstotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Beds",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_wheelchairhousingnscbedsunitsowned + cn_wheelchairhousingnscbedsunitsleasedelsewh ))",
+                  "aux": {
+                    "sampleValue": "2132",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Beds = NSC Beds Owned + NSC Beds Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_31",
+              "header": "Ambulant Disabled Housing",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_21"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_22"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_23"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_32",
+              "header": "SC Units",
+              "children": [
+                {
+                  "name": "cn_ambulantdisabledhousingscunitsowned",
+                  "labelWidth": 5,
+                  "label": " SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2201",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_ambulantdisabledhousingscunitsleasedelsew",
+                  "labelWidth": 5,
+                  "label": " SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "32",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_ambulantdisabledhousingsctotalunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_ambulantdisabledhousingscunitsowned + cn_ambulantdisabledhousingscunitsleasedelsew ))",
+                  "aux": {
+                    "sampleValue": "2233",
+                    "csvColumnName": null
+                  },
+                  "help": "SC total Units = SC Units Owned + SC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_33",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_ambulantdisabledhousingnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2301",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_ambulantdisabledhousingnscunitsleasedelse",
+                  "labelWidth": 5,
+                  "label": " NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "33",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_ambulantdisabledhousingnsctotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_ambulantdisabledhousingnscunitsowned + cn_ambulantdisabledhousingnscunitsleasedelse ))",
+                  "aux": {
+                    "sampleValue": "2334",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Units = NSC Units Owned + NSC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_34",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_ambulantdisabledhousingnscbedsunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2401",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_ambulantdisabledhousingnscbedsunitsleased",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "34",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_ambulantdisabledhousingnscbedstotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Beds",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_ambulantdisabledhousingnscbedsunitsowned + cn_ambulantdisabledhousingnscbedsunitsleased ))",
+                  "aux": {
+                    "sampleValue": "2435",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Beds = NSC Beds Owned + NSC Beds Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_35",
+              "header": "Other Specially Adapted Housing",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_24"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_25"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_26"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_36",
+              "header": "SC Units",
+              "children": [
+                {
+                  "name": "cn_otherspeciallyadaptedhousingscunitsowned",
+                  "labelWidth": 5,
+                  "label": " SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2501",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_otherspeciallyadaptedhousingscunitsleased",
+                  "labelWidth": 5,
+                  "label": " SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "35",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_otherspeciallyadaptedhousingsctotalunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_otherspeciallyadaptedhousingscunitsowned + cn_otherspeciallyadaptedhousingscunitsleased ))",
+                  "aux": {
+                    "sampleValue": "2536",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Total Units = SC Units Owned + SC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_37",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_otherspeciallyadaptedhousingnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2601",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_otherspeciallyadaptedhousingnscunitslease",
+                  "labelWidth": 5,
+                  "label": " NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "36",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_otherspeciallyadaptedhousingnsctotalunits",
+                  "labelWidth": 5,
+                  "label": " NSC Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_otherspeciallyadaptedhousingnscunitsowned + cn_otherspeciallyadaptedhousingnscunitslease ))",
+                  "aux": {
+                    "sampleValue": "2637",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Units = NSC Units Owned + NSC Units Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_38",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_otherspeciallyadaptedhousingnscbedsunitso",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "2701",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_otherspeciallyadaptedhousingnscbedsunitsl",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "37",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_otherspeciallyadaptedhousingnscbedstotalu",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Total Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_otherspeciallyadaptedhousingnscbedsunitso + cn_otherspeciallyadaptedhousingnscbedsunitsl ))",
+                  "aux": {
+                    "sampleValue": "2738",
+                    "csvColumnName": null
+                  },
+                  "help": "NSC Total Beds = NSC Beds Owned + NSC Beds Leased Elsewhere"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_39",
+              "header": "Total",
+              "children": [
+                {
+                  "type": "blank",
+                  "name": "blank_27"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_28"
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_29"
+                }
+              ],
+              "highlight": true
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_40",
+              "header": "Total SC Units",
+              "children": [
+                {
+                  "name": "cn_totalscunitsowned",
+                  "labelWidth": 5,
+                  "label": " Total SC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_generalneedssocialhousingscunitsowned + cn_shelteredhousingscunitsowned + cn_veryshelteredhousingscunitsowned + cn_shelteredwheelchairhousingscunitsowned + cn_amenityhousingscunitsowned + cn_communityalarmscunitsowned + cn_wheelchairhousingscunitsowned + cn_ambulantdisabledhousingscunitsowned + cn_otherspeciallyadaptedhousingscunitsowned )",
+                  "aux": {
+                    "sampleValue": "11709",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "Total SC Units Owned = \nGeneral Needs Social Housing SC Units Owned +\nSheltered Housing SC Units Owned +\nVery Sheltered Housing SC Units Owned +\nSheltered Wheelchair Housing SC Units Owned +\nAmenity Housing SC Units Owned +\nCommunity Alarm SC Units Owned +\nWheelchair Housing SC Units Owned +\nAmbulant Disabled Housing SC Units Owned +\nOther Specially Adapted Housing SC Units Owned"
+                },
+                {
+                  "name": "cn_totalscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " Total SC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_genneedssocialhousingscunitsleasedelsewhe + cn_shelteredhousingscunitsleasedelsewhere + cn_veryshelteredhousingscunitsleasedelsewher + cn_shelteredwheelchairhousingscunitsleasedel + cn_amenityhousingscunitsleasedelsewhere + cn_communityalarmscunitsleasedelsewhere + cn_wheelchairhousingscunitsleasedelsewhere + cn_ambulantdisabledhousingscunitsleasedelsew + cn_otherspeciallyadaptedhousingscunitsleased )",
+                  "aux": {
+                    "sampleValue": "207",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "Total SC Units Leased Elsewhere = \nGeneral Needs Social Housing SC Units Leased Elsewhere +\nSheltered Housing SC Units Leased Elsewhere +\nVery Sheltered Housing SC Units Leased Elsewhere +\nSheltered Wheelchair Housing SC Units Leased Elsewhere +\nAmenity Housing SC Units Leased Elsewhere +\nCommunity Alarm SC Units Leased Elsewhere +\nWheelchair Housing SC Units Leased Elsewhere +\nAmbulant Disabled Housing SC Units Leased Elsewhere +\nOther Specially Adapted Housing SC Units Leased Elsewhere"
+                },
+                {
+                  "name": "cn_totalscunits",
+                  "labelWidth": 5,
+                  "label": " Total SC Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_totalscunitsowned + cn_totalscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "11916",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "Total SC Units = \nGeneral Needs Social Housing SC Total Units +\nSheltered Housing SC Total Units +\nVery Sheltered Housing SC Total Units +\nSheltered Wheelchair Housing SC Total Units +\nAmenity Housing SC Total Units +\nCommunity Alarm SC Total Units +\nWheelchair Housing SC Total Units +\nAmbulant Disabled Housing SC Total Units +\nOther Specially Adapted Housing SC Total Units"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_41",
+              "header": "Total NSC Units",
+              "children": [
+                {
+                  "name": "cn_totalnscunitsowned",
+                  "labelWidth": 5,
+                  "label": " Total NSC Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_generalneedssocialhousingnscunitsowned + cn_shelteredhousingnscunitsowned + cn_veryshelteredhousingnscunitsowned + cn_shelteredwheelchairhousingnscunitsowned + cn_amenityhousingnscunitsowned + cn_communityalarmnscunitsowned + cn_wheelchairhousingnscunitsowned + cn_ambulantdisabledhousingnscunitsowned + cn_otherspeciallyadaptedhousingnscunitsowned )",
+                  "aux": {
+                    "sampleValue": "12609",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "Total NSC Units Owned = \nGeneral Needs Social Housing NSC Units Owned +\nSheltered Housing NSC Units Owned +\nVery Sheltered Housing NSC Units Owned +\nSheltered Wheelchair Housing NSC Units Owned +\nAmenity Housing NSC Units Owned +\nCommunity Alarm NSC Units Owned +\nWheelchair Housing NSC Units Owned +\nAmbulant Disabled Housing NSC Units Owned +\nOther Specially Adapted Housing NSC Units Owned"
+                },
+                {
+                  "name": "cn_totalnscunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " Total NSC Units Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_genneedssocialhousingnscunitsleasedelsewh + cn_shelteredhousingnscunitsleasedelsewhere + cn_veryshelteredhousingnscunitsleasedelsewhe + cn_shelteredwheelchairhousingnscunitsleasede + cn_amenityhousingnscunitsleasedelsewhere + cn_communityalarmnscunitsleasedelsewhere + cn_wheelchairhousingnscunitsleasedelsewhere + cn_ambulantdisabledhousingnscunitsleasedelse + cn_otherspeciallyadaptedhousingnscunitslease )",
+                  "aux": {
+                    "sampleValue": "216",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "Total NSC Units Leased Elsewhere = \nGeneral Needs Social Housing NSC Units Leased Elsewhere +\nSheltered Housing NSC Units Leased Elsewhere +\nVery Sheltered Housing NSC Units Leased Elsewhere +\nSheltered Wheelchair Housing NSC Units Leased Elsewhere +\nAmenity Housing NSC Units Leased Elsewhere +\nCommunity Alarm NSC Units Leased Elsewhere +\nWheelchair Housing NSC Units Leased Elsewhere +\nAmbulant Disabled Housing NSC Units Leased Elsewhere +\nOther Specially Adapted Housing NSC Units Leased Elsewhere"
+                },
+                {
+                  "name": "cn_totalnscunits",
+                  "labelWidth": 5,
+                  "label": " Total NSC Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_totalnscunitsowned + cn_totalnscunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "12825",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "Total NSC Units = \nGeneral Needs Social Housing NSC Total Units +\nSheltered Housing NSC Total Units +\nVery Sheltered Housing NSC Total Units +\nSheltered Wheelchair Housing NSC Total Units +\nAmenity Housing NSC Total Units +\nCommunity Alarm NSC Total Units +\nWheelchair Housing NSC Total Units +\nAmbulant Disabled Housing NSC Total Units +\nOther Specially Adapted Housing NSC Total Units"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_provision_1_row_42",
+              "header": "Total NSC Beds",
+              "children": [
+                {
+                  "name": "cn_totalnscbedsunitsowned",
+                  "labelWidth": 5,
+                  "label": " Total NSC Beds Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_generalneedssocialhousingnscbedsunitsowne + cn_shelteredhousingnscbedsunitsowned + cn_veryshelteredhousingnscbedsunitsowned + cn_shelteredwheelchairhousingnscbedsunitsown + cn_amenityhousingnscbedsunitsowned + cn_communityalarmnscbedsunitsowned + cn_wheelchairhousingnscbedsunitsowned + cn_ambulantdisabledhousingnscbedsunitsowned + cn_otherspeciallyadaptedhousingnscbedsunitso )",
+                  "aux": {
+                    "sampleValue": "13509",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "Total NSC Beds Owned = \nGeneral Needs Social Housing NSC Beds Owned +\nSheltered Housing NSC Beds Owned +\nVery Sheltered Housing NSC Beds Owned +\nSheltered Wheelchair Housing NSC Beds Owned +\nAmenity Housing NSC Beds Owned +\nCommunity Alarm NSC Beds Owned +\nWheelchair Housing NSC Beds Owned +\nAmbulant Disabled Housing NSC Beds Owned +\nOther Specially Adapted Housing NSC Beds Owned"
+                },
+                {
+                  "name": "cn_totalnscbedsunitsleasedelsewhere",
+                  "labelWidth": 5,
+                  "label": " Total NSC Beds Leased Elsewhere",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_genneedssocialhousingnscbedsunitsleasedel + cn_shelteredhousingnscbedsunitsleasedelsewhe + cn_veryshelteredhousingnscbedsunitsleasedels + cn_shelteredwheelchairhousingnscbedsunitsle + cn_amenityhousingnscbedsunitsleasedelsewhere + cn_communityalarmnscbedsunitsleasedelsewhere + cn_wheelchairhousingnscbedsunitsleasedelsewh + cn_ambulantdisabledhousingnscbedsunitsleased + cn_otherspeciallyadaptedhousingnscbedsunitsl )",
+                  "aux": {
+                    "sampleValue": "225",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "Total NSC Beds Leased Elsewhere = \nGeneral Needs Social Housing NSC Beds Leased Elsewhere +\nSheltered Housing NSC Beds Leased Elsewhere +\nVery Sheltered Housing NSC Beds Leased Elsewhere +\nSheltered Wheelchair Housing NSC Beds Leased Elsewhere +\nAmenity Housing NSC Beds Leased Elsewhere +\nCommunity Alarm NSC Beds Leased Elsewhere +\nWheelchair Housing NSC Beds Leased Elsewhere +\nAmbulant Disabled Housing NSC Beds Leased Elsewhere +\nOther Specially Adapted Housing NSC Beds Leased Elsewhere"
+                },
+                {
+                  "name": "cn_totalnscbeds",
+                  "labelWidth": 5,
+                  "label": " Total NSC Beds",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_totalnscbedsunitsowned + cn_totalnscbedsunitsleasedelsewhere ))",
+                  "aux": {
+                    "sampleValue": "13734",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "Total NSC Beds = \nGeneral Needs Social Housing NSC Total Beds +\nSheltered Housing NSC Total Beds +\nVery Sheltered Housing NSC Total Beds +\nSheltered Wheelchair Housing NSC Total Beds +\nAmenity Housing NSC Total Beds +\nCommunity Alarm NSC Total Beds +\nWheelchair Housing NSC Total Beds +\nAmbulant Disabled Housing NSC Total Beds +\nOther Specially Adapted Housing NSC Total Beds"
+                }
+              ]
+            }
+          ],
+          "labelWidth": 1,
+          "headerWidths": [
+            1,
+            1,
+            1
+          ],
+          "headersStyle": "background-color:#891635; color:white"
+        }
+      ],
+      "name": "provision",
+      "title": "Stock by Provision Type"
+    },
+    {
+      "fields": [
+        {
+          "type": "table",
+          "headers": [
+            "Total",
+            "Lettable Units",
+            "Average Weekly Rent (£)"
+          ],
+          "name": "type_1",
+          "label": "Stock by Type, Apartment Size and Average Weekly Rent",
+          "children": [
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_1_row_3",
+              "header": "SC1 Apt",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentsc1apttotal",
+                  "labelWidth": 5,
+                  "label": " SC1 Apt Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "3001",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypesizerentsc1aptnooflettableunits",
+                  "labelWidth": 5,
+                  "label": " SC1 Apt Nos. of Lettable Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "( $value  <=  cn_stkbytypesizerentsc1apttotal )",
+                  "validationMessage": "Lettable 1 Apt SC units must be less than or equal to Total of all 1 Apt SC units",
+                  "aux": {
+                    "sampleValue": "2000",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentsc1aptavgweeklyrent",
+                  "labelWidth": 5,
+                  "label": " SC1 Apt Avg weekly Rent £",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 2,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "activation": "( cn_stkbytypesizerentsc1aptnooflettableunits  > 0)",
+                  "aux": {
+                    "sampleValue": "300.11",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_1_row_4",
+              "header": "SC2 Apt ",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentsc2apttotal",
+                  "labelWidth": 5,
+                  "label": " SC2 Apt Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "4001",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypesizerentsc2aptnooflettableunits",
+                  "labelWidth": 5,
+                  "label": " SC2 Apt Nos. of Lettable Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "( $value  <=  cn_stkbytypesizerentsc2apttotal )",
+                  "validationMessage": "Lettable 2 Apt SC units must be less than or equal to Total of all 2 Apt SC units",
+                  "aux": {
+                    "sampleValue": "2100",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentsc2aptavgweeklyrent",
+                  "labelWidth": 5,
+                  "label": " SC2 Apt Avg weekly Rent £",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 2,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "activation": "( cn_stkbytypesizerentsc2aptnooflettableunits  > 0)",
+                  "aux": {
+                    "sampleValue": "400.12",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_1_row_5",
+              "header": "SC3 Apt ",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentsc3apttotal",
+                  "labelWidth": 5,
+                  "label": " SC3 Apt Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "5001",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypesizerentsc3aptnooflettableunits",
+                  "labelWidth": 5,
+                  "label": " SC3 Apt Nos. of Lettable Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "( $value  <=  cn_stkbytypesizerentsc3apttotal )",
+                  "validationMessage": "Lettable 3 Apt SC units must be less thyan or equal to Total of all 3 Apt SC units",
+                  "aux": {
+                    "sampleValue": "2200",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentsc3aptavgweeklyrent",
+                  "labelWidth": 5,
+                  "label": " SC3 Apt Avg weekly Rent £",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 2,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "activation": "( cn_stkbytypesizerentsc3aptnooflettableunits  > 0)",
+                  "aux": {
+                    "sampleValue": "500.13",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_1_row_6",
+              "header": "SC4 Apt ",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentsc4apttotal",
+                  "labelWidth": 5,
+                  "label": " SC4 Apt Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "6001",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentsc4nooflettableunits",
+                  "labelWidth": 5,
+                  "label": " SC4 Apt Nos. of Lettable Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "( $value  <=  cn_stkbytypesizerentsc4apttotal )",
+                  "validationMessage": "Lettable 4 Apt SC units must be less than or equal to Total of all 4 Apt SC units",
+                  "aux": {
+                    "sampleValue": "2300",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentsc4aptavgweeklyrent",
+                  "labelWidth": 5,
+                  "label": " SC4 Apt Avg weekly Rent £",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 2,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "activation": "( cn_stkbytypeaptsizerentsc4nooflettableunits  > 0)",
+                  "aux": {
+                    "sampleValue": "600.14",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_1_row_7",
+              "header": "SC5+ Apt ",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentsc5apttotal",
+                  "labelWidth": 5,
+                  "label": " SC5+ Apt Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "7001",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentsc5nooflettableunits",
+                  "labelWidth": 5,
+                  "label": " SC5+ Apt Nos. of Lettable Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "( $value  <=  cn_stkbytypesizerentsc5apttotal )",
+                  "validationMessage": "Lettable 5+ Apt SC units must be less than or equal to Total of all 5+ Apt SC units",
+                  "aux": {
+                    "sampleValue": "2400",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentsc5aptavgweeklyrent",
+                  "labelWidth": 5,
+                  "label": " SC5+ Apt Avg weekly Rent £",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 2,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "activation": "( cn_stkbytypeaptsizerentsc5nooflettableunits  > 0)",
+                  "aux": {
+                    "sampleValue": "700.15",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_1_row_8",
+              "header": "Total",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentsctotaltotal",
+                  "labelWidth": 5,
+                  "label": " SC Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_stkbytypesizerentsc1apttotal + cn_stkbytypesizerentsc2apttotal + cn_stkbytypesizerentsc3apttotal + cn_stkbytypesizerentsc4apttotal + cn_stkbytypesizerentsc5apttotal )",
+                  "validation": " $value == cn_totalscunits ",
+                  "validationMessage": "Total of all SC units by Apt. size must equal Total of all SC units by Provision Type",
+                  "aux": {
+                    "sampleValue": "25005",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "SC Total = \nSC! Apt Total +\nSC2 Apt Total +\nSC3 Apt Total +\nSC4 Apt Total +\nSC5+ Apt Total"
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentsctotallettableunits",
+                  "labelWidth": 5,
+                  "label": " SC Total Lettable Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_stkbytypesizerentsc1aptnooflettableunits + cn_stkbytypesizerentsc2aptnooflettableunits + cn_stkbytypesizerentsc3aptnooflettableunits + cn_stkbytypeaptsizerentsc4nooflettableunits + cn_stkbytypeaptsizerentsc5nooflettableunits )",
+                  "aux": {
+                    "sampleValue": "11000",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "SC Total Lettable Units = \nSC! Apt Nos. of Lettable Units +\nSC2 Apt Nos. of Lettable Units +\nSC3 Apt Nos. of Lettable Units +\nSC4 Apt Nos. of Lettable Units +\nSC5+ Apt Nos. of Lettable Units +"
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentsctotalavgweeklyrent",
+                  "labelWidth": 5,
+                  "label": " SC Total Avg Weekly Rent £",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 2,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "calculation": "(((((( cn_stkbytypesizerentsc1aptnooflettableunits  *  cn_stkbytypeaptsizerentsc1aptavgweeklyrent ) + ( cn_stkbytypesizerentsc2aptnooflettableunits  *  cn_stkbytypeaptsizerentsc2aptavgweeklyrent )) + ( cn_stkbytypesizerentsc3aptnooflettableunits  *  cn_stkbytypeaptsizerentsc3aptavgweeklyrent )) + ( cn_stkbytypeaptsizerentsc4nooflettableunits  *  cn_stkbytypeaptsizerentsc4aptavgweeklyrent )) + ( cn_stkbytypeaptsizerentsc5nooflettableunits  *  cn_stkbytypeaptsizerentsc5aptavgweeklyrent )) /  cn_stkbytypeaptsizerentsctotallettableunits )",
+                  "aux": {
+                    "sampleValue": "509.2218181818182",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "SC Total Avg Weekly Rent £ = \n((SC1 Apt Avg Weekly Rent £ * SC! Apt Nos. of Lettable Units) +\n(SC2 Apt Avg Weekly Rent £ * SC2 Apt Nos. of Lettable Units) +\n(SC3 Apt Avg Weekly Rent £ * SC3 Apt Nos. of Lettable Units) +\n(SC4 Apt Avg Weekly Rent £ * SC4 Apt Nos. of Lettable Units) +\n(SC5+ Apt Avg Weekly Rent £ * SC5+ Apt Nos. of Lettable Units))\n / SC Total Lettable Units"
+                }
+              ]
+            }
+          ],
+          "labelWidth": 1,
+          "headerWidths": [
+            1,
+            1,
+            1
+          ],
+          "headersStyle": "background-color:#891635; color:white"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Total",
+            "No. Lettable Units",
+            "Avg Weekly Rent £"
+          ],
+          "name": "type_2",
+          "label": "",
+          "children": [
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_2_row_12",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentnscunitstotal",
+                  "labelWidth": 5,
+                  "label": " NSC Units Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": " cn_totalnscunits ",
+                  "aux": {
+                    "sampleValue": "12825",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "cn_stkbytypesizerentnscunitsnooflettableuni",
+                  "labelWidth": 5,
+                  "label": " NSC Units Nos. of Lettable Units",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "275",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "type": "blank",
+                  "name": "blank_30"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_2_row_13",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentnscbedstotal",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": " cn_totalnscbeds ",
+                  "aux": {
+                    "sampleValue": "13734",
+                    "csvColumnName": null
+                  }
+                },
+                {
+                  "name": "cn_stkbytypesizerentnscbedsnooflettableunit",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Nos. of Lettable Unit",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "(((( $value ==0)&&( cn_stkbytypesizerentnscunitsnooflettableuni ==0)))||(( $value  >=  cn_stkbytypesizerentnscunitsnooflettableuni )))",
+                  "validationMessage": "Lettable NSC beds must = 0 if Lettable NSC units = 0, otherwise Lettable NSC beds must be greater than or equal to Lettable NSC units",
+                  "aux": {
+                    "sampleValue": "475",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypeaptsizerentnscbedsavgweeklyrent",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Avg Weekly Rent £",
+                  "width": 2,
+                  "type": "currency",
+                  "minimumValue": -999999999,
+                  "maximumValue": 999999999,
+                  "decimalPlaces": 2,
+                  "showCurrencySymbol": false,
+                  "validatedPositive": true,
+                  "activation": "( cn_stkbytypesizerentnscbedsnooflettableunit  > 0)",
+                  "aux": {
+                    "sampleValue": "485.26",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            }
+          ],
+          "labelWidth": 1,
+          "headerWidths": [
+            1,
+            1,
+            1
+          ],
+          "headersStyle": "background-color:#891635; color:white"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Low Demand",
+            "Unlettable",
+            "Used for Temp Accom"
+          ],
+          "name": "type_3",
+          "label": "Stock in low demand, unlettable or used for temp accom",
+          "children": [
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_17",
+              "header": "SC Total",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentsctotallowdemand",
+                  "labelWidth": 5,
+                  "label": " SC Total Low Demand",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "( $value  <=  cn_stkbytypesizerentsctotaltotal )",
+                  "validationMessage": "Low demand SC units must be less than or equal to Total of all SC units",
+                  "aux": {
+                    "sampleValue": "75",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypesizerentsctotalunlettable",
+                  "labelWidth": 5,
+                  "label": " SC Total Unlettable",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "85",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypesizerentsctotalusedfortempaccom",
+                  "labelWidth": 5,
+                  "label": " SC Total Used for Temp Accom",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "( $value  <=  cn_stkbytypesizerentsctotaltotal )",
+                  "validationMessage": "Used for temp accom SC units must be less than or equal to Total of all SC units",
+                  "aux": {
+                    "sampleValue": "95",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_18",
+              "header": "NSC Units",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentnscunitslowdemand",
+                  "labelWidth": 5,
+                  "label": " NSC Units Low Demand Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "( $value  <=  cn_stkbytypesizerentnscunitstotal )",
+                  "validationMessage": "Low demand NSC units must be less than or equal to Total of all NSC units",
+                  "aux": {
+                    "sampleValue": "175",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypesizerentnscunitsunlettable",
+                  "labelWidth": 5,
+                  "label": " NSC Units Unlettable",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "185",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypesizerentnscunitsusedfortempacco",
+                  "labelWidth": 5,
+                  "label": " NSC Units Used for Temp Accom",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "( $value  <=  cn_stkbytypesizerentnscunitstotal )",
+                  "validationMessage": "Used for temp accom NSC units must be less than or equal to Total of all NSC units",
+                  "aux": {
+                    "sampleValue": "195",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_19",
+              "header": "NSC Beds",
+              "children": [
+                {
+                  "name": "cn_stkbytypesizerentnscbedslowdemand",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Low Demand",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "(((( $value ==0)&&(137==0)))||(( $value  >=  cn_stkbytypesizerentnscunitslowdemand )))",
+                  "validationMessage": "Low demand NSC beds must = 0 if Low demand NSC units = 0, otherwise Low demand NSC beds must be greater than or equal to Low demand NSC units",
+                  "aux": {
+                    "sampleValue": "375",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypesizerentnscbedsunlettable",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Unlettable",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "(((( $value ==0)&&(138==0)))||(( $value  >=  cn_stkbytypesizerentnscunitsunlettable )))",
+                  "validationMessage": "Unlettable NSC beds must = 0 if Unlettable NSC units = 0, otherwise Unlettable NSC beds must be greater than or equal to Unlettable NSC units",
+                  "aux": {
+                    "sampleValue": "385",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_stkbytypesizerentnscbedsusedfortempaccom",
+                  "labelWidth": 5,
+                  "label": " NSC Beds Used for Temp Accom",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "validation": "(((( $value ==0)&&(139==0)))||(( $value  >=  cn_stkbytypesizerentnscunitsusedfortempacco )))",
+                  "validationMessage": "Used for temp accom NSC beds must = 0 if Used for temp accom NSC units = 0, otherwise Used for temp accom NSC beds must be greater than or equal to Used for temp accom NSC units",
+                  "aux": {
+                    "sampleValue": "395",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            }
+          ],
+          "labelWidth": 1,
+          "headerWidths": [
+            1,
+            1,
+            1
+          ],
+          "headersStyle": "background-color:#891635; color:white"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "House",
+            "High-Rise",
+            "Tenement",
+            "4 in a Block",
+            "Other Flat / Maisonette",
+            "Total"
+          ],
+          "name": "type_3",
+          "label": "Stock by age and dwelling type",
+          "children": [
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_23",
+              "header": "SC Owned Pre-1919",
+              "children": [
+                {
+                  "name": "cn_scownedpre1919house",
+                  "labelWidth": 5,
+                  "label": " House",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "101",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpre1919highrise",
+                  "labelWidth": 5,
+                  "label": " High Rise",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "102",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpre1919tenement",
+                  "labelWidth": 5,
+                  "label": " Tenement",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "103",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpre19194inablock",
+                  "labelWidth": 5,
+                  "label": " 4 in a Block",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "104",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpre1919otherflatmaisonette",
+                  "labelWidth": 5,
+                  "label": " Other Flat / Maisonette",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "105",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpre1919total",
+                  "labelWidth": 5,
+                  "label": " Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_scownedpre1919house + cn_scownedpre1919highrise + cn_scownedpre1919tenement + cn_scownedpre19194inablock + cn_scownedpre1919otherflatmaisonette ))",
+                  "aux": {
+                    "sampleValue": "515",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Owned Pre-1919 Total = <br />SC Owned Pre-1919 House +<br />SC Owned Pre-1919 High Rise +<br />SC Owned Pre-1919 Tenement +<br />SC Owned Pre-1919 4 in a Block +<br />SC Owned Pre-1919 Other Flat / Maisonette"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_24",
+              "header": "SC Owned 1919-1944",
+              "children": [
+                {
+                  "name": "cn_scowned19191944house",
+                  "labelWidth": 5,
+                  "label": " House",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "201",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19191944highrise",
+                  "labelWidth": 5,
+                  "label": " High Rise",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "202",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19191944tenement",
+                  "labelWidth": 5,
+                  "label": " Tenement",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "203",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned191919444inablock",
+                  "labelWidth": 5,
+                  "label": " 4 in a Block",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "204",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19191944otherflatmaisonette",
+                  "labelWidth": 5,
+                  "label": " Other Flat / Maisonette",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "205",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19191944total",
+                  "labelWidth": 5,
+                  "label": " Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_scowned19191944house + cn_scowned19191944highrise + cn_scowned19191944tenement + cn_scowned191919444inablock + cn_scowned19191944otherflatmaisonette ))",
+                  "aux": {
+                    "sampleValue": "1015",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Owned 1919-1944 Total = <br />SC Owned 1919-1944 House +<br />SC Owned 1919-1944 High Rise +<br />SC Owned 1919-1944 Tenement +<br />SC Owned 1919-1944 4 in a Block +<br />SC Owned 1919-1944 Other Flat / Maisonette"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_25",
+              "header": "SC Owned 1945-1964",
+              "children": [
+                {
+                  "name": "cn_scowned19451964house",
+                  "labelWidth": 5,
+                  "label": " House",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "301",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19451964highrise",
+                  "labelWidth": 5,
+                  "label": " High Rise",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "302",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19451964tenement",
+                  "labelWidth": 5,
+                  "label": " Tenement",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "303",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned194519644inablock",
+                  "labelWidth": 5,
+                  "label": " 4 in a Block",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "304",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19451964otherflatmaisonette",
+                  "labelWidth": 5,
+                  "label": " Other Flat / Maisonette",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "305",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19451964total",
+                  "labelWidth": 5,
+                  "label": " Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_scowned19451964house + cn_scowned19451964highrise + cn_scowned19451964tenement + cn_scowned194519644inablock + cn_scowned19451964otherflatmaisonette ))",
+                  "aux": {
+                    "sampleValue": "1515",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Owned 1945-1964 Total = <br />SC Owned 1945-1964 House +<br />SC Owned 1945-1964 High Rise +<br />SC Owned 1945-1964 Tenement +<br />SC Owned 1945-1964 4 in a Block +<br />SC Owned 1945-1964 Other Flat / Maisonette"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_26",
+              "header": "SC Owned 1965-1982",
+              "children": [
+                {
+                  "name": "cn_scowned19651982house",
+                  "labelWidth": 5,
+                  "label": " House",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "401",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19651982highrise",
+                  "labelWidth": 5,
+                  "label": " High Rise",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "402",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19651982tenement",
+                  "labelWidth": 5,
+                  "label": " Tenement",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "403",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned196519824inablock",
+                  "labelWidth": 5,
+                  "label": " 4 in a Block",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "404",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19651982otherflatmaisonette",
+                  "labelWidth": 5,
+                  "label": " Other Flat / Maisonette",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "405",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scowned19651982total",
+                  "labelWidth": 5,
+                  "label": " Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_scowned19651982house + cn_scowned19651982highrise + cn_scowned19651982tenement + cn_scowned196519824inablock + cn_scowned19651982otherflatmaisonette ))",
+                  "aux": {
+                    "sampleValue": "2015",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Owned 1965-1982 Total = <br />SC Owned 1965-1982 House +<br />SC Owned 1965-1982 High Rise +<br />SC Owned 1965-1982 Tenement +<br />SC Owned 1965-1982 4 in a Block +<br />SC Owned 1965-1982 Other Flat / Maisonette"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_27",
+              "header": "SC Owned Post 1982",
+              "children": [
+                {
+                  "name": "cn_scownedpost1982house",
+                  "labelWidth": 5,
+                  "label": " House",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "501",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpost1982highrise",
+                  "labelWidth": 5,
+                  "label": " High Rise",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "502",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpost1982tenement",
+                  "labelWidth": 5,
+                  "label": " Tenement",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "503",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpost19824inablock",
+                  "labelWidth": 5,
+                  "label": " 4 in a Block",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "504",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpost1982otherflatmaisonette",
+                  "labelWidth": 5,
+                  "label": " Other Flat / Maisonette",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "505",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                },
+                {
+                  "name": "cn_scownedpost1982total",
+                  "labelWidth": 5,
+                  "label": " Total",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_scownedpost1982house + cn_scownedpost1982highrise + cn_scownedpost1982tenement + cn_scownedpost19824inablock + cn_scownedpost1982otherflatmaisonette ))",
+                  "aux": {
+                    "sampleValue": "2515",
+                    "csvColumnName": null
+                  },
+                  "help": "SC Owned Post-1982 Total = <br />SC Owned Post-1982 House +<br />SC Owned Post-1982 High Rise +<br />SC Owned Post-1982 Tenement +<br />SC Owned Post-1982 4 in a Block +<br />SC Owned Post-1982 Other Flat / Maisonette"
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_28",
+              "header": "SC Owned Total",
+              "children": [
+                {
+                  "name": "cn_scownedtotalhouse",
+                  "labelWidth": 5,
+                  "label": " House",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_scownedpre1919house + cn_scowned19191944house + cn_scowned19451964house + cn_scowned19651982house + cn_scownedpost1982house )",
+                  "aux": {
+                    "sampleValue": "1505",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "SC Owned Total House = \nSC Owned Pre-1919 House +\nSC Owned 1919-1944 House +\nSC Owned 1945-1964 House +\nSC Owned 1965-1982 House +\nSC Owned Post-1982 House"
+                },
+                {
+                  "name": "cn_scownedtotalhighrise",
+                  "labelWidth": 5,
+                  "label": " High Rise",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_scownedpre1919highrise + cn_scowned19191944highrise + cn_scowned19451964highrise + cn_scowned19651982highrise + cn_scownedpost1982highrise )",
+                  "aux": {
+                    "sampleValue": "1510",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "SC Owned Total High Rise = \nSC Owned Pre-1919 High Rise +\nSC Owned 1919-1944 High Rise +\nSC Owned 1945-1964 High Rise +\nSC Owned 1965-1982 High Rise +\nSC Owned Post-1982 High Rise"
+                },
+                {
+                  "name": "cn_scownedtotaltenement",
+                  "labelWidth": 5,
+                  "label": " Tenement",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_scownedpre1919tenement + cn_scowned19191944tenement + cn_scowned19451964tenement + cn_scowned19651982tenement + cn_scownedpost1982tenement )",
+                  "aux": {
+                    "sampleValue": "1515",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "SC Owned Total Tenement = \nSC Owned Pre-1919 Tenement +\nSC Owned 1919-1944 Tenement +\nSC Owned 1945-1964 Tenement +\nSC Owned 1965-1982 Tenement +\nSC Owned Post-1982 Tenement"
+                },
+                {
+                  "name": "cn_scownedtotal4inablock",
+                  "labelWidth": 5,
+                  "label": " 4 in a Block",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_scownedpre19194inablock + cn_scowned191919444inablock + cn_scowned194519644inablock + cn_scowned196519824inablock + cn_scownedpost19824inablock )",
+                  "aux": {
+                    "sampleValue": "1520",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "SC Owned Total 4 in a Block = \nSC Owned Pre-1919 4 in a Block +\nSC Owned 1919-1944 4 in a Block +\nSC Owned 1945-1964 4 in a Block +\nSC Owned 1965-1982 4 in a Block +\nSC Owned Post-1982 4 in a Block"
+                },
+                {
+                  "name": "cn_scownedtotalotherflatmaisonette",
+                  "labelWidth": 5,
+                  "label": " Other Flat / Maisonette",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "( cn_scownedpre1919otherflatmaisonette + cn_scowned19191944otherflatmaisonette + cn_scowned19451964otherflatmaisonette + cn_scowned19651982otherflatmaisonette + cn_scownedpost1982otherflatmaisonette )",
+                  "aux": {
+                    "sampleValue": "1525",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "SC Owned Total Other Flat / Maisonette = \nSC Owned Pre-1919 Other Flat / Maisonette +\nSC Owned 1919-1944 Other Flat / Maisonette +\nSC Owned 1945-1964 Other Flat / Maisonette +\nSC Owned 1965-1982 Other Flat / Maisonette +\nSC Owned Post-1982 Other Flat / Maisonette"
+                },
+                {
+                  "name": "cn_totalscowned",
+                  "labelWidth": 5,
+                  "label": " Total SC Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "calculation": "(( cn_scownedtotalhouse + cn_scownedtotalhighrise + cn_scownedtotaltenement + cn_scownedtotal4inablock + cn_scownedtotalotherflatmaisonette ))",
+                  "validation": " $value == cn_stkbytypesizerentsctotaltotal ",
+                  "validationMessage": "Total of all SC units by Apt. size must equal Total of all SC units by Age band",
+                  "aux": {
+                    "sampleValue": "7575",
+                    "csvColumnName": null
+                  },
+                  "tooltip": "SC Owned Total Total SC Owned = \nSC Owned Pre-1919 Total +\nSC Owned 1919-1944 Total +\nSC Owned 1945-1964 Total +\nSC Owned 1965-1982 Total +\nSC Owned Post-1982 Total"
+                }
+              ]
+            }
+          ],
+          "labelWidth": 2,
+          "headerWidths": [
+            1,
+            1,
+            1
+          ],
+          "headersStyle": "background-color:#891635; color:white"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Total"
+          ],
+          "name": "type_3",
+          "label": "Stock partly owned and non-housing units",
+          "children": [
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_32",
+              "header": "Units Partly Owned",
+              "children": [
+                {
+                  "name": "cn_unitspartlyowned",
+                  "labelWidth": 5,
+                  "label": " Units Partly Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "25",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            },
+            {
+              "labelWidth": 2,
+              "type": "tablerow",
+              "name": "table_type_3_row_33",
+              "header": "Non-housing Units Owned",
+              "children": [
+                {
+                  "name": "cn_nonhousingunitsowned",
+                  "labelWidth": 5,
+                  "label": " Non-housing Units Owned",
+                  "width": 2,
+                  "type": "numeric",
+                  "minimumValue": 0,
+                  "maximumValue": 1000000000,
+                  "decimalPlaces": 0,
+                  "validatedPositive": true,
+                  "aux": {
+                    "sampleValue": "35",
+                    "csvColumnName": null
+                  },
+                  "required": true
+                }
+              ]
+            }
+          ],
+          "labelWidth": 1,
+          "headerWidths": [
+            1,
+            1,
+            1
+          ],
+          "headersStyle": "background-color:#891635; color:white"
+        }
+      ],
+      "name": "type",
+      "title": "Stock by Type, Apartment Size and Rent"
+    },
+    {
+      "name": "f1",
+      "title": "Approval",
+      "fields": [
+        {
+          "name": "cn_localauthority2",
+          "labelWidth": 3,
+          "label": "F1.4 Local Authority",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "Moray",
+            "csvColumnName": null
+          },
+          "outputColumn": "cn_localauthority",
+          "readonly": true,
+          "required": true
+        },
+        {
+          "name": "cn_provisionupdate",
+          "labelWidth": 3,
+          "label": "F1.5 Provision Update",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "provisionupdate.csv"
+          },
+          "aux": {
+            "sampleValue": "Annual",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "cn_provisionasatfy",
+          "labelWidth": 3,
+          "label": "F1.6 Provision Update as at Financial Year",
+          "width": 2,
+          "type": "choice",
+          "csv": {
+            "labelColumn": "label",
+            "valueColumn": "value",
+            "file": "provisionasatfy.csv"
+          },
+          "aux": {
+            "sampleValue": "202122",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "cn_provisionasatdate ",
+          "labelWidth": 3,
+          "label": "F1.7 Provision Update as at Date",
+          "width": 2,
+          "type": "date",
+          "validation": "( $value  <= new Date())",
+          "validationMessage": "Date approved cannot be a date in the future.",
+          "aux": {
+            "sampleValue": "07/10/2020 00:00:00",
+            "csvColumnName": null
+          },
+          "required": true
+        },
+        {
+          "name": "spa001",
+          "labelWidth": 3,
+          "label": "",
+          "commentsRequiredMessage": "F1.8 ",
+          "width": 5,
+          "type": "submit",
+          "allowErrors": true,
+          "aux": {
+            "csvColumnName": null
+          }
+        },
+        {
+          "name": "spf001",
+          "labelWidth": 3,
+          "label": "F1.1 Form type",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "portal",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "spf002",
+          "labelWidth": 3,
+          "label": "F1.2 Financial year",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "2020/2021",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        },
+        {
+          "name": "cn_sociallandlordid",
+          "labelWidth": 3,
+          "label": "F1.3 Social Landlord ID",
+          "width": 2,
+          "type": "text",
+          "aux": {
+            "sampleValue": "ED6CA976-CFA9-E311-93F1-005056B555E6",
+            "csvColumnName": null
+          },
+          "hidden": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}
