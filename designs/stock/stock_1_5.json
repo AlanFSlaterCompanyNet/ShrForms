@@ -3482,7 +3482,7 @@
           "required": true
         },
         {
-          "name": "cn_provisionasatdate ",
+          "name": "cn_provisionasatdate",
           "labelWidth": 3,
           "label": "F1.7 Provision Update as at Date",
           "width": 2,
